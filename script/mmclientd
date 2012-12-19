@@ -2,10 +2,11 @@
 
 RETVAL=0
 prog="mmclient"
+export XENSTORED_PATH=/dev/xen/xenbus
 
 start() {
         # Start daemons.
-        echo -n $"Starting $prog: "
+        echo -n "Starting $prog: "
         daemon mmclient $OPTIONS
 	RETVAL=$?
         echo
@@ -13,8 +14,8 @@ start() {
 }
 
 stop() {
-        echo -n $"Shutting down $prog: "
-	killproc mmclient
+        echo -n "Shutting down $prog: "
+	kill `pidof mmclient`
 	RETVAL=$?
         echo
 	return $RETVAL
@@ -38,7 +39,7 @@ case "$1" in
 	RETVAL=$?
 	;;
   *)
-        echo $"Usage: $0 {start|stop|restart|status}"
+        echo "Usage: $0 {start|stop|restart|status}"
         exit 1
 esac
 
