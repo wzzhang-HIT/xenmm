@@ -6,15 +6,14 @@
 
 int main()
 {
-    int i=0;
     MemInfo mem;
     if(s_g_init())
         return;
 
-    ulong pagesize = sysconf(_SC_PAGESIZE);
-    while(i<1000){
-        ulong tot = sysconf(_SC_PHYS_PAGES);
-        ulong free = sysconf(_SC_AVPHYS_PAGES);
+    ulong pagesize = sysconf(_SC_PAGESIZE)/1024;//kb
+    while(1){
+        ulong tot = sysconf(_SC_PHYS_PAGES)*pagesize;
+        ulong free = sysconf(_SC_AVPHYS_PAGES)*pagesize;
         mem.tot_mem = tot;
         mem.free_mem = free;
         printf("tot:%lu,free:%lu\n",tot,free);

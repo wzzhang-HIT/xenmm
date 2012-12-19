@@ -48,7 +48,7 @@ MemInfo stat_fetch_mem(StatInfo* info)
     }
     xenstat_domain* domain = xenstat_node_domain_by_index(info, i++);
     mem.id = xenstat_domain_id(domain);
-    mem.max_mem = xenstat_domain_max_mem(domain);
-    mem.cur_mem = xenstat_domain_cur_mem(domain);
+    mem.d_max_mem = xenstat_domain_max_mem(domain);
+    mem.d_cur_mem = xenstat_domain_cur_mem(domain);
     return mem;
 }

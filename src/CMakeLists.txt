@@ -28,4 +28,4 @@ target_link_libraries(mmclient
 
 
 
-
+install(TARGETS mmclient DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
