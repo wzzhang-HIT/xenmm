@@ -8,6 +8,7 @@
 
 typedef unsigned int uint;
 typedef unsigned long long mem_t;
+typedef unsigned long ulong;
 
 typedef struct Domain {
     uint id;
@@ -25,8 +26,9 @@ typedef struct MemOf {
 
 typedef struct MemInfo {
     uint id;
-    mem_t max_mem;
-    mem_t cur_mem;
+    mem_t d_max_mem;
+    mem_t d_cur_mem;
+    mem_t tot_mem;
     mem_t free_mem;
 }MemInfo;
 

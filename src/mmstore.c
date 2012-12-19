@@ -27,8 +27,10 @@ void s_g_write_mem(MemInfo mem)
     xs_transaction_t t;
     t = xs_transaction_start(g_h);
 
-    snprintf(buf,sizeof(buf),"%ld",mem.free_mem);
+    snprintf(buf,sizeof(buf),"%llu",mem.free_mem);
     xs_write(g_h, t, "memory/free", buf, strlen(buf));
+    snprintf(buf, sizeof(buf), "%llu",mem.tot_mem);
+    xs_write(g_h, t, "memory/tot", buf, strlen(buf));
 
     xs_transaction_end(g_h, t, 0);
 }
