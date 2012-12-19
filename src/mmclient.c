@@ -7,7 +7,8 @@ int main()
 {
     int i=0;
     MemInfo mem;
-    s_g_init();
+    if(s_g_init())
+        return;
 
     while(i<1000){
         mem.free_mem = i++;

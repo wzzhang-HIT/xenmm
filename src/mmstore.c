@@ -6,9 +6,14 @@
 
 static struct xs_handle* g_h;
 
-void s_g_init()
+MMRetCode s_g_init()
 {
     g_h = xs_domain_open();
+    if(g_h == NULL){
+        perror("s_g_init:");
+        return MM_FAILED;
+    }
+    return MM_OK;
 }
 
 void s_g_close()
@@ -20,7 +25,7 @@ void s_g_write_mem(MemInfo mem)
 {
     char buf[512];
     xs_transaction_t t;
-    xs_transaction_start(g_h);
+    t = xs_transaction_start(g_h);
 
     snprintf(buf,sizeof(buf),"%ld",mem.free_mem);
     xs_write(g_h, t, "memory/free", buf, strlen(buf));

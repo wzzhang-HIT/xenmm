@@ -3,7 +3,7 @@
 
 #include "type.h"
 
-void s_g_init();
+MMRetCode s_g_init();
 void s_g_close();
 void s_g_write_mem(MemInfo);
 
