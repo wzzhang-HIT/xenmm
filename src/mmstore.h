@@ -13,9 +13,9 @@ WatchLock* s_g_watch_mem(WatchCallback,void* userdata);
 
 MMRetCode s_h_init();
 void s_h_close();
-void s_h_list_domains(Domain0*);
-WatchLock* s_h_watch_mem(Domain*,WatchCallback,void* userdata);
-
+void s_h_list_domains();
+WatchLock* s_h_watch_guest_mem(Domain*,WatchCallback,void* userdata);
+void s_h_wait_change();
 
 void s_unwatch(WatchLock*);
 #endif

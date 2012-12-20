@@ -7,6 +7,7 @@
 #define TYPE_H_
 
 #include <sys/queue.h>
+#include <stdlib.h>
 
 typedef unsigned int uint;
 typedef unsigned long long mem_t;
@@ -37,5 +38,7 @@ typedef struct MemInfo {
     mem_t tot_mem;
     mem_t free_mem;
 }MemInfo;
+
+void* malloc0(size_t sz);
 
 #endif /* GLOBAL_H_ */
