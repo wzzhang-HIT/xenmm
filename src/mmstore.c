@@ -4,7 +4,11 @@
 #include <string.h>
 #include "mmstore.h"
 
-static struct xs_handle* g_h;
+static struct xs_handle* g_h;//guest_handle
+static struct xs_handle* h_h;//host_handle
+struct WatchLock{
+    char* token;
+};
 
 MMRetCode s_g_init()
 {
@@ -33,4 +37,30 @@ void s_g_write_mem(MemInfo mem)
     xs_write(g_h, t, "memory/tot", buf, strlen(buf));
 
     xs_transaction_end(g_h, t, 0);
+}
+
+MMRetCode s_h_init()
+{
+    h_h = xs_daemon_open();
+    if(h_h == NULL){
+        perror("s_h_init:");
+        return MM_FAILED;
+    }
+    return MM_OK;
+}
+
+void s_h_close()
+{
+    xs_close(h_h);
+}
+
+void s_h_list_domains(Domain0* h)
+{
+    char* buf;
+    uint buf_len;
+    xs_transaction_t t = xs_transaction_start(h_h);
+    buf = xs_read(h_h, t, "/local/domain", &buf_len);
+    fwrite(buf, 1, buf_len, stdout);
+    free(buf);
+    xs_transaction_end(h_h, t, 0);
 }

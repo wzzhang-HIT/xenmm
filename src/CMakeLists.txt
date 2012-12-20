@@ -13,6 +13,17 @@ add_library(util STATIC
     mmstore.c
 )
 
+add_executable(mmserver
+    mmserver.c
+    )
+
+target_link_libraries(mmserver
+    util
+    xenstore
+    )
+
+install(TARGETS mmserver DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+
 endif(NOT ONLY_CLIENT)
 
 

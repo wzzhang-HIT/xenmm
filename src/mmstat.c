@@ -28,10 +28,9 @@ void stat_free(StatInfo* info)
 {
     xenstat_free_node(info);
 }
-MemOf stat_mem_all(StatInfo* info){
-    MemOf mf;
-    mf.tot_mem = xenstat_node_tot_mem(info);
-    mf.free_mem = xenstat_node_free_mem(info);
+void stat_mem_all(StatInfo* info,Domain0* h){
+    h->tot_mem = xenstat_node_tot_mem(info);
+    h->free_mem = xenstat_node_free_mem(info);
 }
 MemInfo stat_fetch_mem(StatInfo* info)
 {
