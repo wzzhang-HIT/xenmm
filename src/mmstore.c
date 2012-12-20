@@ -56,11 +56,15 @@ void s_h_close()
 
 void s_h_list_domains(Domain0* h)
 {
-    char* buf;
+    char** buf;
     uint buf_len;
+    uint num;
     xs_transaction_t t = xs_transaction_start(h_h);
-    buf = xs_read(h_h, t, "/local/domain", &buf_len);
-    fwrite(buf, 1, buf_len, stdout);
+    buf = xs_directory(h_h, t, "/local/domain", &num);
+    int i=0;
+    for(i=0;i<num;i++){
+        printf("%s\n",buf[i]);
+    }
     free(buf);
     xs_transaction_end(h_h, t, 0);
 }
