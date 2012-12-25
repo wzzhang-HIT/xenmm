@@ -8,7 +8,13 @@ static struct xs_handle* g_h;//guest_handle
 static struct xs_handle* h_h;//host_handle
 struct WatchLock{
     char token[12];
+    WatchCallback func;
+    void* data;
+    LIST_ENTRY(WatchLock) entries;
 };
+
+static LIST_HEAD(,WatchLock) watch_head;
+
 
 MMRetCode s_g_init()
 {
@@ -82,9 +88,14 @@ void s_h_list_domains()
 WatchLock* s_h_watch_guest_mem(Domain* g,WatchCallback func,void* data)
 {
     if(!g||!func) return;
-    //static int token = 0;
+    static int token = 0;
     WatchLock* lock = malloc0(sizeof(*lock));
-    snprintf(lock->token,sizeof(lock->token),"%u",g->id);
+    lock->func = func;
+    lock->data = data;
+
+    LIST_INSERT_HEAD(&watch_head,lock,entries);
+
+    snprintf(lock->token,sizeof(lock->token),"%d",token++);
     char path[128];
     snprintf(path,sizeof(path),"/local/domain/%u/memory/free",g->id);
     if(!xs_watch(h_h, path, lock->token))
@@ -99,13 +110,17 @@ void s_h_wait_change()
     list = xs_read_watch(h_h, &num);
     int i,id;
     char* path,*token;
+    WatchLock* lock;
     for(i=0;i<num;i+=2){
         path = list[i];
         token = list[i+1];
-        id = atoi(token);
-        Domain* d = get_domain(id);
-        s_h_read_domain_mem(d);
-        s_h_set_domain_mem(d);
+
+        LIST_FOREACH(lock,&watch_head,entries){
+            if(!strcmp(lock->token,token)){
+                lock->func(lock->data);
+            }
+        }
+
     }
     free(list);
 }
@@ -141,7 +156,7 @@ void s_h_set_domain_mem(Domain* d)
     char target[64];
     xs_transaction_t t = xs_transaction_start(h_h);
     snprintf(path, sizeof(path), "/local/domain/%u/memory/target",d->id);
-    snprintf(target,sizeof(target),"%llu",d->tot_mem - d->free_mem+10240);
+    snprintf(target,sizeof(target),"%llu",d->tot_mem - d->free_mem+102400);
     xs_write(h_h, t, path, target, strlen(target));
     xs_transaction_end(h_h, t, 0);
 }

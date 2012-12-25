@@ -4,7 +4,7 @@
 #include "type.h"
 #include <stdlib.h>
 typedef struct WatchLock WatchLock;
-typedef void (WatchCallback)(const char* buf,size_t len,void* userdata);
+typedef void (*WatchCallback)(void* userdata);
 
 MMRetCode s_g_init();
 void s_g_close();

@@ -11,6 +11,7 @@ if(NOT ONLY_CLIENT)
 add_library(util STATIC
     #mmstat.c
     mmstore.c
+    mmctrl.c
 )
 
 add_executable(mmserver
@@ -21,6 +22,7 @@ add_executable(mmserver
 target_link_libraries(mmserver
     util
     xenstore
+    xenctrl
     )
 
 install(TARGETS mmserver DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)

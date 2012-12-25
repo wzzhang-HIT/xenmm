@@ -5,15 +5,21 @@
 #        Email: xiehuc@gmail.com
 #     HomePage: 
 #      Version: 0.0.1
-#   LastChange: 2012-12-22 19:35:07
+#   LastChange: 2012-12-25 17:10:04
 #      History:
 =============================================================================*/
 #include "type.h"
 #include "mmstore.h"
+#include "mmctrl.h"
 #include <stdio.h>
 
-void domainu_mem_change(const char* buf,size_t len,void* data)
+void domainu_mem_change(void* data)
 {
+    Domain* d = data;
+
+    s_h_read_domain_mem(d);
+    s_h_set_domain_mem(d);
+    ctrl_update_domain_mem(d);
 }
 
 int main()
@@ -21,6 +27,7 @@ int main()
     if(s_h_init()==MM_FAILED){
         return -1;
     }
+    ctrl_init();
     s_h_list_domains();
     Domain* domainu;
     if(LIST_EMPTY(&domain0.domainu)){
@@ -41,4 +48,5 @@ int main()
     }
 
     s_h_close();
+    ctrl_close();
 }
