@@ -9,3 +9,11 @@ void* malloc0(size_t sz)
     memset(ret,sz,0);
     return ret;
 }
+Domain* get_domain(uint id)
+{
+    Domain* ret;
+    LIST_FOREACH(ret,&domain0.domainu,entries){
+        if(ret->id == id) return ret;
+    }
+    return NULL;
+}

@@ -23,6 +23,8 @@ extern Domain0 domain0;
 
 typedef struct Domain {
     uint id;
+    mem_t tot_mem;
+    mem_t free_mem;
     LIST_ENTRY(Domain) entries;
 }Domain;
 
@@ -40,5 +42,7 @@ typedef struct MemInfo {
 }MemInfo;
 
 void* malloc0(size_t sz);
+
+Domain* get_domain(uint id);
 
 #endif /* GLOBAL_H_ */

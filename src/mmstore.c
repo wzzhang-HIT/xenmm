@@ -82,9 +82,9 @@ void s_h_list_domains()
 WatchLock* s_h_watch_guest_mem(Domain* g,WatchCallback func,void* data)
 {
     if(!g||!func) return;
-    static int token = 0;
+    //static int token = 0;
     WatchLock* lock = malloc0(sizeof(*lock));
-    snprintf(lock->token,sizeof(lock->token),"%d",token++);
+    snprintf(lock->token,sizeof(lock->token),"%u",g->id);
     char path[128];
     snprintf(path,sizeof(path),"/local/domain/%u/memory/free",g->id);
     if(!xs_watch(h_h, path, lock->token))
@@ -97,9 +97,38 @@ void s_h_wait_change()
     char** list;
     uint num;
     list = xs_read_watch(h_h, &num);
-    int i;
-    for(i=0;i<num;i++){
-        printf("%s\n",list[i]);
+    int i,id;
+    char* path,*token;
+    for(i=0;i<num;i+=2){
+        path = list[i];
+        token = list[i+1];
+        id = atoi(token);
+        s_h_read_domain_mem(id);
     }
     free(list);
+}
+
+Domain* s_h_read_domain_mem(uint id)
+{
+    Domain* domainu = get_domain(id);
+    if(domainu==NULL) return NULL;
+    char path[512];
+    char* buf;
+    uint buf_len;
+
+    xs_transaction_t t = xs_transaction_start(h_h);
+    snprintf(path,sizeof(path),"/local/domain/%u/memory/free",id);
+    buf = xs_read(h_h, t, path, &buf_len);
+    domainu->free_mem = strtoul(buf,NULL,10);
+    free(buf);
+
+    snprintf(path, sizeof(path), "/local/domain/%u/memory/tot",id);
+    buf = xs_read(h_h, t, path, &buf_len);
+    domainu->tot_mem = strtoul(buf,NULL,10);
+    free(buf);
+
+    xs_transaction_end(h_h, t, false);
+    printf("[domain:%u tot:%llu free:%llu]\n",domainu->tot_mem,domainu->free_mem);
+
+    return domainu;
 }

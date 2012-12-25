@@ -10,6 +10,7 @@
 =============================================================================*/
 #include "type.h"
 #include "mmstore.h"
+#include <stdio.h>
 
 void domainu_mem_change(const char* buf,size_t len,void* data)
 {
@@ -36,7 +37,7 @@ int main()
     }
 
     while(1){
-    s_h_wait_change();
+        s_h_wait_change();
     }
 
     s_h_close();
