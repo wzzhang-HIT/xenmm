@@ -103,32 +103,45 @@ void s_h_wait_change()
         path = list[i];
         token = list[i+1];
         id = atoi(token);
-        s_h_read_domain_mem(id);
+        Domain* d = get_domain(id);
+        s_h_read_domain_mem(d);
+        s_h_set_domain_mem(d);
     }
     free(list);
 }
 
-Domain* s_h_read_domain_mem(uint id)
+void s_h_read_domain_mem(Domain* d)
 {
-    Domain* domainu = get_domain(id);
-    if(domainu==NULL) return NULL;
+    if(!d) return ;
     char path[512];
     char* buf;
     uint buf_len;
 
     xs_transaction_t t = xs_transaction_start(h_h);
-    snprintf(path,sizeof(path),"/local/domain/%u/memory/free",id);
+    snprintf(path,sizeof(path),"/local/domain/%u/memory/free",d->id);
     buf = xs_read(h_h, t, path, &buf_len);
-    domainu->free_mem = strtoul(buf,NULL,10);
+    d->free_mem = strtoul(buf,NULL,10);
     free(buf);
 
-    snprintf(path, sizeof(path), "/local/domain/%u/memory/tot",id);
+    snprintf(path, sizeof(path), "/local/domain/%u/memory/tot",d->id);
     buf = xs_read(h_h, t, path, &buf_len);
-    domainu->tot_mem = strtoul(buf,NULL,10);
+    d->tot_mem = strtoul(buf,NULL,10);
     free(buf);
 
     xs_transaction_end(h_h, t, false);
-    printf("[domain:%u tot:%llu free:%llu]\n",domainu->tot_mem,domainu->free_mem);
+    //printf("[domain:%u tot:%llu free:%llu]\n",domainu->id,domainu->tot_mem,domainu->free_mem);
 
-    return domainu;
+}
+
+void s_h_set_domain_mem(Domain* d)
+{
+    if(!d) return ;
+
+    char path[512];
+    char target[64];
+    xs_transaction_t t = xs_transaction_start(h_h);
+    snprintf(path, sizeof(path), "/local/domain/%u/memory/target",d->id);
+    snprintf(target,sizeof(target),"%llu",d->tot_mem - d->free_mem+10240);
+    xs_write(h_h, t, path, target, strlen(target));
+    xs_transaction_end(h_h, t, 0);
 }
