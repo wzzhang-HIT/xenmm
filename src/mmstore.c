@@ -156,7 +156,7 @@ void s_h_set_domain_mem(Domain* d)
     char target[64];
     xs_transaction_t t = xs_transaction_start(h_h);
     snprintf(path, sizeof(path), "/local/domain/%u/memory/target",d->id);
-    snprintf(target,sizeof(target),"%llu",d->tot_mem - d->free_mem+102400);
+    snprintf(target,sizeof(target),"%llu",d->tot_mem);
     xs_write(h_h, t, path, target, strlen(target));
     xs_transaction_end(h_h, t, 0);
 }

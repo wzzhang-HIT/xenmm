@@ -28,6 +28,6 @@ void ctrl_close()
 
 void ctrl_update_domain_mem(Domain* d)
 {
-    uint32_t target = d->tot_mem - d->free_mem + 102400;
+    uint32_t target = d->tot_mem;
     xc_domain_set_pod_target(c_h, d->id, target, 0, 0, 0);
 }

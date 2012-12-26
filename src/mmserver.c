@@ -8,18 +8,60 @@
 #   LastChange: 2012-12-25 17:10:04
 #      History:
 =============================================================================*/
+#include <stdio.h>
+#include <string.h>
 #include "type.h"
 #include "mmstore.h"
 #include "mmctrl.h"
-#include <stdio.h>
+#include "solve.h"
 
-void domainu_mem_change(void* data)
+#define tax_rate 0.75
+#define tau tax_rate
+
+static void domainu_mem_change(void* data)
 {
     Domain* d = data;
 
     s_h_read_domain_mem(d);
-    s_h_set_domain_mem(d);
-    ctrl_update_domain_mem(d);
+    //s_h_set_domain_mem(d);
+    //ctrl_update_domain_mem(d);
+}
+
+static build_linear_equ()
+{
+    memset(_a_,sizeof(_a_),0);
+    memset(_b_,sizeof(_b_),0);
+    memset(_x_,sizeof(_x_),0);
+    int len = 0;
+    double _N_ = 0;
+    double _A0_ = 0;
+    Domain* d;
+    double _Ai_;
+    int i;
+
+    LIST_FOREACH(d,&domain0.domainu,entries){
+        _N_ += d->tot_mem;
+        _Ai_ = d->tot_mem - d->free_mem;
+        if(len==0){
+            _A0_ = _Ai_;
+        }else{
+            _b_[len] = tau*(_Ai_-_A0_);
+            _a_[len][0] = 1;
+            _a_[len][len] = -1;
+        }
+        len++;
+    }
+    _b_[0] = _N_;
+    for(i=0;i<len;i++){
+        _a_[0][i] = 1;
+    }
+    solve_line_equations(_a_, _b_, len, _x_);
+    i=0;
+    LIST_FOREACH(d,&domain0.domainu,entries){
+        d->tot_mem = _x_[i++];
+        s_h_set_domain_mem(d);
+        ctrl_update_domain_mem(d);
+    }
 }
 
 int main()
@@ -45,6 +87,8 @@ int main()
 
     while(1){
         s_h_wait_change();
+        build_linear_equ();
+        sleep(5);
     }
 
     s_h_close();
