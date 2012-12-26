@@ -9,3 +9,7 @@ add_subdirectory(src)
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_subdirectory(unit)
 endif(CMAKE_BUILD_TYPE STREQUAL "Debug")
+
+include(CPack)
+set(CPACK_GENERATOR "DEB")
+set(CPACK_DEBAIN_PACKAGE_MAINTAINER "xiehuc")
