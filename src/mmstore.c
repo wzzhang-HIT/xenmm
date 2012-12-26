@@ -87,7 +87,7 @@ void s_h_list_domains()
 
 WatchLock* s_h_watch_guest_mem(Domain* g,WatchCallback func,void* data)
 {
-    if(!g||!func) return;
+    if(!g||!func) return NULL;
     static int token = 0;
     WatchLock* lock = malloc0(sizeof(*lock));
     lock->func = func;
@@ -108,8 +108,8 @@ void s_h_wait_change()
     char** list;
     uint num;
     list = xs_read_watch(h_h, &num);
-    int i,id;
-    char* path,*token;
+    int i;
+    char *path,*token;
     WatchLock* lock;
     for(i=0;i<num;i+=2){
         path = list[i];
@@ -151,12 +151,13 @@ void s_h_read_domain_mem(Domain* d)
 void s_h_set_domain_mem(Domain* d)
 {
     if(!d) return ;
+    if(abs(d->target_mem - d->tot_mem)<1024*50) return;
 
     char path[512];
     char target[64];
     xs_transaction_t t = xs_transaction_start(h_h);
     snprintf(path, sizeof(path), "/local/domain/%u/memory/target",d->id);
-    snprintf(target,sizeof(target),"%llu",d->tot_mem);
+    snprintf(target,sizeof(target),"%llu",d->target_mem);
     xs_write(h_h, t, path, target, strlen(target));
     xs_transaction_end(h_h, t, 0);
 }

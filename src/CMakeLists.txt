@@ -1,6 +1,9 @@
 include_directories(
 	.
 )
+
+add_definitions(-Wall)
+
 if(NOT ONLY_CLIENT)
 
     #add_library(xenstat STATIC

@@ -25,6 +25,7 @@ typedef struct Domain {
     uint id;
     mem_t tot_mem;
     mem_t free_mem;
+    mem_t target_mem;
     LIST_ENTRY(Domain) entries;
 }Domain;
 

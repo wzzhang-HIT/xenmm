@@ -60,11 +60,12 @@ static build_linear_equ()
         printf(" %llu ",(mem_t)_x_[i]);
     }
     printf("]\n");
-    /*LIST_FOREACH(d,&domain0.domainu,entries){
-        d->tot_mem = _x_[i++];
+    LIST_FOREACH(d,&domain0.domainu,entries){
+        d->target_mem = _x_[i++];
+    //    d->tot_mem = _x_[i++];
         s_h_set_domain_mem(d);
         ctrl_update_domain_mem(d);
-    }*/
+    }
 }
 
 int main()

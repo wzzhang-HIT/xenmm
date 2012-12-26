@@ -8,7 +8,7 @@ int main()
 {
     MemInfo mem;
     if(s_g_init())
-        return;
+        return 0;
 
     ulong pagesize = sysconf(_SC_PAGESIZE)/1024;//kb
     while(1){
