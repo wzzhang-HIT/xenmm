@@ -6,9 +6,10 @@ option(ONLY_CLIENT Off)
 add_subdirectory(script)
 add_subdirectory(src)
 
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+option(UNIT "Build unit test" Off)
+if(UNIT)
     add_subdirectory(unit)
-endif(CMAKE_BUILD_TYPE STREQUAL "Debug")
+endif(UNIT)
 
 option(DEB "Build deb package" Off)
 

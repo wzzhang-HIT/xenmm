@@ -23,8 +23,6 @@ static void domainu_mem_change(void* data)
     Domain* d = data;
 
     s_h_read_domain_mem(d);
-    //s_h_set_domain_mem(d);
-    //ctrl_update_domain_mem(d);
 }
 
 static build_linear_equ()
@@ -57,11 +55,16 @@ static build_linear_equ()
     }
     solve_line_equations(_a_, _b_, len, _x_);
     i=0;
-    LIST_FOREACH(d,&domain0.domainu,entries){
+    printf("[");
+    for(i=0;i<len;i++){
+        printf(" %llu ",(mem_t)_x_[i]);
+    }
+    printf("]\n");
+    /*LIST_FOREACH(d,&domain0.domainu,entries){
         d->tot_mem = _x_[i++];
         s_h_set_domain_mem(d);
         ctrl_update_domain_mem(d);
-    }
+    }*/
 }
 
 int main()
@@ -85,10 +88,11 @@ int main()
         s_h_watch_guest_mem(domainu, domainu_mem_change, domainu);
     }
 
+    s_h_wait_change();
     while(1){
+        sleep(5);
         s_h_wait_change();
         build_linear_equ();
-        sleep(5);
     }
 
     s_h_close();
