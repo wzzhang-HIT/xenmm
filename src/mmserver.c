@@ -38,8 +38,8 @@ static build_linear_equ()
     int i;
 
     LIST_FOREACH(d,&domain0.domainu,entries){
-        _N_ += d->tot_mem;
-        _Ai_ = d->tot_mem - d->free_mem;
+        _N_ += (double)d->tot_mem;
+        _Ai_ = (double)(d->tot_mem - d->free_mem);
         if(len==0){
             _A0_ = _Ai_;
         }else{
@@ -56,10 +56,16 @@ static build_linear_equ()
     solve_line_equations(_a_, _b_, len, _x_);
     i=0;
     printf("[");
+    LIST_FOREACH(d,&domain0.domainu,entries){
+        printf(" %llu|%llu ",d->tot_mem,d->free_mem);
+    }
+    printf("]\n");
+    printf("[");
     for(i=0;i<len;i++){
         printf(" %llu ",(mem_t)_x_[i]);
     }
-    printf("]\n");
+    printf("]\n\n");
+    i = 0;
     LIST_FOREACH(d,&domain0.domainu,entries){
         d->target_mem = _x_[i++];
     //    d->tot_mem = _x_[i++];
