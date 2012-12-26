@@ -70,7 +70,7 @@ void s_h_list_domains()
     uint num,len;
     xs_transaction_t t = xs_transaction_start(h_h);
     ls = xs_directory(h_h, t, "/local/domain", &num);
-    int i=0;
+    uint i=0;
     for(i=0;i<num;i++){
         snprintf(path,sizeof(path),"/local/domain/%s/memory/free",ls[i]);
         result = xs_read(h_h, t, path, &len);
@@ -108,7 +108,7 @@ void s_h_wait_change()
     char** list;
     uint num;
     list = xs_read_watch(h_h, &num);
-    int i;
+    uint i;
     char *path,*token;
     WatchLock* lock;
     for(i=0;i<num;i+=2){

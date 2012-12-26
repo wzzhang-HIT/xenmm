@@ -85,14 +85,18 @@ int main()
         s_h_close();
         return;
     }
-    LIST_FOREACH(domainu,&domain0.domainu,entries){
+    /*LIST_FOREACH(domainu,&domain0.domainu,entries){
         s_h_watch_guest_mem(domainu, domainu_mem_change, domainu);
-    }
+    }*/
 
-    s_h_wait_change();
+    //s_h_wait_change();
+    Domain* d;
     while(1){
         sleep(5);
-        s_h_wait_change();
+        //s_h_wait_change();
+        LIST_FOREACH(d,&domain0.domainu,entries){
+            s_h_read_domain_mem(d);
+        }
         build_linear_equ();
     }
 

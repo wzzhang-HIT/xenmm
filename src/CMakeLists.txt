@@ -2,7 +2,7 @@ include_directories(
 	.
 )
 
-add_definitions(-Wall)
+add_definitions(-Wall -W)
 
 if(NOT ONLY_CLIENT)
 
