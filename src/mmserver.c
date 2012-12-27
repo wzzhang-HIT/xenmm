@@ -10,6 +10,7 @@
 =============================================================================*/
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 #include "type.h"
 #include "mmstore.h"
 #include "mmctrl.h"
@@ -17,15 +18,16 @@
 
 #define tax_rate 0.75
 #define tau tax_rate
-
+#if 0
 static void domainu_mem_change(void* data)
 {
     Domain* d = data;
 
     s_h_read_domain_mem(d);
 }
+#endif
 
-static build_linear_equ()
+static void build_linear_equ()
 {
     memset(_a_,sizeof(_a_),0);
     memset(_b_,sizeof(_b_),0);
@@ -81,7 +83,6 @@ int main()
     }
     ctrl_init();
     s_h_list_domains();
-    Domain* domainu;
     if(LIST_EMPTY(&domain0.domainu)){
         fprintf(stderr,"it seems you didn't run mmclient in any guest vm.\n"
                 "you can install mmclient in your guest vms.\n"
@@ -89,7 +90,7 @@ int main()
                 "or `sudo /etc/init.d/mmclientd start` to run mmclient.\n"
                );
         s_h_close();
-        return;
+        return 0;
     }
     /*LIST_FOREACH(domainu,&domain0.domainu,entries){
         s_h_watch_guest_mem(domainu, domainu_mem_change, domainu);

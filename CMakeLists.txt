@@ -5,6 +5,7 @@ option(ONLY_CLIENT Off)
 
 add_subdirectory(script)
 add_subdirectory(src)
+add_subdirectory(test)
 
 option(UNIT "Build unit test" Off)
 if(UNIT)

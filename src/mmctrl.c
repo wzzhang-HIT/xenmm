@@ -31,5 +31,5 @@ void ctrl_update_domain_mem(Domain* d)
     if(!d) return;
     if(abs(d->target_mem-d->tot_mem)<1024*50) return;
     uint32_t target = d->target_mem;
-    xc_domain_set_pod_target(c_h, d->id, target, 0, 0, 0);
+    xc_domain_set_pod_target(c_h, d->id, target / 4, 0, 0, 0);
 }
