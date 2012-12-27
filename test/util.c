@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
 
 
 int unit_expand(char u)
@@ -15,7 +16,7 @@ void visit_pages(ul size)
     void * trunks[MAX_PAGES];
     ul page_num = size/4;
     int i,times;
-    FILE* rand_stream = fopen("/dev/urandom","r");
+    int rand_stream = open("/dev/urandom",O_RDONLY);
     if(!rand_stream){
         perror("failed to open random stream");
         return;
@@ -32,11 +33,11 @@ void visit_pages(ul size)
 
     for(times=0;times<ITERATE_TIMES;times++){
         for(i=0;i<page_num;i++){
-            fread(trunks[i], 1, ONE_PAGE, rand_stream);
+            read(trunks[i], ONE_PAGE, rand_stream);
         }
     }
 
-    fclose(rand_stream);
+    close(rand_stream);
     for(i=0;i<page_num;i++){
         free(trunks[i]);
     }
