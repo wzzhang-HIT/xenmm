@@ -15,7 +15,7 @@ void visit_pages(ul size)
     void * trunks[MAX_PAGES];
     ul page_num = size/4;
     int i,times;
-    FILE* rand_stream = fopen("/dev/random","r");
+    FILE* rand_stream = fopen("/dev/urandom","r");
     if(!rand_stream){
         perror("failed to open random stream");
         return;

@@ -2,7 +2,7 @@
 #define UTIL_H_H
 typedef unsigned long ul;
 
-#define MAX_MB 4096
+#define MAX_MB 1024
 #define ITERATE_TIMES 50
 
 #define ONE_PAGE 1024*4

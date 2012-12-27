@@ -30,14 +30,24 @@ int main(int argc,char** argv)
     high = strtoul(argv[2],&end,10);
     high *= unit_expand(*end);
     if(low>=high){
-        fprintf(stderr,"low value must less than high value");
+        fprintf(stderr,"low value must less than high value\n");
+        return -1;
+    }
+    if(high>=MAX_MB*1024){
+        fprintf(stderr,"high value must less than MAX_MB(%u)\n",MAX_MB);
         return -1;
     }
 
+    printf("\n");
     for(target = low;target<high;target+=ONE_PAGE*5){
+        printf(".");
+        fflush(stdout);
         visit_pages(target);
     }
     for(target = high;target>=low;target-=ONE_PAGE*5){
+        printf(".");
+        fflush(stdout);
         visit_pages(target);
     }
+    printf("\n");
 }
