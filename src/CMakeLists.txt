@@ -16,6 +16,7 @@ add_library(util STATIC
     mmstore.c
     mmctrl.c
     solve.c
+    mmrecord.c
 )
 
 add_executable(mmserver

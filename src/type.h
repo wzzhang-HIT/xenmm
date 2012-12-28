@@ -8,6 +8,7 @@
 
 #include <sys/queue.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 //this define the accurency of memory adjust
 //that is if adjust range less than accurency
@@ -37,6 +38,8 @@ typedef struct Domain {
      * note tg_mem > tot_mem
      */
     mem_t tg_mem;           
+
+    FILE* record;
 
     LIST_ENTRY(Domain) entries;
 }Domain;

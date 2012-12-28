@@ -16,6 +16,7 @@
 #include "mmstore.h"
 #include "mmctrl.h"
 #include "solve.h"
+#include "mmrecord.h"
 
 #define tau tax_rate
 static int prog_quit = 0;
