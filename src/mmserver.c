@@ -26,7 +26,24 @@ static void domainu_mem_change(void* data)
     s_h_read_domain_mem(d);
 }
 #endif
-
+void matrix_print(int len)
+{
+    int i,j;
+    for(i=0;i<len;i++){
+        printf("[");
+        for(j=0;j<len;j++){
+            printf("%.3lf,",_a_[i][j]);
+        }
+        printf("]\n");
+    }
+}
+void vector_print(int len)
+{
+    int i;
+    for(i=0;i<len;i++){
+        printf("[%.3lf]\n",_b_[i]);
+    }
+}
 static void build_linear_equ()
 {
     memset(_a_,sizeof(_a_),0);
@@ -55,6 +72,8 @@ static void build_linear_equ()
     for(i=0;i<len;i++){
         _a_[0][i] = 1;
     }
+    matrix_print(len);
+    vector_print(len);
     solve_line_equations(_a_, _b_, len, _x_);
     i=0;
     LIST_FOREACH(d,&domain0.domainu,entries){
