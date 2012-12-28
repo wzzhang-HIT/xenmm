@@ -123,15 +123,23 @@ int main()
 
     //s_h_wait_change();
     Domain* d;
+    LIST_FOREACH(d,&domain0.domainu,entries){
+        record_begin(d);
+    }
     while(!prog_quit){
         sleep(2);
         //s_h_wait_change();
         LIST_FOREACH(d,&domain0.domainu,entries){
             s_h_read_domain_mem(d);
+            record_mem(d);
         }
         build_linear_equ();
     }
 
+    LIST_FOREACH(d,&domain0.domainu,entries){
+        record_end(d);
+    }
     s_h_close();
     ctrl_close();
+    return 0;
 }
