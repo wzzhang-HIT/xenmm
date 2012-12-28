@@ -1,0 +1,192 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5336,        183]
+NotebookOptionsPosition[      4655,        157]
+NotebookOutlinePosition[      5093,        174]
+CellTagsIndexPosition[      5050,        171]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "\[Tau]"}], ")"}], "+", 
+     RowBox[{"\[Epsilon]", "*", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        FractionBox["SF1", "ST1"]}], ")"}]}]}], 
+    RowBox[{"Nt1", "-", 
+     RowBox[{"\[Tau]", "*", "A1"}]}]], "==", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "\[Tau]"}], ")"}], "+", 
+     RowBox[{"\[Epsilon]", "*", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        FractionBox["SF2", "ST2"]}], ")"}]}]}], 
+    RowBox[{"Nt2", "-", 
+     RowBox[{"\[Tau]", "*", "A2"}]}]]}],
+  FontSize->16]], "Input",
+ CellChangeTimes->{{3.5630073606237087`*^9, 3.5630073936739492`*^9}, {
+   3.563007635388111*^9, 3.563007754391766*^9}, {3.5630079722979727`*^9, 
+   3.563007977360839*^9}, 3.56300878851221*^9}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{{3.5630089702923603`*^9, 3.563009024523416*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["Solve",
+   FontSize->16], 
+  StyleBox["[",
+   FontSize->16], 
+  RowBox[{
+   RowBox[{
+    StyleBox["{",
+     FontSize->16], 
+    StyleBox[
+     RowBox[{
+      RowBox[{
+       FractionBox[
+        RowBox[{"(", 
+         RowBox[{"1", "-", "\[Tau]"}], ")"}], 
+        RowBox[{"Nt1", "-", 
+         RowBox[{"\[Tau]", "*", "A1"}]}]], "==", 
+       FractionBox[
+        RowBox[{"(", 
+         RowBox[{"1", "-", "\[Tau]"}], ")"}], 
+        RowBox[{"Nt2", "-", 
+         RowBox[{"\[Tau]", "*", "A2"}]}]]}], ",", 
+      RowBox[{"N", " ", "==", " ", 
+       RowBox[{"Nt1", "+", "Nt2"}]}]}],
+     FontSize->16], "}"}], " ", ",", 
+   RowBox[{"{", 
+    RowBox[{"Nt1", ",", "Nt2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.563008749602419*^9, 3.5630088399066973`*^9}, {
+  3.563009032456148*^9, 3.563009046862199*^9}, {3.563009188791453*^9, 
+  3.563009205139194*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Nt1", "\[Rule]", 
+     RowBox[{
+      FractionBox["N", "2"], "+", 
+      FractionBox[
+       RowBox[{"A1", " ", "\[Tau]"}], "2"], "-", 
+      FractionBox[
+       RowBox[{"A2", " ", "\[Tau]"}], "2"]}]}], ",", 
+    RowBox[{"Nt2", "\[Rule]", 
+     RowBox[{
+      FractionBox["N", "2"], "-", 
+      FractionBox[
+       RowBox[{"A1", " ", "\[Tau]"}], "2"], "+", 
+      FractionBox[
+       RowBox[{"A2", " ", "\[Tau]"}], "2"]}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.563009047788918*^9, {3.563009181464261*^9, 3.5630092063820353`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Nt1", "\[Rule]", 
+     RowBox[{
+      FractionBox["N", "2"], "+", 
+      FractionBox[
+       RowBox[{"A1", " ", "\[Tau]"}], "2"], "-", 
+      FractionBox[
+       RowBox[{"A2", " ", "\[Tau]"}], "2"]}]}], ",", 
+    RowBox[{"Nt2", "\[Rule]", 
+     RowBox[{
+      FractionBox["N", "2"], "-", 
+      FractionBox[
+       RowBox[{"A1", " ", "\[Tau]"}], "2"], "+", 
+      FractionBox[
+       RowBox[{"A2", " ", "\[Tau]"}], "2"]}]}]}], "}"}], " ", "/.", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"A1", "\[Rule]", 
+     RowBox[{"0.5", "N"}]}], ",", 
+    RowBox[{"A2", "\[Rule]", 
+     RowBox[{"0.5", "N"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.5630094829358387`*^9, 3.5630095550230427`*^9}, {
+  3.5630096229590063`*^9, 3.563009648522686*^9}, {3.563009714612805*^9, 
+  3.5630097370604963`*^9}, {3.563010581111485*^9, 3.563010585112302*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"Nt1", "\[Rule]", 
+    RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+     FractionBox["N", "2"]}]}], ",", 
+   RowBox[{"Nt2", "\[Rule]", 
+    RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+     FractionBox["N", "2"]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.563009625103904*^9, 3.5630096500873537`*^9}, {
+   3.563009715435627*^9, 3.5630097376272163`*^9}, 3.563010587680972*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.563008847223544*^9, 3.5630088546410103`*^9}, 
+   3.563009478619419*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.563009480314027*^9, 3.5630094803465233`*^9}}]
+},
+WindowSize->{740, 728},
+WindowMargins->{{Automatic, 315}, {-114, Automatic}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 842, 26, 194, "Input"],
+Cell[1402, 48, 113, 1, 71, "Input"],
+Cell[CellGroupData[{
+Cell[1540, 53, 895, 30, 130, "Input"],
+Cell[2438, 85, 614, 19, 61, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3089, 109, 906, 26, 99, "Input"],
+Cell[3998, 137, 421, 10, 60, "Output"]
+}, Open  ]],
+Cell[4434, 150, 120, 2, 43, "Input"],
+Cell[4557, 154, 94, 1, 43, InheritFromParent]
+}
+]
+*)
+
+(* End of internal cache information *)

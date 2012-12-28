@@ -11,13 +11,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <signal.h>
 #include "type.h"
 #include "mmstore.h"
 #include "mmctrl.h"
 #include "solve.h"
 
-#define tax_rate 0.75
 #define tau tax_rate
+static int prog_quit = 0;
 #if 0
 static void domainu_mem_change(void* data)
 {
@@ -94,7 +95,10 @@ static void build_linear_equ()
         ctrl_update_domain_mem(d,allocated);
     }
 }
-
+static void interupt_server(int sig)
+{
+    prog_quit = 1;
+}
 int main()
 {
     if(s_h_init()==MM_FAILED){
@@ -111,13 +115,14 @@ int main()
         s_h_close();
         return 0;
     }
+    signal(SIGINT, interupt_server);
     /*LIST_FOREACH(domainu,&domain0.domainu,entries){
         s_h_watch_guest_mem(domainu, domainu_mem_change, domainu);
     }*/
 
     //s_h_wait_change();
     Domain* d;
-    while(1){
+    while(!prog_quit){
         sleep(2);
         //s_h_wait_change();
         LIST_FOREACH(d,&domain0.domainu,entries){

@@ -13,6 +13,8 @@
 //that is if adjust range less than accurency
 //we ignore it.
 #define ACCURENCY 0*1024
+//this is tax rate as well as tau
+#define tax_rate 0.75
 
 typedef unsigned int uint;
 typedef unsigned long long mem_t;
