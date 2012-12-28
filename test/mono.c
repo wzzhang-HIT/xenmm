@@ -1,7 +1,7 @@
 /*=============================================================================
 #     FileName: mono.c
 #         Desc: mono memory benchmark
-#               simply the original mono version from zhangdi
+#               simplify the original mono version from zhangdi
 #       Author: xiehuc
 #        Email: xiehuc@gmail.com
 #     HomePage: 

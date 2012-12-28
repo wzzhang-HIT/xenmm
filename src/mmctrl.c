@@ -26,10 +26,10 @@ void ctrl_close()
     xc_interface_close(c_h);
 }
 
-void ctrl_update_domain_mem(Domain* d)
+void ctrl_update_domain_mem(Domain* d,mem_t allocated)
 {
     if(!d) return;
-    if(abs(d->target_mem-d->tot_mem)<1024*50) return;
-    uint32_t target = d->target_mem;
+    if(abs(allocated-d->tg_mem)<1024*50) return;
+    uint32_t target = allocated;
     xc_domain_set_pod_target(c_h, d->id, target / 4, 0, 0, 0);
 }

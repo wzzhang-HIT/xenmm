@@ -143,21 +143,26 @@ void s_h_read_domain_mem(Domain* d)
     d->tot_mem = strtoul(buf,NULL,10);
     free(buf);
 
+    snprintf(path, sizeof(path), "/local/domain/%u/memory/target",d->id);
+    buf = xs_read(h_h, t, path, &buf_len);
+    d->tg_mem = strtoul(buf, NULL, 10);
+    free(buf);
+
     xs_transaction_end(h_h, t, false);
     //printf("[domain:%u tot:%llu free:%llu]\n",domainu->id,domainu->tot_mem,domainu->free_mem);
 
 }
 
-void s_h_set_domain_mem(Domain* d)
+void s_h_set_domain_mem(Domain* d,mem_t allocate)
 {
     if(!d) return ;
-    if(abs(d->target_mem - d->tot_mem)<1024*50) return;
+    if(abs(allocate - d->tg_mem)<1024*50) return;
 
     char path[512];
     char target[64];
     xs_transaction_t t = xs_transaction_start(h_h);
     snprintf(path, sizeof(path), "/local/domain/%u/memory/target",d->id);
-    snprintf(target,sizeof(target),"%llu",d->target_mem);
+    snprintf(target,sizeof(target),"%llu",allocate);
     xs_write(h_h, t, path, target, strlen(target));
     xs_transaction_end(h_h, t, 0);
 }

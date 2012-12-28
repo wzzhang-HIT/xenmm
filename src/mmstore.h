@@ -17,7 +17,7 @@ void s_h_list_domains();
 WatchLock* s_h_watch_guest_mem(Domain*,WatchCallback,void* userdata);
 void s_h_wait_change();
 void s_h_read_domain_mem(Domain*);
-void s_h_set_domain_mem(Domain* d);
+void s_h_set_domain_mem(Domain* d,mem_t allocate);
 
 void s_unwatch(WatchLock*);
 #endif

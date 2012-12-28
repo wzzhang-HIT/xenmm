@@ -4,6 +4,6 @@
 
 void ctrl_init();
 void ctrl_close();
-void ctrl_update_domain_mem(Domain* d);
+void ctrl_update_domain_mem(Domain* d,mem_t allocated);
 
 #endif

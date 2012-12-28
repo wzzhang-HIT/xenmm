@@ -40,8 +40,8 @@ static void build_linear_equ()
     int i;
 
     LIST_FOREACH(d,&domain0.domainu,entries){
-        _N_ += (double)d->tot_mem;
-        _Ai_ = (double)(d->tot_mem - d->free_mem);
+        _N_ += (double)d->tg_mem;
+        _Ai_ = (double)(d->tg_mem - d->free_mem);
         if(len==0){
             _A0_ = _Ai_;
         }else{
@@ -68,11 +68,11 @@ static void build_linear_equ()
     }
     printf("]\n\n");
     i = 0;
+    mem_t allocated;
     LIST_FOREACH(d,&domain0.domainu,entries){
-        d->target_mem = _x_[i++];
-    //    d->tot_mem = _x_[i++];
-        s_h_set_domain_mem(d);
-        ctrl_update_domain_mem(d);
+        allocated = _x_[i++];
+        s_h_set_domain_mem(d,allocated);
+        ctrl_update_domain_mem(d,allocated);
     }
 }
 

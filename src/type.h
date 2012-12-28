@@ -23,9 +23,14 @@ extern Domain0 domain0;
 
 typedef struct Domain {
     uint id;
-    mem_t tot_mem;
-    mem_t free_mem;
-    mem_t target_mem;
+    mem_t tot_mem;          ///< it is from guest perspective see total memory
+    mem_t free_mem;         ///< it is from guest perspective see free memory
+    /** target memory: 
+     * it is from host perspective see allocated memory.
+     * note tg_mem > tot_mem
+     */
+    mem_t tg_mem;           
+
     LIST_ENTRY(Domain) entries;
 }Domain;
 

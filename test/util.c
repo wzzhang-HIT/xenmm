@@ -4,7 +4,14 @@
 #include <string.h>
 #include <fcntl.h>
 
-
+double rand_num()
+{
+    double ret;
+    int rand_stream = open("/dev/urandom",O_RDONLY);
+    read(&ret,sizeof(ret),rand_stream);
+    close(rand_stream);
+    return ret;
+}
 int unit_expand(char u)
 {
     if(u=='k'||u=='K') return 1;

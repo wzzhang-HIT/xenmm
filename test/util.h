@@ -10,4 +10,5 @@ typedef unsigned long ul;
 
 int unit_expand(char u);
 void visit_pages(ul size);
+double rand_num();
 #endif
