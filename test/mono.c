@@ -39,19 +39,24 @@ int main(int argc,char** argv)
     }
 
     printf("\n");
+
+    visit_pages(low);
+    sleep(RESP_TIME);
+
     for(target = low;target<high;target+=ONE_PAGE*5){
         printf(".");
         fflush(stdout);
-        visit_pages(target);
+        visit_pages(ONE_PAGE*5);
         sleep(2);
-        free_pages();
     }
     for(target = high;target>=low;target-=ONE_PAGE*5){
         printf(".");
         fflush(stdout);
-        visit_pages(target);
+        free_pages(ONE_PAGE*5);
         sleep(2);
-        free_pages();
     }
+
+    free_all_pages();
+    sleep(2);
     printf("\n");
 }

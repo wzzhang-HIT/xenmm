@@ -22,32 +22,44 @@ static void * trunks[MAX_PAGES];
 static ul page_num = 0;
 void visit_pages(ul size)
 {
-    page_num = size / 4;
+    ul new_pages = size / 4;
+    //page_num = size / 4;
     int i,times;
     int rand_stream = open("/dev/urandom",O_RDONLY);
     if(!rand_stream){
         perror("failed to open random stream");
         return;
     }
-    memset(trunks,sizeof(trunks),0);
-    for(i=0;i<page_num;i++){
+    //memset(trunks,sizeof(trunks),0);
+    for(i=page_num;i<page_num+new_pages;i++){
         trunks[i] = malloc(ONE_PAGE);
+        memset(trunks[i],ONE_PAGE,0);
         if(trunks[i] == NULL){
             perror("malloc failed");
-            break;
+            exit(-1);
         }
     }
-    page_num = i;
 
     for(times=0;times<ITERATE_TIMES;times++){
-        for(i=0;i<page_num;i++){
+        for(i=page_num;i<page_num+new_pages;i++){
             read(trunks[i], ONE_PAGE, rand_stream);
         }
     }
 
     close(rand_stream);
+    page_num += new_pages;
 }
-void free_pages()
+void free_pages(ul size)
+{
+    ul delta_pages = size / 4;
+    int i;
+    for(i=page_num-1;i>=page_num-delta_pages;i--){
+        free(trunks[i]);
+    }
+    page_num -= delta_pages;
+}
+
+void free_all_pages()
 {
     int i;
     for(i=0;i<page_num;i++){

@@ -29,7 +29,7 @@ int main(int argc,char** argv)
     while(1){
         printf(":>");
         scanf("%s",str);
-        free_pages();
+        free_all_pages();
         if(str[0]=='q') break;
         char* end;
         tg_mem = strtoul(str,&end,10);
