@@ -57,11 +57,9 @@ static void build_linear_equ()
     }
     solve_line_equations(_a_, _b_, len, _x_);
     i=0;
-    printf("[");
     LIST_FOREACH(d,&domain0.domainu,entries){
-        printf(" %llu|%llu ",d->tot_mem,d->free_mem);
+        printf("%d:[ tg:%llu tot:%llu free:%llu ]",d->id,d->tg_mem,d->tot_mem,d->free_mem);
     }
-    printf("]\n");
     printf("[");
     for(i=0;i<len;i++){
         printf(" %llu ",(mem_t)_x_[i]);
