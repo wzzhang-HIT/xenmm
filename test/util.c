@@ -18,10 +18,11 @@ int unit_expand(char u)
     if(u=='m'||u=='M') return 1024;
     return 1;
 }
+static void * trunks[MAX_PAGES];
+static ul page_num = 0;
 void visit_pages(ul size)
 {
-    void * trunks[MAX_PAGES];
-    ul page_num = size/4;
+    page_num = size / 4;
     int i,times;
     int rand_stream = open("/dev/urandom",O_RDONLY);
     if(!rand_stream){
@@ -45,7 +46,12 @@ void visit_pages(ul size)
     }
 
     close(rand_stream);
+}
+void free_pages()
+{
+    int i;
     for(i=0;i<page_num;i++){
         free(trunks[i]);
     }
+    page_num = 0;
 }

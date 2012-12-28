@@ -9,4 +9,14 @@ add_executable(mm_test_random
     util.c
     )
 
-install(TARGETS mm_test_mono mm_test_random DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")
+add_executable(mm_test_static
+    static.c
+    util.c
+    )
+
+install(TARGETS 
+    mm_test_mono 
+    mm_test_random 
+    mm_test_static
+    
+    DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")

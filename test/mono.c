@@ -43,11 +43,13 @@ int main(int argc,char** argv)
         printf(".");
         fflush(stdout);
         visit_pages(target);
+        free_pages();
     }
     for(target = high;target>=low;target-=ONE_PAGE*5){
         printf(".");
         fflush(stdout);
         visit_pages(target);
+        free_pages();
     }
     printf("\n");
 }

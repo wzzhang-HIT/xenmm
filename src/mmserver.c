@@ -60,7 +60,7 @@ static void build_linear_equ()
     LIST_FOREACH(d,&domain0.domainu,entries){
         printf("%d:[ tg:%llu tot:%llu free:%llu ]",d->id,d->tg_mem,d->tot_mem,d->free_mem);
     }
-    printf("[");
+    printf("\n[");
     for(i=0;i<len;i++){
         printf(" %llu ",(mem_t)_x_[i]);
     }
@@ -97,7 +97,7 @@ int main()
     //s_h_wait_change();
     Domain* d;
     while(1){
-        sleep(5);
+        sleep(2);
         //s_h_wait_change();
         LIST_FOREACH(d,&domain0.domainu,entries){
             s_h_read_domain_mem(d);
