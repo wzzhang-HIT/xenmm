@@ -9,6 +9,11 @@
 #include <sys/queue.h>
 #include <stdlib.h>
 
+//this define the accurency of memory adjust
+//that is if adjust range less than accurency
+//we ignore it.
+#define ACCURENCY 0*1024
+
 typedef unsigned int uint;
 typedef unsigned long long mem_t;
 typedef unsigned long ulong;

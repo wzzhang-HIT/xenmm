@@ -29,7 +29,7 @@ void ctrl_close()
 void ctrl_update_domain_mem(Domain* d,mem_t allocated)
 {
     if(!d) return;
-    if(abs(allocated-d->tg_mem)<1024*50) return;
+    if(abs(allocated-d->tg_mem)<ACCURENCY) return;
     uint32_t target = allocated;
     xc_domain_set_pod_target(c_h, d->id, target / 4, 0, 0, 0);
 }
