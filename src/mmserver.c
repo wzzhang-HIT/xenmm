@@ -25,14 +25,13 @@ static void domainu_mem_change(void* data)
 
     s_h_read_domain_mem(d);
 }
-#endif
 void matrix_print(int len)
 {
     int i,j;
     for(i=0;i<len;i++){
         printf("[");
         for(j=0;j<len;j++){
-            printf("%.3lf,",_a_[i][j]);
+            printf("%.0lf,",_a_[i][j]);
         }
         printf("]\n");
     }
@@ -41,9 +40,10 @@ void vector_print(int len)
 {
     int i;
     for(i=0;i<len;i++){
-        printf("[%.3lf]\n",_b_[i]);
+        printf("[%.0lf]\n",_b_[i]);
     }
 }
+#endif
 static void build_linear_equ()
 {
     memset(_a_,sizeof(_a_),0);
@@ -62,7 +62,7 @@ static void build_linear_equ()
         if(len==0){
             _A0_ = _Ai_;
         }else{
-            _b_[len] = tau*(_Ai_-_A0_);
+            _b_[len] = tau*(_A0_-_Ai_);
             _a_[len][0] = 1;
             _a_[len][len] = -1;
         }
@@ -72,12 +72,14 @@ static void build_linear_equ()
     for(i=0;i<len;i++){
         _a_[0][i] = 1;
     }
+#if 0
     matrix_print(len);
     vector_print(len);
+#endif
     solve_line_equations(_a_, _b_, len, _x_);
     i=0;
     LIST_FOREACH(d,&domain0.domainu,entries){
-        printf("%d:[ tg:%llu tot:%llu free:%llu ]",d->id,d->tg_mem,d->tot_mem,d->free_mem);
+        printf("%d:[ tg:%llu use:%llu free:%llu ]",d->id,d->tg_mem,d->tg_mem-d->free_mem,d->free_mem);
     }
     printf("\n[");
     for(i=0;i<len;i++){
