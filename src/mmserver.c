@@ -122,6 +122,7 @@ int main()
     }*/
 
     //s_h_wait_change();
+    ctrl_read_domains_maxmem();
     Domain* d;
     LIST_FOREACH(d,&domain0.domainu,entries){
         record_begin(d);

@@ -31,5 +31,21 @@ void ctrl_update_domain_mem(Domain* d,mem_t allocated)
     if(!d) return;
     if(abs(allocated-d->tg_mem)<ACCURENCY) return;
     uint32_t target = allocated;
+    if(target > d->max_mem){
+        xc_domain_setmaxmem(c_h, d->id, target+10240);
+        d->max_mem = target+10240;
+    }
     xc_domain_set_pod_target(c_h, d->id, target / 4, 0, 0, 0);
+}
+void ctrl_read_domains_maxmem()
+{
+    xc_domaininfo_t domain_infos[256];
+    int domains_num = xc_domain_getinfolist(c_h, 0, 256, domain_infos);
+    int i;
+    for(i=0;i<domains_num;i++){
+        int id = domain_infos[i].domain;
+        Domain* domain = get_domain(id);
+        if(domain == NULL) continue;
+        domain->max_mem = domain_infos[i].max_pages * domain0.page_size;
+    }
 }

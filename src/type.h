@@ -24,6 +24,7 @@ typedef unsigned long ulong;
 typedef struct Domain0 {
     mem_t tot_mem;
     mem_t free_mem;
+    unsigned int page_size;
     LIST_HEAD(,Domain) domainu;
 }Domain0;
 
@@ -38,6 +39,7 @@ typedef struct Domain {
      * note tg_mem > tot_mem
      */
     mem_t tg_mem;           
+    mem_t max_mem;          ///< it is from host perspective see maxmium memory setting
 
     FILE* record;
 
@@ -59,6 +61,7 @@ typedef struct MemInfo {
 
 void* malloc0(size_t sz);
 
+void domain0_init();
 Domain* get_domain(uint id);
 
 #endif /* GLOBAL_H_ */
