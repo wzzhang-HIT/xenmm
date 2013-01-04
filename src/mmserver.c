@@ -81,7 +81,7 @@ static void build_linear_equ()
     solve_line_equations(_a_, _b_, len, _x_);
     i=0;
     LIST_FOREACH(d,&domain0.domainu,entries){
-        printf("%d:[ tg:%llu use:%llu free:%llu ]",d->id,d->tg_mem,d->tg_mem-d->free_mem,d->free_mem);
+        printf("%d:[ tg:%llu use:%llu free:%llu ]",d->id,d->tg_mem,d->tot_mem-d->free_mem,d->free_mem);
     }
     printf("\n[");
     for(i=0;i<len;i++){
@@ -139,6 +139,7 @@ int main()
 
     LIST_FOREACH(d,&domain0.domainu,entries){
         record_end(d);
+        if(d->uuid) free(d->uuid);
     }
     s_h_close();
     ctrl_close();

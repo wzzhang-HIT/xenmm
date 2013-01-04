@@ -97,17 +97,47 @@ useage
 ------
 
 1. 在虚拟机之中开启client
-因为有脚本.所以就很方便了.
-需要注意/dev/xen/xenbus文件或者是/proc/xen/xenbus
-自己看脚本内容修改.
+ 因为有脚本.所以就很方便了.
+ 需要注意/dev/xen/xenbus文件或者是/proc/xen/xenbus
+ 自己看脚本内容修改.
 	$ sudo service mmclientd start
 
 2. 在服务器上运行调节程序
 	$ sudo src/mmserver
-之后可以在控制台中看到输出.并且在build文件夹中可以看到log文件.
-log文件的命名规则是:日期_次数_[虚拟机id].log
-有数据了不管用什么方法.gnuplot,matlab,...或者是excel.
-就可以画图了.
+ 之后可以在控制台中看到输出.并且在build文件夹中可以看到log文件.
+ log文件的命名规则是:日期_次数_[虚拟机id].log
+ 次数在这一天之中做试验的次数.如果做了两次试验,那么
+ 次数有1和2.2是最近做的试验.所以log不会被覆盖.大胆放心的测吧.
+ 有数据了不管用什么方法.gnuplot,matlab,...或者是excel.
+ 就可以画图了.
+
+benchmark
+---------
+
+### mono test method
+
+1. 在guest端安装deb.见上文.
+2. 在host开启mm_server调节程序.最好是在build文件夹用
+   `sudo src/mm_server`启用.因为会在当前目录写log记录.
+   千万不要用`sudo make install;sudo mm_server`
+   这样是使用的/usr/local/bin目录下面的mm_server.
+   那么log记录也会写乱.
+3. 在guest端使用`mm_test_mono low high`low,high是两个内存数值.
+   如`mm_test_mono 50M 400M` M是MB.
+4. 观察host端的记录.可以看到某个domain id下面的free会变少.total会变多.
+   这个是正在调节.
+5. 打开build文件夹下面的log记录.把一个试验里面的所有记录全部复制出来.
+   推荐复制到dataset文件夹.然后设置好文件夹名称.例如date_test_param
+   date是日期,test是测试项目名称.如mono,dacapo...param是测试参数
+   然后再画图什么的...
+   如果对mathematica比较熟悉.可以使用notebook文件夹里面已经写好的样本.
+   里面也有已经画出来的图,注意不要覆盖了.用追加的方式贴记录.
+
+### dacapo test method
+
+dacapo测试,需要测一下的4组数据.其中每组数据都是时间.
+因为dacapo的输出比较乱.推荐手工收集数据.
+
 
 
 note
@@ -135,3 +165,7 @@ unit		:	单元测试
 又或者需要手工设置每个虚拟机的内存.
 这个时候就可以使用static了.它能够保持一部分内存.
 可以相对比较自由的设置内存.
+*13-01-04*:增加不停的写内存的设置.
+  因为如果仅仅是申请了而不写入,或者是仅写入一次.那么
+  这部分内存就会因为内存替换算法被替换到交换空间.
+  达不到我们预期的效果了.
