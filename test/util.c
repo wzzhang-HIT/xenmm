@@ -49,6 +49,17 @@ void visit_pages(ul size)
     close(rand_stream);
     page_num += new_pages;
 }
+void flush_pages()
+{
+    int rand_stream = open("/dev/urandom",O_RDONLY);
+    int times,i;
+    for(times=0;times<ITERATE_TIMES;times++){
+        for(i=0;i<page_num;i++){
+            read(trunks[i], ONE_PAGE, rand_stream);
+        }
+    }
+    close(rand_stream);
+}
 void free_pages(ul size)
 {
     ul delta_pages = size / 4;
