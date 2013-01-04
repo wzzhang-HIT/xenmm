@@ -30,9 +30,9 @@ int main(int argc,char** argv)
     char str[256];
     ul tg_mem;
     if(argc==2){
-        char end;
+        char* end;
         tg_mem = strtoul(argv[1],&end,10);
-        tg_mem *= unit_expand(end);
+        tg_mem *= unit_expand(*end);
         visit_pages(tg_mem);
     }
     int flags = fcntl(STDIN_FILENO,F_GETFL,0);
