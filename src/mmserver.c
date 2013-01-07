@@ -139,7 +139,6 @@ int main()
 
     LIST_FOREACH(d,&domain0.domainu,entries){
         record_end(d);
-        if(d->uuid) free(d->uuid);
     }
     s_h_close();
     ctrl_close();

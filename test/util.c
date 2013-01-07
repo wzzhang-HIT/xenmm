@@ -25,11 +25,13 @@ void visit_pages(ul size)
     ul new_pages = size / 4;
     //page_num = size / 4;
     int i,times;
+#if ! LOW_CPU
     int rand_stream = open("/dev/urandom",O_RDONLY);
     if(!rand_stream){
         perror("failed to open random stream");
         return;
     }
+#endif
     //memset(trunks,sizeof(trunks),0);
     for(i=page_num;i<page_num+new_pages;i++){
         trunks[i] = malloc(ONE_PAGE);
@@ -41,24 +43,37 @@ void visit_pages(ul size)
     }
 
     for(times=0;times<ITERATE_TIMES;times++){
+#if LOW_CPU
+        memset(trunks,times,(page_num+new_pages)*ONE_PAGE);
+#else 
         for(i=page_num;i<page_num+new_pages;i++){
             read(trunks[i], ONE_PAGE, rand_stream);
         }
+#endif
     }
 
+#if ! LOW_CPU
     close(rand_stream);
+#endif
     page_num += new_pages;
 }
 void flush_pages()
 {
+    int times;
+#if LOW_CPU
+    for(times=0;times<ITERATE_TIMES;times++){
+        memset(trunks,times,page_num*ONE_PAGE);
+    }
+#else
     int rand_stream = open("/dev/urandom",O_RDONLY);
-    int times,i;
+    int i;
     for(times=0;times<ITERATE_TIMES;times++){
         for(i=0;i<page_num;i++){
             read(trunks[i], ONE_PAGE, rand_stream);
         }
     }
     close(rand_stream);
+#endif
 }
 void free_pages(ul size)
 {
