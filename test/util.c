@@ -42,39 +42,40 @@ void visit_pages(ul size)
         }
     }
 
-    for(times=0;times<ITERATE_TIMES;times++){
-#if LOW_CPU
-        memset(trunks,times,(page_num+new_pages)*ONE_PAGE);
-#else 
-        for(i=page_num;i<page_num+new_pages;i++){
-            read(trunks[i], ONE_PAGE, rand_stream);
-        }
-#endif
-    }
 
 #if ! LOW_CPU
     close(rand_stream);
 #endif
     page_num += new_pages;
+    flush_pages();
 }
+#if LOW_CPU
 void flush_pages()
 {
-    int times;
-#if LOW_CPU
+    int times,i;
     for(times=0;times<ITERATE_TIMES;times++){
-        memset(trunks,times,page_num*ONE_PAGE);
+        struct timespec tm_,rem_;
+        tm_.tv_sec = 0;
+        tm_.tv_nsec = NANO_SLEEP_TIME;
+        nanosleep(&tm_,&rem_);
+        for(i=0;i<page_num;i++){
+            memset(trunks[i],times,ONE_PAGE);
+        }
     }
+}
 #else
+void flush_pages()
+{
+    int times,i;
     int rand_stream = open("/dev/urandom",O_RDONLY);
-    int i;
     for(times=0;times<ITERATE_TIMES;times++){
         for(i=0;i<page_num;i++){
             read(trunks[i], ONE_PAGE, rand_stream);
         }
     }
     close(rand_stream);
-#endif
 }
+#endif
 void free_pages(ul size)
 {
     ul delta_pages = size / 4;

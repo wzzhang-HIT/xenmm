@@ -4,6 +4,9 @@ typedef unsigned long ul;
 
 #define LOW_CPU 1
 
+//50 ms
+#define NANO_SLEEP_TIME 300*1000*1000
+
 #define MAX_MB 1024
 #define ITERATE_TIMES 50
 
