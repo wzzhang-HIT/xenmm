@@ -41,6 +41,12 @@ int main(int argc,char** argv)
     printf(":>");
     fflush(stdout);
     while(1){
+#if LOW_CPU
+        struct timespec tm_,rem_;
+        tm_.tv_sec = 0;
+        tm_.tv_nsec = 50*1000;
+        nanosleep(&tm_,&rem_);
+#endif
         int ret = read(0,str,sizeof(str));
         if(ret == -1 && errno == EAGAIN){
             flush_pages();
