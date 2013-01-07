@@ -57,10 +57,12 @@ static void build_linear_equ()
     Domain* d;
     double _Ai_;
     int i;
+    mem_t total;
 
     LIST_FOREACH(d,&domain0.domainu,entries){
+        total = (abs(d->tg_mem - d->tot_mem)> 70*1024)?d->tot_mem:d->tg_mem;
         _N_ += (double)d->tg_mem;
-        _Ai_ = (double)(d->tg_mem - d->free_mem);
+        _Ai_ = (double)(total - d->free_mem);
         if(len==0){
             _A0_ = _Ai_;
         }else{
@@ -70,7 +72,8 @@ static void build_linear_equ()
         }
         len++;
     }
-    _b_[0] = _N_;
+    //_b_[0] = _N_;
+    _b_[0] = 1024*1024*len;
     for(i=0;i<len;i++){
         _a_[0][i] = 1;
     }
