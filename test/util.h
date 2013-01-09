@@ -3,6 +3,7 @@
 typedef unsigned long ul;
 
 #define LOW_CPU 1
+#define RECORD_SWAP 1
 
 //50 ms
 #define NANO_SLEEP_TIME 300*1000*1000
@@ -12,7 +13,6 @@ typedef unsigned long ul;
 
 #define ONE_PAGE 1024*4
 #define MAX_PAGES MAX_MB*1024/4
-
 
 
 //response time,that is 
