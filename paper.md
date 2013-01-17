@@ -1,3 +1,104 @@
+%
+% xiehuc
+
+实验环境
+=======
+
+物理机
+-----
+
+CPU 信息
+
+key          value
+----------   ---------------------------------
+vendor_id     AuthenticAMD
+model name    AMD Opteron(TM) Processor 6272
+cpu MHz       2100.108
+cache size    2048KB
+count         64
+-----------------------------------------------
+Table: Cpu Info
+
+主板信息:
+
+key            value
+------------   -------------------------------
+Manufacturer   SUGON
+Product Name   Server
+Serial Number  9800026100264555
+UUID           03000200-0400-0500-0006-000700080009
+Wake-up Type   Power Switch
+----------------------------------------------
+Table: Mother board Info
+
+内存信息:
+
+key            value
+-----------    ------------------------------
+Total Width    72 bits
+Data Width     64 bits
+Size           4096 MB
+Form Factor    DIMM
+Locator        DIMM11
+Bank Locator   BANK11
+Type           DDR3
+Type Detail    Synchronous
+Speed          1333 MHz
+Count          32
+Total          128GB
+----------------------------------------------
+Table: Memory Info
+
+系统信息:
+
+Linux root3-Server 3.2.0-29-generic #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+
+xen:
+
+key                    value
+-------------          -------------------------------------------
+host                    root3-Server
+release                 3.2.0-29-generic
+version                 #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012
+machine                 x86_64
+nr_cpus                 64
+nr_nodes                8
+cores_per_socket        16
+threads_per_core        1
+cpu_mhz                 2100
+virt_caps               hvm
+total_memory            131054
+free_memory             17
+free_cpus               0
+xen_major               4
+xen_minor               1
+xen_extra               .2
+xen_scheduler           credit
+xen_pagesize            4096
+platform_params         virt_start=0xffff800000000000
+xen_changeset           unavailable
+xen_commandline         placeholder
+cc_compiler             gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) 
+cc_compile_by           marc.deslaurier
+cc_compile_domain       ubuntu.com
+cc_compile_date         Tue Dec 11 16:32:07 UTC 2012
+xend_config_format      4
+----------------------------------------------------------
+Table: xm info
+
+
+虚拟机
+------
+
+5台虚拟机均使用同一规格:
+
+* CPU: 同物理机.只分配一个核心
+* Mem: 1024MB
+* Mem Dynamic Range: <=2048MB
+* System: Ubuntu Server
+* uname: Linux ubuntu 3.5.0-17-generic #28-Ubuntu SMP Tue Oct 9 19:31:23 UTC 2012 x86_64 GNU/Linux
+* 虚拟化: 全虚拟化
+
 实验过程
 =======
 
@@ -92,6 +193,7 @@ tradesoap        runs the daytrader benchmark via a SOAP to
 
 xalan            把XML转换成HTML
 -------------------------------------------------------------------
+Table: dacapo testset
 
 
 dacapo测试,需要测以下的4组数据.其中每组数据都是时间.
