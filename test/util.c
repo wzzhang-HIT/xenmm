@@ -5,15 +5,6 @@
 #include <fcntl.h>
 #include <time.h>
 
-#if RECORD_SWAP
-#else
-//empty define
-#define record_swap()
-#define close_swap()
-#endif
-
-
-
 unsigned long rand_ul()
 {
     unsigned long ret;
@@ -83,7 +74,6 @@ void flush_pages()
             read(trunks[i], ONE_PAGE, rand_stream);
         }
     }
-    record_swap();
     close(rand_stream);
 }
 #endif

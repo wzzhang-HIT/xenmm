@@ -2,8 +2,9 @@
 #define UTIL_H_H
 typedef unsigned long ul;
 
+#ifndef LOW_CPU
 #define LOW_CPU 1
-#define RECORD_SWAP 1
+#endif
 
 //50 ms
 #define NANO_SLEEP_TIME 300*1000*1000

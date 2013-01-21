@@ -11,6 +11,7 @@
 =============================================================================*/
 
 #include "util.h"
+#include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
 //adjust this value to set max mb size of memory
@@ -24,20 +25,20 @@ void show_help()
         "\t run random from 100M to 500M last default 10s\n"
         "example: random 100M 500M 30s\n"
         "\t run random from 100M to 500M last 30s\n";
-    printf(help);
+    printf("%s\n",help);
 }
 int main(int argc,char** argv)
 {
     ul low,high,target,duration=20;
-    if(argc<3||argc>5){show_help();return 0;}
+    if(argc<3||argc>4){show_help();return 0;}
     char* end;
-    if(argc<3){
+    if(argc>=3){
         low = strtoul(argv[1],&end,10);
         low *= unit_expand(*end);
         high = strtoul(argv[2],&end,10);
         high *= unit_expand(*end);
     }
-    if(argc<4){
+    if(argc>=4){
         duration = strtoul(argv[3],&end,10);
     }
     if(low>=high){
@@ -55,8 +56,8 @@ int main(int argc,char** argv)
     double rate;
     do{
         ed = time(NULL);
-        srand48(rand_ul());
-        rate = drand48();
+        srand(ed);
+        rate = (double)rand()/RAND_MAX;
         target = (ul)(rate*(high-low)+low);
         printf(".");
         fflush(stdout);
@@ -67,4 +68,5 @@ int main(int argc,char** argv)
 
     free_all_pages();
     printf("\n");
+    return 0;
 }
