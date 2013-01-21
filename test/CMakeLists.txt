@@ -8,6 +8,10 @@ add_executable(mm_test_random
     random.c
     util.c
     )
+set_target_properties(mm_test_random
+    PROPERTIES
+    COMPILE_FLAGS "-DLOW_CPU=0"
+    )
 
 add_executable(mm_test_static
     static.c
