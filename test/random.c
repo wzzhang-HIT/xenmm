@@ -23,7 +23,7 @@ void show_help()
         "example: random 100M 500M\n";
         "\t run random from 100M to 500M last default 10s\n"
         "example: random 100M 500M 30s\n"
-        "\t run random from 100M to 500M last default 30s\n";
+        "\t run random from 100M to 500M last 30s\n";
     printf(help);
 }
 int main(int argc,char** argv)
@@ -55,22 +55,16 @@ int main(int argc,char** argv)
     double rate;
     do{
         ed = time(NULL);
-        rate = rand_num();
+        srand48(rand_ul());
+        rate = drand48();
         target = (ul)(rate*(high-low)+low);
         printf(".");
         fflush(stdout);
+        free_all_pages();
         visit_pages(target);
+        sleep(1);
     }while(ed-start<duration);
 
-    /*for(target = low;target<high;target+=ONE_PAGE*5){
-        printf(".");
-        fflush(stdout);
-        visit_pages(target);
-    }
-    for(target = high;target>=low;target-=ONE_PAGE*5){
-        printf(".");
-        fflush(stdout);
-        visit_pages(target);
-    }
-    printf("\n");*/
+    free_all_pages();
+    printf("\n");
 }

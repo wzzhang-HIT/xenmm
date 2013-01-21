@@ -14,9 +14,9 @@
 
 
 
-double rand_num()
+unsigned long rand_ul()
 {
-    double ret;
+    unsigned long ret;
     int rand_stream = open("/dev/urandom",O_RDONLY);
     read(&ret,sizeof(ret),rand_stream);
     close(rand_stream);
