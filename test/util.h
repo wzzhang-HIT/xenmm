@@ -20,7 +20,7 @@ typedef unsigned long ul;
 #define RESP_TIME 2
 
 int unit_expand(char u);
-double rand_num();
+unsigned long rand_ul();
 void visit_pages(ul size);
 void free_pages(ul size);
 void flush_pages();
