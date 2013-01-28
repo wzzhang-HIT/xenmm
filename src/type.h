@@ -15,7 +15,11 @@
 //we ignore it.
 #define ACCURENCY 0*1024
 //this is tax rate as well as tau
+#ifndef TAX_RATE
 #define tax_rate 0.75
+#else
+#define tax_rate TAX_RATE
+#endif
 
 typedef unsigned int uint;
 typedef unsigned long long mem_t;
