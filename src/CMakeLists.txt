@@ -29,6 +29,12 @@ target_link_libraries(mmserver
     xenstore
     xenctrl
     )
+if(DEFINED TAX_RATE)
+    set_target_properties(mmserver
+        PROPERTIES
+        COMPILE_FLAG "-DTAX_RATE=${TAX_RATE}"
+        )
+endif(DEFINED TAX_RATE)
 
 install(TARGETS mmserver DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
