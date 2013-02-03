@@ -47,16 +47,13 @@ int main(int argc,char** argv)
         printf(".");
         fflush(stdout);
         visit_pages(ONE_PAGE*5);
-        sleep(2);
     }
     for(target = high;target>=low;target-=ONE_PAGE*5){
         printf(".");
         fflush(stdout);
         free_pages(ONE_PAGE*5);
-        sleep(2);
     }
 
     free_all_pages();
-    sleep(2);
     printf("\n");
 }
