@@ -1,13 +1,35 @@
-%
+% xen memory management experiment paper
 % xiehuc
 
 实验环境
 =======
 
-物理机
------
+程序配置环境
+-----------
 
-CPU 信息
+程序集分为两个部分.服务端和客户端.是典型的C/S架构.
+只不过.这里我们的服务器和客户机分别运行于物理机和虚拟机.
+另外程序集附带了4个辅助测试程序.方便测试和记录数据.
+
+- **mmclient** : 客户程序.每间隔1秒种.读取虚拟机`总内存`,`使用内存`,`可用内存`,并写入xenstorage中.
+- **mmserver** : 服务程序.每间隔1秒种.读取所有虚拟机的xenstorage结点.取得内存信息.并且进行矩阵运算.
+  然后将结果作为最后的分配方案.修改各个虚拟机的内存分配.
+- **mm_test_static** : 该程序能够申请一块内存区域.并且保持.并且定时写入.防止被替换到swap分区.
+  在模拟负载环境中使用.
+- **mm_test_mono**   : 该程序能够指定一个范围.并且从低到高的提出内存申请.再由高到低的释放内存.
+  在mono测试中使用.
+- **mm_test_random** : 该程序能够指定一个范围和时间间隔.在时间间隔以内提出随机大小的内存申请.
+  在整个测试中没有使用.
+- **mm_util_swap**   : 该程序能够定时的记录swap使用率.在dacapo测试中使用.
+
+另外.还使用了2个测试标准:
+
+- **dacapo** : [link](http://dacapobench.org/)
+
+物理机环境
+----------
+
+物理机使用曙光的64核服务器.具体的信息如下:
 
 key          value
 ----------   ---------------------------------
@@ -19,17 +41,6 @@ count         64
 -----------------------------------------------
 Table: Cpu Info
 
-主板信息:
-
-key            value
-------------   -------------------------------
-Manufacturer   SUGON
-Product Name   Server
-Serial Number  9800026100264555
-UUID           03000200-0400-0500-0006-000700080009
-Wake-up Type   Power Switch
-----------------------------------------------
-Table: Mother board Info
 
 内存信息:
 
@@ -49,11 +60,12 @@ Total          128GB
 ----------------------------------------------
 Table: Memory Info
 
-系统信息:
+系统使用Ubuntu 12.04 Desktop 64位.`uname -r`信息如下:
 
 Linux root3-Server 3.2.0-29-generic #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
 
-xen:
+xen套件使用4.1.2版本.从Ubuntu软件中心中取得.
+具体信息用`xm info`如下:
 
 key                    value
 -------------          -------------------------------------------
@@ -90,11 +102,12 @@ Table: xm info
 虚拟机
 ------
 
-5台虚拟机均使用同一规格:
+5台虚拟机均使用同一规格:  
+系统使用Ubuntu 12.10 Server版本.没有X环境.
 
 * CPU: 同物理机.只分配一个核心
 * Mem: 1024MB
-* Mem Dynamic Range: <=2048MB
+* MaxMem: 2048MB
 * System: Ubuntu Server
 * uname: Linux ubuntu 3.5.0-17-generic #28-Ubuntu SMP Tue Oct 9 19:31:23 UTC 2012 x86_64 GNU/Linux
 * 虚拟化: 全虚拟化
@@ -105,26 +118,174 @@ Table: xm info
 基本操作
 -------
 
-* 在虚拟机停机的时候设置好maxmem.
+* 在虚拟机停机的时候设置好maxmem.该值作为实际内存分配上界.具有高优先级.
+ 当分配的值超过maxmem之后.实际分配的结果是maxmem.
  可以用`xm mem-max`设置,或者是virt-manager.
  max值只能在停机的时候设置,在运行的时候设置下次启动有效.
- 当分配的时候超过max值,虽然写入了分配的目标值,但是实际上没有分配.
- 会造成数据的非一致性.检测方法见note一节
 
 * 在虚拟机之中开启client
  因为有脚本.所以就很方便了.
- 需要注意/dev/xen/xenbus文件或者是/proc/xen/xenbus
- 自己看脚本内容修改.
 	$ sudo service mmclientd start
+ 需要注意的是xenstorage服务需要指明xenbus系统设备的路径.
+ 因为xenstorage服务实际上是封装的对xenbus的文件操作.
+ 许多虚拟机环境没有初始化好这个值.导致启动失败.
+ 所以脚本中通过变量的方式指明了路径.xenbus常见的路径是/dev/xen/xenbus或/proc/xen/xenbus.
+ 需要根据虚拟机的实际路径修改脚本中的变量.
 
 * 在服务器上运行调节程序
-	$ sudo src/mmserver
- 之后可以在控制台中看到输出.并且在build文件夹中可以看到log文件.
- log文件的命名规则是:日期_次数_[虚拟机id].log
+ 如果是通过编译源代码的方式.使用`make install`安装到系统中了.
+ 	$ sudo mmserver
+ 如果是只是编译了.而没有安装.进入编译目录.执行
+	$ sudo ./src/mmserver
+ 之后可以在控制台中看到输出.并且在当前文件夹中可以看到log文件.
+ log文件的命名规则是:日期_实验次数_[虚拟机id].log
  次数在这一天之中做试验的次数.如果做了两次试验,那么
- 次数有1和2.2是最近做的试验.所以log不会被覆盖.大胆放心的测吧.
- 有数据了不管用什么方法.gnuplot,matlab,...或者是excel.
- 就可以画图了.
+ 次数有1和2.2是最近做的试验.所以所测试的日志文件不会被覆盖.
+ 有了数据了.我们通过Mathematica绘制图型.当然.类似的工作也可以由matlab或者gnuplot完成.
+
+$\tau$值的推导与测定
+==================
+
+求解线性方程组
+------------
+
+现在先不考虑交换空间.这可以通过假设只研究总内存能够满足分配方案的情况.此时交换空间使用率为0.
+即可以满足不用考虑的条件.
+
+原方程组可以重新用矩阵表达:
+	$$AX=B$$
+
+其中$A$为
+	$\left(
+	\begin{array}{ccccc}
+	 1 & 1 & 1 &  & 1 \\
+	 1 & -1 & 0 & \cdots  & 0 \\
+	 1 & 0 & -1 &  & 0 \\
+	  & \vdots  & & \ddots &  \\
+	 1 & 0 & 0 &  & -1 \\
+	\end{array}
+	\right)$
+,B为
+	$\left(
+	\begin{array}{c}
+	 N \\
+	 \tau  \left(A_1-A_2\right) \\
+	 \tau  \left(A_1-A_3\right) \\
+	 \vdots  \\
+	 \tau  \left(A_1-A_n\right) \\
+	\end{array}
+	\right)$
+.n为方程的个数.
+X为
+	$\left(
+	\begin{array}{c}
+	 N_{\text{t1}} \\
+	 N_{\text{t2}} \\
+	 N_{\text{t3}} \\
+	 \vdots  \\
+	 N_{\text{tn}} \\
+	\end{array}
+	\right)$
+
+现,为了表述方便.左右两边同时除以$N$,使得单位化为1.即$\frac{A X}{N}=\frac{B}{N}$.
+解得X为$A^{-1} B$即
+	$A^{-1} B$
+=
+	$\left(
+	\begin{array}{ccccc}
+	 \frac{1}{n} & \frac{1}{n} & \frac{1}{n} &  & \frac{1}{n} \\
+	 \frac{1}{n} & \frac{1}{n}-1 & \frac{1}{n} & \cdots  & \frac{1}{n} \\
+	 \frac{1}{n} & \frac{1}{n} & \frac{1}{n}-1 &  & \frac{1}{n} \\
+		         & \vdots      &               & \ddots &  \\
+	 \frac{1}{n} & \frac{1}{n} & \frac{1}{n} &          & \frac{1}{n}-1 \\
+	\end{array}
+	\right)$
+	$\left(
+	\begin{array}{c}
+	 1 \\
+	 \tau  \left(A_1-A_2\right) \\
+	 \tau  \left(A_1-A_3\right) \\
+	 \vdots  \\
+	 \tau  \left(A_1-A_n\right) \\
+	\end{array}
+	\right)$
+=
+	$\left(
+	\begin{array}{c}
+	 \tau \left(A_1-\frac{\sum _{i=1}^n A_i}{n}\right)+\frac{1}{n} \\
+	 \tau  \left(A_2-\frac{\sum _{i=1}^n A_i}{n}\right)+\frac{1}{n} \\
+	 \tau  \left(A_3-\frac{\sum _{i=1}^n A_i}{n}\right)+\frac{1}{n} \\
+	 \vdots  \\
+	 \tau  \left(A_n-\frac{\sum _{i=1}^n A_i}{n}\right)+\frac{1}{n} \\
+	\end{array}
+	\right)$
+
+设A={$A_1$,$A_2$,$A3$,$\dots$,$A_n$}.为整个系统当前使用的内存的集合
+其中,当$A_i(i=1 \ldots n)$固定的时候.$\frac 1 n \sum _{i=1}^n A_i$为定值.等于$\bar{A}$
+
+所以对于$N_{ti}$可以重新表述为.所有内存的平均+当前内存和总的使用内存的平均的差值再乘以一个影响系数.
+该方程关于$\tau$是一个线性方程.线性变化的.当前内存$A_i$和$\bar A$的差值要么为正要么为负.乘上$\tau$之后都不改变极性.只会改变幅值.
+幅度范围以$\frac 1 n$为中心.上下伸展.
+
+$\tau$的值域的讨论
+-----------------
+
+当0<$\tau$<1时.和$\tau$=1相比实际上是拉小这种差异性.
+$\tau$为0的时候.所有解都取得$\frac 1 n$.$\tau$为1的时候差异性最大.
+当$\tau$>1时.实际上是拉大这种差异性.但是会因为幅度范围到达负值.也就是一些情况.会分配负的内存.所以是不可取的.
+所以$\tau$的取值范围是(0,1]
+
+现在以n=2作出图形,任意取$A_1$和$A_2$.(这里取$A_1=0$,$A_2=1$).
+
+![受$\tau$影响的结果范围](graph/tau_plot.png)
+
+可以看出这种变化趋势.
+
+$\tau$的可行解域的讨论
+---------------------
+
+为了研究不同的$\tau$值的影响.现在我们来从下面一个角度观察.
+ >  在总内存能够满足分配的情况下.需要解X的每一个元素$N_{ti}$大于等于当前申请的量$A_i$
+ >  也就是分配的结果应该大于申请的容量.
+ >  否则.会得出明明还有富余但是分配的反而无法满足提出的需求.这种异常的情况.
+
+所以可以列出条件限制方程组 $X\geq A$ 即
+$\begin{array}{cc}
+ \left\{ & 
+\begin{array}{c}
+ N_{\text{t1}}\geq A_1   \\
+ N_{\text{t2}}\geq A_2   \\
+ \vdots    \\
+ N_{\text{tn}}\geq A_n   \\
+\end{array}
+ \\
+\end{array}$
+最后根据$\tau$画出来解区域.称这样的区域为可行解域.
+
+为了方便研究.只画出在n=2时不同$\tau$的可行解域.
+
+![](graph/valid_region_0.png)
+
+这个是$\tau$等于0的时候的结果.可以看到.其中满足解的范围非常小.
+特别的.总内存为1,每台虚拟机在初始化的时候各自分配0.5.
+要求$A_1,A_2 \leq 0.5$.也就是每台虚拟机只能提出小于等于各自的初始内存.不能超过它.不然解就会违反判定条件.
+这个是非常的不合理的.而且是毫无意义的.
+
+下面再看一下$\tau$从0取到1,间隔0.2的情况
+
+![](graph/valid_region_table.png)
+
+由组图可以看出随着$\tau$的增大.可行解域也不断增大.
+具体来说.不可解的例子,如取$\tau=0.8$的图,取$A_1=0.8,A_2=0.2$.求解得到
+X={0.74,0.26}对于$A_1$就出现了异常解.
+
+当$\tau$为1的时候达到最大,满足可分配条件的全域($A_1+A_2<1$)可解
+
+综上所述:
+从理论角度上考虑,$\tau$=1是一个比较好的取值.
+
+下面的内容还未整理
+================
 
 mono测试
 --------
