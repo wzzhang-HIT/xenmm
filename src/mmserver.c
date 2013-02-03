@@ -120,6 +120,9 @@ int main()
         return 0;
     }
     signal(SIGINT, interupt_server);
+    //=============print param=============
+    printf(":: PARAM: TAU=%f\n\n",tau);
+    //=====================================
     /*LIST_FOREACH(domainu,&domain0.domainu,entries){
         s_h_watch_guest_mem(domainu, domainu_mem_change, domainu);
     }*/
