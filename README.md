@@ -7,7 +7,7 @@ author: xiehuc<xiehuc@gmail.com>
 build
 -----
 
-使用cmake构建方式,具体不明白的可以先股沟之.
+使用cmake构建方式,具体不明白的可以先google之.
 以下使用ubuntu为例.
 
 ### 安装编译包
@@ -38,7 +38,7 @@ build
 								不过其实也可以不用
 * **UNIT**					:	编译单元测试.虽然现在只有一个测试,而且已经不用再测试了.
 * **DEB**					:	开启以支持构建deb包.方便部署.
-* **TAU_RATE**           :  在编译时确定tau值.方便更改.
+* **TAX_RATE**           :  在编译时确定tau值.方便更改.
 
 例如:
     cmake .. -DTAU_RATE=0.75 -DDEB=On
