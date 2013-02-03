@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    433967,       9678]
-NotebookOptionsPosition[    430530,       9570]
-NotebookOutlinePosition[    431188,       9593]
-CellTagsIndexPosition[    431145,       9590]
+NotebookDataLength[    435334,       9720]
+NotebookOptionsPosition[    431737,       9607]
+NotebookOutlinePosition[    432395,       9630]
+CellTagsIndexPosition[    432352,       9627]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -9566,7 +9566,44 @@ redo all test under \[Tau]=1.0 condition\
 Cell["\<\
 02-03:monotest,2 machine ;50M ~ 400M\
 \>", "Subsection",
- CellChangeTimes->{{3.5688611344455423`*^9, 3.568861163972355*^9}}]
+ CellChangeTimes->{{3.5688611344455423`*^9, 3.568861163972355*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vm1", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", "\"\<../dataset/2-3_mono_2/1.log\>\"", "]"}], "[", 
+    
+    RowBox[{"[", 
+     RowBox[{"4", ";;"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vm2", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", "\"\<../dataset/2-3_mono_2/2.log\>\"", "]"}], "[", 
+    
+    RowBox[{"[", 
+     RowBox[{"4", ";;"}], "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.568864896931592*^9, 3.568864960344741*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "argt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Import\\)\[NoBreak] called with \[NoBreak]\
+\\!\\(0\\)\[NoBreak] arguments; \[NoBreak]\\!\\(1\\)\[NoBreak] or \
+\[NoBreak]\\!\\(2\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argt\\\", \
+ButtonNote -> \\\"Import::argt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.568864943224586*^9}],
+
+Cell[BoxData[
+ RowBox[{"Import", "[", "]"}]], "Output",
+ CellChangeTimes->{3.568864943227077*^9}]
+}, Open  ]]
 },
 CellGrouping->Manual,
 WindowSize->{1440, 873},
@@ -9647,7 +9684,7 @@ Cell[CellGroupData[{
 Cell[218146, 5071, 869, 25, 77, "Input"],
 Cell[219018, 5098, 48260, 1105, 287, "Output"]
 }, Open  ]],
-Cell[267293, 6206, 1058, 19, 171, "Text"],
+Cell[267293, 6206, 1058, 19, 170, "Text"],
 Cell[CellGroupData[{
 Cell[268376, 6229, 702, 15, 77, "Input"],
 Cell[269081, 6246, 17153, 307, 250, "Output"]
@@ -9679,7 +9716,12 @@ Cell[400392, 8958, 27789, 536, 336, "Output"]
 Cell[428196, 9497, 1813, 54, 165, "Input"],
 Cell[430012, 9553, 241, 5, 50, "Text"],
 Cell[430256, 9560, 133, 3, 83, "Section"],
-Cell[430392, 9565, 134, 3, 37, "Subsection"]
+Cell[430392, 9565, 134, 3, 37, "Subsection"],
+Cell[CellGroupData[{
+Cell[430551, 9572, 507, 15, 49, "Input"],
+Cell[431061, 9589, 560, 11, 23, "Message"],
+Cell[431624, 9602, 97, 2, 32, "Output"]
+}, Open  ]]
 }
 ]
 *)
