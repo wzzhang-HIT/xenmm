@@ -32,7 +32,7 @@ target_link_libraries(mmserver
 if(DEFINED TAX_RATE)
     set_target_properties(mmserver
         PROPERTIES
-        COMPILE_FLAG "-DTAX_RATE=${TAX_RATE}"
+        COMPILE_FLAGS "-DTAX_RATE=${TAX_RATE}"
         )
 endif(DEFINED TAX_RATE)
 
