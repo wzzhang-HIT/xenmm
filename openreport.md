@@ -442,11 +442,65 @@ $\tau$为空闲内存税,指定了可以回收多少空闲内存资源.
 该公式将不同虚拟机的内存用一个统一等价量来表示.使得内存之间的比较成为可能.
 通过安排不同的虚拟机的内存,使得每个虚拟机的每页股份率接近相等,来达到平衡的状态.
 
+为了更好的研究公式以及做图.我们使用`Mathematica 9`来进行数学研究.
+
 ### 4.1.3 代码编写 ###
 
 为了更加高效的完成代码的编写.使用git来进行代码的版本管理.它能够使得在非破坏性的基础之上不断扩充代码.
 
 ### 4.1.4 数据测量 ###
+
+数据测量工作.我们使用2套测试集来完成.分别是`mono`和`dacapo`[^dacapo]
+
+[^dacapo]: http://dacapobench.org/
+
+mono
+ :   指定一个范围.并且从低到高的提出内存申请.再由高到低的释放内存.
+dacapo
+ :   一套用java写成的测试集.利用真实的程序.测试结果能够比较好的体现
+     物理世界的真实负载.测试集有很多.有一些是CPU集中型的.一些是内存集中型的.
+dacapo的测试表:
+
+-----------------------------------------------------------------
+     testset     description
+------------     -------------------------------------------------
+avrora           模拟一组程序在AVR微控制器上运行
+
+batik            根据Apache的Batik产生一组SVG图像
+
+eclipse          为Eclipse IDE执行一些非GUI的jdt性能测试
+
+fop              分析和格式化XSL-FO文件,并生成PDF文件
+
+h2               执行类似于JDBCbench的内存评估,执行一组和
+                 银行程序模型相关的事务.代替了旧的hsqldb测试
+
+jython           pybench 一个Python的评估解释器.
+
+luindex          使用lucene来建立一些文件的索引;是莎士比亚
+                 和King James Bible的作品
+
+lusearch         使用lucene来做一些文本搜索;基于莎士比亚和
+                 King James Bible作品中的一些词语
+
+pmd              分析一些Java的Classes文件,检查一些源代码问题.
+
+sunflow          使用光线追踪渲染一些图片
+
+tomcat           运行一些Tomcat服务器的检索和验证网页结果的查询.
+
+tradebeans       runs the daytrader benchmark via a Jave Beans to 
+                 a GERONIMO backend with an in memory h2 as the 
+                 underlying database
+
+tradesoap        runs the daytrader benchmark via a SOAP to 
+                 a GERONIMO backend with in memory h2 
+                 as the underlying database
+
+xalan            把XML转换成HTML
+-------------------------------------------------------------------
+Table: dacapo testset
+
 
 4.2 进度安排
 -----------
@@ -454,8 +508,98 @@ $\tau$为空闲内存税,指定了可以回收多少空闲内存资源.
 4.3 预期达到的目标
 ----------------
 
+mono测试预期只是简单的证明调节的有效,也就是开启调节之后,能够看到虚拟机内存分配的变化.
+
+dacapo测试主要是要测量其具体的运行时间.希望在`高负荷`情况下.能够因为避免使用交换分区从而
+缩短执行时间.
+
 第5章 所需条件及经费
 ==================
+
+5.1 服务器实验环境以及规格
+----------------------
+
+物理机使用曙光的64核服务器.具体的信息如下:
+
+key          value
+----------   ---------------------------------
+vendor_id     AuthenticAMD
+model name    AMD Opteron(TM) Processor 6272
+cpu MHz       2100.108
+cache size    2048KB
+count         64
+-----------------------------------------------
+Table: Cpu Info
+
+
+内存信息:
+
+key            value
+-----------    ------------------------------
+Total Width    72 bits
+Data Width     64 bits
+Size           4096 MB
+Form Factor    DIMM
+Locator        DIMM11
+Bank Locator   BANK11
+Type           DDR3
+Type Detail    Synchronous
+Speed          1333 MHz
+Count          32
+Total          128GB
+----------------------------------------------
+Table: Memory Info
+
+系统使用Ubuntu 12.04 Desktop 64位.`uname -r`信息如下:
+
+Linux root3-Server 3.2.0-29-generic #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+
+xen套件使用4.1.2版本.从Ubuntu软件中心中取得.
+具体信息用`xm info`如下:
+
+key                    value
+-------------          -------------------------------------------
+host                    root3-Server
+release                 3.2.0-29-generic
+version                 #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012
+machine                 x86_64
+nr_cpus                 64
+nr_nodes                8
+cores_per_socket        16
+threads_per_core        1
+cpu_mhz                 2100
+virt_caps               hvm
+total_memory            131054
+free_memory             17
+free_cpus               0
+xen_major               4
+xen_minor               1
+xen_extra               .2
+xen_scheduler           credit
+xen_pagesize            4096
+platform_params         virt_start=0xffff800000000000
+xen_changeset           unavailable
+xen_commandline         placeholder
+cc_compiler             gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) 
+cc_compile_by           marc.deslaurier
+cc_compile_domain       ubuntu.com
+cc_compile_date         Tue Dec 11 16:32:07 UTC 2012
+xend_config_format      4
+----------------------------------------------------------
+Table: xm info
+
+5.2 虚拟机规格
+------------
+
+5台虚拟机均使用同一规格:\
+系统使用Ubuntu 12.10 Server版本.没有X环境.
+
+* CPU: 同物理机.只分配一个核心
+* Mem: 1024MB
+* MaxMem: 2048MB
+* System: Ubuntu Server
+* uname: Linux ubuntu 3.5.0-17-generic #28-Ubuntu SMP Tue Oct 9 19:31:23 UTC 2012 x86_64 GNU/Linux
+* 虚拟化: 全虚拟化
 
 第6章 预计困难和问题
 ==================
