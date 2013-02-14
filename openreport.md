@@ -340,33 +340,35 @@ proc文件系统提供两个标准文件`/proc/cpuinfo`和`/proc/meminfo`.分别
 
 一个典型的`/proc/meminfo`文件:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-MemTotal:        5076744 kB
-MemFree:          527404 kB
-Buffers:          220688 kB
-Cached:          1479788 kB
-SwapCached:            0 kB
-Active:          3374232 kB
-Inactive:         835848 kB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+key                   value    descript
+
+MemTotal:        5076744 kB    所有可用RAM大小(物理内存减去一些预留的和内核大小)
+MemFree:          527404 kB    LowFree与HighFree的总和,系统留着未使用的内存
+Buffers:          220688 kB    用来给文件做缓冲大小
+Cached:          1479788 kB    被高速缓冲存储器(CacheMemory)用的内存大小(=DiskCache-SwapCache)
+SwapCached:            0 kB    被高速缓冲存储器(CacheMemory)用的交换空间大小
+Active:          3374232 kB    在活跃使用中的缓冲或高速缓冲存储器页面文件大小
+Inactive:         835848 kB    在不经常使用中的缓冲或高速缓冲存储器页面文件的大小,可能用于其他
 Active(anon):    2515728 kB
 Inactive(anon):    12972 kB
 Active(file):     858504 kB
 Inactive(file):   822876 kB
 Unevictable:          80 kB
 Mlocked:              80 kB
-SwapTotal:             0 kB
-SwapFree:              0 kB
-Dirty:               108 kB
-Writeback:             0 kB
-AnonPages:       2509748 kB
-Mapped:           379144 kB
+SwapTotal:             0 kB    交换空间总大小
+SwapFree:              0 kB    未被使用交换空间的大小
+Dirty:               108 kB    等待被写回到磁盘的内存大小
+Writeback:             0 kB    正在被写回到磁盘的内存大小
+AnonPages:       2509748 kB    未映射页的内存
+Mapped:           379144 kB    设备和文件等映射的大小
 Shmem:             19080 kB
-Slab:             165852 kB
-SReclaimable:     128968 kB
-SUnreclaim:        36884 kB
+Slab:             165852 kB    内核数据结构缓存的大小,可以减少申请和释放内存带来的消耗
+SReclaimable:     128968 kB    可回收Slab的大小
+SUnreclaim:        36884 kB    不可回收Slab的大小
 KernelStack:        4600 kB
-PageTables:        50208 kB
-NFS_Unstable:          0 kB
+PageTables:        50208 kB    管理内存分页页面索引表的大小
+NFS_Unstable:          0 kB    不稳定页表的大小
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     2538372 kB
@@ -383,8 +385,17 @@ HugePages_Surp:        0
 Hugepagesize:       2048 kB
 DirectMap4k:      411024 kB
 DirectMap2M:     4829184 kB
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+CommitLimit
+ :  基于overcommit ratio,这是系统当前可被申请的总的内存大小.
+    该值在这里是如果严格的overcommit记录被启用了.CommitLimit计算公式是
+    CommitLimit = (vm.overcommit_ratio * Physical RAM)+Swap
+    例如.在1G物理内存和7G交换空间ratoi为30(%)的情况下CommitLimit为7.3G
+
+Committed_AS
+ :  当前系统申请的内存.已提交内存是被所有进程申请的内存的综合.即使还没有被进程'使用'.
+    一个进程可能malloc() 1G内存.但是只使用300M
 
 第4章 研究方案
 ============
