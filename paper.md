@@ -368,7 +368,7 @@ Table: dacapo testset
 
 **参数**:低负载,开启调节和不开启调节
 
-![低负载调节效果对比](tex/workload_gr3.eps)
+![低负载调节效果对比](graph/dacapo_low_bar.png)
 
 由图中得出.在低负载情况下.无论是否开启内存.对CPU影响都不大.
 都能够保持高效的运算.
@@ -378,7 +378,7 @@ Table: dacapo testset
 
 **参数**:高负载(800M),开启调节和不开启调节
 
-![高负载调节效果对比](tex/workload_gr8.eps)
+![高负载调节效果对比](graph/dacapo_high_bar.png)
 
 由图中看出.在高负载情况下.开启调节能够大幅度的减少执行时间.
 和上图对比,完全来说.是在高负载情况下.程序执行时间大幅增加.而经过调节程序.
@@ -389,7 +389,7 @@ eclipse,h2,trade beans,trade scope,xalan.
 
 为了更好的探究其中的原因.参见下图:
 
-![开启调节和不开启调节SWAP占用率](tex/workload_gr7.eps)
+![开启调节和不开启调节SWAP占用率](graph/swap_useage.png)
 
 其中蓝色的线条是不开启调节时候.SWAP的占用率.而下面不是非常明显的红色的线条
 是开启调节时候的SWAP占用率.
@@ -423,7 +423,7 @@ eclipse,h2,trade beans,trade scope,xalan.
 为了探究在开启调节后.负载机没有使用SWAP分区的原因.
 参见下图:
 
-![开启调节后所有虚拟机的内存分配](tex/workload_gr9.eps)
+![开启调节后所有虚拟机的内存分配](graph/totmem.png)
 
 该图是在调节时候调节程序记录下来的对所有内存的分配.
 等效于实验2中.5个虚拟机的总内存变化曲线的集合.
