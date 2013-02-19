@@ -30,10 +30,19 @@ target_link_libraries(mmserver
     xenctrl
     )
 if(DEFINED TAX_RATE)
-    set_target_properties(mmserver
-        PROPERTIES
-        COMPILE_FLAGS "-DTAX_RATE=${TAX_RATE}"
-        )
+    if(TAX_RATE STREQUAL "AUTO")
+        set_target_properties(mmserver
+            PROPERTIES
+            COMPILE_FLAGS "-DAUTO_TAX_RATE=1"
+            )
+        message("[TAX_RATE = AUTO]")
+    else(TAX_RATE STREQUAL "AUTO")
+        set_target_properties(mmserver
+            PROPERTIES
+            COMPILE_FLAGS "-DTAX_RATE=${TAX_RATE}"
+            )
+        message("[TAX_RATE = ${TAX_RATE}]")
+    endif(TAX_RATE STREQUAL "AUTO")
 endif(DEFINED TAX_RATE)
 
 install(TARGETS mmserver DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
