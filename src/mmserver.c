@@ -99,7 +99,7 @@ static void build_linear_equ()
         len++;
     }
     Total = 1024*1024*len;
-    Amax/=N;
+    Amax/=Total;
     Amean/=len;
 #if AUTO_TAX_RATE
     Tau = sqrt(1-pow(1-Amax,2));
