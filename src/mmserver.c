@@ -12,6 +12,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <signal.h>
+#include <math.h>
 #include "type.h"
 #include "mmstore.h"
 #include "mmctrl.h"
@@ -48,17 +49,17 @@ void vector_print(int len)
 #endif
 static void build_linear_equ()
 {
+    int i;
+    memset(_x_,sizeof(_x_),0);
+#if SOLVE_EQU
     memset(_a_,sizeof(_a_),0);
     memset(_b_,sizeof(_b_),0);
-    memset(_x_,sizeof(_x_),0);
     int len = 0;
     double _N_ = 0;
     double _A0_ = 0;
     Domain* d;
     double _Ai_;
-    int i;
     mem_t total;
-
     LIST_FOREACH(d,&domain0.domainu,entries){
         total = (abs(d->tg_mem - d->tot_mem)> 70*1024)?d->tot_mem:d->tg_mem;
         _N_ += (double)d->tg_mem;
@@ -82,6 +83,36 @@ static void build_linear_equ()
     vector_print(len);
 #endif
     solve_line_equations(_a_, _b_, len, _x_);
+#else
+    double Amax = 0;
+    double Amean = 0;
+    double Total;
+    double Tau;
+    int len = 0;
+    Domain* d;
+    LIST_FOREACH(d,&domain0.domainu,entries){
+        mem_t total = (abs(d->tg_mem - d->tot_mem)> 70*1024)?d->tot_mem:d->tg_mem;
+        double A=(double)(total-d->free_mem);
+        _x_[len]=A;
+        if(A>Amax) Amax=A;
+        Amean+=A;
+        len++;
+    }
+    Total = 1024*1024*len;
+    Amax/=N;
+    Amean/=len;
+#if AUTO_TAX_RATE
+    Tau = sqrt(1-pow(1-Amax,2));
+#else
+    Tau = tau;
+#endif
+    double Part = Total/len-Tau*Amean;
+    i=0;
+    LIST_FOREACH(d,&domain0.domainu,entries){
+        _x_[i]=Part+Tau*_x_[i];
+        i++;
+    }
+#endif
     i=0;
     LIST_FOREACH(d,&domain0.domainu,entries){
         printf("%d:[ tg:%llu use:%llu free:%llu ]",d->id,d->tg_mem,d->tot_mem-d->free_mem,d->free_mem);
