@@ -346,8 +346,8 @@ key                   value    descript
 MemTotal:        5076744 kB    所有可用RAM大小(物理内存减去一些预留的和内核大小)
 MemFree:          527404 kB    LowFree与HighFree的总和,系统留着未使用的内存
 Buffers:          220688 kB    用来给文件做缓冲大小
-Cached:          1479788 kB    被高速缓冲存储器(CacheMemory)用的内存大小(=DiskCache-SwapCache)
-SwapCached:            0 kB    被高速缓冲存储器(CacheMemory)用的交换空间大小
+Cached:          1479788 kB    被CacheMemory用的内存大小(=DiskCache-SwapCache)
+SwapCached:            0 kB    被CacheMemory用的交换空间大小
 Active:          3374232 kB    在活跃使用中的缓冲或高速缓冲存储器页面文件大小
 Inactive:         835848 kB    在不经常使用中的缓冲或高速缓冲存储器页面文件的大小,可能用于其他
 Active(anon):    2515728 kB
