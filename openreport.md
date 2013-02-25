@@ -226,7 +226,7 @@ target和tot的区别是:target是仲裁端写入客户端,tot是客户端写入
 -----------------------------------------------------------------------
 function        prototype                              descript
 ---------       -----------                            -------------
-xs_daemon_open  struct xs_handle* \xs_daemon_open();   打开Domain-0的句柄
+xs_daemon_open  struct xs_handle* xs_daemon_open();   打开Domain-0的句柄
 
 xs_domain_open  struct xs_handle* xs_domain_open();    打开Domain-U的句柄
 

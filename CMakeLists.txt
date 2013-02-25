@@ -2,10 +2,13 @@ project(xenmm)
 cmake_minimum_required(VERSION 2.8)
 
 option(ONLY_CLIENT Off)
+option(ONLY_DOCUMENT Off)
 
+if( NOT ONLY_DOCUMENT)
 add_subdirectory(script)
 add_subdirectory(src)
 add_subdirectory(test)
+endif( NOT ONLY_DOCUMENT)
 
 option(UNIT "Build unit test" Off)
 if(UNIT)
@@ -23,3 +26,5 @@ if(DEB)
     set(CPACK_PACKAGE_DESCRIPTION "the xen memory manage utils")
     include(CPack)
 endif(DEB)
+
+add_subdirectory(notebook)
