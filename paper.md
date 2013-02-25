@@ -250,15 +250,11 @@ $\tau$的可行解域的讨论
  >  否则.会得出明明还有富余但是分配的反而无法满足提出的需求.这种异常的情况.
 
 所以可以列出条件限制方程组 $X\geq A$ 即
-$\begin{array}{cc}
- \left\{ & 
-\begin{array}{c}
+$\begin{array}{c}
  N_{\text{t1}}\geq A_1   \\
  N_{\text{t2}}\geq A_2   \\
  \vdots    \\
  N_{\text{tn}}\geq A_n   \\
-\end{array}
- \\
 \end{array}$
 最后根据$\tau$画出来解区域.称这样的区域为可行解域.
 

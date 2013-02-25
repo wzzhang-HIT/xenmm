@@ -28,6 +28,7 @@ target_link_libraries(mmserver
     util
     xenstore
     xenctrl
+    m
     )
 if(DEFINED TAX_RATE)
     if(TAX_RATE STREQUAL "AUTO")
