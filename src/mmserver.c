@@ -21,6 +21,7 @@
 
 #define tau tax_rate
 static int prog_quit = 0;
+static double old_tau = 0.0;
 #if 0
 static void domainu_mem_change(void* data)
 {
@@ -106,7 +107,9 @@ static void build_linear_equ()
     Tau = (Amax-1.0/len)/(Amax-Amean/Total);
     Tau = Tau * 0.8 + 0.2;
     Tau = (Tau<0)?0:((Tau>1)?1:Tau);
+    Tau = Tau>old_tau?Tau:old_tau-(old_tau-Tau)/5;
     printf("Tau:%lf\n",Tau);
+    old_tau = Tau;
 #else
     Tau = tau;
 #endif
