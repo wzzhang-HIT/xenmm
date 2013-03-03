@@ -102,7 +102,10 @@ static void build_linear_equ()
     Amax/=Total;
     Amean/=len;
 #if AUTO_TAX_RATE
-    Tau = sqrt(1-pow(1-Amax,2));
+    //Tau = sqrt(1-pow(1-Amax,2));
+    Tau = (Amax-1/len)/(Amax-Amean/Total);
+    Tau = Tau * 0.9 + 0.1;
+    Tau = (Tau<0)?0:((Tau>1)?1:Tau);
 #else
     Tau = tau;
 #endif

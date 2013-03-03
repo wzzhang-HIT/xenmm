@@ -27,4 +27,4 @@ if(DEB)
     include(CPack)
 endif(DEB)
 
-add_subdirectory(notebook)
+#add_subdirectory(notebook)
