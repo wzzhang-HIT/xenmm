@@ -103,9 +103,10 @@ static void build_linear_equ()
     Amean/=len;
 #if AUTO_TAX_RATE
     //Tau = sqrt(1-pow(1-Amax,2));
-    Tau = (Amax-1/len)/(Amax-Amean/Total);
-    Tau = Tau * 0.9 + 0.1;
+    Tau = (Amax-1.0/len)/(Amax-Amean/Total);
+    Tau = Tau * 0.8 + 0.2;
     Tau = (Tau<0)?0:((Tau>1)?1:Tau);
+    printf("Tau:%lf\n",Tau);
 #else
     Tau = tau;
 #endif
@@ -118,9 +119,9 @@ static void build_linear_equ()
 #endif
     i=0;
     LIST_FOREACH(d,&domain0.domainu,entries){
-        printf("%d:[ tg:%llu use:%llu free:%llu ]",d->id,d->tg_mem,d->tot_mem-d->free_mem,d->free_mem);
+        printf("%d:[ tg:%llu use:%llu free:%llu ]\n",d->id,d->tg_mem,d->tot_mem-d->free_mem,d->free_mem);
     }
-    printf("\n[");
+    printf("Target:[");
     for(i=0;i<len;i++){
         printf(" %llu ",(mem_t)_x_[i]);
     }
