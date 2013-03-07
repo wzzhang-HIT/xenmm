@@ -15,9 +15,18 @@ unsigned long rand_ul()
 }
 int unit_expand(char u)
 {
-    if(u=='k'||u=='K') return 1;
-    if(u=='m'||u=='M') return 1024;
-    return 1;
+    switch(u){
+        case 'k':
+        case 'K':
+            return 1;
+        case 'm':
+        case 'M':
+            return 1024;
+        case 'G':
+            return 1024*1024;
+        default:
+            return 1;
+    }
 }
 static void * trunks[MAX_PAGES];
 static ul page_num = 0;
