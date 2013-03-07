@@ -22,6 +22,7 @@
 #define tau tax_rate
 static int prog_quit = 0;
 static double old_tau = 0.0;
+static double total_mem = 0.0;
 #if 0
 static void domainu_mem_change(void* data)
 {
@@ -48,6 +49,21 @@ void vector_print(int len)
     }
 }
 #endif
+int unit_expand(char u)
+{
+    switch(u){
+        case 'k':
+        case 'K':
+            return 1;
+        case 'm':
+        case 'M':
+            return 1024;
+        case 'G':
+            return 1024*1024;
+        default:
+            return 1;
+    }
+}
 static void build_linear_equ()
 {
     int i;
@@ -99,7 +115,7 @@ static void build_linear_equ()
         Amean+=A;
         len++;
     }
-    Total = 1024*1024*len;
+    Total = total_mem>1?:1024*1024*len;
     Amax/=Total;
     Amean/=len;
 #if AUTO_TAX_RATE
@@ -107,7 +123,7 @@ static void build_linear_equ()
     Tau = (Amax-1.0/len)/(Amax-Amean/Total);
     Tau = Tau * 0.8 + 0.2;
     Tau = (Tau<0)?0:((Tau>1)?1:Tau);
-    Tau = Tau>old_tau?Tau:old_tau-(old_tau-Tau)/5;
+    Tau = Tau>old_tau?Tau:old_tau-(old_tau-Tau)/10;
     printf("Tau:%lf\n",Tau);
     old_tau = Tau;
 #else
@@ -141,10 +157,28 @@ static void interupt_server(int sig)
 {
     prog_quit = 1;
 }
-int main()
+int main(int argc,char** argv)
 {
     if(s_h_init()==MM_FAILED){
         return -1;
+    }
+    char ch;
+    char* unit;
+    while((ch = getopt(argc, argv, "N:"))!= 0){
+        switch(ch){
+            case 'N':
+                total_mem = strtoul(optarg, &unit, 10);
+                total_mem*= unit?unit_expand(*unit):1024*1024;
+                break;
+            default:
+                fprintf(stderr, "undefined argument\n");
+                return 0;
+                break;
+        }
+    }
+    if(total_mem==0.0){
+        fprintf(stderr, "-N is required\n");
+        return 0;
     }
     ctrl_init();
     s_h_list_domains();
