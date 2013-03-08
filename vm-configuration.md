@@ -26,9 +26,10 @@ ubuntu_4   12.10      hvm        /dev/dm-3
 ubuntu_5   12.10      hvm        /dev/dm-4
 ubuntu_6   12.10      hvm        /dev/dm-5
 ubuntu_7   12.10      hvm        /dev/dm-6
-ubuntu_8   12.10      hvm        /dev/dm-7
+ubuntu_8   12.10      hvm        /dev/mapper/vg-ubuntu_8
 centos1    6.3        pvm        /dev/mapper/vg-centos_1(/dev/dm-8)
 fedora1    15         pvm        /dev/mapper/vg-fedora_1(/dev/dm-9)
+fedora2    15         pvm        /dev/mapper/vg-fedora_2
 
 **********************************
 
@@ -44,3 +45,10 @@ fedora1    15         pvm        /dev/mapper/vg-fedora_1(/dev/dm-9)
 
 测试pvm安装比较困难。
 其中fedora 16/17 安装失败。
+
+command
+-------
+
+虚拟机的克隆使用`virt-clone`命令
+
+    #virt-clone -o origin -n target -f file

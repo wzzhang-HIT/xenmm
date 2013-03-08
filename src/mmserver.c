@@ -115,7 +115,7 @@ static void build_linear_equ()
         Amean+=A;
         len++;
     }
-    Total = total_mem>1?:1024*1024*len;
+    Total = total_mem>1?total_men:1024*1024*len;
     Amax/=Total;
     Amean/=len;
 #if AUTO_TAX_RATE
@@ -164,15 +164,11 @@ int main(int argc,char** argv)
     }
     char ch;
     char* unit;
-    while((ch = getopt(argc, argv, "N:"))!= 0){
+    while((ch = getopt(argc, argv, "N:"))!= -1){
         switch(ch){
             case 'N':
                 total_mem = strtoul(optarg, &unit, 10);
                 total_mem*= unit?unit_expand(*unit):1024*1024;
-                break;
-            default:
-                fprintf(stderr, "undefined argument\n");
-                return 0;
                 break;
         }
     }
