@@ -23,6 +23,8 @@
 static int prog_quit = 0;
 static double old_tau = 0.0;
 static double total_mem = 0.0;
+static double reverse_mem = 0.0;
+static double xi_ = 0.0;
 #if 0
 static void domainu_mem_change(void* data)
 {
@@ -115,13 +117,13 @@ static void build_linear_equ()
         Amean+=A;
         len++;
     }
-    Total = total_mem>1?total_men:1024*1024*len;
+    Total = total_mem>1?total_mem:1024*1024*len;
     Amax/=Total;
     Amean/=len;
 #if AUTO_TAX_RATE
     //Tau = sqrt(1-pow(1-Amax,2));
-    Tau = (Amax-1.0/len)/(Amax-Amean/Total);
-    Tau = Tau * 0.8 + 0.2;
+    Tau = (xi_ + Amax-1.0/len)/(Amax-Amean/Total);
+    //Tau = Tau * 0.8 + 0.2;
     Tau = (Tau<0)?0:((Tau>1)?1:Tau);
     Tau = Tau>old_tau?Tau:old_tau-(old_tau-Tau)/10;
     printf("Tau:%lf\n",Tau);
@@ -157,6 +159,15 @@ static void interupt_server(int sig)
 {
     prog_quit = 1;
 }
+static void show_help()
+{
+    printf("mmserver -N :Total -f :Reverse\n"
+            "\t:Total   the total memory\n"
+            "\t:Reverse the reversed free memory\n"
+            "example:\n"
+            "\tmmserver -N 5G -f 100M\n"
+          );
+}
 int main(int argc,char** argv)
 {
     if(s_h_init()==MM_FAILED){
@@ -164,11 +175,19 @@ int main(int argc,char** argv)
     }
     char ch;
     char* unit;
-    while((ch = getopt(argc, argv, "N:"))!= -1){
+    while((ch = getopt(argc, argv, "N:f:h"))!= -1){
         switch(ch){
             case 'N':
                 total_mem = strtoul(optarg, &unit, 10);
                 total_mem*= unit?unit_expand(*unit):1024*1024;
+                break;
+            case 'f':
+                reverse_mem = strtoul(optarg,&unit,10);
+                reverse_mem*= unit?unit_expand(*unit)<##>:1024;
+                break;
+            case 'h':
+                show_help();
+                return 0;
                 break;
         }
     }
@@ -176,6 +195,11 @@ int main(int argc,char** argv)
         fprintf(stderr, "-N is required\n");
         return 0;
     }
+    if(reverse_mem == 0.0){
+        fprintf(stderr, "-f is required\n")<##>;
+        return 0;
+    }
+    xi_ = reverse_mem/total_mem;
     ctrl_init();
     s_h_list_domains();
     if(LIST_EMPTY(&domain0.domainu)){
