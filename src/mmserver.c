@@ -183,7 +183,7 @@ int main(int argc,char** argv)
                 break;
             case 'f':
                 reverse_mem = strtoul(optarg,&unit,10);
-                reverse_mem*= unit?unit_expand(*unit)<##>:1024;
+                reverse_mem*= unit?unit_expand(*unit):1024;
                 break;
             case 'h':
                 show_help();
