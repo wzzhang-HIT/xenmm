@@ -37,9 +37,10 @@ int main()
         unsigned long long free = strtoull(ptr,NULL,10);
         //ptr = strstr(ptr,"Buffers:")+strlen("Buffers:");
         //unsigned long long buffer = strtoull(ptr,NULL,10);
-        ptr = strstr(ptr,"Cached:")+strlen("Cached:");
-        unsigned long long cached = strtoull(ptr,NULL,10);
-        mem.free_mem = free+cached;
+        //ptr = strstr(ptr,"Cached:")+strlen("Cached:");
+        //unsigned long long cached = strtoull(ptr,NULL,10);
+        //mem.free_mem = free+cached;
+        mem.free_mem = free;
         printf("tot:%llu,free:%llu\n",mem.tot_mem,mem.free_mem);
         s_g_write_mem(mem);
         close(fd);
