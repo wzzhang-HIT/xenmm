@@ -178,11 +178,11 @@ int main(int argc,char** argv)
     while((ch = getopt(argc, argv, "N:f:h"))!= -1){
         switch(ch){
             case 'N':
-                total_mem = strtoul(optarg, &unit, 10);
+                total_mem = strtod(optarg, &unit);
                 total_mem*= unit?unit_expand(*unit):1024*1024;
                 break;
             case 'f':
-                reverse_mem = strtoul(optarg,&unit,10);
+                reverse_mem = strtod(optarg,&unit);
                 reverse_mem*= unit?unit_expand(*unit):1024;
                 break;
             case 'h':
@@ -196,7 +196,7 @@ int main(int argc,char** argv)
         return 0;
     }
     if(reverse_mem == 0.0){
-        fprintf(stderr, "-f is required\n")<##>;
+        fprintf(stderr, "-f is required\n");
         return 0;
     }
     xi_ = reverse_mem/total_mem;
