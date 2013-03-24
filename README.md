@@ -1,7 +1,7 @@
 xenmm
 ======
 
-xen memory management project
+xen memory management readme file
 author: xiehuc<xiehuc@gmail.com>
 
 build
@@ -10,14 +10,14 @@ build
 使用cmake构建方式,具体不明白的可以先google之.
 以下使用ubuntu为例.
 
-### 安装编译包
+### 安装编译包 ###
 
 	$ sudo apt-get install cmake 
 	$ sudo apt-get install xenstore-util libxen-dev
 
 其他编译开发包请自行安装.
 
-### 编译
+### 编译 ###
 
 	$ mkdir build
 	$ cd build
@@ -28,7 +28,7 @@ build
 编译的时候可能会提示有一些开发包没有安装.需要自行安装.  
 大概这一步不会出现其他问题.  
 
-### 编译选项
+### 编译选项 ###
 
 可以使用`ccmake ..`来查看支持哪些选项.然后来控制开关等等.按c配置,q退出.  
 再用`make`来编译  
@@ -53,7 +53,7 @@ distribute
 * 源代码部署
 * 二进制包部署
 
-### 同步到服务器上
+### 同步到服务器上 ###
 
 在服务器上部署源代码方式,方便直接修正编译运行.不必再来回复制.
 这里使用git来完成.对git不熟悉的请自行股沟之.
@@ -74,7 +74,7 @@ _如果是已经有origin了.可以先`git remote rm origin`删除._
 
 4. 	在服务器上编译,测试运行.
 
-### 编译二进制包直接安装
+### 编译二进制包直接安装 ###
 
 虽然也可以使用git+服务器中介.从虚拟机上pull代码.再编译.  
 不过虚拟机10台阿10台,一个一个编译太蛋疼了.所以使用包的方式就很快捷了.  
@@ -126,7 +126,7 @@ useage
 benchmark
 ---------
 
-### mono test method
+### mono test method ###
 
 1. 在guest端安装deb.见上文.
 2. 在host开启mm_server调节程序.最好是在build文件夹用
@@ -145,7 +145,7 @@ benchmark
    如果对mathematica比较熟悉.可以使用notebook文件夹里面已经写好的样本.
    里面也有已经画出来的图,注意不要覆盖了.用追加的方式贴记录.
 
-### dacapo test method
+### dacapo test method ###
 
 dacapo测试,需要测以下的4组数据.其中每组数据都是时间.
  **低负载+无调节**,**低负载+开启调节**,**高负载+无调节**,**高负载+开启调节**
@@ -156,12 +156,64 @@ dacapo测试,需要测以下的4组数据.其中每组数据都是时间.
 将所有的测试的消耗时间汇总之后画图.就可以得到workload.nb中的结果了.
 因为dacapo的输出比较乱.推荐手工收集数据.
 
+### phoronix-test-suite method ###
 
+在多虚拟机测试环节主要使用了phoronix-test-suite测试套件.该测试套件提供了很多基准测试.
+可以用 `$ phoronix-test-suite list-tests`查看.
+
+安装一个测试则是用 `$phoronix-test-suite install`
+
+phoronix-test-suite默认使用交互的方式进行测试,但是不是我们需要的.所以我们应该先用
+`$ phoronix-test-suite batch-setup`进行设置.然后再用`$ phoronix-test-suite batch-run`
+进行自动运行.
+
+为了延长一个测试的运行时间.需要使用`TOTAL_LOOP_COUNT`环境变量.例如:
+
+    $ TOTAL_LOOP_COUNT=10 phoronix-test-suite batch-run nginx
+
+或者
+
+    $ export TOTAL_LOOP_COUNT=10
+    $ phoronix-test-suite batch-run nginx
+
+这样即是运行10次,每次运行的时间phoronix-test-suite会提示,所以可以估算出来大概的运行时间.
+因为phoronix-test-suite运行的时候不能使用`Ctrl+C`强制结束.不能得到结果.所以采取的策略是
+首先手工确定单次运行最长时间为整个测试的运行时间.然后设置其他测试运行的时间稍微多一些.让所有
+测试正常结束.其他测试最后的一组测试成绩或者几组测试成绩因为是在最长测试结束之后得到的成绩.所以
+是无效的.我们只需要舍弃这些结果即可.
+
+为了同时进行swap使用量的记录.可以使用如下的语法:
+
+    $ mm_util_swap & phoronix-test-suite batch-run nginx
+
+`&`符号是后台运行.相关的命令可以参考`bg`,`fg`,`jobs`,`Ctrl+Z`的 man 页面.
+等运行结束之后.需要使用
+
+    $ fg 1
+      Ctrl+Z
+
+结束swap记录程序.
+不过我经常忘记结束swap记录.所以这里还是不推荐.推荐下面使用tmux的方法.
+
+dacapo的循环运行可以使用`./dacapo_test.sh`脚本.例如:
+
+    $ ./dacapo_test.sh h2 10
+    $ ./dacapo_test.sh all 
+    $ ./dacapo_test.sh 'h2 tradebeans' 5
+
+最后,推荐学习一下`tmux`终端服用工具.会很方便的.
+相关的内容有`Ctrl+b [`,`Ctrl+b c`,`Ctrl+b n`
+
+一般我测试使用tmux分配三个或者两个终端:
+
+   tty1: mm_test_static 100M (optional)
+   tty2: mm_util_swap 
+   tty3: phoronix-test-suite batch-run nginx
 
 note
 ----
 
-### 源码文件夹的组织方式
+### 源码文件夹的组织方式 ###
 
 build		:	cmake编译
 notebook	:	mathematica实验nootbook
@@ -172,12 +224,12 @@ src			:	源文件.包含mmserver,mmclient程序
 test		:	测试文件,包含mm_test_static,mm_test_mono
 unit		:	单元测试
 
-### mm_test_mono
+### mm_test_mono ###
 
 这个程序可以申请内存,从low到high,再从high到low
 	mm_test_mono 50M 300M
 
-### mm_test_static
+### mm_test_static ###
 
 因为就算mono比较好.还是有些太快了.
 又或者需要手工设置每个虚拟机的内存.
@@ -188,7 +240,7 @@ unit		:	单元测试
   这部分内存就会因为内存替换算法被替换到交换空间.
   达不到我们预期的效果了.
 
-### 记录的说明
+### 记录的说明 ###
 
 记录是每个VM有3个数值,total,used,free.
 其中total是从host视角看的.
@@ -196,7 +248,7 @@ free是从虚拟机视角看的.
 而used是tot-free.其中tot是从虚拟机视角看的总内存.
 其中tot!=total,并且他们相差大概有50M左右.是正常范围.
 
-### 不一致性的检测方法
+### 不一致性的检测方法(过时) ###
 
 当出现不一致的时候,虚拟机视角的tot不变.而物理机视角的total值不断增加.
 造成两者的不一致.这个是程序造成的.但是如果程序不这么写的话.

@@ -1,0 +1,1 @@
+BOOT_IMAGE=/vmlinuz-3.5.0-17-generic root=/dev/mapper/ubuntu-root ro

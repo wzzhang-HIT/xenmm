@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--Phoronix Test Suite v4.0.0 (Suldal) [ http://www.phoronix-test-suite.com/ ]-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" font-family="sans-serif" viewbox="0 0 244 217" width="244" height="217">
+  <rect x="1" y="1" width="242" height="216" fill="#FEFEFE" stroke="#757575" stroke-width="1"/>
+  <rect x="1" y="1" width="243" height="216" fill="#FEFEFE" stroke="#757575" stroke-width="1"/>
+  <a xlink:href="http://www.phoronix-test-suite.com/" xlink:show="new">
+    <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAqCAQAAACOoRSBAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAHSgAAB0oBjtiwKgAAAAd0SU1FB9oLEQAQBdqsctwAAAACYktHRAD/h4/MvwAABL1JREFUWMPtmH1oVWUcx7+fzbn03tymKy1xWm7DmTjb+cOsEEUwwtHSRF2RumtLehFjhlKJIIxyTCEVX9aLymKt3DDbRm4LdaRIpilUECUirLKSUP9pm9Pu6Y+dnZ17d8+951yFhHy+XO5znvN7fs/nefs9D0fymzaqU53q1F+6TdM2mZb+H4ChuaHyUHmoPPTK7Qr4ecjs0x3AO4B3AG8R4ChN03y9oBJNVeZNAObpRW3VbhfVaG4ygIU6J1OmwtbP1FnlJQH4gP60PbhprV/AoH6K4TQsUyeU5gtwdkK4JADz4jgN64bu8QyY4QnPJ+BYF6dhx//wGIBpERoqSWq0aoVlqlt/u6hLFX4AexxOL2mVJGmI1uuKDRnWpSjAWB3KlxxvZ/rdxZMpoIACpkTZbHY4fTbq3WoHypqoERysXOXY+Tf8h5ki0+hTs9MiPUGfFzsAEgMW2vkFNwHY6LSosF1udvFRa1s8n2CKc5Vtv/3kVgG2JgwbA40eiBjB0zoboR+VI+mqjd6sPI0ZpHQN8Qf4i+Xuqzjd/MGy6fQQZt6KG1z64M8rwztgj1X1gziADZZNr6dAfTFhDAzLVLlXwP4JqY4DWG/ZXJdUnRAwXV0JQ3VYpp72Bmh6ADxp2fwh6XW7xv1xamz1MIrXbhVgim1zSNIc+2lV3O2ZonQFlRmlDC1wRID5boDGa8Z1o9foNXq9AFbaNi87uhRWT5JXwNG2vw9dASusnJkYMN/RY0Wctqb2JonYv43abh7QecupsspGOhb6/qQA+9us8wO4KcbFqVX/OK4RA+ldB2KX1vvEO+NcMt4Bu3XZoSvqijrQJkU0ciziKmbqmrpkaqI9Ql2ucu7kND+A8WPWnEHj8E3MszhyCuPrbfcw4w/QVE7Mqdoy6MrgB7A13kniDbCv8ZVKdV1N9+poxELwDvhS/LM4FuAFtTt0SB/rVT0UefOImTJVpHJt0jbtUrZVtlvbXLVOMxVw3GYOl5llZpkZMiXDNLqNbqPbqDfeNMwisygCsOq/+Ja3wpFfkCAmVd+uHySjABGSSNIZLnl3Kx+ADKWDI6yQOO0ZqIBQVMlOjtPCcb6IW6+JIyx1PD/JbDf0AcBhfClxkky+lwj0mTNBkhghMUYilRGSRJZEUGIYowkyBJHK8P4GONc/F9xnecmXeIL1BCSJ5ZRJBOjzGySFLDKYwg6CEmmMcgNsk7gq8TvbOcqDjOMMIU5JHKCORwhRyxY2SlxmO0fIZQZVDOWCxNfY3eechJjKfmooZiStLCOFtTRQKElkc5FpEnfTJrGXCayklFIOM4PH2UM9jxIT8Ao7KLQaWM5i3mGWRCPj+IwMiZ8lid8si6WUMp1KRA43eHjApTWCu2injQZSOM8iiVmstdd5gFOsZDhNEjWMZwVLmMgOiQZa6GCn+xRL4juJMhZRwUKJEwQ4SIbEt5LERctiGUuYTqXEBt5ntaIBq8m3S95jHrNYF7EOf0W0SByzAXdK7CMrcjVet1TFXdRZVQ9JLGQe0MI+NkjUEERMoo0mHrMsnqGYaaxhPJUSn2IfiByVEGkcZAulTKaWZrIRHcyUJJ6jjmZKJBr5iHrGsohiiXaeIkAz1ZT0+/oXaiARbiWMdiQAAAAASUVORK5CYII=" x="31" y="68" width="80" height="42"/>
+  </a>
+  <line x1="142" y1="113" x2="193" y2="113" stroke="#BABABA" stroke-width="176" stroke-dasharray="51,51"/>
+  <rect x="193" y="25" width="51" height="176" fill="#949494"/>
+  <line x1="97" y1="153" x2="97" y2="201" stroke="#949494" stroke-width="193" stroke-dasharray="16,16"/>
+  <line x1="142" y1="113" x2="244" y2="113" stroke="#757575" stroke-width="176" stroke-dasharray="1,50"/>
+  <rect x="1" y="1" width="242" height="25" fill="#231f20"/>
+  <text x="5" y="19" font-size="17" fill="#FEFEFE" text-anchor="start">2013-03-22-0759</text>
+  <line x1="1" y1="25" x2="243" y2="25" stroke="#757575" stroke-width="1"/>
+  <a xlink:href="http://openbenchmarking.org/test/pts/nginx-1.1.0" xlink:show="new">
+    <text x="140" y="165" font-size="10" fill="#065695" font-weight="bold" text-anchor="end">NGINX Benchmark</text>
+  </a>
+  <text x="140" y="181" font-size="10" fill="#065695" font-weight="bold" text-anchor="end">Standard Error</text>
+  <text x="140" y="197" font-size="10" fill="#065695" font-weight="bold" text-anchor="end">Standard Deviation</text>
+  <text x="170.5" y="149" font-size="10" fill="#065695" font-weight="bold" text-anchor="end" transform="rotate(90 170.5 149)">2013-03-22 07:59</text>
+  <text x="167.5" y="166" font-size="10" fill="#065695" text-anchor="middle" xlink:title="STD Dev: 1.51%;  STD Error: 56.47">6488.57</text>
+  <text x="167.5" y="182" font-size="10" fill="#065695" text-anchor="middle" xlink:title="">56.47</text>
+  <text x="167.5" y="198" font-size="10" fill="#065695" text-anchor="middle" xlink:title="">1.51%</text>
+  <line x1="97" y1="153" x2="97" y2="201" stroke="#949494" stroke-width="193" stroke-dasharray="1,15"/>
+  <rect x="0" y="201" width="244" height="16" fill="#231f20"/>
+  <a xlink:href="http://www.phoronix-test-suite.com/" xlink:show="new">
+    <text x="242" y="214" font-size="10" fill="#FFFFFF" text-anchor="end" xlink:show="new">PHORONIX-TEST-SUITE.COM</text>
+  </a>
+</svg>

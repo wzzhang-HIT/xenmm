@@ -1,0 +1,59 @@
+Slot:	00:00.0
+Class:	Host bridge [0600]
+Vendor:	Intel Corporation [8086]
+Device:	440FX - 82441FX PMC [Natoma] [1237]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Qemu virtual machine [1100]
+Rev:	02
+
+Slot:	00:01.0
+Class:	ISA bridge [0601]
+Vendor:	Intel Corporation [8086]
+Device:	82371SB PIIX3 ISA [Natoma/Triton II] [7000]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Qemu virtual machine [1100]
+
+Slot:	00:01.1
+Class:	IDE interface [0101]
+Vendor:	Intel Corporation [8086]
+Device:	82371SB PIIX3 IDE [Natoma/Triton II] [7010]
+SVendor:	XenSource, Inc. [5853]
+SDevice:	Device [0001]
+ProgIf:	80
+Driver:	ata_piix
+
+Slot:	00:01.2
+Class:	USB controller [0c03]
+Vendor:	Intel Corporation [8086]
+Device:	82371SB PIIX3 USB [Natoma/Triton II] [7020]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Qemu virtual machine [1100]
+Rev:	01
+Driver:	uhci_hcd
+
+Slot:	00:01.3
+Class:	Bridge [0680]
+Vendor:	Intel Corporation [8086]
+Device:	82371AB/EB/MB PIIX4 ACPI [7113]
+SVendor:	Red Hat, Inc [1af4]
+SDevice:	Qemu virtual machine [1100]
+Rev:	01
+Module:	i2c-piix4
+
+Slot:	00:02.0
+Class:	VGA compatible controller [0300]
+Vendor:	Cirrus Logic [1013]
+Device:	GD 5446 [00b8]
+SVendor:	XenSource, Inc. [5853]
+SDevice:	Device [0001]
+Module:	cirrusfb
+
+Slot:	00:03.0
+Class:	Unassigned class [ff80]
+Vendor:	XenSource, Inc. [5853]
+Device:	Xen Platform Device [0001]
+SVendor:	XenSource, Inc. [5853]
+SDevice:	Xen Platform Device [0001]
+Rev:	01
+Driver:	xen-platform-pci
+

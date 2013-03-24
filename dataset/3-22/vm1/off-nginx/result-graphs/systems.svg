@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--Phoronix Test Suite v4.0.0 (Suldal) [ http://www.phoronix-test-suite.com/ ]-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" font-family="sans-serif" viewbox="0 0 287 386" width="287" height="386">
+  <rect x="1" y="1" width="285" height="385" fill="#FEFEFE" stroke="#757575" stroke-width="1"/>
+  <rect x="2" y="1" width="284" height="38" fill="#231f20" stroke="#757575" stroke-width="1"/>
+  <text x="143.5" y="19" font-size="17" fill="#FEFEFE" text-anchor="middle">2013-03-22-0741</text>
+  <a xlink:href="http://www.phoronix-test-suite.com/" xlink:show="new">
+    <text x="4" y="36" font-size="8" fill="#FEFEFE" text-anchor="start" xlink:show="new">PHORONIX-TEST-SUITE.COM</text>
+  </a>
+  <a xlink:href="http://www.phoronix-test-suite.com/" xlink:show="new">
+    <text x="283" y="36" font-size="8" fill="#FEFEFE" text-anchor="end" xlink:show="new">Phoronix Test Suite 4.0.0</text>
+  </a>
+  <line x1="0" y1="39" x2="287" y2="39" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="48" font-size="7" fill="#065695" text-anchor="end">Processor</text>
+  <a xlink:href="http://openbenchmarking.org/s/AMD Opteron 6272" xlink:show="new">
+    <text x="143.5" y="52" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Processor: AMD Opteron 6272 @ 2.10GHz (1 Core)" font-weight="bold">AMD Opteron 6272 @ 2.10GHz (1 Core)</text>
+  </a>
+  <rect x="0" y="55" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="55" x2="287" y2="55" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="64" font-size="7" fill="#065695" text-anchor="end">Motherboard</text>
+  <a xlink:href="http://openbenchmarking.org/s/Xen HVM domU v4.1.2" xlink:show="new">
+    <text x="143.5" y="68" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Motherboard: Xen HVM domU v4.1.2" font-weight="bold">Xen HVM domU v4.1.2</text>
+  </a>
+  <line x1="0" y1="71" x2="287" y2="71" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="80" font-size="7" fill="#065695" text-anchor="end">Chipset</text>
+  <a xlink:href="http://openbenchmarking.org/s/Intel 440FX- 82441FX PMC" xlink:show="new">
+    <text x="143.5" y="84" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Chipset: Intel 440FX- 82441FX PMC" font-weight="bold">Intel 440FX- 82441FX PMC</text>
+  </a>
+  <rect x="0" y="87" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="87" x2="287" y2="87" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="96" font-size="7" fill="#065695" text-anchor="end">Memory</text>
+  <text x="143.5" y="100" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Memory: 1024MB" font-weight="bold">1024MB</text>
+  <line x1="0" y1="103" x2="287" y2="103" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="112" font-size="7" fill="#065695" text-anchor="end">Disk</text>
+  <text x="143.5" y="116" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Disk: 9GB" font-weight="bold">9GB</text>
+  <rect x="0" y="119" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="119" x2="287" y2="119" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="128" font-size="7" fill="#065695" text-anchor="end">Graphics</text>
+  <a xlink:href="http://openbenchmarking.org/s/Cirrus Logic GD 5446" xlink:show="new">
+    <text x="143.5" y="132" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Graphics: Cirrus Logic GD 5446" font-weight="bold">Cirrus Logic GD 5446</text>
+  </a>
+  <line x1="0" y1="135" x2="287" y2="135" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="144" font-size="7" fill="#065695" text-anchor="end">OS</text>
+  <a xlink:href="http://openbenchmarking.org/s/Ubuntu 12.10" xlink:show="new">
+    <text x="143.5" y="148" font-size="10" fill="#065695" text-anchor="middle" xlink:title="OS: Ubuntu 12.10" font-weight="bold">Ubuntu 12.10</text>
+  </a>
+  <rect x="0" y="151" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="151" x2="287" y2="151" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="160" font-size="7" fill="#065695" text-anchor="end">Kernel</text>
+  <a xlink:href="http://openbenchmarking.org/s/3.5.0-17-generic" xlink:show="new">
+    <text x="143.5" y="164" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Kernel: 3.5.0-17-generic (x86_64)" font-weight="bold">3.5.0-17-generic (x86_64)</text>
+  </a>
+  <line x1="0" y1="167" x2="287" y2="167" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="176" font-size="7" fill="#065695" text-anchor="end">Compiler</text>
+  <a xlink:href="http://openbenchmarking.org/s/GCC 4.7" xlink:show="new">
+    <text x="143.5" y="180" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Compiler: GCC 4.7" font-weight="bold">GCC 4.7</text>
+  </a>
+  <rect x="0" y="183" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="183" x2="287" y2="183" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="192" font-size="7" fill="#065695" text-anchor="end">File-System</text>
+  <a xlink:href="http://openbenchmarking.org/s/ext4" xlink:show="new">
+    <text x="143.5" y="196" font-size="10" fill="#065695" text-anchor="middle" xlink:title="File-System: ext4" font-weight="bold">ext4</text>
+  </a>
+  <line x1="0" y1="199" x2="287" y2="199" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="208" font-size="7" fill="#065695" text-anchor="end">Screen Resolution</text>
+  <text x="143.5" y="212" font-size="10" fill="#065695" text-anchor="middle" xlink:title="Screen Resolution: 800x600" font-weight="bold">800x600</text>
+  <rect x="0" y="215" width="287" height="16" fill="#949494"/>
+  <line x1="0" y1="215" x2="287" y2="215" stroke="#757575" stroke-width="1"/>
+  <text x="283" y="224" font-size="7" fill="#065695" text-anchor="end">System Layer</text>
+  <text x="143.5" y="228" font-size="10" fill="#065695" text-anchor="middle" xlink:title="System Layer: Xen HVM domU 4.1.2" font-weight="bold">Xen HVM domU 4.1.2</text>
+  <rect x="1" y="231" width="285" height="155" fill="#231f20"/>
+  <a xlink:href="http://www.phoronix-test-suite.com/" xlink:show="new">
+    <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAqCAYAAAAkqNwKAAAEn0lEQVR42u3YfWhVdRzH8W/bnbbcJqs9tWytmbrc2tWSQJRKmSuQK1TOnthgYqGSzPmQVkKjoNZay+zhikqrZV3LckuxXKtYQTqz0LA/LEhGwVhSEvXHhubW+4/fH4cv5z6dnXt3kfOBF+I499x734x77pmMjY0l2nr0WxyDXC6S8STbx9S8gJdXwADWW3kB49OtX5wX0AvoBfQCegG9gCkT0Ac/7sFDqEEl0iYoYBYWYTOaHViQrIC3ogN/wW5DCGJWkgLmohP/YTzbkuiA+QhhFLHsInYiK4EBb8cgzFI3YAXOwsl+REkCAmbiF7DUDliGPzGeDaDA5YCtYKkdMBOnYbdBdGAtlqAReyPE/ha+KAHPxKAcgrM2HxmvoBKFDkxJRMBtsFsHciA2CvEJ7PaYCuhkfuRC70CSvsYMKK+FC5iHf6G3DhKD56E3iMkuBLwNemuSFFBvX7iADdDrhcTIhx+gF3AhYJbNt4GeVAv4IfTKIHGYB723IgTsi8F0CM7AulGEUA1/DLITHfAnmyupOHAe1n3n0lV4G8azS+Y9tiMnEQH11fRjhwF7YN1vLgX04STc2O+ocTugvjV6yWHAEKw7F+EiczUkDje7+GV6GLPcDHgJ1rU6DKjf4GkI1kFvESROUxDECMa7fqSnUsBcm6vlIQiWQm8DxKEM+FGP1VGswUe4AL27HATchBErtwK+CL21EFyFYZvPomxIkiyH3hMOAm7VP3Qj4Dz9OWr+XwwxuqD3RhIDZuBvWBdKhYALMQC9Xeo4v83zjKINmUkIOAN67RMV0IcqtJnH6v2jfvsMotrvZ9ShAj6IyypxEHoPJyrgIPrDOIlhhNsolkFsXIkTiLQRDBkV6vFDDvwR4Xmudz2gC9/4GyERXBvHl2I/BIar2wxJpYDnsTSO73MfTGDAXqSlSsCLeBN5kDgtRn8SA17AU0iHJDLgOZwK43t8ij2oU7dkTpVgNdrwHrqNUv1GHehCO+oj/IWpA0OK4JTSgsf1sWGvwp7YeAG9gKkZMAfNeBKLIdgNcdkNWAiJoB7NFk0QB9LQiHYsgNiYi9luBJyGQ5iJ4+aNHsEVNrdeU9U9pyAbgknq+Ax1jlzciHRDkGaIkYsiHDX/5kPgw2QVKA+C+WhQdzb34WlkYJp6vT7zuq5DEWZio/m5OQ5xBtwPn+WFn0AQPShBMT7Hq9gDwdvYjVoE0IV3sRKizlGKO7EVxThsgneiAKL0qXvb/eZ555pwB/CsCd6KL1ENMarQZ+II8tEJwcuYjZWoRRP6cS/mIIR3MCOegL/ifXNCwTET9FHcjy1YAUEI003AmyD4ClORhuPqHKuw3BJQUG0CPwCJEvAF7ECriVZsgs2HoMZEEKUKR7EsSsBbLNeCnWjB62iK9zdQLI5AsMoE3GR5s/tQZgIWQtALE5Bw1nOYF6oCNpgID8YQcAMCKEIOBAXYa865BBshmjn+a+Sb48WE1AHbIHgOd6AI2W4GLMJhBA1RAe9Gt4lbFyVgOYIm9kGURwlYiO14BiswBzssj70GvepiUYsWE+YRCD5DEN+ogJPwhXkPpZbnCkCs/gcStvF7wAxWOwAAAABJRU5ErkJggg==" x="10" y="340" width="80" height="42"/>
+  </a>
+  <text x="4" y="252" font-size="9" fill="#FEFEFE" text-anchor="start" xlink:title="">
+    <tspan x="4" y="252" dx="0" dy="0">- --build=x86_64-linux-gnu --disable-werror</tspan>
+    <tspan x="4" y="252" dx="5" dy="10"> --enable-checking=release --enable-clocale=gnu</tspan>
+    <tspan x="4" y="252" dx="5" dy="20"> --enable-gnu-unique-object</tspan>
+    <tspan x="4" y="252" dx="5" dy="30"> --enable-languages=c,c++,go,fortran,objc,obj-c++</tspan>
+    <tspan x="4" y="252" dx="5" dy="40"> --enable-libstdcxx-debug</tspan>
+    <tspan x="4" y="252" dx="5" dy="50"> --enable-libstdcxx-time=yes --enable-nls</tspan>
+    <tspan x="4" y="252" dx="5" dy="60"> --enable-objc-gc --enable-plugin --enable-shared</tspan>
+    <tspan x="4" y="252" dx="5" dy="70"> --enable-threads=posix --host=x86_64-linux-gnu</tspan>
+    <tspan x="4" y="252" dx="5" dy="80"> --target=x86_64-linux-gnu --with-arch-32=i686</tspan>
+    <tspan x="4" y="252" dx="5" dy="90"> --with-tune=generic -v </tspan>
+  </text>
+</svg>
