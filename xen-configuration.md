@@ -49,3 +49,27 @@ xenstore-*无论是hvm还是pvm均可以使用。
 1. 查看/proc/xen/xenbus 或者 /dev/xen/xenbus
 2. 修改/etc/environment 添加 XENSTORED_PATH=<上面的值>
 3. 重启电脑
+
+console-configure
+------------------
+
+编辑`/etc/default/grub`文件:
+
+    GRUB_CMDLINE_LINUX_DEFAULT="console=ttyS0,115200"
+    GRUB_TERMINAL=serial
+    GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --pairty=no --stop=1"
+
+使用`update-grub`命令生成`grub.cfg`
+
+创建`/etc/init/ttyS0.conf`内容如下:
+
+    start on stopped rc or RUNLEVEL=[2345]
+    stop on runlevel [!2345]
+     
+    respawn
+
+    exec /sbin/getty -L 115200 ttyS0 vt102
+
+最后.在物理机上使用`xm console $vm_name` 连接虚拟机即可
+
+需要退出的时候,使用`Ctrl+[`即可
