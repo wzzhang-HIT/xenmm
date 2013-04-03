@@ -341,13 +341,13 @@ sunflow          使用光线追踪渲染一些图片
 
 tomcat           运行一些Tomcat服务器的检索和验证网页结果的查询.
 
-tradebeans       runs the daytrader benchmark via a Jave Beans to 
-                 a GERONIMO backend with an in memory h2 as the 
-                 underlying database
+tradebeans       通过jave beans运行DayTrader基准测试
+                   与H2作为内存中的Geronimo后端
+                   底层数据库
 
-tradesoap        runs the daytrader benchmark via a SOAP to 
-                 a GERONIMO backend with in memory h2 
-                 as the underlying database
+tradesoap        通过soap运行DayTrader基准测试
+                   与H2作为内存中的Geronimo后端
+                   底层数据库
 
 xalan            把XML转换成HTML
 -------------------------------------------------------------------

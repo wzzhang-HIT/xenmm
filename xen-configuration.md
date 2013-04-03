@@ -73,3 +73,13 @@ console-configure
 最后.在物理机上使用`xm console $vm_name` 连接虚拟机即可
 
 需要退出的时候,使用`Ctrl+[`即可
+
+
+phoronix-test-suite configure
+------------------------------
+
+系统源带的pts可能比较老了.推荐在官方网站上下载deb包.用sudo dpkg -i package.
+
+对于一些有选项的测试使用TOTAL_LOOP_COUNT环境变量可能得不到预期的结果.可以设置
+`.phoronix-test-suite/test-profiles/pts/[Test]/test-definition.xml`
+TestSettings/Default/AllowCacheShare设置为FALSE
