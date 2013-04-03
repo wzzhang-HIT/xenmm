@@ -1,0 +1,108 @@
+dacapo test set
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 96986 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 98058 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 101445 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 105352 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 98722 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 97154 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 101057 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 96946 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 99518 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 103182 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 101742 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 103934 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 106184 msec =====
+Exception during initialization: java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.dacapo.daytrader.Launcher.initialize(Launcher.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.dacapo.harness.Tradesoap.prepare(Tradesoap.java:45)
+	at org.dacapo.harness.Benchmark.run(Benchmark.java:144)
+	at org.dacapo.harness.TestHarness.runBenchmark(TestHarness.java:218)
+	at org.dacapo.harness.TestHarness.main(TestHarness.java:171)
+	at Harness.main(Harness.java:17)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.geronimo.system.configuration.ConfigurationOverride
+	at org.apache.geronimo.system.configuration.ServerOverride.<init>(ServerOverride.java:42)
+	at org.apache.geronimo.system.configuration.LocalAttributeManager.read(LocalAttributeManager.java:354)
+	at org.apache.geronimo.system.configuration.LocalAttributeManager.load(LocalAttributeManager.java:334)
+	at org.apache.geronimo.system.configuration.LocalAttributeManager.doStart(LocalAttributeManager.java:520)
+	at org.apache.geronimo.gbean.runtime.GBeanInstance.createInstance(GBeanInstance.java:998)
+	at org.apache.geronimo.gbean.runtime.GBeanInstanceState.attemptFullStart(GBeanInstanceState.java:268)
+	at org.apache.geronimo.gbean.runtime.GBeanInstanceState.start(GBeanInstanceState.java:102)
+	at org.apache.geronimo.gbean.runtime.GBeanInstanceState.startRecursive(GBeanInstanceState.java:124)
+	at org.apache.geronimo.gbean.runtime.GBeanInstance.startRecursive(GBeanInstance.java:555)
+	at org.apache.geronimo.kernel.basic.BasicKernel.startRecursiveGBean(BasicKernel.java:379)
+	at org.apache.geronimo.kernel.config.ConfigurationUtil.startConfigurationGBeans(ConfigurationUtil.java:456)
+	at org.apache.geronimo.kernel.config.ConfigurationUtil.loadBootstrapConfiguration(ConfigurationUtil.java:208)
+	at org.apache.geronimo.kernel.config.ConfigurationUtil.loadBootstrapConfiguration(ConfigurationUtil.java:167)
+	at org.dacapo.daytrader.DaCapoClientRunner.initialize(DaCapoClientRunner.java:41)
+	... 14 more
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 103150 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 98573 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 99369 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 102300 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 102069 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 98660 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 99658 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 101030 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 101540 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 96799 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 100692 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 100329 msec =====

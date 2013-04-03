@@ -1,0 +1,86 @@
+dacapo test set
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 114326 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 48447 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 33603 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 29242 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 39114 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 17961 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 28375 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 28502 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 29495 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 39702 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 29373 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 29140 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 21246 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 32191 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 34671 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 19214 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 32322 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 21114 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 31969 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 22992 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 18238 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 35432 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 17818 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 18917 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 29564 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 19916 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 24922 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 53527 msec =====
+===== DaCapo 9.12 h2 starting =====
+java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.dacapo.harness.H2.preIteration(H2.java:77)
+	at org.dacapo.harness.Benchmark.run(Benchmark.java:152)
+	at org.dacapo.harness.TestHarness.runBenchmark(TestHarness.java:218)
+	at org.dacapo.harness.TestHarness.main(TestHarness.java:171)
+	at Harness.main(Harness.java:17)
+Caused by: org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-123]
+	at org.h2.message.Message.getSQLException(Message.java:111)
+	at org.h2.message.Message.getSQLException(Message.java:122)
+	at org.h2.message.Message.getSQLException(Message.java:75)
+	at org.h2.message.Message.getSQLException(Message.java:157)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1328)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:870)
+	at org.h2.jdbc.JdbcPreparedStatement.checkClosed(JdbcPreparedStatement.java:1451)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:844)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1244)
+	at org.h2.jdbc.JdbcPreparedStatement.setInt(JdbcPreparedStatement.java:295)
+	at org.apache.derbyTesting.system.oe.load.SimpleInsert.orderTable(SimpleInsert.java:420)
+	at org.apache.derbyTesting.system.oe.load.SimpleInsert.populateForOneWarehouse(SimpleInsert.java:149)
+	at org.apache.derbyTesting.system.oe.load.SimpleInsert.populateAllTables(SimpleInsert.java:127)
+	at org.apache.derbyTesting.system.oe.load.ThreadInsert.populateAllTables(ThreadInsert.java:127)
+	at org.dacapo.h2.TPCC.loadData(TPCC.java:400)
+	at org.dacapo.h2.TPCC.preIterationMemoryDB(TPCC.java:215)

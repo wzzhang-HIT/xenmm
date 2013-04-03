@@ -1,0 +1,145 @@
+dacapo test set
+java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.dacapo.harness.H2.preIteration(H2.java:77)
+	at org.dacapo.harness.Benchmark.run(Benchmark.java:152)
+	at org.dacapo.harness.TestHarness.runBenchmark(TestHarness.java:218)
+	at org.dacapo.harness.TestHarness.main(TestHarness.java:171)
+	at Harness.main(Harness.java:17)
+Caused by: org.h2.jdbc.JdbcSQLException: Out of memory.; SQL statement:
+
+
+ALTER TABLE ORDERLINE ADD CONSTRAINT
+    OL_O_FK FOREIGN KEY (OL_W_ID, OL_D_ID, OL_O_ID) REFERENCES ORDERS [90108-123]
+	at org.h2.message.Message.getSQLException(Message.java:111)
+	at org.h2.message.Message.convertThrowable(Message.java:303)
+	at org.h2.command.Command.executeUpdate(Command.java:231)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:162)
+	at org.h2.tools.RunScript.process(RunScript.java:166)
+	at org.h2.tools.RunScript.execute(RunScript.java:154)
+	at org.dacapo.h2.TPCC.runScript(TPCC.java:566)
+	at org.dacapo.h2.TPCC.runScript(TPCC.java:556)
+	at org.dacapo.h2.TPCC.runScript(TPCC.java:544)
+	at org.dacapo.h2.TPCC.createConstraints(TPCC.java:382)
+	at org.dacapo.h2.TPCC.preIterationMemoryDB(TPCC.java:225)
+	at org.dacapo.h2.TPCC.preIteration(TPCC.java:254)
+	... 9 more
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.h2.command.dml.Select.queryFlat(Select.java:492)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:556)
+	at org.h2.command.dml.Query.query(Query.java:236)
+	at org.h2.index.ViewIndex.find(ViewIndex.java:192)
+	at org.h2.index.IndexCursor.find(IndexCursor.java:109)
+	at org.h2.table.TableFilter.next(TableFilter.java:255)
+	at org.h2.command.dml.Select.queryFlat(Select.java:489)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:556)
+	at org.h2.command.dml.Query.query(Query.java:236)
+	at org.h2.constraint.ConstraintReferential.checkExistingData(ConstraintReferential.java:630)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:239)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:72)
+	at org.h2.command.Command.executeUpdate(Command.java:209)
+	... 18 more
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 116093 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 31867 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 45611 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 59547 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 38696 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 29194 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 38133 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 19336 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 21199 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 26414 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 60722 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 45023 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 32367 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 49831 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 27306 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 47490 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 18135 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 27270 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 25328 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 24073 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 27371 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 17846 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 28012 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 25110 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 24955 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 26207 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 22975 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 30939 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 46458 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 19578 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 24414 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 40653 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 30714 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 18171 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 37047 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 18475 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 17986 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 35187 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 41834 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 23571 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 28041 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 22888 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 20371 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 27676 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 40305 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 38819 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 31617 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 16744 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 16488 msec =====
+===== DaCapo 9.12 h2 starting =====
