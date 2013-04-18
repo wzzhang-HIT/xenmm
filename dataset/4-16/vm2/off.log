@@ -1,0 +1,68 @@
+dacapo test set
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 103151 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 152754 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 107589 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 143684 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 149485 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 127396 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 131652 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 128206 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 159299 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 136788 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 133363 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 168656 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 153034 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 104493 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 292523 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 94114 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 123493 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 96922 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 91744 msec =====
+===== DaCapo 9.12 h2 starting =====
+java.lang.reflect.InvocationTargetException
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.dacapo.harness.H2.iterate(H2.java:87)
+	at org.dacapo.harness.Benchmark.run(Benchmark.java:166)
+	at org.dacapo.harness.TestHarness.runBenchmark(TestHarness.java:218)
+	at org.dacapo.harness.TestHarness.main(TestHarness.java:171)
+	at Harness.main(Harness.java:17)
+Caused by: org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-123]
+	at org.h2.message.Message.getSQLException(Message.java:111)
+	at org.h2.message.Message.getSQLException(Message.java:122)
+	at org.h2.message.Message.getSQLException(Message.java:75)
+	at org.h2.message.Message.getSQLException(Message.java:157)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1328)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:870)
+	at org.h2.jdbc.JdbcPreparedStatement.checkClosed(JdbcPreparedStatement.java:1451)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:844)
+	at org.h2.jdbc.JdbcResultSet.checkClosed(JdbcResultSet.java:3007)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:2991)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3021)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:266)
+	at org.dacapo.h2.TPCC.calculateSumDB(TPCC.java:464)
+	at org.dacapo.h2.TPCC.calculateSumDB(TPCC.java:445)
+	at org.dacapo.h2.TPCC.iteration(TPCC.java:312)
+	... 9 more
