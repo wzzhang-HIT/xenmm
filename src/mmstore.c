@@ -156,7 +156,7 @@ void s_h_read_domain_mem(Domain* d)
 void s_h_set_domain_mem(Domain* d,mem_t allocate)
 {
     if(!d) return ;
-    if(abs(allocate - d->tg_mem)<ACCURENCY) return;
+    if(abs(allocate - d->tg_mem)<ACCURACY) return;
 
     char path[512];
     char target[64];
