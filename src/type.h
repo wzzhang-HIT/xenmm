@@ -10,10 +10,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-//this define the accurency of memory adjust
-//that is if adjust range less than accurency
+//this define the accuracy of memory adjust
+//that is if adjust range less than accuracy
 //we ignore it.
-#define ACCURENCY 0*1024
+//value example 10*1024 -> 10MB
+#define ACCURACY 0*1024
 //this is tax rate as well as tau
 #ifndef TAX_RATE
 #define tax_rate 0.75
