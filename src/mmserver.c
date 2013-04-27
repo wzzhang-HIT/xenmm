@@ -25,6 +25,7 @@ static double old_tau = 0.0;
 static double total_mem = 0.0;
 static double reverse_mem = 0.0;
 static double xi_ = 0.0;
+static int reset_ = 0;
 #if 0
 static void domainu_mem_change(void* data)
 {
@@ -131,6 +132,7 @@ static void build_linear_equ()
 #else
     Tau = tau;
 #endif
+    if(reset_) Tau = 0;
     double Part = Total/len-Tau*Amean;
     i=0;
     LIST_FOREACH(d,&domain0.domainu,entries){
@@ -161,9 +163,10 @@ static void interupt_server(int sig)
 }
 static void show_help()
 {
-    printf("mmserver -N :Total -f :Reverse\n"
+    printf("mmserver [-r] -N :Total -f :Reverse \n"
             "\t:Total   the total memory\n"
             "\t:Reverse the reversed free memory\n"
+            "\t-r       force set all vm memory are equal\n"
             "example:\n"
             "\tmmserver -N 5G -f 100M\n"
           );
@@ -184,6 +187,9 @@ int main(int argc,char** argv)
             case 'f':
                 reverse_mem = strtod(optarg,&unit);
                 reverse_mem*= unit?unit_expand(*unit):1024;
+                break;
+            case 'r':
+                reset_ = 1;
                 break;
             case 'h':
                 show_help();
