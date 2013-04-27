@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[   3352149,      58909]
-NotebookOptionsPosition[   3344556,      58686]
-NotebookOutlinePosition[   3345405,      58712]
-CellTagsIndexPosition[   3345362,      58709]
+NotebookDataLength[   3354421,      58968]
+NotebookOptionsPosition[   3346628,      58738]
+NotebookOutlinePosition[   3347477,      58764]
+CellTagsIndexPosition[   3347434,      58761]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -283,8 +283,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0.5454545454545454, 0.}, {1.4545454545454546`, 
                   14657.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{49.88429569244672, 63.66198380559872}, {
-                 68.85851013655979, 96.80560399714533}}], 
+                ImageSizeCache -> {{48.88791042247158, 62.698459717667674`}, {
+                 70.40828155476487, 98.42363798589528}}], 
                StatusArea[#, 14657]& , TagBoxNote -> "14657"], 
               StyleBox["14657", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -307,8 +307,8 @@ Cell[BoxData[
                  
                  RectangleBox[{1.5454545454545454`, 0.}, {2.4545454545454546`,
                    14377.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{64.35225261691392, 78.12994073006593}, {
-                 69.38045775755754, 96.80560399714533}}], 
+                ImageSizeCache -> {{63.39201464718729, 77.20256394238339}, {
+                 70.93153322978134, 98.42363798589528}}], 
                StatusArea[#, 14377]& , TagBoxNote -> "14377"], 
               StyleBox["14377", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -331,9 +331,9 @@ Cell[BoxData[
                  
                  RectangleBox[{2.6363636363636362`, 0.}, {3.5454545454545454`,
                    128628.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{80.13547835269631, 
-                 93.91316646584832}, {-143.5946766946331, 
-                 96.80560399714534}}], StatusArea[#, 128628]& , TagBoxNote -> 
+                ImageSizeCache -> {{79.2146738014226, 
+                 93.02522309661872}, {-142.5757064927459, 
+                 98.42363798589528}}], StatusArea[#, 128628]& , TagBoxNote -> 
                "128628"], 
               StyleBox["128628", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -356,9 +356,9 @@ Cell[BoxData[
                  
                  RectangleBox[{3.6363636363636362`, 0.}, {4.545454545454545, 
                   129993.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{94.60343527716351, 
-                 108.38112339031551`}, {-146.1391713469971, 
-                 96.80560399714534}}], StatusArea[#, 129993]& , TagBoxNote -> 
+                ImageSizeCache -> {{93.71877802613832, 
+                 107.52932732133442`}, {-145.12655840845122`, 
+                 98.42363798589528}}], StatusArea[#, 129993]& , TagBoxNote -> 
                "129993"], 
               StyleBox["129993", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -381,9 +381,10 @@ Cell[BoxData[
                  
                  RectangleBox[{4.727272727272727, 0.}, {5.636363636363636, 
                   12951.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{110.3866610129459, 124.1643491260979}, {
-                 72.03866242735319, 96.80560399714533}}], 
-               StatusArea[#, 12951]& , TagBoxNote -> "12951"], 
+                ImageSizeCache -> {{109.54143718037363`, 
+                 123.35198647556973`}, {73.59637926040098, 
+                 98.42363798589528}}], StatusArea[#, 12951]& , TagBoxNote -> 
+               "12951"], 
               StyleBox["12951", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[12951, {
@@ -405,9 +406,10 @@ Cell[BoxData[
                  
                  RectangleBox[{5.727272727272727, 0.}, {6.636363636363636, 
                   13000.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{124.85461793741311`, 138.6323060505651}, {
-                 71.9473215936786, 96.80560399714533}}], 
-               StatusArea[#, 13000]& , TagBoxNote -> "13000"], 
+                ImageSizeCache -> {{124.04554140508935`, 
+                 137.85609070028545`}, {73.50481021727309, 
+                 98.42363798589528}}], StatusArea[#, 13000]& , TagBoxNote -> 
+               "13000"], 
               StyleBox["13000", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[13000, {
@@ -429,8 +431,8 @@ Cell[BoxData[
                  
                  RectangleBox[{6.8181818181818175`, 0.}, {7.727272727272727, 
                   49313.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{140.6378436731955, 154.4155317863475}, {
-                 4.2563074462103145`, 96.80560399714533}}], 
+                ImageSizeCache -> {{139.86820055932466`, 153.6787498545208}, {
+                 5.6446742355824995`, 98.42363798589528}}], 
                StatusArea[#, 49313]& , TagBoxNote -> "49313"], 
               StyleBox["49313", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -453,9 +455,10 @@ Cell[BoxData[
                  
                  RectangleBox[{7.8181818181818175`, 0.}, {8.727272727272727, 
                   48837.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{155.1058005976627, 168.88348871081467`}, {
-                 5.14361840190648, 96.80560399714533}}], 
-               StatusArea[#, 48837]& , TagBoxNote -> "48837"], 
+                ImageSizeCache -> {{154.37230478404038`, 
+                 168.18285407923648`}, {6.5342020831105145`, 
+                 98.42363798589528}}], StatusArea[#, 48837]& , TagBoxNote -> 
+               "48837"], 
               StyleBox["48837", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[48837, {
@@ -477,8 +480,8 @@ Cell[BoxData[
                  
                  RectangleBox[{8.909090909090908, 0.}, {9.818181818181817, 
                   38933.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{170.8890263334451, 184.66671444659707`}, {
-                 23.605651396055293`, 96.80560399714533}}], 
+                ImageSizeCache -> {{170.1949639382757, 184.0055132334718}, {
+                 25.04236133083623, 98.42363798589528}}], 
                StatusArea[#, 38933]& , TagBoxNote -> "38933"], 
               StyleBox["38933", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -501,10 +504,9 @@ Cell[BoxData[
                  
                  RectangleBox[{9.909090909090908, 0.}, {10.818181818181817`, 
                   40724.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{185.35698325791228`, 
-                 199.13467137106426`}, {20.267050720316135`, 
-                 96.80560399714533}}], StatusArea[#, 40724]& , TagBoxNote -> 
-               "40724"], 
+                ImageSizeCache -> {{184.6990681629914, 198.5096174581875}, {
+                 21.69541936671297, 98.42363798589528}}], 
+               StatusArea[#, 40724]& , TagBoxNote -> "40724"], 
               StyleBox["40724", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[40724, {
@@ -526,9 +528,9 @@ Cell[BoxData[
                  
                  RectangleBox[{10.999999999999998`, 0.}, {11.909090909090907`,
                    5068.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{201.14020899369467`, 
-                 214.91789710684665`}, {86.73335205708614, 
-                 96.80560399714533}}], StatusArea[#, 5068]& , TagBoxNote -> 
+                ImageSizeCache -> {{200.52172731722672`, 
+                 214.33227661242282`}, {88.32778266809703, 
+                 98.42363798589528}}], StatusArea[#, 5068]& , TagBoxNote -> 
                "5068"], 
               StyleBox["5068", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -551,9 +553,9 @@ Cell[BoxData[
                  
                  RectangleBox[{11.999999999999998`, 0.}, {12.909090909090907`,
                    5029.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{215.60816591816186`, 
-                 229.38585403131384`}, {86.80605190429654, 
-                 96.80560399714533}}], StatusArea[#, 5029]& , TagBoxNote -> 
+                ImageSizeCache -> {{215.02583154194244`, 
+                 228.83638083713853`}, {88.40066415140289, 
+                 98.42363798589528}}], StatusArea[#, 5029]& , TagBoxNote -> 
                "5029"], 
               StyleBox["5029", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -576,9 +578,9 @@ Cell[BoxData[
                  
                  RectangleBox[{13.090909090909088`, 0.}, {13.999999999999996`,
                    12728.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{231.39139165394423`, 
-                 245.16907976709624`}, {72.45435642550497, 
-                 96.80560399714533}}], StatusArea[#, 12728]& , TagBoxNote -> 
+                ImageSizeCache -> {{230.84849069617775`, 
+                 244.65903999137385`}, {74.01311184443196, 
+                 98.42363798589528}}], StatusArea[#, 12728]& , TagBoxNote -> 
                "12728"], 
               StyleBox["12728", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -601,9 +603,10 @@ Cell[BoxData[
                  
                  RectangleBox[{14.090909090909088`, 0.}, {14.999999999999996`,
                    12737.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{245.85934857841144`, 259.6370366915634}, {
-                 72.43757953768718, 96.80560399714533}}], 
-               StatusArea[#, 12737]& , TagBoxNote -> "12737"], 
+                ImageSizeCache -> {{245.35259492089347`, 
+                 259.16314421608956`}, {73.99629304059214, 
+                 98.42363798589528}}], StatusArea[#, 12737]& , TagBoxNote -> 
+               "12737"], 
               StyleBox["12737", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[12737, {
@@ -625,8 +628,8 @@ Cell[BoxData[
                  
                  RectangleBox[{15.181818181818178`, 0.}, {16.090909090909086`,
                    22158.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{261.64257431419384`, 275.4202624273458}, {
-                 54.87590618975948, 96.80560399714533}}], 
+                ImageSizeCache -> {{261.1752540751288, 274.98580337032485`}, {
+                 56.39074293226986, 98.42363798589528}}], 
                StatusArea[#, 22158]& , TagBoxNote -> "22158"], 
               StyleBox["22158", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -649,9 +652,10 @@ Cell[BoxData[
                  
                  RectangleBox[{16.181818181818176`, 0.}, {17.090909090909086`,
                    22123.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{276.110531238661, 289.888219351813}, {
-                 54.941149642384204`, 96.80560399714533}}], 
-               StatusArea[#, 22123]& , TagBoxNote -> "22123"], 
+                ImageSizeCache -> {{275.67935829984447`, 
+                 289.48990759504056`}, {56.45614939164692, 
+                 98.42363798589528}}], StatusArea[#, 22123]& , TagBoxNote -> 
+               "22123"], 
               StyleBox["22123", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[22123, {
@@ -673,8 +677,8 @@ Cell[BoxData[
                  
                  RectangleBox[{17.27272727272727, 0.}, {18.18181818181818, 
                   24072.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{291.8937569744434, 305.67144508759543`}, {
-                 51.30802138051061, 96.80560399714533}}], 
+                ImageSizeCache -> {{291.5020174540798, 305.3125667492759}, {
+                 52.81394398233579, 98.42363798589528}}], 
                StatusArea[#, 24072]& , TagBoxNote -> "24072"], 
               StyleBox["24072", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -697,10 +701,9 @@ Cell[BoxData[
                  
                  RectangleBox[{18.27272727272727, 0.}, {19.18181818181818, 
                   24458.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{306.36171389891064`, 
-                 320.13940201206265`}, {50.58847930299229, 
-                 96.80560399714533}}], StatusArea[#, 24458]& , TagBoxNote -> 
-               "24458"], 
+                ImageSizeCache -> {{306.0061216787955, 319.8166709739916}, {
+                 52.092604173205935`, 98.42363798589528}}], 
+               StatusArea[#, 24458]& , TagBoxNote -> "24458"], 
               StyleBox["24458", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[24458, {
@@ -722,10 +725,9 @@ Cell[BoxData[
                  
                  RectangleBox[{19.363636363636363`, 0.}, {20.272727272727273`,
                    24098.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{322.14493963469306`, 
-                 335.92262774784507`}, {51.25955481570368, 
-                 96.80560399714533}}], StatusArea[#, 24098]& , TagBoxNote -> 
-               "24098"], 
+                ImageSizeCache -> {{321.82878083303086`, 335.639330128227}, {
+                 52.765356326798546`, 98.42363798589528}}], 
+               StatusArea[#, 24098]& , TagBoxNote -> "24098"], 
               StyleBox["24098", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[24098, {
@@ -747,8 +749,8 @@ Cell[BoxData[
                  
                  RectangleBox[{20.363636363636363`, 0.}, {21.272727272727273`,
                    23767.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{336.6128965591603, 350.3905846723123}, {
-                 51.87657146766887, 96.80560399714533}}], 
+                ImageSizeCache -> {{336.3328850577466, 350.14343435294273`}, {
+                 53.383914556907314`, 98.42363798589528}}], 
                StatusArea[#, 23767]& , TagBoxNote -> "23767"], 
               StyleBox["23767", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -771,8 +773,8 @@ Cell[BoxData[
                  
                  RectangleBox[{21.454545454545457`, 0.}, {22.363636363636367`,
                    23046.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{352.3961222949427, 366.1738104080947}, {
-                 53.22058659173806, 96.80560399714533}}], 
+                ImageSizeCache -> {{352.155544211982, 365.9660935071781}, {
+                 54.731287620074745`, 98.42363798589528}}], 
                StatusArea[#, 23046]& , TagBoxNote -> "23046"], 
               StyleBox["23046", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -795,10 +797,9 @@ Cell[BoxData[
                  
                  RectangleBox[{22.454545454545457`, 0.}, {23.363636363636367`,
                    23209.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{366.86407921940986`, 
-                 380.64176733256187`}, {52.916738512371516`, 
-                 96.80560399714533}}], StatusArea[#, 23209]& , TagBoxNote -> 
-               "23209"], 
+                ImageSizeCache -> {{366.6596484366977, 380.4701977318938}, {
+                 54.42668039497586, 98.42363798589528}}], 
+               StatusArea[#, 23209]& , TagBoxNote -> "23209"], 
               StyleBox["23209", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[23209, {
@@ -820,9 +821,9 @@ Cell[BoxData[
                  
                  RectangleBox[{23.54545454545455, 0.}, {24.45454545454546, 
                   82364.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{382.64730495519234`, 
-                 396.42499306834435`}, {-57.35401691663425, 
-                 96.80560399714533}}], StatusArea[#, 82364]& , TagBoxNote -> 
+                ImageSizeCache -> {{382.48230759093303`, 
+                 396.29285688612913`}, {-56.11957973216613, 
+                 98.42363798589528}}], StatusArea[#, 82364]& , TagBoxNote -> 
                "82364"], 
               StyleBox["82364", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -845,9 +846,9 @@ Cell[BoxData[
                  
                  RectangleBox[{24.54545454545455, 0.}, {25.45454545454546, 
                   82255.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{397.1152618796595, 
-                 410.8929499928115}, {-57.150830164174394`, 
-                 96.80560399714533}}], StatusArea[#, 82255]& , TagBoxNote -> 
+                ImageSizeCache -> {{396.98641181564875`, 
+                 410.79696111084485`}, {-55.915885330106136`, 
+                 98.42363798589528}}], StatusArea[#, 82255]& , TagBoxNote -> 
                "82255"], 
               StyleBox["82255", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -870,8 +871,8 @@ Cell[BoxData[
                  
                  RectangleBox[{25.636363636363644`, 0.}, {26.545454545454554`,
                    16980.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{412.8984876154419, 426.67617572859393`}, {
-                 64.52820898092493, 96.80560399714533}}], 
+                ImageSizeCache -> {{412.8090709698841, 426.61962026508024`}, {
+                 66.0671614081103, 98.42363798589528}}], 
                StatusArea[#, 16980]& , TagBoxNote -> "16980"], 
               StyleBox["16980", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -894,10 +895,9 @@ Cell[BoxData[
                  
                  RectangleBox[{26.636363636363644`, 0.}, {27.545454545454554`,
                    17037.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{427.36644453990914`, 
-                 441.14413265306115`}, {64.42195535807896, 
-                 96.80560399714533}}], StatusArea[#, 17037]& , TagBoxNote -> 
-               "17037"], 
+                ImageSizeCache -> {{427.3131751945998, 441.1237244897959}, {
+                 65.96064231712481, 98.42363798589528}}], 
+               StatusArea[#, 17037]& , TagBoxNote -> "17037"], 
               StyleBox["17037", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[17037, {
@@ -954,6 +954,7 @@ Cell[BoxData[
                 Offset[{-1.102182119232618*^-15, -6.}, {8.909090909090908, 
                  0.}]}], 
               LineBox[{{10.818181818181817`, 0.}, 
+                
                 Offset[{-1.102182119232618*^-15, -6.}, {10.818181818181817`, 
                  0.}]}], 
               LineBox[{{10.999999999999998`, 0.}, 
@@ -1284,6 +1285,7 @@ Cell[BoxData[
                     RowBox[{"Opacity", "[", "0.7`", "]"}]}], "}"}], "]"}], 
                     ",", 
                     RowBox[{"RGBColor", "[", 
+                    
                     RowBox[{
                     "0.798413061722744`", ",", "0.824719615472648`", ",", 
                     "0.968322270542458`"}], "]"}]}], "]"}], ",", 
@@ -1392,8 +1394,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0.5454545454545454, 0.}, {1.4545454545454546`, 
                   18238.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{56.858992582272755`, 70.40665242111604}, {
-                 95.52248295776782, 97.59914657786351}}], 
+                ImageSizeCache -> {{55.86260731229761, 69.443128333185}, {
+                 97.12600484704377, 99.20635991944741}}], 
                StatusArea[#, 18238]& , TagBoxNote -> "18238"], 
               StyleBox["18238", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1416,8 +1418,8 @@ Cell[BoxData[
                  
                  RectangleBox[{1.5454545454545454`, 0.}, {2.4545454545454546`,
                    17358.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{71.07391840500037, 84.62157824384364}, {
-                 95.59252704076398, 97.59914657786351}}], 
+                ImageSizeCache -> {{70.11368043527374, 83.69420145616112}, {
+                 97.19622704595349, 99.20635991944741}}], 
                StatusArea[#, 17358]& , TagBoxNote -> "17358"], 
               StyleBox["17358", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1440,8 +1442,8 @@ Cell[BoxData[
                  
                  RectangleBox[{2.6363636363636362`, 0.}, {3.5454545454545454`,
                    433186.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{86.5811102116123, 100.12877005045559`}, {
-                 62.49446914970404, 97.59914657786351}}], 
+                ImageSizeCache -> {{85.6603056603386, 99.24082668122597}, {
+                 64.0140037184255, 99.20635991944741}}], 
                StatusArea[#, 433186]& , TagBoxNote -> "433186"], 
               StyleBox["433186", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1464,10 +1466,9 @@ Cell[BoxData[
                  
                  RectangleBox[{3.6363636363636362`, 0.}, {4.545454545454545, 
                   171196.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{100.79603603433989`, 
-                 114.34369587318318`}, {83.34770699534886, 
-                 97.59914657786351}}], StatusArea[#, 171196]& , TagBoxNote -> 
-               "171196"], 
+                ImageSizeCache -> {{99.91137878331472, 113.49189980420209`}, {
+                 84.92026950519083, 99.20635991944741}}], 
+               StatusArea[#, 171196]& , TagBoxNote -> "171196"], 
               StyleBox["171196", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[171196, {
@@ -1489,9 +1490,10 @@ Cell[BoxData[
                  
                  RectangleBox[{4.727272727272727, 0.}, {5.636363636363636, 
                   16029.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{116.30322784095182`, 129.8508876797951}, {
-                 95.69830952519798, 97.59914657786351}}], 
-               StatusArea[#, 16029]& , TagBoxNote -> "16029"], 
+                ImageSizeCache -> {{115.45800400837956`, 
+                 129.03852502926694`}, {97.3022785258978, 
+                 99.20635991944741}}], StatusArea[#, 16029]& , TagBoxNote -> 
+               "16029"], 
               StyleBox["16029", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[16029, {
@@ -1513,9 +1515,10 @@ Cell[BoxData[
                  
                  RectangleBox[{5.727272727272727, 0.}, {6.636363636363636, 
                   17748.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{130.51815366367944`, 144.0658135025227}, {
-                 95.56148477670887, 97.59914657786351}}], 
-               StatusArea[#, 17748]& , TagBoxNote -> "17748"], 
+                ImageSizeCache -> {{129.70907713135568`, 
+                 143.28959815224306`}, {97.16510584416396, 
+                 99.20635991944741}}], StatusArea[#, 17748]& , TagBoxNote -> 
+               "17748"], 
               StyleBox["17748", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[17748, {
@@ -1537,9 +1540,9 @@ Cell[BoxData[
                  
                  RectangleBox[{6.8181818181818175`, 0.}, {7.727272727272727, 
                   2.991145*^6}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{146.02534547029137`, 
-                 159.57300530913466`}, {-141.10768141485104`, 
-                 97.59914657786351}}], StatusArea[#, 2991145]& , TagBoxNote -> 
+                ImageSizeCache -> {{145.25570235642053`, 
+                 158.83622337730793`}, {-140.1058891234711, 
+                 99.20635991944741}}], StatusArea[#, 2991145]& , TagBoxNote -> 
                "2991145"], 
               StyleBox["2991145", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1562,9 +1565,9 @@ Cell[BoxData[
                  
                  RectangleBox[{7.8181818181818175`, 0.}, {8.727272727272727, 
                   37778.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{160.24027129301896`, 
-                 173.78793113186225`}, {93.96718593305734, 
-                 97.59914657786351}}], StatusArea[#, 37778]& , TagBoxNote -> 
+                ImageSizeCache -> {{159.50677547939665`, 
+                 173.08729650028403`}, {95.56675283943511, 
+                 99.20635991944741}}], StatusArea[#, 37778]& , TagBoxNote -> 
                "37778"], 
               StyleBox["37778", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1587,10 +1590,9 @@ Cell[BoxData[
                  
                  RectangleBox[{8.909090909090908, 0.}, {9.818181818181817, 
                   49847.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{175.74746309963092`, 
-                 189.29512293847418`}, {93.00654725387459, 
-                 97.59914657786351}}], StatusArea[#, 49847]& , TagBoxNote -> 
-               "49847"], 
+                ImageSizeCache -> {{175.05340070446152`, 188.6339217253489}, {
+                 94.60367134097918, 99.20635991944741}}], 
+               StatusArea[#, 49847]& , TagBoxNote -> "49847"], 
               StyleBox["49847", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[49847, {
@@ -1612,9 +1614,10 @@ Cell[BoxData[
                  
                  RectangleBox[{9.909090909090908, 0.}, {10.818181818181817`, 
                   47796.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{189.9623889223585, 203.51004876120177`}, {
-                 93.16979772458498, 97.59914657786351}}], 
-               StatusArea[#, 47796]& , TagBoxNote -> "47796"], 
+                ImageSizeCache -> {{189.30447382743765`, 
+                 202.88499484832502`}, {94.76733694321078, 
+                 99.20635991944741}}], StatusArea[#, 47796]& , TagBoxNote -> 
+               "47796"], 
               StyleBox["47796", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[47796, {
@@ -1636,8 +1639,8 @@ Cell[BoxData[
                  
                  RectangleBox[{10.999999999999998`, 0.}, {11.909090909090907`,
                    6268.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{205.46958072897044`, 219.0172405678137}, {
-                 96.4752416776135, 97.59914657786351}}], 
+                ImageSizeCache -> {{204.8510990525025, 218.43162007338987`}, {
+                 98.08118634812237, 99.20635991944741}}], 
                StatusArea[#, 6268]& , TagBoxNote -> "6268"], 
               StyleBox["6268", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1660,9 +1663,9 @@ Cell[BoxData[
                  
                  RectangleBox[{11.999999999999998`, 0.}, {12.909090909090907`,
                    6144.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{219.68450655169804`, 
-                 233.23216639054132`}, {96.48511152567204, 
-                 97.59914657786351}}], StatusArea[#, 6144]& , TagBoxNote -> 
+                ImageSizeCache -> {{219.10217217547861`, 
+                 232.68269319636596`}, {98.09108129433238, 
+                 99.20635991944741}}], StatusArea[#, 6144]& , TagBoxNote -> 
                "6144"], 
               StyleBox["6144", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1685,10 +1688,9 @@ Cell[BoxData[
                  
                  RectangleBox[{13.090909090909088`, 0.}, {13.999999999999996`,
                    15821.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{235.19169835830996`, 
-                 248.73935819715322`}, {95.71486539936072, 
-                 97.59914657786351}}], StatusArea[#, 15821]& , TagBoxNote -> 
-               "15821"], 
+                ImageSizeCache -> {{234.64879740054346`, 248.2293184214308}, {
+                 97.31887650018555, 99.20635991944741}}], 
+               StatusArea[#, 15821]& , TagBoxNote -> "15821"], 
               StyleBox["15821", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[15821, {
@@ -1710,10 +1712,9 @@ Cell[BoxData[
                  
                  RectangleBox[{14.090909090909088`, 0.}, {14.999999999999996`,
                    16029.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{249.40662418103759`, 
-                 262.95428401988084`}, {95.69830952519798, 
-                 97.59914657786351}}], StatusArea[#, 16029]& , TagBoxNote -> 
-               "16029"], 
+                ImageSizeCache -> {{248.89987052351955`, 262.4803915444069}, {
+                 97.3022785258978, 99.20635991944741}}], 
+               StatusArea[#, 16029]& , TagBoxNote -> "16029"], 
               StyleBox["16029", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[16029, {
@@ -1735,10 +1736,9 @@ Cell[BoxData[
                  
                  RectangleBox[{15.181818181818178`, 0.}, {16.090909090909086`,
                    27475.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{264.91381598764946`, 
-                 278.46147582649274`}, {94.78725887295457, 
-                 97.59914657786351}}], StatusArea[#, 27475]& , TagBoxNote -> 
-               "27475"], 
+                ImageSizeCache -> {{264.4464957485844, 278.02701676947174`}, {
+                 96.3889111523518, 99.20635991944741}}], 
+               StatusArea[#, 27475]& , TagBoxNote -> "27475"], 
               StyleBox["27475", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[27475, {
@@ -1760,10 +1760,9 @@ Cell[BoxData[
                  
                  RectangleBox[{16.181818181818176`, 0.}, {17.090909090909086`,
                    26530.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{279.12874181037705`, 
-                 292.67640164922034`}, {94.8624766666266, 
-                 97.59914657786351}}], StatusArea[#, 26530]& , TagBoxNote -> 
-               "26530"], 
+                ImageSizeCache -> {{278.69756887156046`, 292.2780898924479}, {
+                 96.46432021822643, 99.20635991944741}}], 
+               StatusArea[#, 26530]& , TagBoxNote -> "26530"], 
               StyleBox["26530", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[26530, {
@@ -1785,8 +1784,8 @@ Cell[BoxData[
                  
                  RectangleBox[{17.27272727272727, 0.}, {18.18181818181818, 
                   29067.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{294.635933616989, 308.1835934558323}, {
-                 94.66054275917058, 97.59914657786351}}], 
+                ImageSizeCache -> {{294.2441940966254, 307.82471511751277`}, {
+                 96.26187281068788, 99.20635991944741}}], 
                StatusArea[#, 29067]& , TagBoxNote -> "29067"], 
               StyleBox["29067", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1809,8 +1808,8 @@ Cell[BoxData[
                  
                  RectangleBox[{18.27272727272727, 0.}, {19.18181818181818, 
                   30805.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{308.8508594397166, 322.3985192785599}, {
-                 94.52220569525315, 97.59914657786351}}], 
+                ImageSizeCache -> {{308.4952672196015, 322.07578824048886`}, {
+                 96.12318396784121, 99.20635991944741}}], 
                StatusArea[#, 30805]& , TagBoxNote -> "30805"], 
               StyleBox["30805", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1833,8 +1832,8 @@ Cell[BoxData[
                  
                  RectangleBox[{19.363636363636363`, 0.}, {20.272727272727273`,
                    29034.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{324.3580512463286, 337.9057110851719}, {
-                 94.66316941228294, 97.59914657786351}}], 
+                ImageSizeCache -> {{324.04189244466636`, 337.6224134655538}, {
+                 96.264506143147, 99.20635991944741}}], 
                StatusArea[#, 29034]& , TagBoxNote -> "29034"], 
               StyleBox["29034", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1857,8 +1856,8 @@ Cell[BoxData[
                  
                  RectangleBox[{20.363636363636363`, 0.}, {21.272727272727273`,
                    29370.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{338.5729770690562, 352.1206369078995}, {
-                 94.63642530786622, 97.59914657786351}}], 
+                ImageSizeCache -> {{338.2929655676425, 351.8734865885299}, {
+                 96.23769403083602, 99.20635991944741}}], 
                StatusArea[#, 29370]& , TagBoxNote -> "29370"], 
               StyleBox["29370", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1881,10 +1880,9 @@ Cell[BoxData[
                  
                  RectangleBox[{21.454545454545457`, 0.}, {22.363636363636367`,
                    54152.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{354.08016887566816`, 
-                 367.62782871451145`}, {92.66388841603535, 
-                 97.59914657786351}}], StatusArea[#, 54152]& , TagBoxNote -> 
-               "54152"], 
+                ImageSizeCache -> {{353.8395907927074, 367.4201118135948}, {
+                 94.26014115199477, 99.20635991944741}}], 
+               StatusArea[#, 54152]& , TagBoxNote -> "54152"], 
               StyleBox["54152", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[54152, {
@@ -1906,10 +1904,9 @@ Cell[BoxData[
                  
                  RectangleBox[{22.454545454545457`, 0.}, {23.363636363636367`,
                    29416.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{368.29509469839576`, 
-                 381.84275453723905`}, {94.6327639126187, 
-                 97.59914657786351}}], StatusArea[#, 29416]& , TagBoxNote -> 
-               "29416"], 
+                ImageSizeCache -> {{368.09066391568354`, 381.6711849365709}, {
+                 96.23402332498392, 99.20635991944741}}], 
+               StatusArea[#, 29416]& , TagBoxNote -> "29416"], 
               StyleBox["29416", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[29416, {
@@ -1931,10 +1928,9 @@ Cell[BoxData[
                  
                  RectangleBox[{23.54545454545455, 0.}, {24.45454545454546, 
                   796455.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{383.80228650500777`, 
-                 397.34994634385106`}, {33.5798737111394, 
-                 97.59914657786351}}], StatusArea[#, 796455]& , TagBoxNote -> 
-               "796455"], 
+                ImageSizeCache -> {{383.6372891407484, 397.21781016163584`}, {
+                 35.02588101873292, 99.20635991944741}}], 
+               StatusArea[#, 796455]& , TagBoxNote -> "796455"], 
               StyleBox["796455", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[796455, {
@@ -1956,9 +1952,9 @@ Cell[BoxData[
                  
                  RectangleBox[{24.54545454545455, 0.}, {25.45454545454546, 
                   110001.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{398.01721232773536`, 
-                 411.56487216657865`}, {88.21855660779299, 
-                 97.59914657786351}}], StatusArea[#, 110001]& , TagBoxNote -> 
+                ImageSizeCache -> {{397.88836226372456`, 
+                 411.46888328461193`}, {89.80350525778103, 
+                 99.20635991944741}}], StatusArea[#, 110001]& , TagBoxNote -> 
                "110001"], 
               StyleBox["110001", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -1981,8 +1977,8 @@ Cell[BoxData[
                  
                  RectangleBox[{25.636363636363644`, 0.}, {26.545454545454554`,
                    21351.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{413.5244041343473, 427.0720639731906}, {
-                 95.27470201416885, 97.59914657786351}}], 
+                ImageSizeCache -> {{413.43498748878943`, 427.0155085096768}, {
+                 96.8775938184007, 99.20635991944741}}], 
                StatusArea[#, 21351]& , TagBoxNote -> "21351"], 
               StyleBox["21351", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -2005,8 +2001,8 @@ Cell[BoxData[
                  
                  RectangleBox[{26.636363636363644`, 0.}, {27.545454545454554`,
                    22948.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{427.7393299570749, 441.2869897959182}, {
-                 95.14758792264057, 97.59914657786351}}], 
+                ImageSizeCache -> {{427.6860606117655, 441.26658163265296`}, {
+                 96.75015648697025, 99.20635991944741}}], 
                StatusArea[#, 22948]& , TagBoxNote -> "22948"], 
               StyleBox["22948", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -2064,7 +2060,6 @@ Cell[BoxData[
                 Offset[{-1.102182119232618*^-15, -6.}, {8.909090909090908, 
                  0.}]}], 
               LineBox[{{10.818181818181817`, 0.}, 
-                
                 Offset[{-1.102182119232618*^-15, -6.}, {10.818181818181817`, 
                  0.}]}], 
               LineBox[{{10.999999999999998`, 0.}, 
@@ -2395,7 +2390,6 @@ Cell[BoxData[
                     RowBox[{"Opacity", "[", "0.7`", "]"}]}], "}"}], "]"}], 
                     ",", 
                     RowBox[{"RGBColor", "[", 
-                    
                     RowBox[{
                     "0.798413061722744`", ",", "0.824719615472648`", ",", 
                     "0.968322270542458`"}], "]"}]}], "]"}], ",", 
@@ -3143,8 +3137,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0.5454545454545454, 0.}, {1.4545454545454546`, 
                   23884.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{49.88429569244672, 63.661983805598716`}, {
-                 96.46906743342225, 109.18060399714551`}}], 
+                ImageSizeCache -> {{48.88791042247157, 62.698459717667674`}, {
+                 97.05690395418026, 109.79863798589533`}}], 
                StatusArea[#, 23884]& , TagBoxNote -> "23884"], 
               StyleBox["23884", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3167,8 +3161,8 @@ Cell[BoxData[
                  
                  RectangleBox[{1.5454545454545454`, 0.}, {2.4545454545454546`,
                    24975.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{64.35225261691392, 78.12994073006591}, {
-                 95.9169651310013, 109.18060399714551`}}], 
+                ImageSizeCache -> {{63.39201464718728, 77.20256394238338}, {
+                 96.50342225812427, 109.79863798589533`}}], 
                StatusArea[#, 24975]& , TagBoxNote -> "24975"], 
               StyleBox["24975", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3191,9 +3185,9 @@ Cell[BoxData[
                  
                  RectangleBox[{2.6363636363636362`, 0.}, {3.5454545454545454`,
                    478844.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{80.13547835269631, 
-                 93.9131664658483}, {-133.76417134699693`, 
-                 109.18060399714551`}}], StatusArea[#, 478844]& , TagBoxNote -> 
+                ImageSizeCache -> {{79.2146738014226, 
+                 93.0252230966187}, {-133.75155840845105`, 
+                 109.79863798589531`}}], StatusArea[#, 478844]& , TagBoxNote -> 
                "478844"], 
               StyleBox["478844", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3216,9 +3210,9 @@ Cell[BoxData[
                  
                  RectangleBox[{3.6363636363636362`, 0.}, {4.545454545454545, 
                   239428.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{94.6034352771635, 
-                 108.38112339031551`}, {-12.607319984563219`, 
-                 109.18060399714551`}}], StatusArea[#, 239428]& , TagBoxNote -> 
+                ImageSizeCache -> {{93.71877802613831, 
+                 107.5293273213344}, {-12.292004106948212`, 
+                 109.79863798589533`}}], StatusArea[#, 239428]& , TagBoxNote -> 
                "239428"], 
               StyleBox["239428", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3241,9 +3235,10 @@ Cell[BoxData[
                  
                  RectangleBox[{4.727272727272727, 0.}, {5.636363636363636, 
                   23048.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{110.3866610129459, 124.16434912609787`}, {
-                 96.89212657624894, 109.18060399714551`}}], 
-               StatusArea[#, 23048]& , TagBoxNote -> "23048"], 
+                ImageSizeCache -> {{109.54143718037362`, 
+                 123.35198647556973`}, {97.48102008424699, 
+                 109.79863798589533`}}], StatusArea[#, 23048]& , TagBoxNote -> 
+               "23048"], 
               StyleBox["23048", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[23048, {
@@ -3265,9 +3260,10 @@ Cell[BoxData[
                  
                  RectangleBox[{5.727272727272727, 0.}, {6.636363636363636, 
                   23974.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{124.85461793741308`, 138.6323060505651}, {
-                 96.42352278885957, 109.18060399714551`}}], 
-               StatusArea[#, 23974]& , TagBoxNote -> "23974"], 
+                ImageSizeCache -> {{124.04554140508934`, 
+                 137.85609070028545`}, {97.01124551912523, 
+                 109.79863798589533`}}], StatusArea[#, 23974]& , TagBoxNote -> 
+               "23974"], 
               StyleBox["23974", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[23974, {
@@ -3289,9 +3285,10 @@ Cell[BoxData[
                  
                  RectangleBox[{6.8181818181818175`, 0.}, {7.727272727272727, 
                   153730.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{140.63784367319548`, 154.4155317863475}, {
-                 30.760290568022427`, 109.18060399714551`}}], 
-               StatusArea[#, 153730]& , TagBoxNote -> "153730"], 
+                ImageSizeCache -> {{139.86820055932463`, 
+                 153.67874985452076`}, {31.18395775245213, 
+                 109.79863798589533`}}], StatusArea[#, 153730]& , TagBoxNote -> 
+               "153730"], 
               StyleBox["153730", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[153730, {
@@ -3313,9 +3310,9 @@ Cell[BoxData[
                  
                  RectangleBox[{7.8181818181818175`, 0.}, {8.727272727272727, 
                   26330.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{155.10580059766266`, 
-                 168.88348871081467`}, {95.23126520452982, 
-                 109.18060399714551`}}], StatusArea[#, 26330]& , TagBoxNote -> 
+                ImageSizeCache -> {{154.37230478404035`, 
+                 168.18285407923645`}, {95.81600915257353, 
+                 109.79863798589533`}}], StatusArea[#, 26330]& , TagBoxNote -> 
                "26330"], 
               StyleBox["26330", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3338,10 +3335,9 @@ Cell[BoxData[
                  
                  RectangleBox[{8.909090909090908, 0.}, {9.818181818181817, 
                   73064.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{170.88902633344506`, 
-                 184.66671444659704`}, {71.5814494379479, 
-                 109.18060399714551`}}], StatusArea[#, 73064]& , TagBoxNote -> 
-               "73064"], 
+                ImageSizeCache -> {{170.1949639382757, 184.00551323347176`}, {
+                 72.1071057763312, 109.79863798589533`}}], 
+               StatusArea[#, 73064]& , TagBoxNote -> "73064"], 
               StyleBox["73064", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[73064, {
@@ -3363,9 +3359,9 @@ Cell[BoxData[
                  
                  RectangleBox[{9.909090909090908, 0.}, {10.818181818181817`, 
                   64626.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{185.35698325791225`, 
-                 199.13467137106423`}, {75.85151289150244, 
-                 109.18060399714551`}}], StatusArea[#, 64626]& , TagBoxNote -> 
+                ImageSizeCache -> {{184.69906816299138`, 
+                 198.50961745818748`}, {76.38783772071287, 
+                 109.79863798589533`}}], StatusArea[#, 64626]& , TagBoxNote -> 
                "64626"], 
               StyleBox["64626", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3388,10 +3384,9 @@ Cell[BoxData[
                  
                  RectangleBox[{10.999999999999998`, 0.}, {11.909090909090907`,
                    8767.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{201.14020899369464`, 
-                 214.91789710684662`}, {104.11904956513405`, 
-                 109.18060399714551`}}], StatusArea[#, 8767]& , TagBoxNote -> 
-               "8767"], 
+                ImageSizeCache -> {{200.5217273172267, 214.3322766124228}, {
+                 104.72599909559027`, 109.79863798589533`}}], 
+               StatusArea[#, 8767]& , TagBoxNote -> "8767"], 
               StyleBox["8767", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[8767, {
@@ -3413,8 +3408,8 @@ Cell[BoxData[
                  
                  RectangleBox[{11.999999999999998`, 0.}, {12.909090909090907`,
                    9638.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{215.60816591816183`, 229.3858540313138}, {
-                 103.67827861608853`, 109.18060399714551`}}], 
+                ImageSizeCache -> {{215.0258315419424, 228.8363808371385}, {
+                 104.28412690744658`, 109.79863798589533`}}], 
                StatusArea[#, 9638]& , TagBoxNote -> "9638"], 
               StyleBox["9638", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3437,9 +3432,10 @@ Cell[BoxData[
                  
                  RectangleBox[{13.090909090909088`, 0.}, {13.999999999999996`,
                    20613.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{231.39139165394423`, 245.1690797670962}, {
-                 98.12436223747261, 109.18060399714551`}}], 
-               StatusArea[#, 20613]& , TagBoxNote -> "20613"], 
+                ImageSizeCache -> {{230.84849069617772`, 
+                 244.65903999137382`}, {98.7163344104581, 
+                 109.79863798589533`}}], StatusArea[#, 20613]& , TagBoxNote -> 
+               "20613"], 
               StyleBox["20613", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[20613, {
@@ -3461,8 +3457,8 @@ Cell[BoxData[
                  
                  RectangleBox[{14.090909090909088`, 0.}, {14.999999999999996`,
                    22347.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{245.8593485784114, 259.6370366915634}, {
-                 97.2468687522316, 109.18060399714551`}}], 
+                ImageSizeCache -> {{245.35259492089344`, 259.1631442160895}, {
+                 97.83664856173118, 109.79863798589533`}}], 
                StatusArea[#, 22347]& , TagBoxNote -> "22347"], 
               StyleBox["22347", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3485,8 +3481,8 @@ Cell[BoxData[
                  
                  RectangleBox[{15.181818181818178`, 0.}, {16.090909090909086`,
                    39601.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{261.6425743141938, 275.4202624273458}, {
-                 88.51545433795926, 109.18060399714551`}}], 
+                ImageSizeCache -> {{261.17525407512875`, 274.9858033703248}, {
+                 89.0834192457367, 109.79863798589533`}}], 
                StatusArea[#, 39601]& , TagBoxNote -> "39601"], 
               StyleBox["39601", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3509,8 +3505,8 @@ Cell[BoxData[
                  
                  RectangleBox[{16.181818181818176`, 0.}, {17.090909090909086`,
                    39842.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{276.110531238661, 289.888219351813}, {
-                 88.39349590085251, 109.18060399714551`}}], 
+                ImageSizeCache -> {{275.6793582998444, 289.48990759504056`}, {
+                 88.96115610297824, 109.79863798589533`}}], 
                StatusArea[#, 39842]& , TagBoxNote -> "39842"], 
               StyleBox["39842", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3533,8 +3529,8 @@ Cell[BoxData[
                  
                  RectangleBox[{17.27272727272727, 0.}, {18.18181818181818, 
                   36987.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{291.8937569744434, 305.67144508759543`}, {
-                 89.83827323670204, 109.18060399714551`}}], 
+                ImageSizeCache -> {{291.5020174540798, 305.3125667492759}, {
+                 90.40954312611282, 109.79863798589533`}}], 
                StatusArea[#, 36987]& , TagBoxNote -> "36987"], 
               StyleBox["36987", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3557,8 +3553,8 @@ Cell[BoxData[
                  
                  RectangleBox[{18.27272727272727, 0.}, {19.18181818181818, 
                   39059.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{306.3617138989106, 320.1394020120626}, {
-                 88.78973430854785, 109.18060399714551`}}], 
+                ImageSizeCache -> {{306.00612167879547`, 319.8166709739916}, {
+                 89.35838448795701, 109.79863798589533`}}], 
                StatusArea[#, 39059]& , TagBoxNote -> "39059"], 
               StyleBox["39059", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3581,9 +3577,10 @@ Cell[BoxData[
                  
                  RectangleBox[{19.363636363636363`, 0.}, {20.272727272727273`,
                    50080.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{322.144939634693, 335.922627747845}, {
-                 83.21253955604433, 109.18060399714551`}}], 
-               StatusArea[#, 50080]& , TagBoxNote -> "50080"], 
+                ImageSizeCache -> {{321.82878083303086`, 
+                 335.63933012822696`}, {83.76725545749596, 
+                 109.79863798589533`}}], StatusArea[#, 50080]& , TagBoxNote -> 
+               "50080"], 
               StyleBox["50080", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[50080, {
@@ -3605,8 +3602,8 @@ Cell[BoxData[
                  
                  RectangleBox[{20.363636363636363`, 0.}, {21.272727272727273`,
                    40833.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{336.6128965591602, 350.39058467231223`}, {
-                 87.89199875905676, 109.18060399714551`}}], 
+                ImageSizeCache -> {{336.3328850577466, 350.1434343529427}, {
+                 88.45840600142785, 109.79863798589533`}}], 
                StatusArea[#, 40833]& , TagBoxNote -> "40833"], 
               StyleBox["40833", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3629,10 +3626,9 @@ Cell[BoxData[
                  
                  RectangleBox[{21.454545454545457`, 0.}, {22.363636363636367`,
                    74204.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{352.39612229494264`, 
-                 366.17381040809465`}, {71.0045506068206, 
-                 109.18060399714551`}}], StatusArea[#, 74204]& , TagBoxNote -> 
-               "74204"], 
+                ImageSizeCache -> {{352.1555442119819, 365.966093507178}, {
+                 71.52876559896748, 109.79863798589533`}}], 
+               StatusArea[#, 74204]& , TagBoxNote -> "74204"], 
               StyleBox["74204", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[74204, {
@@ -3654,9 +3650,9 @@ Cell[BoxData[
                  
                  RectangleBox[{22.454545454545457`, 0.}, {23.363636363636367`,
                    42590.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{366.86407921940986`, 
-                 380.64176733256187`}, {87.00286608687196, 
-                 109.18060399714551`}}], StatusArea[#, 42590]& , TagBoxNote -> 
+                ImageSizeCache -> {{366.65964843669764`, 
+                 380.47019773189373`}, {87.56705188596463, 
+                 109.79863798589533`}}], StatusArea[#, 42590]& , TagBoxNote -> 
                "42590"], 
               StyleBox["42590", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3679,9 +3675,9 @@ Cell[BoxData[
                  
                  RectangleBox[{23.54545454545455, 0.}, {24.45454545454546, 
                   328558.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{382.6473049551923, 
-                 396.4249930683443}, {-57.71169964980578, 
-                 109.18060399714551`}}], StatusArea[#, 328558]& , TagBoxNote -> 
+                ImageSizeCache -> {{382.482307590933, 
+                 396.29285688612913`}, {-57.5090742897804, 
+                 109.79863798589533`}}], StatusArea[#, 328558]& , TagBoxNote -> 
                "328558"], 
               StyleBox["328558", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3704,10 +3700,9 @@ Cell[BoxData[
                  
                  RectangleBox[{24.54545454545455, 0.}, {25.45454545454546, 
                   157477.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{397.11526187965944`, 
-                 410.89294999281145`}, {28.864115199396096`, 
-                 109.18060399714551`}}], StatusArea[#, 157477]& , TagBoxNote -> 
-               "157477"], 
+                ImageSizeCache -> {{396.9864118156487, 410.7969611108448}, {
+                 29.28304490632769, 109.79863798589533`}}], 
+               StatusArea[#, 157477]& , TagBoxNote -> "157477"], 
               StyleBox["157477", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[157477, {
@@ -3729,8 +3724,8 @@ Cell[BoxData[
                  
                  RectangleBox[{25.636363636363644`, 0.}, {26.545454545454554`,
                    28337.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{412.8984876154419, 426.67617572859393`}, {
-                 94.21561963078202, 109.18060399714551`}}], 
+                ImageSizeCache -> {{412.80907096988403`, 426.6196202650802}, {
+                 94.79782605084634, 109.79863798589533`}}], 
                StatusArea[#, 28337]& , TagBoxNote -> "28337"], 
               StyleBox["28337", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3750,10 +3745,11 @@ Cell[BoxData[
                     GrayLevel[0.5], 
                     AbsoluteThickness[1.5], 
                     Opacity[0.66]}], {}, {}], 
+                 
                  RectangleBox[{26.636363636363644`, 0.}, {27.545454545454554`,
                    30263.}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{427.3664445399091, 441.1441326530611}, {
-                 93.24096423714062, 109.18060399714551`}}], 
+                ImageSizeCache -> {{427.31317519459975`, 441.1237244897959}, {
+                 93.8207355406687, 109.79863798589533`}}], 
                StatusArea[#, 30263]& , TagBoxNote -> "30263"], 
               StyleBox["30263", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -3799,6 +3795,7 @@ Cell[BoxData[
                 Offset[{-1.102182119232618*^-15, -6.}, {6.636363636363637, 
                  0.}]}], 
               LineBox[{{6.818181818181818, 0.}, 
+                
                 Offset[{-1.102182119232618*^-15, -6.}, {6.818181818181818, 
                  0.}]}], 
               LineBox[{{8.727272727272727, 0.}, 
@@ -4039,7 +4036,6 @@ Cell[BoxData[
                     RowBox[{"Opacity", "[", "0.7`", "]"}]}], "}"}], "]"}], 
                     ",", 
                     RowBox[{"RGBColor", "[", 
-                    
                     RowBox[{
                     "0.798413061722744`", ",", "0.824719615472648`", ",", 
                     "0.968322270542458`"}], "]"}]}], "]"}], ",", 
@@ -31377,10 +31373,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 0.5454545454545454}, {1., 
                   1.4545454545454546`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {163.2024873670219, 
-                 179.69633680602186`}}], StatusArea[#, 1]& , TagBoxNote -> 
-               "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 274.6261762450212}, {
+                 163.96859055120353`, 180.5417181722468}}], 
+               StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31402,8 +31397,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 1.5454545454545454`}, {0.8901253156053833, 
                   2.4545454545454546`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 259.4738525283769}, {
-                 145.74675298412194`, 162.2406024231219}}], 
+                ImageSizeCache -> {{115.18749999999999`, 257.1765736900507}, {
+                 146.42565016805594`, 162.99877778909922`}}], 
                StatusArea[#, 0.8901253156053833]& , TagBoxNote -> 
                "0.8901253156053833"], 
               StyleBox["0.8901253156053833`", {
@@ -31427,10 +31422,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 2.6363636363636362`}, {1., 
                   3.5454545454545454`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {126.70413365732199`, 
-                 143.19798309632196`}}], StatusArea[#, 1]& , TagBoxNote -> 
-               "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 274.6261762450212}, {
+                 127.28789702280405`, 143.86102464384732`}}], 
+               StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31452,8 +31446,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 3.6363636363636362`}, {0.997750205811346, 
                   4.545454545454545}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 276.4811911094539}, {
-                 109.24839927442206`, 125.742248713422}}], 
+                ImageSizeCache -> {{115.18749999999999`, 274.2688781591264}, {
+                 109.74495663965648`, 126.31808426069972`}}], 
                StatusArea[#, 0.997750205811346]& , TagBoxNote -> 
                "0.997750205811346"], 
               StyleBox["0.997750205811346`", {
@@ -31477,10 +31471,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 4.727272727272727}, {1., 
                   5.636363636363636}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {90.2057799476221, 
-                 106.69962938662206`}}], StatusArea[#, 1]& , TagBoxNote -> 
-               "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 274.6261762450212}, {
+                 90.60720349440457, 107.18033111544783`}}], 
+               StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31502,10 +31495,10 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 5.727272727272727}, {0.9924502649885306, 
                   6.636363636363636}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 275.6436721316339}, {
-                 72.75004556472216, 89.24389500372212}}], 
-               StatusArea[#, 0.9924502649885306]& , TagBoxNote -> 
-               "0.9924502649885306"], 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 273.42717507317406`}, {73.06426311125699, 
+                 89.63739073230025}}], StatusArea[#, 0.9924502649885306]& , 
+               TagBoxNote -> "0.9924502649885306"], 
               StyleBox["0.9924502649885306`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[0.9924502649885306, {
@@ -31527,9 +31520,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 6.8181818181818175`}, {1., 
                   7.727272727272727}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {53.70742623792222, 
-                 70.20127567692217}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 274.6261762450212}, {
+                 53.926509966005085`, 70.49963758704834}}], 
+               StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31551,10 +31544,10 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 7.8181818181818175`}, {0.911221748751245, 
                   8.727272727272727}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 262.80759977474435`}, {36.251691855022244`, 
-                 52.74554129402222}}], StatusArea[#, 0.911221748751245]& , 
-               TagBoxNote -> "0.911221748751245"], 
+                ImageSizeCache -> {{115.18749999999999`, 260.5269757936023}, {
+                 36.38356958285749, 52.956697203900745`}}], 
+               StatusArea[#, 0.911221748751245]& , TagBoxNote -> 
+               "0.911221748751245"], 
               StyleBox["0.911221748751245`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[0.911221748751245, {
@@ -31576,9 +31569,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 8.909090909090908}, {1., 
                   9.818181818181817}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {17.209072528222322`, 
-                 33.70292196722227}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 274.6261762450212}, {
+                 17.245816437605612`, 33.81894405864884}}], 
+               StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31597,12 +31590,11 @@ Cell[BoxData[
                     GrayLevel[0.5], 
                     AbsoluteThickness[1.5], 
                     Opacity[0.66]}], {}, {}], 
-                 
                  RectangleBox[{0., 9.909090909090908}, {1.021013357661885, 
                   10.818181818181817`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 280.15733237406266`}, {-0.24666185467762602`, 
-                 16.24718758432232}}], StatusArea[#, 1.021013357661885]& , 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 277.96338482555666`}, {-0.2971239455419834, 
+                 16.276003675501272`}}], StatusArea[#, 1.021013357661885]& , 
                TagBoxNote -> "1.021013357661885"], 
               StyleBox["1.021013357661885`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -31625,9 +31617,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 10.999999999999998`}, {1., 
                   11.909090909090907`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {-19.28928118147755, \
--2.7954317424776036`}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 274.6261762450212}, {-19.43487709079386, \
+-2.861749469750606}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31646,11 +31638,12 @@ Cell[BoxData[
                     GrayLevel[0.5], 
                     AbsoluteThickness[1.5], 
                     Opacity[0.66]}], {}, {}], 
+                 
                  RectangleBox[{0., 11.999999999999998`}, {1.169913152016362, 
                   12.909090909090907`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 303.6871052025698}, {-36.745015564377496`, \
--20.25116612537755}}], StatusArea[#, 1.169913152016362]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 301.6107085591188}, {-36.97781747394143, \
+-20.4046898528982}}], StatusArea[#, 1.169913152016362]& , TagBoxNote -> 
                "1.169913152016362"], 
               StyleBox["1.169913152016362`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -31673,9 +31666,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 13.090909090909088`}, {1., 
                   13.999999999999996`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {-55.78763489117745, \
--39.2937854521775}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 274.6261762450212}, {-56.115570619193335`, \
+-39.54244299815008}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31697,9 +31690,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 14.090909090909088`}, {0.910658110164839, 
                   14.999999999999996`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 262.7185312306741}, {-73.2433692740774, \
--56.74951983507745}}], StatusArea[#, 0.910658110164839]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 260.4374622776216}, {-73.6585110023409, \
+-57.085383381297675`}}], StatusArea[#, 0.910658110164839]& , TagBoxNote -> 
                "0.910658110164839"], 
               StyleBox["0.910658110164839`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -31722,9 +31715,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 15.181818181818178`}, {1., 
                   16.090909090909086`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {-92.28598860087732, \
--75.7921391618774}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 274.6261762450212}, {-92.79626414759281, \
+-76.22313652654958}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31746,9 +31739,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 16.181818181818176`}, {0.8785908108812518, 
                   17.090909090909086`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 257.6511214962437}, {-109.74172298377727`, \
--93.24787354477729}}], StatusArea[#, 0.8785908108812518]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 255.34473659114582`}, {-110.3392045307404, \
+-93.76607690969712}}], StatusArea[#, 0.8785908108812518]& , TagBoxNote -> 
                "0.8785908108812518"], 
               StyleBox["0.8785908108812518`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -31771,9 +31764,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 17.27272727272727}, {1., 
                   18.18181818181818}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {-128.78434231057724`, \
--112.29049287157727`}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 274.6261762450212}, {-129.4769576759923, \
+-112.90383005494908`}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31795,9 +31788,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 18.27272727272727}, {3.722498511761018, 
                   19.18181818181818}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 707.0573979591836}, {-146.2400766934772, \
--129.74622725447722`}}], StatusArea[#, 3.722498511761018]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 706.9961734693877}, {-147.0198980591399, \
+-130.44677043809662`}}], StatusArea[#, 3.722498511761018]& , TagBoxNote -> 
                "3.722498511761018"], 
               StyleBox["3.722498511761018`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -31820,9 +31813,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 19.363636363636363`}, {1., 
                   20.272727272727273`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 276.83671306567567`}, {-165.28269602027723`, \
--148.78884658127726`}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 274.6261762450212}, {-166.15765120439187`, \
+-149.58452358334858`}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -31844,9 +31837,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 20.363636363636363`}, {0.8924164996388961, 
                   21.272727272727273`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.18750000000001`, 
-                 259.8359150822614}, {-182.73843040317718`, \
--166.2445809641772}}], StatusArea[#, 0.8924164996388961]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.18749999999999`, 
+                 257.5404450493667}, {-183.70059158753946`, \
+-167.12746396649618`}}], StatusArea[#, 0.8924164996388961]& , TagBoxNote -> 
                "0.8924164996388961"], 
               StyleBox["0.8924164996388961`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -32044,7 +32037,6 @@ Cell[BoxData[
                     RowBox[{"Opacity", "[", "0.7`", "]"}]}], "}"}], "]"}], 
                     ",", 
                     RowBox[{"RGBColor", "[", 
-                    
                     RowBox[{
                     "0.798413061722744`", ",", "0.824719615472648`", ",", 
                     "0.968322270542458`"}], "]"}]}], "]"}], ",", 
@@ -32096,6 +32088,7 @@ Cell[BoxData[
                     RowBox[{"Opacity", "[", "0.7`", "]"}]}], "}"}], "]"}], 
                     ",", 
                     RowBox[{"RGBColor", "[", 
+                    
                     RowBox[{
                     "0.798413061722744`", ",", "0.824719615472648`", ",", 
                     "0.968322270542458`"}], "]"}]}], "]"}], ",", 
@@ -44846,8 +44839,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 0.5454545454545454}, {1., 
                   1.4545454545454546`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 205.38958760001265`}, {
-                 129.20355575418108`, 142.42057366872473`}}], 
+                ImageSizeCache -> {{115.1875, 202.93466894901587`}, {
+                 129.9696589383626, 143.26595503494957`}}], 
                StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -44870,8 +44863,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 1.5454545454545454`}, {1.0870203781898293`,
                    2.4545454545454546`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 212.92355850553975`}, {
-                 115.35233604818303`, 128.5693539627267}}], 
+                ImageSizeCache -> {{115.1875, 210.51607303967745`}, {
+                 116.03123323211696`, 129.32752932870392`}}], 
                StatusArea[#, 1.0870203781898293`]& , TagBoxNote -> 
                "1.0870203781898293"], 
               StyleBox["1.0870203781898293`", {
@@ -44895,8 +44888,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 2.6363636363636362`}, {1., 
                   3.5454545454545454`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 205.38958760001265`}, {
-                 100.24191455073064`, 113.4589324652743}}], 
+                ImageSizeCache -> {{115.1875, 202.93466894901587`}, {
+                 100.82567791621261`, 114.12197401279957`}}], 
                StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -44919,8 +44912,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 3.6363636363636362`}, {0.9638217940121039, 
                   4.545454545454545}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 202.25738389098728`}, {
-                 86.39069484473261, 99.60771275927627}}], 
+                ImageSizeCache -> {{115.1875, 199.7827451746661}, {
+                 86.88725220996696, 100.18354830655392`}}], 
                StatusArea[#, 0.9638217940121039]& , TagBoxNote -> 
                "0.9638217940121039"], 
               StyleBox["0.9638217940121039`", {
@@ -44944,8 +44937,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 4.727272727272727}, {1., 
                   5.636363636363636}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 205.38958760001265`}, {
-                 71.28027334728021, 84.49729126182388}}], StatusArea[#, 1]& , 
+                ImageSizeCache -> {{115.1875, 202.93466894901587`}, {
+                 71.68169689406261, 84.97799299064957}}], StatusArea[#, 1]& , 
                TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -44968,8 +44961,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 5.727272727272727}, {1.0164405253230693`, 
                   6.636363636363636}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 206.81296040109825`}, {
-                 57.42905364128218, 70.64607155582584}}], 
+                ImageSizeCache -> {{115.1875, 204.36700317382292`}, {
+                 57.74327118781696, 71.03956728440392}}], 
                StatusArea[#, 1.0164405253230693`]& , TagBoxNote -> 
                "1.0164405253230693"], 
               StyleBox["1.0164405253230693`", {
@@ -44993,9 +44986,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 6.8181818181818175`}, {1., 
                   7.727272727272727}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 205.38958760001265`}, {
-                 42.318632143829774`, 55.53565005837345}}], 
-               StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.1875, 202.93466894901587`}, {
+                 42.53771587191261, 55.83401196849957}}], StatusArea[#, 1]& , 
+               TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -45017,8 +45010,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 7.8181818181818175`}, {1.0377584283672265`,
                    8.727272727272727}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 208.65860236040083`}, {
-                 28.46741243783174, 41.684430352375415`}}], 
+                ImageSizeCache -> {{115.1875, 206.2242651244747}, {
+                 28.599290165666957`, 41.895586262253914`}}], 
                StatusArea[#, 1.0377584283672265`]& , TagBoxNote -> 
                "1.0377584283672265"], 
               StyleBox["1.0377584283672265`", {
@@ -45042,8 +45035,8 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 8.909090909090908}, {1., 
                   9.818181818181817}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 205.38958760001265`}, {
-                 13.356990940379347`, 26.574008854923008`}}], 
+                ImageSizeCache -> {{115.1875, 202.93466894901587`}, {
+                 13.393734849762609`, 26.690030946349566`}}], 
                StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -45066,9 +45059,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 9.909090909090908}, {1.2119256571863823`, 
                   10.818181818181817`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 223.73749378692833`}, {-0.49422876561868634`, 
-                 12.722789148924988`}}], StatusArea[#, 1.2119256571863823`]& ,
+                ImageSizeCache -> {{115.1875, 
+                 221.3980918590391}, {-0.5446908564830437, 
+                 12.751605240103913`}}], StatusArea[#, 1.2119256571863823`]& ,
                 TagBoxNote -> "1.2119256571863823"], 
               StyleBox["1.2119256571863823`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -45091,9 +45084,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 10.999999999999998`}, {1., 
                   11.909090909090907`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 205.38958760001265`}, {-15.60465026307105, \
--2.3876323485274042`}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.1875, 
+                 202.93466894901587`}, {-15.750246172387364`, \
+-2.453950075800435}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -45115,9 +45108,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 11.999999999999998`}, {2.6499230453067857`,
                    12.909090909090907`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 348.2351196268179}, {-29.455869969069084`, \
--16.238852054525438`}}], StatusArea[#, 2.6499230453067857`]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.1875, 
+                 346.67954325510846`}, {-29.688671878633045`, \
+-16.392375782046088`}}], StatusArea[#, 2.6499230453067857`]& , TagBoxNote -> 
                "2.6499230453067857"], 
               StyleBox["2.6499230453067857`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -45140,9 +45133,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 13.090909090909088`}, {1., 
                   13.999999999999996`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 205.38958760001265`}, {-44.56629146652148, \
--31.34927355197783}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.1875, 
+                 202.93466894901587`}, {-44.894227194537365`, \
+-31.597931097950408`}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -45163,9 +45156,9 @@ Cell[BoxData[
                     Opacity[0.66]}], {}, {}], 
                  RectangleBox[{0., 14.090909090909088`}, {0.9802519584708818, 
                   14.999999999999996`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 203.6798596786175}, {-58.41751117251951, \
--45.200493257975864`}}], StatusArea[#, 0.9802519584708818]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.1875, 
+                 201.21417673850385`}, {-58.83265290078302, \
+-45.53635680419609}}], StatusArea[#, 0.9802519584708818]& , TagBoxNote -> 
                "0.9802519584708818"], 
               StyleBox["0.9802519584708818`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -45188,9 +45181,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 15.181818181818178`}, {1., 
                   16.090909090909086`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 205.38958760001265`}, {-73.5279326699719, \
--60.31091475542826}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.1875, 
+                 202.93466894901587`}, {-74.03820821668737, \
+-60.74191212010041}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -45212,9 +45205,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 16.181818181818176`}, {0.8782015939769251, 
                   17.090909090909086`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 194.844636332211}, {-87.37915237596994, \
--74.16213446142626}}], StatusArea[#, 0.8782015939769251]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.1875, 
+                 192.3233276417527}, {-87.97663392293302, \
+-74.68033782634603}}], StatusArea[#, 0.8782015939769251]& , TagBoxNote -> 
                "0.8782015939769251"], 
               StyleBox["0.8782015939769251`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -45237,9 +45230,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 17.27272727272727}, {1., 
                   18.18181818181818}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 205.38958760001265`}, {-102.48957387342239`, \
--89.27255595887868}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.1875, 
+                 202.93466894901587`}, {-103.1821892388374, \
+-89.88589314225044}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -45261,9 +45254,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 18.27272727272727}, {5.391443892876027, 
                   19.18181818181818}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 585.588010204081}, {-116.34079357942039`, \
--103.12377566487672`}}], StatusArea[#, 5.391443892876027]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.1875, 
+                 585.5267857142851}, {-117.12061494508305`, \
+-103.82431884849609`}}], StatusArea[#, 5.391443892876027]& , TagBoxNote -> 
                "5.391443892876027"], 
               StyleBox["5.391443892876027`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -45286,9 +45279,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 19.363636363636363`}, {1., 
                   20.272727272727273`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 205.38958760001265`}, {-131.45121507687287`, \
--118.23419716232917`}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
+                ImageSizeCache -> {{115.1875, 
+                 202.93466894901587`}, {-132.32617026098745`, \
+-119.0298741644005}}], StatusArea[#, 1]& , TagBoxNote -> "1"], 
               StyleBox["1", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
               Style[1, {
@@ -45310,9 +45303,9 @@ Cell[BoxData[
                  
                  RectangleBox[{0., 20.363636363636363`}, {0.8760517926771407, 
                   21.272727272727273`}, "RoundingRadius" -> 0]}, 
-                ImageSizeCache -> {{118.1875, 
-                 194.65851279675695`}, {-145.30243478287088`, \
--132.08541686832717`}}], StatusArea[#, 0.8760517926771407]& , TagBoxNote -> 
+                ImageSizeCache -> {{115.1875, 
+                 192.1360322897061}, {-146.2645959672331, \
+-132.96829987064615`}}], StatusArea[#, 0.8760517926771407]& , TagBoxNote -> 
                "0.8760517926771407"], 
               StyleBox["0.8760517926771407`", {
                 GrayLevel[0]}, StripOnInput -> False]], Annotation[#, 
@@ -58678,13 +58671,72 @@ Cell["dynamic tau complement test", "Section",
  CellChangeTimes->{{3.576050402850259*^9, 3.576050405447945*^9}, {
   3.576050450763002*^9, 3.576050471161372*^9}}],
 
+Cell[CellGroupData[{
+
 Cell["mono test ", "Subsection",
  CellChangeTimes->{{3.576050388913753*^9, 3.57605039098759*^9}, {
-  3.5760504755938377`*^9, 3.576050478833493*^9}}]
+  3.5760504755938377`*^9, 3.576050478833493*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vm1", "=", 
+   RowBox[{"VMLoad", "[", "\"\<4-27_mono/1.log\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vm2", "=", 
+   RowBox[{"VMLoad", "[", "\"\<4-27_mono/2.log\>\"", "]"}]}], ";"}]}], "Input",\
+
+ CellChangeTimes->{{3.576066560781293*^9, 3.576066601963209*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"vm2", "\[Transpose]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.576066606130238*^9, 3.576066659489393*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.24720000000000014`, 0.24, 0.6], LineBox[CompressedData["
+1:eJxdz70OAUEUBeCJSrmFQiFhWYKI+P+3FvsAQqeUqHV0olaoFErxBEq9B6AS
+lVKt8AA45kacSW5uvjm5uTPmaNIfe5RSiXd9+vc8Wt8eausL599eskH2kf3k
+ADlEDpMtcowchzd7cRLeDkztFHx4itPwdR3WzsCPYkQ7CxsXcQ6OzyztPOz4
+o9oFeGdIXoTducyX4OVN9pVhuyCuwIGTvK8KJ3viGjy8y//q8HQlbpCb8PkY
+1LbJLbLz7wVZtSknqw7lZNWlnKxcyn9+AbUHS40=
+      "]]}, 
+    {RGBColor[0.6, 0.24, 0.4428931686004542], LineBox[CompressedData["
+1:eJxTTMoPSmViYGDQBGIQDQEf7EHkgqfMjlABBxBx4CWMzwHmJ2hxQfkCEPkT
+PFC+CJgvcEsAypcA8x2ihaF8GTD/wRwRKF8BzC94IArlK4H5BgniUL4KmD/h
+viSUrwaRV5SG8jUg5qfLQPlaEPNWykL5OmD+hpdyUL4emP9BVAHKN4C4dxuM
+bwjma4QrQvlGEPN/wPjGEPdvh6k3AfO/fISZbwrm3yiAuccMzL/yFuZ+czB/
+zhoJKN8CzO/QEoPyLcF8lZWw8LIC8120BaF8azD/RwgvlG8D5s/oZIHybSHu
+y4Tx7dD49mh8B1R+AxqfwRFNHo3P4IQmj8ZncEaTR+MzuKDJI/gAI2NTwg==
+
+      "]]}, 
+    {RGBColor[0.6, 0.5470136627990908, 0.24], LineBox[CompressedData["
+1:eJxTTMoPSmViYGDQBGIQDQEf7EGkAa+YI1TAAUQocMP4HGD+hVdCUL4AmL9g
+tiCULwLmP/Dmg/IlwPwGT04oXwbMdzjGBuUrQMy3Z4HylSDm2TNC+Spg/oHG
+Hw4QvhpEf/VnKF8DIv8cxteCyH+H8XUg9H8YXw9N3gBN3hBN3giNbwzxTyPM
+fSYQ98YxQfmmYH6COCuUbwZRP48dyjeHuLccxreAqH/OBeVbQvjveKF8KzC/
+YKEAlG8N4RfBwt8GzFe4AYsfWzD/QZ8olG+HxrdH4zug8hvQ+AyOaPJofAYn
+NHk0PoMzmjwan8EFTR7BBwC3T1r0
+      "]]}}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  Method->{},
+  PlotRange->{{0, 41.}, {0, 691232.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0.8200000000000001, 0.8200000000000001}, {13824.64, 
+   13824.64}}]], "Output",
+ CellChangeTimes->{{3.576066644877674*^9, 3.5760666601738586`*^9}}]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1440, 873},
+WindowSize->{1366, 741},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 Magnification:>FEPrivate`If[
   FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
@@ -58712,203 +58764,210 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 109, 1, 120, "Title"],
+Cell[579, 22, 109, 1, 116, "Title"],
 Cell[691, 25, 3019, 84, 229, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[3735, 113, 114, 1, 103, "Section"],
+Cell[3735, 113, 114, 1, 100, "Section"],
 Cell[CellGroupData[{
-Cell[3874, 118, 103, 1, 57, "Subsection"],
+Cell[3874, 118, 103, 1, 56, "Subsection"],
 Cell[3980, 121, 700, 18, 121, "Text"],
 Cell[CellGroupData[{
 Cell[4705, 143, 4416, 119, 553, "Input"],
-Cell[9124, 264, 48506, 1107, 354, "Output"],
-Cell[57633, 1373, 48579, 1110, 355, "Output"],
-Cell[106215, 2485, 1218, 26, 367, "Output"],
-Cell[107436, 2513, 17803, 317, 308, "Output"],
-Cell[125242, 2832, 8485, 166, 296, "Output"]
+Cell[9124, 264, 48550, 1109, 353, "Output"],
+Cell[57677, 1375, 48419, 1102, 353, "Output"],
+Cell[106099, 2479, 1218, 26, 366, "Output"],
+Cell[107320, 2507, 17803, 317, 309, "Output"],
+Cell[125126, 2826, 8485, 166, 299, "Output"]
 }, Open  ]],
-Cell[133742, 3001, 907, 12, 121, "Text"]
+Cell[133626, 2995, 907, 12, 117, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[134686, 3018, 108, 1, 57, "Subsection"],
-Cell[134797, 3021, 554, 16, 121, "Text"],
+Cell[134570, 3012, 108, 1, 56, "Subsection"],
+Cell[134681, 3015, 554, 16, 121, "Text"],
 Cell[CellGroupData[{
-Cell[135376, 3041, 3077, 81, 445, "Input"],
-Cell[138456, 3124, 48476, 1107, 377, "Output"],
-Cell[186935, 4233, 9571, 184, 300, "Output"],
-Cell[196509, 4419, 7305, 140, 296, "Output"]
+Cell[135260, 3035, 3077, 81, 445, "Input"],
+Cell[138340, 3118, 48507, 1109, 376, "Output"],
+Cell[186850, 4229, 9571, 184, 302, "Output"],
+Cell[196424, 4415, 7305, 140, 298, "Output"]
 }, Open  ]],
-Cell[203829, 4562, 179, 2, 37, "Text"]
+Cell[203744, 4558, 179, 2, 38, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[204057, 4570, 98, 1, 103, "Section"],
+Cell[203972, 4566, 98, 1, 100, "Section"],
 Cell[CellGroupData[{
-Cell[204180, 4575, 185, 2, 57, "Subsection"],
-Cell[204368, 4579, 3373, 55, 471, "Text"]
+Cell[204095, 4571, 185, 2, 56, "Subsection"],
+Cell[204283, 4575, 3373, 55, 490, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[207778, 4639, 101, 1, 57, "Subsection"],
-Cell[207882, 4642, 582, 17, 121, "Text"],
+Cell[207693, 4635, 101, 1, 71, "Subsection"],
+Cell[207797, 4638, 582, 17, 151, "Text"],
 Cell[CellGroupData[{
-Cell[208489, 4663, 5719, 166, 607, "Input"],
-Cell[214211, 4831, 1687, 29, 136, "Output"],
-Cell[215901, 4862, 13524, 298, 347, "Output"],
-Cell[229428, 5162, 6803, 137, 298, "Output"],
-Cell[236234, 5301, 7840, 153, 304, "Output"],
-Cell[244077, 5456, 7810, 153, 304, "Output"]
+Cell[208404, 4659, 5719, 166, 758, "Input"],
+Cell[214126, 4827, 1687, 29, 170, "Output"],
+Cell[215816, 4858, 13524, 298, 433, "Output"],
+Cell[229343, 5158, 6803, 137, 372, "Output"],
+Cell[236149, 5297, 7840, 153, 380, "Output"],
+Cell[243992, 5452, 7810, 153, 380, "Output"]
 }, Open  ]],
-Cell[251902, 5612, 3067, 51, 448, "Text"]
+Cell[251817, 5608, 3067, 51, 560, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[255006, 5668, 102, 1, 57, "Subsection"],
-Cell[255111, 5671, 1299, 37, 296, "Text"],
-Cell[256413, 5710, 1247, 39, 121, "Input"],
-Cell[257663, 5751, 189, 2, 37, "Text"],
+Cell[254921, 5664, 102, 1, 71, "Subsection"],
+Cell[255026, 5667, 1299, 37, 370, "Text"],
+Cell[256328, 5706, 1247, 39, 151, "Input"],
+Cell[257578, 5747, 189, 2, 46, "Text"],
 Cell[CellGroupData[{
-Cell[257877, 5757, 258, 9, 39, "Input"],
-Cell[258138, 5768, 893, 18, 136, "Output"]
+Cell[257792, 5753, 258, 9, 48, "Input"],
+Cell[258053, 5764, 893, 18, 170, "Output"]
 }, Open  ]],
-Cell[259046, 5789, 206, 2, 38, "Text"],
+Cell[258961, 5785, 206, 2, 47, "Text"],
 Cell[CellGroupData[{
-Cell[259277, 5795, 1275, 39, 121, "Input"],
-Cell[260555, 5836, 22274, 509, 347, "Output"]
+Cell[259192, 5791, 1275, 39, 151, "Input"],
+Cell[260470, 5832, 22274, 509, 433, "Output"]
 }, Open  ]],
-Cell[282844, 6348, 513, 10, 112, "Text"],
+Cell[282759, 6344, 513, 10, 140, "Text"],
 Cell[CellGroupData[{
-Cell[283382, 6362, 2299, 48, 229, "Input"],
-Cell[285684, 6412, 3595, 77, 53, "Output"],
-Cell[289282, 6491, 70087, 1178, 785, 23026, 406, "CachedBoxData", "BoxData", \
+Cell[283297, 6358, 2299, 48, 286, "Input"],
+Cell[285599, 6408, 3595, 77, 66, "Output"],
+Cell[289197, 6487, 70087, 1178, 981, 23026, 406, "CachedBoxData", "BoxData", \
 "Output"]
 }, Open  ]],
-Cell[359384, 7672, 1772, 29, 209, "Text"],
+Cell[359299, 7668, 1772, 29, 241, "Text"],
 Cell[CellGroupData[{
-Cell[361181, 7705, 1625, 40, 229, "Input"],
-Cell[362809, 7747, 3113, 71, 53, "Output"],
-Cell[365925, 7820, 220847, 3648, 819, 73375, 1229, "CachedBoxData", \
+Cell[361096, 7701, 1625, 40, 229, "Input"],
+Cell[362724, 7743, 3113, 71, 53, "Output"],
+Cell[365840, 7816, 220847, 3648, 819, 73375, 1229, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
-Cell[586787, 11471, 16, 0, 37, "Text"],
+Cell[586702, 11467, 16, 0, 46, "Text"],
 Cell[CellGroupData[{
-Cell[586828, 11475, 103, 1, 45, "Subsubsection"],
-Cell[586934, 11478, 177, 2, 37, "Text"],
+Cell[586743, 11471, 103, 1, 56, "Subsubsection"],
+Cell[586849, 11474, 177, 2, 46, "Text"],
 Cell[CellGroupData[{
-Cell[587136, 11484, 121, 3, 39, "Input"],
-Cell[587260, 11489, 1834, 32, 550, "Output"]
+Cell[587051, 11480, 121, 3, 48, "Input"],
+Cell[587175, 11485, 1834, 32, 687, "Output"]
 }, Open  ]],
-Cell[589109, 11524, 174, 2, 37, "Text"],
+Cell[589024, 11520, 174, 2, 46, "Text"],
 Cell[CellGroupData[{
-Cell[589308, 11530, 120, 3, 39, "Input"],
-Cell[589431, 11535, 2212, 38, 688, "Output"]
+Cell[589223, 11526, 120, 3, 48, "Input"],
+Cell[589346, 11531, 2212, 38, 860, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[591704, 11580, 160, 2, 57, "Subsection"],
-Cell[591867, 11584, 230, 3, 37, "Text"],
-Cell[592100, 11589, 1319, 40, 121, "Input"],
+Cell[591619, 11576, 160, 2, 71, "Subsection"],
+Cell[591782, 11580, 230, 3, 46, "Text"],
+Cell[592015, 11585, 1319, 40, 151, "Input"],
 Cell[CellGroupData[{
-Cell[593444, 11633, 4250, 114, 553, "Input"],
-Cell[597697, 11749, 22211, 505, 347, "Output"],
-Cell[619911, 12256, 3187, 72, 53, "Output"],
-Cell[623101, 12330, 95388, 1593, 792, 35778, 615, "CachedBoxData", "BoxData", \
+Cell[593359, 11629, 4250, 114, 691, "Input"],
+Cell[597612, 11745, 22211, 505, 433, "Output"],
+Cell[619826, 12252, 3187, 72, 66, "Output"],
+Cell[623016, 12326, 95388, 1593, 990, 35778, 615, "CachedBoxData", "BoxData", \
 "Output"],
-Cell[718492, 13925, 3190, 72, 53, "Output"],
-Cell[721685, 13999, 243863, 4026, 792, 94754, 1581, "CachedBoxData", \
+Cell[718407, 13921, 3190, 72, 66, "Output"],
+Cell[721600, 13995, 243863, 4026, 990, 94754, 1581, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[965597, 18031, 99, 1, 57, "Subsection"],
-Cell[965699, 18034, 1639, 41, 417, "Text"],
-Cell[967341, 18077, 1665, 51, 148, "Input"],
+Cell[965512, 18027, 99, 1, 71, "Subsection"],
+Cell[965614, 18030, 1639, 41, 521, "Text"],
+Cell[967256, 18073, 1665, 51, 185, "Input"],
 Cell[CellGroupData[{
-Cell[969031, 18132, 420, 11, 39, "Input"],
-Cell[969454, 18145, 2636, 46, 438, "Output"]
+Cell[968946, 18128, 420, 11, 48, "Input"],
+Cell[969369, 18141, 2636, 46, 547, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[972127, 18196, 3493, 108, 364, "Input"],
-Cell[975623, 18306, 37085, 834, 395, "Output"]
+Cell[972042, 18192, 3493, 108, 455, "Input"],
+Cell[975538, 18302, 37085, 834, 493, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1012745, 19145, 1442, 36, 229, "Input"],
-Cell[1014190, 19183, 3103, 71, 53, "Output"],
-Cell[1017296, 19256, 142565, 2396, 1116, 69341, 1194, "CachedBoxData", \
+Cell[1012660, 19141, 1442, 36, 286, "Input"],
+Cell[1014105, 19179, 3103, 71, 66, "Output"],
+Cell[1017211, 19252, 142565, 2396, 1395, 69341, 1194, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1159898, 21657, 1508, 38, 229, "Input"],
-Cell[1161409, 21697, 3134, 72, 53, "Output"],
-Cell[1164546, 21771, 563036, 9283, 1225, 259642, 4308, "CachedBoxData", \
-"BoxData", "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1727631, 31060, 135, 2, 57, "Subsection"],
-Cell[1727769, 31064, 3320, 69, 460, "Text"],
-Cell[1731092, 31135, 1594, 50, 148, "Input"],
-Cell[CellGroupData[{
-Cell[1732711, 31189, 299, 9, 39, "Input"],
-Cell[1733013, 31200, 2551, 45, 438, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1735601, 31250, 3318, 106, 364, "Input"],
-Cell[1738922, 31358, 37260, 836, 432, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1776219, 32199, 1451, 37, 229, "Input"],
-Cell[1777673, 32238, 3202, 74, 53, "Output"],
-Cell[1780878, 32314, 153596, 2578, 1145, 68923, 1186, "CachedBoxData", \
-"BoxData", "Output"]
-}, Open  ]],
-Cell[1934489, 34895, 428, 7, 38, "Text"],
-Cell[CellGroupData[{
-Cell[1934942, 34906, 1611, 41, 229, "Input"],
-Cell[1936556, 34949, 3204, 73, 53, "Output"],
-Cell[1939763, 35024, 563748, 9298, 1194, 269908, 4478, "CachedBoxData", \
+Cell[1159813, 21653, 1508, 38, 286, "Input"],
+Cell[1161324, 21693, 3134, 72, 66, "Output"],
+Cell[1164461, 21767, 563036, 9283, 1531, 259642, 4308, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2503560, 44328, 153, 2, 57, "Subsection"],
-Cell[2503716, 44332, 11830, 183, 2057, "Text"],
-Cell[2515549, 44517, 1566, 49, 148, "Input"],
-Cell[2517118, 44568, 281, 6, 86, "Text"],
+Cell[1727546, 31056, 135, 2, 71, "Subsection"],
+Cell[1727684, 31060, 3320, 69, 575, "Text"],
+Cell[1731007, 31131, 1594, 50, 185, "Input"],
 Cell[CellGroupData[{
-Cell[2517424, 44578, 257, 8, 39, "Input"],
-Cell[2517684, 44588, 2419, 43, 438, "Output"]
+Cell[1732626, 31185, 299, 9, 48, "Input"],
+Cell[1732928, 31196, 2551, 45, 547, "Output"]
 }, Open  ]],
-Cell[2520118, 44634, 403, 8, 62, "Text"],
 Cell[CellGroupData[{
-Cell[2520546, 44646, 3690, 112, 391, "Input"],
-Cell[2524239, 44760, 2253, 65, 256, "Output"],
-Cell[2526495, 44827, 37152, 834, 355, "Output"]
+Cell[1735516, 31246, 3318, 106, 364, "Input"],
+Cell[1738837, 31354, 37191, 833, 434, "Output"]
 }, Open  ]],
-Cell[2563662, 45664, 5144, 87, 736, "Text"],
 Cell[CellGroupData[{
-Cell[2568831, 45755, 1953, 47, 229, "Input"],
-Cell[2570787, 45804, 3323, 74, 53, "Output"],
-Cell[2574113, 45880, 204032, 3400, 1363, 91779, 1558, "CachedBoxData", \
+Cell[1776065, 32192, 1451, 37, 229, "Input"],
+Cell[1777519, 32231, 3202, 74, 53, "Output"],
+Cell[1780724, 32307, 153596, 2578, 1145, 68923, 1186, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
-Cell[2778160, 49283, 4806, 84, 883, "Text"],
+Cell[1934335, 34888, 428, 7, 47, "Text"],
 Cell[CellGroupData[{
-Cell[2782991, 49371, 1517, 39, 229, "Input"],
-Cell[2784511, 49412, 3108, 71, 53, "Output"],
-Cell[2787622, 49485, 554309, 9141, 1312, 226370, 3764, "CachedBoxData", \
+Cell[1934788, 34899, 1611, 41, 286, "Input"],
+Cell[1936402, 34942, 3204, 73, 66, "Output"],
+Cell[1939609, 35017, 563748, 9298, 1492, 269908, 4478, "CachedBoxData", \
+"BoxData", "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2503406, 44321, 153, 2, 71, "Subsection"],
+Cell[2503562, 44325, 11830, 183, 2571, "Text"],
+Cell[2515395, 44510, 1566, 49, 185, "Input"],
+Cell[2516964, 44561, 281, 6, 107, "Text"],
+Cell[CellGroupData[{
+Cell[2517270, 44571, 257, 8, 48, "Input"],
+Cell[2517530, 44581, 2419, 43, 438, "Output"]
+}, Open  ]],
+Cell[2519964, 44627, 403, 8, 64, "Text"],
+Cell[CellGroupData[{
+Cell[2520392, 44639, 3690, 112, 391, "Input"],
+Cell[2524085, 44753, 2253, 65, 256, "Output"],
+Cell[2526341, 44820, 37149, 834, 357, "Output"]
+}, Open  ]],
+Cell[2563505, 45657, 5144, 87, 920, "Text"],
+Cell[CellGroupData[{
+Cell[2568674, 45748, 1953, 47, 286, "Input"],
+Cell[2570630, 45797, 3323, 74, 66, "Output"],
+Cell[2573956, 45873, 204032, 3400, 1363, 91779, 1558, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]],
-Cell[3341946, 58629, 789, 13, 85, "Text"],
+Cell[2778003, 49276, 4806, 84, 910, "Text"],
 Cell[CellGroupData[{
-Cell[3342760, 58646, 128, 2, 45, "Subsubsection"],
-Cell[3342891, 58650, 1264, 19, 133, "Text"]
+Cell[2782834, 49364, 1517, 39, 229, "Input"],
+Cell[2784354, 49405, 3108, 71, 53, "Output"],
+Cell[2787465, 49478, 554309, 9141, 1312, 226370, 3764, "CachedBoxData", \
+"BoxData", "Output"]
+}, Open  ]],
+Cell[3341789, 58622, 789, 13, 88, "Text"],
+Cell[CellGroupData[{
+Cell[3342603, 58639, 128, 2, 44, "Subsubsection"],
+Cell[3342734, 58643, 1264, 19, 137, "Text"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3344216, 58676, 161, 2, 103, "Section"],
-Cell[3344380, 58680, 148, 2, 57, "Subsection"]
+Cell[3344059, 58669, 161, 2, 100, "Section"],
+Cell[CellGroupData[{
+Cell[3344245, 58675, 148, 2, 56, "Subsection"],
+Cell[3344396, 58679, 324, 9, 67, "Input"],
+Cell[CellGroupData[{
+Cell[3344745, 58692, 162, 3, 39, "Input"],
+Cell[3344910, 58697, 1666, 35, 326, "Output"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
