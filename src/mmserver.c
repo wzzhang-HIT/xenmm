@@ -178,7 +178,7 @@ int main(int argc,char** argv)
     }
     char ch;
     char* unit;
-    while((ch = getopt(argc, argv, "N:f:h"))!= -1){
+    while((ch = getopt(argc, argv, "N:f:hr"))!= -1){
         switch(ch){
             case 'N':
                 total_mem = strtod(optarg, &unit);
