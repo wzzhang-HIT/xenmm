@@ -5,40 +5,41 @@ prog="mmclient"
 export XENSTORED_PATH=/dev/xen/xenbus
 
 start() {
-        # Start daemons.
-        echo -n "Starting $prog: "
-        daemon mmclient $OPTIONS
-	RETVAL=$?
-        echo
-	return $RETVAL
+    # Start daemons.
+    echo -n "Starting $prog: "
+    daemon mmclient $OPTIONS
+    renice -10 -p `pidof mmclient` 
+    RETVAL=$?
+    echo
+    return $RETVAL
 }
 
 stop() {
-        echo -n "Shutting down $prog: "
-	kill `pidof mmclient`
-	RETVAL=$?
-        echo
-	return $RETVAL
+    echo -n "Shutting down $prog: "
+    kill `pidof mmclient`
+    RETVAL=$?
+    echo
+    return $RETVAL
 }
 
 # See how we were called.
 case "$1" in
-  start)
-	start
+    start)
+        start
         ;;
-  stop)
-	stop
+    stop)
+        stop
         ;;
-  status)
-	status mmclient
-	RETVAL=$?
-	;;
-  restart|reload)
-	stop
-	start
-	RETVAL=$?
-	;;
-  *)
+    status)
+        status mmclient
+        RETVAL=$?
+        ;;
+    restart|reload)
+        stop
+        start
+        RETVAL=$?
+        ;;
+    *)
         echo "Usage: $0 {start|stop|restart|status}"
         exit 1
 esac
