@@ -1,0 +1,11 @@
+dacapo test set
+===== DaCapo 9.12 eclipse starting =====
+===== DaCapo 9.12 eclipse PASSED in 222465 msec =====
+===== DaCapo 9.12 h2 starting =====
+===== DaCapo 9.12 h2 PASSED in 25111 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradebeans starting =====
+===== DaCapo 9.12 tradebeans PASSED in 41971 msec =====
+Successfully created tables
+===== DaCapo 9.12 tradesoap starting =====
+===== DaCapo 9.12 tradesoap PASSED in 151905 msec =====
