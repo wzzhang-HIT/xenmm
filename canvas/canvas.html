@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <script type="text/javascript" src="flotr2.min.js"></script>
+    <script type="text/javascript" src="jquery-2.0.0.min.js"></script>
+  	<style>
+  	#boxContainer div{
+  		padding-right: 30;
+  	}
+  	</style>
+  	<title>vmm memory monitor</title>
+  </head>
+  <body>
+  	<h1><center>vmm memory monitor page</center></h1>
+  	<div id="boxContainer"></div>
+    <div id="container" style="width:600px;height:384px;"></div>
+    
+    <script type="text/javascript">
+      (function () {
+      	const pointNum=100;
+      	const timeRange=1000;
+      	const hostUrl="http://127.0.0.1:9091";
+
+        var container = [];
+		var vms = [],x=0;
+		var nums = 0;
+		function render(){
+			
+			$.getJSON(hostUrl,function(d){
+			var i;
+			x++;
+			for(i=0;i<nums;i++){
+				var from=0;
+				var vm = vms[i];
+				if(vm[0].length>pointNum){
+					from = vm[0].shift()[0]+1;
+					vm[1].shift();vm[2].shift();
+				}
+				var to = from+pointNum;
+
+				vm[0].push([x,d[i][0]]);
+				vm[1].push([x,d[i][1]]);
+				vm[2].push([x,d[i][2]]);
+
+				g = Flotr.draw(container[i],vm,{
+					title:"vm "+i+" mem graph",
+					shadowSize:0,
+					xaxis:{title:"t(s)",max:to,min:from},
+					yaxis:{min:0},
+				});
+			}
+				
+				
+			})
+			.always(function(){
+				setTimeout(function(){render();},timeRange);
+			});
+			
+		}
+		function createContainer(){
+			$.getJSON(hostUrl,function(d){
+				nums = d.length;
+				var i;
+				for(i=0;i<nums;i++){
+					container.push($("#boxContainer").append("<div style='width:600px;height:384px;display:inline-block'></div>")[0].lastChild);
+					vms.push([[],[],[]]);
+				}
+				render();
+			});
+		}
+		createContainer();
+      })();
+    </script>
+  </body>
+</html>

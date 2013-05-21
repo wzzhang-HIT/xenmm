@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 2.8)
 option(ONLY_CLIENT Off)
 option(ONLY_DOCUMENT Off)
 
+option(SOCK Off)
+
 if( NOT ONLY_DOCUMENT)
 add_subdirectory(script)
 add_subdirectory(src)

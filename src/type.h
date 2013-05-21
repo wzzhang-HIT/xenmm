@@ -22,6 +22,8 @@
 #define tax_rate TAX_RATE
 #endif
 
+#define UNUSED(x) (void)x
+
 typedef unsigned int uint;
 typedef unsigned long long mem_t;
 typedef unsigned long ulong;
