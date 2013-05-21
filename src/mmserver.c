@@ -26,32 +26,6 @@ static double total_mem = 0.0;
 static double reverse_mem = 0.0;
 static double xi_ = 0.0;
 static int reset_ = 0;
-#if 0
-static void domainu_mem_change(void* data)
-{
-    Domain* d = data;
-
-    s_h_read_domain_mem(d);
-}
-void matrix_print(int len)
-{
-    int i,j;
-    for(i=0;i<len;i++){
-        printf("[");
-        for(j=0;j<len;j++){
-            printf("%.0lf,",_a_[i][j]);
-        }
-        printf("]\n");
-    }
-}
-void vector_print(int len)
-{
-    int i;
-    for(i=0;i<len;i++){
-        printf("[%.0lf]\n",_b_[i]);
-    }
-}
-#endif
 int unit_expand(char u)
 {
     switch(u){
@@ -159,6 +133,7 @@ static void build_linear_equ()
 }
 static void interupt_server(int sig)
 {
+    UNUSED(sig);
     prog_quit = 1;
 }
 static void show_help()
@@ -171,6 +146,41 @@ static void show_help()
             "\tmmserver -N 5G -f 100M\n"
           );
 }
+#if ENABLE_SOCK
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <pthread.h>
+static void * sock_thread(void* no_used)
+{
+    UNUSED(no_used);
+    int server = socket(AF_INET,SOCK_STREAM,0);
+    struct sockaddr_in addr;
+    memset(&addr,0,sizeof(addr));
+    addr.sin_family = AF_INET;
+    addr.sin_port = htons(9091);
+    addr.sin_addr.s_addr = INADDR_ANY;
+    bind(server,(struct sockaddr*)&addr,sizeof(addr));
+    listen(server,10);
+    char buf[8192] = {0};
+    while(!prog_quit){
+        struct sockaddr_in dest_addr;
+        socklen_t dest_sz = sizeof(dest_addr);
+        int client = 0;
+        if((client = accept(server,(struct sockaddr*)&dest_addr,&dest_sz))>0){
+            memset(buf,0,sizeof(buf));
+            strcat(buf,"[");
+            Domain* d;
+            LIST_FOREACH(d,&domain0.domainu,entries){
+                snprintf(buf+strlen(buf),sizeof(buf)-strlen(buf),"[%llu,%llu,%llu],",d->tot_mem,d->tot_mem-d->free_mem,d->free_mem);
+            }
+            buf[strlen(buf)-1] = ']';
+        }
+        write(client,buf,strlen(buf));
+        close(client);
+    }
+    return NULL;
+}
+#endif
 int main(int argc,char** argv)
 {
     if(s_h_init()==MM_FAILED){
@@ -235,6 +245,10 @@ int main(int argc,char** argv)
     LIST_FOREACH(d,&domain0.domainu,entries){
         record_begin(d);
     }
+#if ENABLE_SOCK
+    pthread_t thread = 0;
+    pthread_create(&thread,NULL,sock_thread,NULL);
+#endif
     while(!prog_quit){
         sleep(2);
         //s_h_wait_change();
@@ -244,7 +258,9 @@ int main(int argc,char** argv)
         }
         build_linear_equ();
     }
-
+#if ENABLE_SOCK
+    pthread_cancel(thread);
+#endif
     LIST_FOREACH(d,&domain0.domainu,entries){
         record_end(d);
     }

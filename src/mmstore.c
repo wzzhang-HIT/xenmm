@@ -122,6 +122,7 @@ void s_h_wait_change()
         }
 
     }
+    UNUSED(path);
     free(list);
 }
 
