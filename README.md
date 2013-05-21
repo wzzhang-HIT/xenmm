@@ -35,10 +35,11 @@ build
 
 * **CMAKE_BUILD_TYPE** 	:	选择Debug,构建调式版本,选择Release,构建发布版本.
 * **ONLY_CLIENT** 	 	:	开启已仅仅编译mmclient,可以再虚拟机(guest)中使用该选项.
-								不过其实也可以不用
-* **UNIT**					:	编译单元测试.虽然现在只有一个测试,而且已经不用再测试了.
-* **DEB**					:	开启以支持构建deb包.方便部署.
-* **TAX_RATE**           :  在编译时确定tau值.方便更改.
+							不过其实也可以不用
+* **UNIT**				:	编译单元测试.虽然现在只有一个测试,而且已经不用再测试了.
+* **DEB**				:	开启以支持构建deb包.方便部署.
+* **TAX_RATE**          :   在编译时确定tau值.方便更改.
+* **SOCK**              :   开启socket，可以用127.0.0.1:9091来获取当前虚拟机的内存用量JSON
 
 例如:
     cmake .. -DTAU_RATE=0.75 -DDEB=On
@@ -86,7 +87,7 @@ _如果是已经有origin了.可以先`git remote rm origin`删除._
 	$ cmake .. -DDEB=ON
 	$ make
 	$ sudo make package
-大概这个时候就可以看到在build文件夹中安静的躺着的*.deb了.
+大概这个时候就可以看到在build文件夹中安静的躺着的.deb了.
 
 2. 传送deb到虚拟机
 这里因为物理机和虚拟机有网络通路(NAT或桥).xen使用的是后者.
@@ -129,17 +130,17 @@ benchmark
 ### mono test method ###
 
 1. 在guest端安装deb.见上文.
-2. 在host开启mm_server调节程序.最好是在build文件夹用
+2. 在host开启`mm_server`调节程序.最好是在build文件夹用
    `sudo src/mm_server`启用.因为会在当前目录写log记录.
    千万不要用`sudo make install;sudo mm_server`
-   这样是使用的/usr/local/bin目录下面的mm_server.
+   这样是使用的/usr/local/bin目录下面的`mm_server`.
    那么log记录也会写乱.
 3. 在guest端使用`mm_test_mono low high`low,high是两个内存数值.
    如`mm_test_mono 50M 400M` M是MB.
 4. 观察host端的记录.可以看到某个domain id下面的free会变少.total会变多.
    这个是正在调节.
 5. 打开build文件夹下面的log记录.把一个试验里面的所有记录全部复制出来.
-   推荐复制到dataset文件夹.然后设置好文件夹名称.例如date_test_param
+   推荐复制到dataset文件夹.然后设置好文件夹名称.例如`date_test_param`
    date是日期,test是测试项目名称.如mono,dacapo...param是测试参数
    然后再画图什么的...
    如果对mathematica比较熟悉.可以使用notebook文件夹里面已经写好的样本.
@@ -151,8 +152,8 @@ dacapo测试,需要测以下的4组数据.其中每组数据都是时间.
  **低负载+无调节**,**低负载+开启调节**,**高负载+无调节**,**高负载+开启调节**
 其中低负载是通过不执行负载程序来进行的.
 高负载是通过开启负载程序来模拟的.
-负载程序即是mm_test_static.
-为了记录swap值的使用量.可以再开启mm_util_swap.
+负载程序即是`mm_test_static`.
+为了记录swap值的使用量.可以再开启`mm_util_swap`.
 将所有的测试的消耗时间汇总之后画图.就可以得到workload.nb中的结果了.
 因为dacapo的输出比较乱.推荐手工收集数据.
 
@@ -216,6 +217,22 @@ dacapo的循环运行可以使用`./dacapo_test.sh`脚本.例如:
    tty1: mm_test_static 100M (optional)
    tty2: mm_util_swap 
    tty3: phoronix-test-suite batch-run nginx
+
+dynamic display
+---------------
+
+最后利用一些剩余时间做了一个网页的动态显示内存用量的UI。
+免得哪些老师要怎么样的要求界面。
+
+其原理如下：首先编译的时候使用SOCK来开启一个服务线程。
+当有请求访问的时候就写入所有虚拟机用量的JSON。
+其格式如下[[total,used,free], ...]
+
+所以我们只需要使用javascript定期的获取JSON就可以获得用量。
+再使用库画出折线图。即可。
+
+因为chromium不允许跨域的获取JSON，所以需要使用--disable-web-security选项。
+首先完全退出chromium,再执行canvas文件夹里面的start.sh即可。
 
 note
 ----
