@@ -72,10 +72,6 @@ static void build_linear_equ()
     for(i=0;i<len;i++){
         _a_[0][i] = 1;
     }
-#if 0
-    matrix_print(len);
-    vector_print(len);
-#endif
     solve_line_equations(_a_, _b_, len, _x_);
 #else
     double Amax = 0;
@@ -85,6 +81,16 @@ static void build_linear_equ()
     int len = 0;
     Domain* d;
     LIST_FOREACH(d,&domain0.domainu,entries){
+        /**
+         * 正确计算总内存的数值,因为tg_mem和tot_mem视角不一致,
+         * tot_mem是虚拟机内部的内存,系统会占用一部分内存作为内核用,
+         * 所以tot_mem<tg_mem.所以一般情况下使用tg_mem.
+         *
+         * 但是当调节超过气球驱动限制之后,tg_mem>>>tot_mem,tg_mem不再可信
+         * 所以要使用tot_mem
+         *
+         * 另外因为设置了N为固定值,所以tot_mem并不会带来什么严重的问题.
+         */
         mem_t total = (abs(d->tg_mem - d->tot_mem)> 70*1024)?d->tot_mem:d->tg_mem;
         double A=(double)(total-d->free_mem);
         _x_[len]=A;
@@ -92,13 +98,13 @@ static void build_linear_equ()
         Amean+=A;
         len++;
     }
-    Total = total_mem>1?total_mem:1024*1024*len;
+    Total = total_mem;
     Amax/=Total;
     Amean/=len;
 #if AUTO_TAX_RATE
-    //Tau = sqrt(1-pow(1-Amax,2));
+    ///*动态曲线1:*/Tau = sqrt(1-pow(1-Amax,2));
+    ///*动态曲线2:*/Tau = Tau * 0.8 + 0.2;
     Tau = (xi_ + Amax-1.0/len)/(Amax-Amean/Total);
-    //Tau = Tau * 0.8 + 0.2;
     Tau = (Tau<0)?0:((Tau>1)?1:Tau);
     Tau = Tau>old_tau?Tau:old_tau-(old_tau-Tau)/10;
     printf("Tau:%lf\n",Tau);
@@ -146,6 +152,7 @@ static void show_help()
             "\tmmserver -N 5G -f 100M\n"
           );
 }
+/**使网页端显示可行*/
 #if ENABLE_SOCK
 #include <arpa/inet.h>
 #include <sys/socket.h>

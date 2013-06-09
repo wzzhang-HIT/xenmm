@@ -13,7 +13,10 @@ int main()
     if(s_g_init())
         return 0;
 
+#if 0
     /*
+     * 使用sysconf获取内存信息的方法，因为数据少而放弃
+     */
     ulong pagesize = sysconf(_SC_PAGESIZE)/1024;//kb
     while(1){
         ulong tot = sysconf(_SC_PHYS_PAGES)*pagesize;
@@ -23,7 +26,8 @@ int main()
         printf("tot:%lu,free:%lu\n",tot,free);
         s_g_write_mem(mem);
         sleep(1);
-    }*/
+    }
+#endif
 
     char buf[4096];
     char* ptr;
@@ -39,6 +43,7 @@ int main()
         //unsigned long long buffer = strtoull(ptr,NULL,10);
         ptr = strstr(ptr,"Cached:")+strlen("Cached:");
         unsigned long long cached = strtoull(ptr,NULL,10);
+        //计算方法:把cached看作free,纠正内存计算
         mem.free_mem = free+cached;
         //mem.free_mem = free;
         printf("tot:%llu,free:%llu\n",mem.tot_mem,mem.free_mem);

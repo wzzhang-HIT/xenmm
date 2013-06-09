@@ -6,13 +6,7 @@ add_definitions(-Wall -W)
 
 if(NOT ONLY_CLIENT)
 
-    #add_library(xenstat STATIC
-    #  libxenstat/xenstat.c
-    #libxenstat/xenstat_linux.c    
-    #)
-
 add_library(util STATIC
-    #mmstat.c
     mmstore.c
     mmctrl.c
     solve.c

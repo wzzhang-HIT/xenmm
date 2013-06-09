@@ -29,8 +29,10 @@ void ctrl_close()
 void ctrl_update_domain_mem(Domain* d,mem_t allocated)
 {
     if(!d) return;
+    //大于精度才进行调整
     if(abs(allocated-d->tg_mem)<ACCURACY) return;
     uint32_t target = allocated;
+    //参考libxl源代码相关功能函数
     if(target > d->max_mem){
         xc_domain_setmaxmem(c_h, d->id, target+10240);
         d->max_mem = target+10240;
