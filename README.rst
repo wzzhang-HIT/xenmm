@@ -33,7 +33,7 @@ use ``cmake .. -D<<OPTION>>=<<VALUE>>`` to add more control. such as ``cmake ..
    when build on guest virtual machines to simplify build
 -  **DEB** : make a deb package to directly install for many virtual machines
 -  **RPM** : make a rpm package to directly install for many virtual machines
--  **TAX_RATE** : set tax rate directly, the default value is **0.75** the
+-  **TAX_RATE** : set tax rate directly, the default value is **AUTO** the
    possible values are:
 
    - **AUTO** : enable dynamic tax rate ability

@@ -1,8 +1,8 @@
 project(xenmm)
 cmake_minimum_required(VERSION 2.8)
 
-option(ONLY_CLIENT Off)
-option(ONLY_DOCUMENT Off)
+option(ONLY_CLIENT "Build Only Client, useful on domain" Off)
+option(ONLY_DOCUMENT "[Not Used]" Off)
 
 option(SOCK Off)
 
