@@ -26,7 +26,7 @@ static double total_mem = 0.0;
 static double reverse_mem = 0.0;
 static double xi_ = 0.0;
 static int reset_ = 0;
-int unit_expand(char u)
+static int unit_expand(char u)
 {
     switch(u){
         case 'k':

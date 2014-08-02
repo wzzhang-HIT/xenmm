@@ -25,6 +25,14 @@ set_target_properties(mm_test_static
     PROPERTIES
     COMPILE_FLAGS "-DLOW_CPU=1"
     )
+add_executable(mm_test_client 
+   mono-client.c
+   ../src/mmstore.c
+   ../src/type.c
+   )
+target_link_libraries(mm_test_client
+   xenstore
+   )
 add_executable(mm_util_swap
     swap.c
     )

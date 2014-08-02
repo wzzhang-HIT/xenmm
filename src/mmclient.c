@@ -7,6 +7,31 @@
 #include "type.h"
 #include "mmstore.h"
 
+static void read_mem(MemInfo* mem)
+{
+   char buf[4096];
+   char* ptr;
+
+   int fd = open("/proc/meminfo",O_RDONLY);
+   size_t len = read(fd,buf,sizeof(buf)-1);
+   buf[len]='\0';
+   ptr = strstr(buf,"MemTotal:")+strlen("MemTotal:");
+   mem->tot_mem = strtoull(ptr,NULL,10);
+   ptr = strstr(ptr,"MemFree:")+strlen("MemFree:");
+   unsigned long long free = strtoull(ptr,NULL,10);
+   //ptr = strstr(ptr,"Buffers:")+strlen("Buffers:");
+   //unsigned long long buffer = strtoull(ptr,NULL,10);
+   ptr = strstr(ptr,"Cached:")+strlen("Cached:");
+   unsigned long long cached = strtoull(ptr,NULL,10);
+   //计算方法:把cached看作free,纠正内存计算
+   mem->free_mem = free+cached;
+   //mem.free_mem = free;
+   close(fd);
+}
+
+#ifndef IMPLEMENT_CLIENT
+// with this macro, it means there are another implement for client. so, we
+// shouldn't compile main function 
 int main()
 {
     MemInfo mem;
@@ -29,29 +54,14 @@ int main()
     }
 #endif
 
-    char buf[4096];
-    char* ptr;
     while(1){
-        int fd = open("/proc/meminfo",O_RDONLY);
-        size_t len = read(fd,buf,sizeof(buf)-1);
-        buf[len]='\0';
-        ptr = strstr(buf,"MemTotal:")+strlen("MemTotal:");
-        mem.tot_mem = strtoull(ptr,NULL,10);
-        ptr = strstr(ptr,"MemFree:")+strlen("MemFree:");
-        unsigned long long free = strtoull(ptr,NULL,10);
-        //ptr = strstr(ptr,"Buffers:")+strlen("Buffers:");
-        //unsigned long long buffer = strtoull(ptr,NULL,10);
-        ptr = strstr(ptr,"Cached:")+strlen("Cached:");
-        unsigned long long cached = strtoull(ptr,NULL,10);
-        //计算方法:把cached看作free,纠正内存计算
-        mem.free_mem = free+cached;
-        //mem.free_mem = free;
+        read_mem(&mem);
         printf("tot:%llu,free:%llu\n",mem.tot_mem,mem.free_mem);
         s_g_write_mem(mem);
-        close(fd);
         sleep(1);
     }
 
     s_g_close();
 
 }
+#endif
