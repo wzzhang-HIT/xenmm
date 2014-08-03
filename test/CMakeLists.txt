@@ -41,6 +41,7 @@ install(TARGETS
     mm_test_mono 
     mm_test_random 
     mm_test_static
+    mm_test_client
     mm_util_swap
     
     DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")
