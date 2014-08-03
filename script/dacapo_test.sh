@@ -14,7 +14,7 @@ times=1
 if [ $# -ge 1 ]; then
     testid=$1
 fi
-if [ $testid = "all" ]; then
+if [ $testid == "all" ]; then
     runall=1
     testid=`java -jar $dacapo -l`
 fi
