@@ -36,6 +36,7 @@ static int unit_expand(char u)
 int main(int argc, char** argv)
 {
    MemInfo mem, real_mem;
+   mem_t used_mem, real_used_mem;
    char * unit = NULL;
 
    if(argc!=3){
@@ -53,16 +54,19 @@ int main(int argc, char** argv)
 
    read_mem(&real_mem);
    mem = real_mem;
+   used_mem = mem.tot_mem - mem.free_mem;
    int direction = DIRECT_DECREASE;
    while(1){
       read_mem(&real_mem);
+      real_used_mem = real_mem.tot_mem - real_mem.free_mem;
       mem.tot_mem = real_mem.tot_mem;
 
       if(direction == DIRECT_DECREASE) 
-         mem.free_mem > reverse_mem ? mem.free_mem -= speed_mem : direction = DIRECT_INCREASE;
+         used_mem - speed_mem > real_used_mem ? used_mem -= speed_mem : (direction = DIRECT_INCREASE);
       else
-         mem.free_mem + speed_mem < real_mem.free_mem ? mem.free_mem += speed_mem : direction = DIRECT_DECREASE;
+         used_mem + speed_mem < real_mem.tot_mem - reverse_mem ? used_mem += speed_mem : (direction = DIRECT_DECREASE);
 
+      mem.free_mem = mem.tot_mem - used_mem;
       s_g_write_mem(mem);
       sleep(1);
    }
