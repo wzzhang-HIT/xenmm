@@ -11,10 +11,11 @@
 
 #define DIRECT_DECREASE 1
 #define DIRECT_INCREASE 0
+#define max(a,b) a<b?b:a
 
 static void show_help(char* prog)
 {
-   printf("useage: %s :Reverse :Delta\n"
+   printf("useage: %s :Base :Delta\n"
          "Delta is changed mem in every 2 seconds\n",
          prog);
 }
@@ -46,8 +47,8 @@ int main(int argc, char** argv)
       return 0;
    }
 
-   double reverse_mem = strtod(argv[1], &unit);
-   reverse_mem *= unit?unit_expand(*unit):1024;
+   double base_mem = strtod(argv[1], &unit);
+   base_mem *= unit?unit_expand(*unit):1024;
 
    double speed_mem = strtod(argv[2], &unit);
    speed_mem *= unit?unit_expand(*unit):1024;
@@ -58,17 +59,19 @@ int main(int argc, char** argv)
    read_mem(&real_mem);
    mem = real_mem;
    used_mem = mem.tot_mem - mem.free_mem;
+   used_mem = max(base_mem, used_mem);
    int direction = DIRECT_DECREASE;
    while(1){
       read_mem(&real_mem);
       real_used_mem = real_mem.tot_mem - real_mem.free_mem;
+      real_used_mem = max(real_used_mem, base_mem);
       mem.tot_mem = real_mem.tot_mem;
 
       if(direction == DIRECT_DECREASE) 
          used_mem - speed_mem > real_used_mem ? used_mem -= speed_mem : (direction = DIRECT_INCREASE);
       else
-         if( used_mem + speed_mem < real_mem.tot_mem - reverse_mem) 
-            used_mem += speed_mem 
+         if( used_mem + speed_mem < real_mem.tot_mem ) 
+            used_mem += speed_mem ;
          else {
             int i=3;
             do{
