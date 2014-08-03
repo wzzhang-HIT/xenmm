@@ -91,7 +91,9 @@ static void build_linear_equ()
          *
          * 另外因为设置了N为固定值,所以tot_mem并不会带来什么严重的问题.
          */
-        mem_t total = (abs(d->tg_mem - d->tot_mem)> 70*1024)?d->tot_mem:d->tg_mem;
+         // 在N=12.5G的时候直接超过70M了, 导致实验错误. 暂时禁用
+         //mem_t total = (abs(d->tg_mem - d->tot_mem)> 70*1024)?d->tot_mem:d->tg_mem;
+        mem_t total = d->tg_mem;
         double A=(double)(total-d->free_mem);
         _x_[len]=A;
         if(A>Amax) Amax=A;
