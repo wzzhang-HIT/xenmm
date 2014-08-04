@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[   2420222,      48191]
-NotebookOptionsPosition[   2409013,      47859]
-NotebookOutlinePosition[   2409757,      47883]
-CellTagsIndexPosition[   2409714,      47880]
+NotebookDataLength[   2420312,      48193]
+NotebookOptionsPosition[   2409103,      47861]
+NotebookOutlinePosition[   2409847,      47885]
+CellTagsIndexPosition[   2409804,      47882]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47359,12 +47359,13 @@ Cell[TextData[{
  Cell[BoxData[GridBox[{
     {"key", "value", "key", "value"},
     {"N", 
-     RowBox[{"10", "GB"}], 
+     RowBox[{"12.5", "GB"}], 
      RowBox[{"init", " ", "mem"}], 
-     RowBox[{"2", "G"}]},
+     RowBox[{"2.5", "G"}]},
     {
      RowBox[{"VM", " ", "count"}], "5", "f", 
-     RowBox[{"300", "MB"}]},
+     RowBox[{"300", 
+      RowBox[{"M", "/", "450"}], "M"}]},
     {
      RowBox[{"high", " ", "load"}], 
      RowBox[{"800", "MB"}], "ACCURANCY", 
@@ -47374,7 +47375,8 @@ Cell[TextData[{
     "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
      "RowsIndexed" -> {}}]]]
 }], "Text",
- CellChangeTimes->{{3.616041585413711*^9, 3.616041708076576*^9}}],
+ CellChangeTimes->{{3.616041585413711*^9, 3.616041708076576*^9}, {
+  3.6161011872316637`*^9, 3.6161012054359083`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -47858,7 +47860,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{898, 674},
-WindowMargins->{{Automatic, 140}, {-9, Automatic}},
+WindowMargins->{{Automatic, 130}, {-9, Automatic}},
 FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
 StyleDefinitions->Notebook[{
    Cell[
@@ -48184,11 +48186,11 @@ Cell[2385985, 47289, 2292, 40, 262, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[2388326, 47335, 108, 1, 47, "Subsection"],
-Cell[2388437, 47338, 1199, 38, 209, "Text"],
-Cell[2389639, 47378, 480, 11, 55, "Input"],
+Cell[2388437, 47338, 1289, 40, 210, "Text"],
+Cell[2389729, 47380, 480, 11, 55, "Input"],
 Cell[CellGroupData[{
-Cell[2390144, 47393, 2999, 84, 275, "Input"],
-Cell[2393146, 47479, 15815, 374, 122, "Output"]
+Cell[2390234, 47395, 2999, 84, 275, "Input"],
+Cell[2393236, 47481, 15815, 374, 122, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

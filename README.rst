@@ -131,11 +131,11 @@ mono client test
 mono client test is a little like mono test. it is used to measure pure cpu performance decrease. 
 it doesn't use mmclient as client, but mm_test_client as the client. this is a fake client program, means which doesn't report 'real' memory status to server. but generate a fake and rapid changed number to server. which makes server always do the adjust. then it would cause memory remap, then it makes cpu performance down, without introduce other noise (compare with run a real eat memory program). 
 
-mm_test_client use two parameters, reversed memory and speed memory. it makes a mono increase on used memory from real used memory to total memory - reversed memory. and then decrease it. with every second change speed memory. 
+mm_test_client use two parameters, base memory and delta memory. it makes a mono increase on used memory from base memory to total memory . and then decrease it. with every second change delta memory. 
 
 1.  run ``service mmclientd start`` on other domain
 2.  run ``mm_test_client 150M 10M`` on target domain
-3.  run ``renice -10 -p `pidof mm_test_client`` on target domain
+3.  run ``renice -10 -p `pidof mm_test_client` `` on target domain
 4.  start server program
 3.  run ``./dacapo_test 'sunflow luindex lusearch' 15`` on target domain
 
