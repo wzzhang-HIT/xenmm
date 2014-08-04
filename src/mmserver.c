@@ -20,6 +20,7 @@
 #include "mmrecord.h"
 
 #define tau tax_rate
+#define max(a,b) a<b?b:a
 static int prog_quit = 0;
 static double old_tau = 0.0;
 static double total_mem = 0.0;
@@ -93,7 +94,8 @@ static void build_linear_equ()
          */
          // 在N=12.5G的时候直接超过70M了, 导致实验错误. 暂时禁用
          //mem_t total = (abs(d->tg_mem - d->tot_mem)> 70*1024)?d->tot_mem:d->tg_mem;
-        mem_t total = d->tg_mem;
+         // 有时候没有调节过来, 导致tg_mem < tot_mem, 然后得出结果为负, 然后整个计算都错误了.
+        mem_t total = max(d->tg_mem,d->tot_mem);
         double A=(double)(total-d->free_mem);
         _x_[len]=A;
         if(A>Amax) Amax=A;
