@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[   2428200,      48406]
-NotebookOptionsPosition[   2416745,      48066]
-NotebookOutlinePosition[   2417489,      48090]
-CellTagsIndexPosition[   2417446,      48087]
+NotebookDataLength[   2435814,      48542]
+NotebookOptionsPosition[   2424193,      48197]
+NotebookOutlinePosition[   2424936,      48221]
+CellTagsIndexPosition[   2424893,      48218]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47331,7 +47331,153 @@ Cell[BoxData[
    3.614945806851203*^9}, {3.614946346659205*^9, 3.614946352833685*^9}, {
    3.6149464235294237`*^9, 3.6149464370476093`*^9}, 3.614994725494548*^9}]
 }, Open  ]]
+}, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["fake client test", "Section",
+ CellChangeTimes->{{3.6162813883418627`*^9, 3.616281390847157*^9}}],
+
+Cell["\<\
+\:5b9e\:9a8c\:539f\:7406
+==========
+
+\:4e3a\:4e86\:6d4b\:8bd5\:8c03\:8282\:65f6\:5019\:7684\:7eaf\:6d88\:8017, \
+\:4e5f\:5c31\:662f\:5f00\:542f\:8c03\:8282\:7684\:65f6\:5019\:5bf9cpu\:6027\
+\:80fd\:7684\:4e0b\:964d\:6d88\:8017, \:6211\:4eec\:53ef\:4ee5\:53e6\:8c03\
+\:8282\:7684\:901f\:7387\:4e3a\:81ea\:53d8\:91cf, cpu\:5bc6\:96c6\:578b\:7a0b\
+\:5e8f\:7684\:6d4b\:8bd5\:7ed3\:679c\:4e3a\:56e0\:53d8\:91cf, \:90a3\:4e48\
+\:6211\:4eec\:9884\:8ba1\:968f\:7740\:8c03\:8282\:91cf\:7684\:589e\:52a0, \
+\:6d4b\:8bd5\:7684\:65f6\:95f4\:4e5f\:4f1a\:589e\:52a0.
+
+\:5b9e\:9a8c\:7684\:5173\:952e\:5728\:4e8e\:5982\:4f55\:8ba9\:8c03\:8282\:53ef\
+\:5ea6\:91cf\:5316, \:6211\:4eec\:6309\:7167\:4ec0\:4e48\:6837\:7684\:6807\
+\:51c6\:6765\:786e\:5b9a\:6211\:4eec\:8bbe\:7f6e\:7684\:8c03\:8282\:901f\:7387\
+\:5c31\:662f\:5b9e\:9645\:7684\:60c5\:51b5. \:56e0\:4e3a\:5728\:4ee5\:524d\
+\:7684\:6d4b\:8bd5\:4e2d, \:8c03\:8282\:5b8c\:5168\:662f\:6309\:7167\:4e0a\
+\:9762\:8dd1\:7684\:7a0b\:5e8f\:7684\:9700\:6c42\:6765\:53d8\:5316\:7684. \
+\:4e00\:4e2a\:666e\:901a\:7a0b\:5e8f\:5bf9\:5185\:5b58\:7684\:9700\:6c42\:5e76\
+\:4e0d\:597d\:76f4\:89c2\:7684\:786e\:5b9a. \:552f\:4e00\:6211\:4eec\:60f3\
+\:5230\:7684\:662fmono\:6d4b\:8bd5, \
+\:8fd9\:4e2a\:6d4b\:8bd5\:7a0b\:5e8f\:7684\:5185\:5b58\:53d8\:5316\:662f\:4ece\
+\:4f4e\:5230\:9ad8, \:518d\:4ece\:9ad8\:5230\:4f4e. \:6240\:4ee5\:6211\:4eec\
+\:4ece\:4e2d\:5f97\:5230\:4e86\:542f\:53d1.
+
+\:4e0b\:4e00\:4e2a\:95ee\:9898\:662f\:6d4b\:8bd5\:66f4\:9ad8\:7684\:5185\:5b58\
+\:91cf, \:56e0\:4e3a\:6e90\:4e8e\[CloseCurlyDoubleQuote]\:628a120G\
+\[CloseCurlyDoubleQuote]\:5185\:5b58\:7528\:5c3d\:7684\:9700\:6c42. \:56e0\
+\:4e3a\:6ca1\:6709\:4ec0\:4e48\:7a0b\:5e8f\:80fd\:771f\:6b63\:7684\:6d88\:8017\
+\:6389\:5982\:6b64\:5927\:7684\:5185\:5b58. \
+\:800c\:4e14\:5c31\:7b97\:662fmono\:7a0b\:5e8f, \
+\:628a\:8303\:56f4\:8bbe\:7f6e\:5230120G, \
+\:90a3\:6837\:5b83\:8fd0\:884c\:8d77\:6765\:4e5f\:4f1a\:5341\:5206\:7684\:7f13\
+\:6162. \:56e0\:4e3a\:9700\:8981\:7533\:8bf7120G\:7684\:5185\:5b58, \:5bb9\
+\:6613\:51fa\:73b0\:5185\:5b58\:4e0d\:8db3\:7684\:60c5\:51b5, \:5230\:65f6\
+\:5019linux\:5185\:6838\:5c31\:4f1a\:968f\:673a\:6740\:8fdb\:7a0b. \:5e76\
+\:4e14\:5bf9120G\:7684\:5185\:5b58\:4f1a\:6765\:56de\:7684\:64e6\:9664\:5199\
+\:5165. \:5b83\:672c\:8eab\:5c31\:4f1a\:8fdb\:5165\:5de8\:5927\:7684\:566a\
+\:97f3, \:6d88\:8017\:6389\:5927\:91cf\:7684cpu\:5468\:671f. \:6b64\:65f6\
+\:7684cpu\:6027\:80fd\:4e0b\:964d, \:5c31\:4e0d\:80fd\:8bf4\:662f\:56e0\:4e3a\
+\:5185\:5b58\:8c03\:8282\:5f15\:8d77\:7684, \
+\:8fd8\:662fmono\:7a0b\:5e8f\:5f15\:8d77\:7684\:4e86.
+
+\:56e0\:6b64, \
+\:6211\:4eec\:6ce8\:610f\:5230\:5185\:5b58\:91cf\:662f\:7531mmclient\:7a0b\
+\:5e8f\:6765\:62a5\:544a\:7684\:7cfb\:7edf\:7684\:771f\:5b9e\:5185\:5b58\:60c5\
+\:51b5, \:90a3\:4e48, \:5982\:679c\:5b83\:662f\:62a5\:544a\:7684\:4e00\:4e2a\
+\:865a\:5047\:7684\:5185\:5b58\:60c5\:51b5. \:5219\:4e0a\:9762\:7684\:95ee\
+\:9898\:4f1a\:5c3d\:6570\:89e3\:51b3. \:4e5f\:5c31\:662f\:8bf4, \:5b9e\:9645\
+\:4e0a\:865a\:62df\:673a\:672c\:8eab\:53ea\:7528\:4e86300M\:7684\:5185\:5b58, \
+\:4f46\:662f\:4e00\:4e2a\:7279\:6b8a\:7684client\:7aef\:544a\:8bc9server\:7aef\
+\:4f7f\:7528\:4e86120G, \
+\:90a3\:4e48\:5c31\:5b8c\:5168\:4e0d\:9700\:8981\:5f15\:5165\:4e00\:4e2a\:771f\
+\:6b63\:4f7f\:7528\:4e86120G\:7684\:7a0b\:5e8f, \
+\:5c31\:8fbe\:5230\:6211\:4eec\:7684\:9700\:6c42. \:53e6\:5916\:7531\:4e8e\
+\:6211\:4eec\:53ef\:4ee5\:63a7\:5236client\:7aef\:7684\:884c\:4e3a, \:6240\
+\:4ee5\:8ba9\:5b83\:6309\:7167\:600e\:6837\:7684\:53d8\:5316\:89c4\:5f8b\:53bb\
+\:62a5\:544a\:5185\:5b58\:90fd\:662f\:53ef\:884c\:7684. \:4e5f\:80fd\:591f\
+\:65b9\:4fbf\:7684\:63a7\:5236\:53d8\:5316\:91cf\:7684\:591a\:5c11.
+
+fake client
+============
+
+\:7531\:4e0a, \:5b9e\:9a8c\:9700\:8981\:4e00\:4e2a\:7279\:6b8a\:7684client\
+\:7aef. \:5b83\:4f1a\:865a\:62a5\:5185\:5b58\:7528\:91cf, \
+\:4ece\:800c\:8ba9server\:7aef\:4e0d\:65ad\:7684\:6267\:884c\:8c03\:8282\:8fc7\
+\:7a0b. \:9996\:5148, \:4e3a\:4e86\:8ba9\:5b83\:548c\:4ee5\:524d\:7684\:9ad8\
+\:8d1f\:8f7d\:6d4b\:8bd5\:8054\:7cfb, \:9700\:8981\:8bbe\:7f6e\:4e00\:4e2a\
+\:57fa\:7840\:5185\:5b58800M, \
+\:76f4\:63a5\:8fdb\:5165\:9ad8\:8d1f\:8f7d\:72b6\:6001, \:7136\:540e\:9700\
+\:8981\:8bbe\:7f6e\:4e00\:4e2a\:5355\:4f4d\:65f6\:95f4\:5185\:5b58\:53d8\:5316\
+\:91cfDelta, \
+\:5b83\:4f1a\:9996\:5148\:4ece800M\:6bcf2\:79d2\:589e\:52a0Delta, (2\:79d2\
+\:662f\:56e0\:4e3aserver\:7aef\:6bcf2\:79d2\:6267\:884c\:4e00\:6b21\:8c03\
+\:8282.) \:6b64\:65f6server\:7aef\:4f1a\:6267\:884c\:8c03\:8282, \:4e0d\:65ad\
+\:7684\:589e\:52a0\:603b\:5185\:5b58. \:56e0\:6b64\:5b83\:4e5f\:4f1a\:4e00\
+\:76f4\:589e\:52a0, \:76f4\:5230\:8c03\:8282\:7684\:4e34\:754c\:72b6\:6001. \
+\:518d\:589e\:52a0Delta\:8d85\:8fc7\:603b\:5185\:5b58\:7684\:65f6\:5019, \
+\:5c31\:53cd\:8f6c\:65b9\:5411, \:6bcf2\:79d2\:9010\:6e10\:9012\:51cfDelta. \
+\:6b64\:65f6server\:7aef\:4f1a\:6162\:6162\:7684\:6062\:590d\:5230\:521d\:59cb\
+\:7684\:72b6\:6001. \:4e00\:76f4\:5230\:51cf\:5c0f\:5230\:57fa\:7840\:5185\
+\:5b58800M. \:518d\:53cd\:5411\:9012\:589e. \:4f9d\:6b21\:7c7b\:63a8, \:4e0d\
+\:65ad\:91cd\:590d.
+
+\:6240\:4ee5, \:5b83\:80fd\:591f\:6ee1\:8db3\:4e00\:4e2a\:786e\:5b9a\:7684\
+\:8c03\:8282\:901f\:7387\:53c2\:6570. \:65e0\:8bba\:662f\:9012\:589e\:8fd8\
+\:662f\:9012\:51cf\:9636\:6bb5, \:90fd\:662fDelta\:7684\:8c03\:8282\:901f\
+\:7387. \:53e6\:5916\:5b83\:8fbe\:5230\:4e34\:754c\:7684\:65f6\:5019, \:7531\
+\:4e8e\:5b9e\:9645\:5185\:5b58\:4f7f\:7528\:8fd8\:662f\:5341\:5206\:5c11\:7684\
+, \:4e5f\:4e0d\:4f1a\:6709\:4f7f\:7528swap\:5206\:533a\:7684\:95ee\:9898.
+
+\:5b9e\:9a8c\:8bbe\:7f6e
+==========
+
+fake client\:8bbe\:7f6e\:57fa\:7840\:5185\:5b58800M, Delta\:5206\:522b\:662f \
+0(\:4e0d\:5f00\:542f\:8c03\:8282), 10M, 50M, 100M, 150M, 200M, 300M
+\:6bcf\:4e2a\:6d4b\:8bd5\:8fd0\:884c15\:6b21, \:7528\:4e2d\:95f4\:503c\:628a\
+\:8fde\:7ebf\:8fde\:63a5\:8d77\:6765, \:6700\:5927\:503c, \:6700\:5c0f\:503c\
+\:4f5c\:4e3aerror bar\:7684\:8303\:56f4.
+
+1. sunflow, luindex, lusearch
+
+\:5728\:505a\:8fd9\:4e09\:4e2a\:5b9e\:9a8c\:7684\:65f6\:5019, \:662f\:4ece0\
+\:5230300M\:7684\:65b9\:5411\:6d4b\:8bd5\:7684. \
+\:9996\:5148\:4e00\:5f00\:59cb\:865a\:62df\:673a\:7684\:914d\:7f6e\:8fd8\:662f\
+\:548c\:4ee5\:524d\:4e00\:6837\:7684. N=5G, \:865a\:62df\:673a\:6570\:91cf5\
+\:53f0, \:6bcf\:4e2a\:865a\:62df\:673a\:521d\:59cb\:5185\:5b581G, \
+\:6700\:5927\:5185\:5b582G. \:9884\:7559\:5185\:5b58150M.
+\:6d4b\:8bd5\:7684\:662f 0, 10M, 50M, 100M \:8fd9\:51e0\:4e2a\:53c2\:6570
+
+\:4f46\:662f\:5f53\:5927\:4e8e100M\:7684\:65f6\:5019, \
+\:8c03\:8282\:5230\:8fbe\:4e34\:754c\:592a\:5feb\:4e86. \:6240\:4ee5\:6211\
+\:4eec\:589e\:5927\:4e86\:5185\:5b58\:5206\:914d, \:6d4b\:8bd5\:5927\:5185\
+\:5b58\:7684\:60c5\:51b5. N=12.5G, \:865a\:62df\:673a\:6570\:91cf5\:53f0, \
+\:6bcf\:4e2a\:865a\:62df\:673a\:521d\:59cb\:5185\:5b582.5G, \
+\:6700\:5927\:5185\:5b585G, \:9884\:7559\:5185\:5b58300M, Delta=300M\:7684\
+\:65f6\:5019\:9884\:7559\:5185\:5b58450M.
+\:6d4b\:8bd5\:7684\:662f 150M, 200M, 300M \:8fd9\:51e0\:4e2a\:53c2\:6570
+
+2. h2
+
+\:5728\:505a\:8fd9\:4e2a\:5b9e\:9a8c\:7684\:65f6\:5019, \
+\:662f\:4ece300M\:52300\:7684\:65b9\:5411\:6d4b\:8bd5\:7684. \:9996\:5148\
+\:865a\:62df\:673a\:914d\:7f6e\:4fdd\:6301 N=12.5G, \:6570\:91cf5, \:521d\
+\:59cb\:5185\:5b582.5G, \:6700\:5927\:5185\:5b585G, \
+\:9884\:7559\:5185\:5b58300M, Delta=300M\:7684\:65f6\:5019\:9884\:7559\:5185\
+\:5b58450M
+\:6d4b\:8bd5\:7684\:662f 300M, 200M, 150M, 100M \:8fd9\:51e0\:4e2a\:53c2\:6570
+
+\:4f46\:662f\:5f53\:5c0f\:4e8e100M\:7684\:65f6\:5019, \
+\:5230\:5f00\:59cb\:8c03\:8282\:7684\:72b6\:6001\:592a\:6162\:4e86, \:4e5f\
+\:5c31\:662f\:4ece800M\:7ecf\:8fc7\:5f88\:957f\:65f6\:95f4\:624d\:8fbe\:5230\
+\:63a5\:8fd12.5G, \:4ece\:800c\:5f00\:59cb\:8c03\:8282. \:6240\:4ee5\:53c8\
+\:628a\:53c2\:6570\:6539\:56de\:5230 N=5G, \:6570\:91cf5\:53f0, \:521d\:59cb\
+\:5185\:5b581G, \:6700\:5927\:5185\:5b582G, \:9884\:7559\:5185\:5b58150M
+\:6d4b\:8bd5\:7684\:662f 50M, 10M, 0 \:8fd9\:51e0\:4e2a\:53c2\:6570\
+\>", "Text",
+ CellChangeTimes->{
+  3.616281399290694*^9, {3.616582577878791*^9, 3.616582608013681*^9}}],
 
 Cell[CellGroupData[{
 
@@ -47413,7 +47559,10 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{
          RowBox[{"#", "/@", 
-          RowBox[{"Transpose", "[", "d", "]"}]}], "&"}], "/@", 
+          RowBox[{"Transpose", "[", 
+           RowBox[{
+           "d", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+           "]"}]}], "&"}], "/@", 
         RowBox[{"{", 
          RowBox[{"Median", ",", "Min", ",", "Max"}], "}"}]}], ")"}]}]}], ";", 
     "\[IndentingNewLine]", 
@@ -47427,36 +47576,59 @@ Cell[BoxData[{
          RowBox[{"{", 
           RowBox[{
            RowBox[{"{", 
-            RowBox[{"#1", ",", "#2"}], "}"}], ",", 
+            RowBox[{"#1", ",", 
+             RowBox[{"#2", "/", "1000"}]}], "}"}], ",", 
            RowBox[{"ErrorBar", "[", 
             RowBox[{
-             RowBox[{"{", 
-              RowBox[{"#3", ",", "#4"}], "}"}], "-", "#2"}], "]"}]}], "}"}], 
-         "&"}], "@@", "#"}], "&"}], "/@", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"#3", ",", "#4"}], "}"}], "-", "#2"}], ")"}], "/", 
+             "1000"}], "]"}]}], "}"}], "&"}], "@@", "#"}], "&"}], "/@", 
       RowBox[{"(", 
        RowBox[{"$", "\[Transpose]"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"ErrorListPlot", "[", 
      RowBox[{"$", ",", "\[IndentingNewLine]", 
       RowBox[{"PlotRange", "\[Rule]", 
        RowBox[{"{", 
-        RowBox[{"All", ",", "$max"}], "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"All", ",", 
+         RowBox[{"$max", "/", "1000"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
       RowBox[{"Joined", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
-      RowBox[{"Mesh", "\[Rule]", "All"}]}], "\[IndentingNewLine]", "]"}]}], 
-   ",", "\[IndentingNewLine]", 
+      RowBox[{"Mesh", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"AxesLabel", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<\[CapitalDelta](MB)\>\"", ",", "\"\<time(s)\>\""}], 
+        "}"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"PlotLabel", "\[Rule]", 
+       RowBox[{
+        RowBox[{"d", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+        "<>", "\"\< running time with increasing memory allocation \
+rates\>\""}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"PlotTheme", "\[Rule]", "\"\<Monochrome\>\""}]}], 
+     "\[IndentingNewLine]", "]"}]}], ",", "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{"d", ",", 
-     RowBox[{"{", 
+     RowBox[{"{", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"dp", "[", 
-        RowBox[{"[", 
-         RowBox[{"2", ";;", "16"}], "]"}], "]"}], ",", 
-       RowBox[{"dp", "[", 
-        RowBox[{"[", 
-         RowBox[{"17", ";;", "31"}], "]"}], "]"}], ",", 
-       RowBox[{"dp", "[", 
-        RowBox[{"[", 
-         RowBox[{"32", ";;", "46"}], "]"}], "]"}]}], "}"}]}], "}"}]}], 
-  "]"}], "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"dp", "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ";;", "16"}], "]"}], "]"}], ",", "\"\<sunflow\>\""}], 
+        "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"dp", "[", 
+          RowBox[{"[", 
+           RowBox[{"17", ";;", "31"}], "]"}], "]"}], ",", "\"\<luindex\>\""}],
+         "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"dp", "[", 
+          RowBox[{"[", 
+           RowBox[{"32", ";;", "46"}], "]"}], "]"}], ",", 
+         "\"\<lusearch\>\""}], "}"}]}], "\[IndentingNewLine]", "}"}]}], 
+    "\[IndentingNewLine]", "}"}]}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Do", "[", 
   RowBox[{
    RowBox[{
@@ -47475,397 +47647,360 @@ Cell[BoxData[{
   RowBox[{"Clear", "[", 
    RowBox[{"$", ",", "$max"}], "]"}], ";"}]}], "Input",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGCQAGIQ/S5y8iPJj68clX4wPAPRNtXHX4FoPUGrdyDaZfnu
-vyDauzmMRwpIe6kEiYHoVYUb7EH0p7PnvED0lZr5PiB6Rff9WBCddds9GUQ3
-7A5IB9GdR34WgOifgltLQfSuJUXlIPreyVu1IPpxT1A3iN5usn8GiOZ/GLcI
-RNtEJ60F0VUlT9aB6BN9Hw6B6JDAiqMgOoG57xmIXt0u9QKsbvXOtyA6QEzl
-PYgOejjxM4jWFNsApjddnvMXRMftWMgoDaTNt87gANFVR96B6Qc2i8RBdNNc
-ZwUQ7f21RAVEL16Uqguib3ZG24BoAe+5tiDa/+z3cBB9r6UjGkQzhGalgegW
-mSowLaPemwWiw6fK54LoyVqik0C0VmnfVBANACnlzS0=
+1:eJwdzk0ogwEAxvEXBx+t2MG0Wdm0wmo7KaVJotSmzMLSsphGreSjLdooZsXa
+rFirHYyMIosWLR9TSpNpcUFhNYZmrcxXix1W3uc9PP0uz+HPVQ3J1NkEQbDJ
+wWSX/Zn5lWgo/yNiUGQ4T0AhvTYJmzb8GSiZ6aSxSMU8GQNujXjr4ffllRje
+TKy0wE3LYzfUhJv74JRfOgDNgfQwTNN9Oni0PjoGIxcPk/DFKrPA/eoTJyyM
+Kt1QpFBtQ732dQcGbZ+nsL1t/Az25Nhi0DPLilM/z+E7lDJ4H1AWXfiBVQwv
+5e71UgYqD1azSklrfM48qA8kKZ9E7hJodDVyoCSl5cE1t1oA780KESySuOpg
+6+WvHEZMcwpIdGj6oYmtp2RXzGug3FE2CO384kXI19kc0BDae5tGT9AXhyFh
+L8dIygjnc+FtbqQSLtPsAsi8OzbAAlPKCv8BP47x2g==
   "]],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   GraphicsBox[{{}, 
-     GraphicsComplexBox[{{0., 23635.}, {10., 23911.}, {50., 25143.}, {100., 
-      26081.}, {150., 25639.}, {200., 26643.}, {300., 30714.}}, {{{}, {}, 
-        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-         0.019444444444444445`], AbsoluteThickness[1.6], 
-         LineBox[{1, 2, 3, 4, 5, 6, 
-          7}], {{LineBox[{{0., 24025.}, {0., 23357.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {0., 24025.}], Offset[{-1.5, 0}, {0., 24025.}]}],
-            LineBox[{
-            Offset[{1.5, 0}, {0., 23357.}], 
-             Offset[{-1.5, 0}, {0., 23357.}]}]}, {
-           LineBox[{{10., 27147.}, {10., 23452.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 27147.}], 
-             Offset[{-1.5, 0}, {10., 27147.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 23452.}], 
-             Offset[{-1.5, 0}, {10., 23452.}]}]}, {
-           LineBox[{{50., 26362.}, {50., 24300.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 26362.}], 
-             Offset[{-1.5, 0}, {50., 26362.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 24300.}], 
-             Offset[{-1.5, 0}, {50., 24300.}]}]}, {
-           LineBox[{{100., 27354.}, {100., 25687.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 27354.}], 
-             Offset[{-1.5, 0}, {100., 27354.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 25687.}], 
-             Offset[{-1.5, 0}, {100., 25687.}]}]}, {
-           LineBox[{{150., 27218.}, {150., 24615.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 27218.}], 
-             Offset[{-1.5, 0}, {150., 27218.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 24615.}], 
-             Offset[{-1.5, 0}, {150., 24615.}]}]}, {
-           LineBox[{{200., 32103.}, {200., 25745.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 32103.}], 
-             Offset[{-1.5, 0}, {200., 32103.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 25745.}], 
-             Offset[{-1.5, 0}, {200., 25745.}]}]}, {
-           LineBox[{{300., 32785.}, {300., 28180.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 32785.}], 
-             Offset[{-1.5, 0}, {300., 32785.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 28180.}], 
-             Offset[{-1.5, 0}, {300., 28180.}]}]}}}}, {
-        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-         0.019444444444444445`], AbsoluteThickness[1.6], 
-         PointBox[{1, 2, 3, 4, 5, 6, 
-          7}], {{LineBox[{{0., 24025.}, {0., 23357.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {0., 24025.}], Offset[{-1.5, 0}, {0., 24025.}]}],
-            LineBox[{
-            Offset[{1.5, 0}, {0., 23357.}], 
-             Offset[{-1.5, 0}, {0., 23357.}]}]}, {
-           LineBox[{{10., 27147.}, {10., 23452.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 27147.}], 
-             Offset[{-1.5, 0}, {10., 27147.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 23452.}], 
-             Offset[{-1.5, 0}, {10., 23452.}]}]}, {
-           LineBox[{{50., 26362.}, {50., 24300.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 26362.}], 
-             Offset[{-1.5, 0}, {50., 26362.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 24300.}], 
-             Offset[{-1.5, 0}, {50., 24300.}]}]}, {
-           LineBox[{{100., 27354.}, {100., 25687.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 27354.}], 
-             Offset[{-1.5, 0}, {100., 27354.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 25687.}], 
-             Offset[{-1.5, 0}, {100., 25687.}]}]}, {
-           LineBox[{{150., 27218.}, {150., 24615.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 27218.}], 
-             Offset[{-1.5, 0}, {150., 27218.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 24615.}], 
-             Offset[{-1.5, 0}, {150., 24615.}]}]}, {
-           LineBox[{{200., 32103.}, {200., 25745.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 32103.}], 
-             Offset[{-1.5, 0}, {200., 32103.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 25745.}], 
-             Offset[{-1.5, 0}, {200., 25745.}]}]}, {
-           LineBox[{{300., 32785.}, {300., 28180.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 32785.}], 
-             Offset[{-1.5, 0}, {300., 32785.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 28180.}], 
-             Offset[{-1.5, 0}, {300., 28180.}]}]}}}, {}, {}}}], {}},
+   GraphicsBox[{{}, {{{}, {}, 
+       {GrayLevel[0], PointSize[0.019444444444444445`], AbsoluteThickness[
+        1.6], LineBox[{{0., 23.635}, {10., 23.911}, {50., 25.143}, {100., 
+         26.081}, {150., 25.639}, {200., 26.643}, {300., 
+         30.714}}], {{
+          LineBox[{{0., 24.025000000000002`}, {0., 23.357000000000003`}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {0., 24.025000000000002`}], 
+            Offset[{-1.5, 0}, {0., 24.025000000000002`}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {0., 23.357000000000003`}], 
+            Offset[{-1.5, 0}, {0., 23.357000000000003`}]}]}, {
+          LineBox[{{10., 27.147000000000002`}, {10., 23.452}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {10., 27.147000000000002`}], 
+            Offset[{-1.5, 0}, {10., 27.147000000000002`}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {10., 23.452}], 
+            Offset[{-1.5, 0}, {10., 23.452}]}]}, {
+          LineBox[{{50., 26.362000000000002`}, {50., 24.3}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {50., 26.362000000000002`}], 
+            Offset[{-1.5, 0}, {50., 26.362000000000002`}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {50., 24.3}], Offset[{-1.5, 0}, {50., 24.3}]}]}, {
+          LineBox[{{100., 27.354}, {100., 25.687}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {100., 27.354}], 
+            Offset[{-1.5, 0}, {100., 27.354}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {100., 25.687}], 
+            Offset[{-1.5, 0}, {100., 25.687}]}]}, {
+          LineBox[{{150., 27.218}, {150., 24.615}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {150., 27.218}], 
+            Offset[{-1.5, 0}, {150., 27.218}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {150., 24.615}], 
+            Offset[{-1.5, 0}, {150., 24.615}]}]}, {
+          LineBox[{{200., 32.103}, {200., 25.745}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {200., 32.103}], 
+            Offset[{-1.5, 0}, {200., 32.103}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {200., 25.745}], 
+            Offset[{-1.5, 0}, {200., 25.745}]}]}, {
+          LineBox[{{300., 32.785}, {300., 28.18}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {300., 32.785}], 
+            Offset[{-1.5, 0}, {300., 32.785}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {300., 28.18}], 
+            Offset[{-1.5, 0}, {300., 28.18}]}]}}}}, {
+       {GrayLevel[0], PointSize[0.019444444444444445`], AbsoluteThickness[
+        1.6], GeometricTransformationBox[{InsetBox[
+           GraphicsBox[
+            {GrayLevel[0], PointSize[0.019444444444444445`], 
+             AbsoluteThickness[1.6], 
+             DiskBox[{0, 0}, 
+              Offset[{2.75, 2.75}, {0., 0.}]]}], {0., 0.}], {}}, {{{0., 
+         23.635}}, {{10., 23.911}}, {{50., 25.143}}, {{100., 26.081}}, {{150.,
+          25.639}}, {{200., 26.643}}, {{300., 30.714}}}]}, {}}}, {}},
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->{True, True},
-    AxesLabel->{None, None},
-    AxesOrigin->{0, 23201.578947368424`},
+    AxesLabel->{
+      FormBox["\"\[CapitalDelta](MB)\"", TraditionalForm], 
+      FormBox["\"time(s)\"", TraditionalForm]},
+    AxesOrigin->{0, 23.201578947368425`},
+    AxesStyle->GrayLevel[0],
+    BaseStyle->GrayLevel[0],
     DisplayFunction->Identity,
     Frame->{{False, False}, {False, False}},
     FrameLabel->{{None, None}, {None, None}},
+    FrameStyle->GrayLevel[0],
     FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+    FrameTicksStyle->GrayLevel[0],
     GridLines->{None, None},
     GridLinesStyle->Directive[
-      GrayLevel[0.5, 0.4]],
+      GrayLevel[0], 
+      AbsoluteThickness[1], 
+      AbsoluteDashing[{1, 2}]],
+    LabelStyle->{FontFamily -> "Helvetica", 
+      GrayLevel[0]},
     Method->{},
-    PlotRange->{{0, 300.}, {23635., 32785}},
+    PlotLabel->FormBox[
+     "\"sunflow running time with increasing memory allocation rates\"", 
+      TraditionalForm],
+    PlotRange->NCache[{{0, 300.}, {23.635, 
+        Rational[6557, 200]}}, {{0, 300.}, {23.635, 32.785}}],
     PlotRangeClipping->True,
     PlotRangePadding->{{
        Scaled[0.02], 
        Scaled[0.02]}, {
        Scaled[0.05], 0}},
-    Ticks->{Automatic, Automatic}], ",", 
-   GraphicsBox[{{}, 
-     GraphicsComplexBox[{{0., 4950.}, {10., 5130.}, {50., 5475.}, {100., 
-      5920.}, {150., 5367.}, {200., 6662.}, {300., 7124.}}, {{{}, {}, 
-        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-         0.019444444444444445`], AbsoluteThickness[1.6], 
-         LineBox[{1, 2, 3, 4, 5, 6, 
-          7}], {{LineBox[{{0., 5234.}, {0., 4756.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {0., 5234.}], Offset[{-1.5, 0}, {0., 5234.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {0., 4756.}], 
-             Offset[{-1.5, 0}, {0., 4756.}]}]}, {
-           LineBox[{{10., 5446.}, {10., 4966.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 5446.}], Offset[{-1.5, 0}, {10., 5446.}]}],
-            LineBox[{
-            Offset[{1.5, 0}, {10., 4966.}], 
-             Offset[{-1.5, 0}, {10., 4966.}]}]}, {
-           LineBox[{{50., 5804.}, {50., 4985.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 5804.}], Offset[{-1.5, 0}, {50., 5804.}]}],
-            LineBox[{
-            Offset[{1.5, 0}, {50., 4985.}], 
-             Offset[{-1.5, 0}, {50., 4985.}]}]}, {
-           LineBox[{{100., 6729.}, {100., 5035.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 6729.}], 
-             Offset[{-1.5, 0}, {100., 6729.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 5035.}], 
-             Offset[{-1.5, 0}, {100., 5035.}]}]}, {
-           LineBox[{{150., 7081.}, {150., 4999.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 7081.}], 
-             Offset[{-1.5, 0}, {150., 7081.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 4999.}], 
-             Offset[{-1.5, 0}, {150., 4999.}]}]}, {
-           LineBox[{{200., 9668.}, {200., 4954.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 9668.}], 
-             Offset[{-1.5, 0}, {200., 9668.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 4954.}], 
-             Offset[{-1.5, 0}, {200., 4954.}]}]}, {
-           LineBox[{{300., 14283.}, {300., 4956.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 14283.}], 
-             Offset[{-1.5, 0}, {300., 14283.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 4956.}], 
-             Offset[{-1.5, 0}, {300., 4956.}]}]}}}}, {
-        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-         0.019444444444444445`], AbsoluteThickness[1.6], 
-         PointBox[{1, 2, 3, 4, 5, 6, 
-          7}], {{LineBox[{{0., 5234.}, {0., 4756.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {0., 5234.}], Offset[{-1.5, 0}, {0., 5234.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {0., 4756.}], 
-             Offset[{-1.5, 0}, {0., 4756.}]}]}, {
-           LineBox[{{10., 5446.}, {10., 4966.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 5446.}], Offset[{-1.5, 0}, {10., 5446.}]}],
-            LineBox[{
-            Offset[{1.5, 0}, {10., 4966.}], 
-             Offset[{-1.5, 0}, {10., 4966.}]}]}, {
-           LineBox[{{50., 5804.}, {50., 4985.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 5804.}], Offset[{-1.5, 0}, {50., 5804.}]}],
-            LineBox[{
-            Offset[{1.5, 0}, {50., 4985.}], 
-             Offset[{-1.5, 0}, {50., 4985.}]}]}, {
-           LineBox[{{100., 6729.}, {100., 5035.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 6729.}], 
-             Offset[{-1.5, 0}, {100., 6729.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 5035.}], 
-             Offset[{-1.5, 0}, {100., 5035.}]}]}, {
-           LineBox[{{150., 7081.}, {150., 4999.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 7081.}], 
-             Offset[{-1.5, 0}, {150., 7081.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 4999.}], 
-             Offset[{-1.5, 0}, {150., 4999.}]}]}, {
-           LineBox[{{200., 9668.}, {200., 4954.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 9668.}], 
-             Offset[{-1.5, 0}, {200., 9668.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 4954.}], 
-             Offset[{-1.5, 0}, {200., 4954.}]}]}, {
-           LineBox[{{300., 14283.}, {300., 4956.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 14283.}], 
-             Offset[{-1.5, 0}, {300., 14283.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 4956.}], 
-             Offset[{-1.5, 0}, {300., 4956.}]}]}}}, {}, {}}}], {}},
+    Ticks->{Automatic, Automatic},
+    TicksStyle->GrayLevel[0]], ",", 
+   GraphicsBox[{{}, {{{}, {}, 
+       {GrayLevel[0], PointSize[0.019444444444444445`], AbsoluteThickness[
+        1.6], LineBox[{{0., 4.95}, {10., 5.13}, {50., 5.475}, {100., 5.92}, {
+         150., 5.367}, {200., 6.662}, {300., 
+         7.124}}], {{LineBox[{{0., 5.234}, {0., 4.756}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {0., 5.234}], Offset[{-1.5, 0}, {0., 5.234}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {0., 4.756}], Offset[{-1.5, 0}, {0., 4.756}]}]}, {
+          LineBox[{{10., 5.446}, {10., 4.966}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {10., 5.446}], Offset[{-1.5, 0}, {10., 5.446}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {10., 4.966}], 
+            Offset[{-1.5, 0}, {10., 4.966}]}]}, {
+          LineBox[{{50., 5.803999999999999}, {50., 4.984999999999999}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {50., 5.803999999999999}], 
+            Offset[{-1.5, 0}, {50., 5.803999999999999}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {50., 4.984999999999999}], 
+            Offset[{-1.5, 0}, {50., 4.984999999999999}]}]}, {
+          LineBox[{{100., 6.729}, {100., 5.035}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {100., 6.729}], 
+            Offset[{-1.5, 0}, {100., 6.729}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {100., 5.035}], 
+            Offset[{-1.5, 0}, {100., 5.035}]}]}, {
+          LineBox[{{150., 7.0809999999999995`}, {150., 4.999}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {150., 7.0809999999999995`}], 
+            Offset[{-1.5, 0}, {150., 7.0809999999999995`}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {150., 4.999}], 
+            Offset[{-1.5, 0}, {150., 4.999}]}]}, {
+          LineBox[{{200., 9.668}, {200., 4.954}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {200., 9.668}], 
+            Offset[{-1.5, 0}, {200., 9.668}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {200., 4.954}], 
+            Offset[{-1.5, 0}, {200., 4.954}]}]}, {
+          LineBox[{{300., 14.283}, {300., 4.9559999999999995`}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {300., 14.283}], 
+            Offset[{-1.5, 0}, {300., 14.283}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {300., 4.9559999999999995`}], 
+            Offset[{-1.5, 0}, {300., 4.9559999999999995`}]}]}}}}, {
+       {GrayLevel[0], PointSize[0.019444444444444445`], AbsoluteThickness[
+        1.6], GeometricTransformationBox[{InsetBox[
+           GraphicsBox[
+            {GrayLevel[0], PointSize[0.019444444444444445`], 
+             AbsoluteThickness[1.6], 
+             DiskBox[{0, 0}, 
+              Offset[{2.75, 2.75}, {0., 0.}]]}], {0., 0.}], {}}, {{{0., 
+         4.95}}, {{10., 5.13}}, {{50., 5.475}}, {{100., 5.92}}, {{150., 
+         5.367}}, {{200., 6.662}}, {{300., 7.124}}}]}, {}}}, {}},
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->{True, True},
-    AxesLabel->{None, None},
-    AxesOrigin->{0, 4507.91052631579},
+    AxesLabel->{
+      FormBox["\"\[CapitalDelta](MB)\"", TraditionalForm], 
+      FormBox["\"time(s)\"", TraditionalForm]},
+    AxesOrigin->{0, 4.50791052631579},
+    AxesStyle->GrayLevel[0],
+    BaseStyle->GrayLevel[0],
     DisplayFunction->Identity,
     Frame->{{False, False}, {False, False}},
     FrameLabel->{{None, None}, {None, None}},
+    FrameStyle->GrayLevel[0],
     FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+    FrameTicksStyle->GrayLevel[0],
     GridLines->{None, None},
     GridLinesStyle->Directive[
-      GrayLevel[0.5, 0.4]],
+      GrayLevel[0], 
+      AbsoluteThickness[1], 
+      AbsoluteDashing[{1, 2}]],
+    LabelStyle->{FontFamily -> "Helvetica", 
+      GrayLevel[0]},
     Method->{},
-    PlotRange->{{0, 300.}, {4950., 14283}},
+    PlotLabel->FormBox[
+     "\"luindex running time with increasing memory allocation rates\"", 
+      TraditionalForm],
+    PlotRange->NCache[{{0, 300.}, {4.95, 
+        Rational[14283, 1000]}}, {{0, 300.}, {4.95, 14.283}}],
     PlotRangeClipping->True,
     PlotRangePadding->{{
        Scaled[0.02], 
        Scaled[0.02]}, {
        Scaled[0.05], 0}},
-    Ticks->{Automatic, Automatic}], ",", 
-   GraphicsBox[{{}, 
-     GraphicsComplexBox[{{0., 12367.}, {10., 13204.}, {50., 14279.}, {100., 
-      14714.}, {150., 14805.}, {200., 14662.}, {300., 18244.}}, {{{}, {}, 
-        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-         0.019444444444444445`], AbsoluteThickness[1.6], 
-         LineBox[{1, 2, 3, 4, 5, 6, 
-          7}], {{LineBox[{{0., 12448.}, {0., 12266.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {0., 12448.}], Offset[{-1.5, 0}, {0., 12448.}]}],
-            LineBox[{
-            Offset[{1.5, 0}, {0., 12266.}], 
-             Offset[{-1.5, 0}, {0., 12266.}]}]}, {
-           LineBox[{{10., 13308.}, {10., 13075.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 13308.}], 
-             Offset[{-1.5, 0}, {10., 13308.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 13075.}], 
-             Offset[{-1.5, 0}, {10., 13075.}]}]}, {
-           LineBox[{{50., 14849.}, {50., 12957.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 14849.}], 
-             Offset[{-1.5, 0}, {50., 14849.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 12957.}], 
-             Offset[{-1.5, 0}, {50., 12957.}]}]}, {
-           LineBox[{{100., 16052.}, {100., 13457.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 16052.}], 
-             Offset[{-1.5, 0}, {100., 16052.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 13457.}], 
-             Offset[{-1.5, 0}, {100., 13457.}]}]}, {
-           LineBox[{{150., 15427.}, {150., 12248.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 15427.}], 
-             Offset[{-1.5, 0}, {150., 15427.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 12248.}], 
-             Offset[{-1.5, 0}, {150., 12248.}]}]}, {
-           LineBox[{{200., 21538.}, {200., 12640.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 21538.}], 
-             Offset[{-1.5, 0}, {200., 21538.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 12640.}], 
-             Offset[{-1.5, 0}, {200., 12640.}]}]}, {
-           LineBox[{{300., 19211.}, {300., 12515.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 19211.}], 
-             Offset[{-1.5, 0}, {300., 19211.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 12515.}], 
-             Offset[{-1.5, 0}, {300., 12515.}]}]}}}}, {
-        {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-         0.019444444444444445`], AbsoluteThickness[1.6], 
-         PointBox[{1, 2, 3, 4, 5, 6, 
-          7}], {{LineBox[{{0., 12448.}, {0., 12266.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {0., 12448.}], Offset[{-1.5, 0}, {0., 12448.}]}],
-            LineBox[{
-            Offset[{1.5, 0}, {0., 12266.}], 
-             Offset[{-1.5, 0}, {0., 12266.}]}]}, {
-           LineBox[{{10., 13308.}, {10., 13075.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 13308.}], 
-             Offset[{-1.5, 0}, {10., 13308.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {10., 13075.}], 
-             Offset[{-1.5, 0}, {10., 13075.}]}]}, {
-           LineBox[{{50., 14849.}, {50., 12957.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 14849.}], 
-             Offset[{-1.5, 0}, {50., 14849.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {50., 12957.}], 
-             Offset[{-1.5, 0}, {50., 12957.}]}]}, {
-           LineBox[{{100., 16052.}, {100., 13457.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 16052.}], 
-             Offset[{-1.5, 0}, {100., 16052.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {100., 13457.}], 
-             Offset[{-1.5, 0}, {100., 13457.}]}]}, {
-           LineBox[{{150., 15427.}, {150., 12248.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 15427.}], 
-             Offset[{-1.5, 0}, {150., 15427.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {150., 12248.}], 
-             Offset[{-1.5, 0}, {150., 12248.}]}]}, {
-           LineBox[{{200., 21538.}, {200., 12640.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 21538.}], 
-             Offset[{-1.5, 0}, {200., 21538.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {200., 12640.}], 
-             Offset[{-1.5, 0}, {200., 12640.}]}]}, {
-           LineBox[{{300., 19211.}, {300., 12515.}}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 19211.}], 
-             Offset[{-1.5, 0}, {300., 19211.}]}], 
-           LineBox[{
-            Offset[{1.5, 0}, {300., 12515.}], 
-             Offset[{-1.5, 0}, {300., 12515.}]}]}}}, {}, {}}}], {}},
+    Ticks->{Automatic, Automatic},
+    TicksStyle->GrayLevel[0]], ",", 
+   GraphicsBox[{{}, {{{}, {}, 
+       {GrayLevel[0], PointSize[0.019444444444444445`], AbsoluteThickness[
+        1.6], LineBox[{{0., 12.367}, {10., 13.204}, {50., 14.279}, {100., 
+         14.714}, {150., 14.805}, {200., 14.662}, {300., 
+         18.244}}], {{LineBox[{{0., 12.448}, {0., 12.266}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {0., 12.448}], Offset[{-1.5, 0}, {0., 12.448}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {0., 12.266}], 
+            Offset[{-1.5, 0}, {0., 12.266}]}]}, {
+          LineBox[{{10., 13.308}, {10., 13.075000000000001`}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {10., 13.308}], 
+            Offset[{-1.5, 0}, {10., 13.308}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {10., 13.075000000000001`}], 
+            Offset[{-1.5, 0}, {10., 13.075000000000001`}]}]}, {
+          LineBox[{{50., 14.849}, {50., 12.957}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {50., 14.849}], 
+            Offset[{-1.5, 0}, {50., 14.849}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {50., 12.957}], 
+            Offset[{-1.5, 0}, {50., 12.957}]}]}, {
+          LineBox[{{100., 16.052}, {100., 13.457}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {100., 16.052}], 
+            Offset[{-1.5, 0}, {100., 16.052}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {100., 13.457}], 
+            Offset[{-1.5, 0}, {100., 13.457}]}]}, {
+          LineBox[{{150., 15.427}, {150., 12.248}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {150., 15.427}], 
+            Offset[{-1.5, 0}, {150., 15.427}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {150., 12.248}], 
+            Offset[{-1.5, 0}, {150., 12.248}]}]}, {
+          LineBox[{{200., 21.538}, {200., 12.64}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {200., 21.538}], 
+            Offset[{-1.5, 0}, {200., 21.538}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {200., 12.64}], 
+            Offset[{-1.5, 0}, {200., 12.64}]}]}, {
+          LineBox[{{300., 19.211}, {300., 12.515}}], 
+          LineBox[{
+           Offset[{1.5, 0}, {300., 19.211}], 
+            Offset[{-1.5, 0}, {300., 19.211}]}], 
+          LineBox[{
+           Offset[{1.5, 0}, {300., 12.515}], 
+            Offset[{-1.5, 0}, {300., 12.515}]}]}}}}, {
+       {GrayLevel[0], PointSize[0.019444444444444445`], AbsoluteThickness[
+        1.6], GeometricTransformationBox[{InsetBox[
+           GraphicsBox[
+            {GrayLevel[0], PointSize[0.019444444444444445`], 
+             AbsoluteThickness[1.6], 
+             DiskBox[{0, 0}, 
+              Offset[{2.75, 2.75}, {0., 0.}]]}], {0., 0.}], {}}, {{{0., 
+         12.367}}, {{10., 13.204}}, {{50., 14.279}}, {{100., 14.714}}, {{150.,
+          14.805}}, {{200., 14.662}}, {{300., 18.244}}}]}, {}}}, {}},
     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
     Axes->{True, True},
-    AxesLabel->{None, None},
-    AxesOrigin->{0, 11932.584210526316`},
+    AxesLabel->{
+      FormBox["\"\[CapitalDelta](MB)\"", TraditionalForm], 
+      FormBox["\"time(s)\"", TraditionalForm]},
+    AxesOrigin->{0, 11.932584210526317`},
+    AxesStyle->GrayLevel[0],
+    BaseStyle->GrayLevel[0],
     DisplayFunction->Identity,
     Frame->{{False, False}, {False, False}},
     FrameLabel->{{None, None}, {None, None}},
+    FrameStyle->GrayLevel[0],
     FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+    FrameTicksStyle->GrayLevel[0],
     GridLines->{None, None},
     GridLinesStyle->Directive[
-      GrayLevel[0.5, 0.4]],
+      GrayLevel[0], 
+      AbsoluteThickness[1], 
+      AbsoluteDashing[{1, 2}]],
+    LabelStyle->{FontFamily -> "Helvetica", 
+      GrayLevel[0]},
     Method->{},
-    PlotRange->{{0, 300.}, {12367., 21538}},
+    PlotLabel->FormBox[
+     "\"lusearch running time with increasing memory allocation rates\"", 
+      TraditionalForm],
+    PlotRange->NCache[{{0, 300.}, {12.367, 
+        Rational[10769, 500]}}, {{0, 300.}, {12.367, 21.538}}],
     PlotRangeClipping->True,
     PlotRangePadding->{{
        Scaled[0.02], 
        Scaled[0.02]}, {
        Scaled[0.05], 0}},
-    Ticks->{Automatic, Automatic}]}], "}"}]], "Output",
+    Ticks->{Automatic, Automatic},
+    TicksStyle->GrayLevel[0]]}], "}"}]], "Output",
  CellChangeTimes->{
   3.616069534083818*^9, {3.616069618238433*^9, 3.616069645779429*^9}, 
    3.616069704460495*^9, 3.6160698246273127`*^9, 3.616069892315559*^9, 
-   3.616070495246881*^9, 3.616070834088088*^9}]
+   3.616070495246881*^9, 3.616070834088088*^9, 3.61628039158044*^9, {
+   3.616280913792334*^9, 3.616280942034152*^9}, {3.616281686364554*^9, 
+   3.616281705677334*^9}}]
 }, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["8-4 mono client tesst memory \:5bc6\:96c6", "Subsection",
- CellChangeTimes->{{3.6161220747366753`*^9, 3.6161220883194933`*^9}}],
+Cell["8-4 mono client test memory \:5bc6\:96c6", "Subsection",
+ CellChangeTimes->{{3.6161220747366753`*^9, 3.6161220883194933`*^9}, 
+   3.616281233047842*^9}],
+
+Cell[TextData[{
+ "delta memory >=100MB\:65f6\:4f7f\:7528\:4e0b\:5217\:53c2\:6570\n",
+ Cell[BoxData[GridBox[{
+    {"key", "value", "key", "value"},
+    {"N", 
+     RowBox[{"12.5", "GB"}], 
+     RowBox[{"init", " ", "mem"}], 
+     RowBox[{"2.5", "G"}]},
+    {
+     RowBox[{"VM", " ", "count"}], "5", "f", 
+     RowBox[{"300", 
+      RowBox[{"M", "/", "450"}], "M"}]},
+    {
+     RowBox[{"high", " ", "load"}], 
+     RowBox[{"800", "MB"}], 
+     RowBox[{"max", " ", "mem"}], 
+     RowBox[{"5", "G"}]}
+   },
+   GridBoxDividers->{
+    "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
+     "RowsIndexed" -> {}}]]],
+ "\n< 100MB\:65f6\:4f7f\:7528\:4e0b\:5217\:53c2\:6570\n",
+ Cell[BoxData[GridBox[{
+    {"key", "value", "key", "value"},
+    {"N", 
+     RowBox[{"5", "GB"}], 
+     RowBox[{"init", " ", "mem"}], 
+     RowBox[{"1", "G"}]},
+    {
+     RowBox[{"VM", " ", "count"}], "5", "f", 
+     RowBox[{"150", "MB"}]},
+    {
+     RowBox[{"high", " ", "load"}], 
+     RowBox[{"800", "MB"}], 
+     RowBox[{"max", " ", "mem"}], 
+     RowBox[{"2", "G"}]}
+   },
+   GridBoxDividers->{
+    "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
+     "RowsIndexed" -> {}}]]]
+}], "Text",
+ CellChangeTimes->{{3.6162812290967407`*^9, 3.616281269159206*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -47911,22 +48046,35 @@ Cell[BoxData[{
        RowBox[{"{", 
         RowBox[{
          RowBox[{"{", 
-          RowBox[{"#1", ",", "#2"}], "}"}], ",", 
+          RowBox[{"#1", ",", 
+           RowBox[{"#2", "/", "1000"}]}], "}"}], ",", 
          RowBox[{"ErrorBar", "[", 
           RowBox[{
-           RowBox[{"{", 
-            RowBox[{"#3", ",", "#4"}], "}"}], "-", "#2"}], "]"}]}], "}"}], 
-       "&"}], "@@", "#"}], "&"}], "/@", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"#3", ",", "#4"}], "}"}], "-", "#2"}], ")"}], "/", 
+           "1000"}], "]"}]}], "}"}], "&"}], "@@", "#"}], "&"}], "/@", 
     RowBox[{"(", 
      RowBox[{"$", "\[Transpose]"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"ErrorListPlot", "[", 
   RowBox[{"$", ",", "\[IndentingNewLine]", 
    RowBox[{"PlotRange", "\[Rule]", 
     RowBox[{"{", 
-     RowBox[{"All", ",", "$max"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"All", ",", 
+      RowBox[{"$max", "/", "1000"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
    RowBox[{"Joined", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
-   RowBox[{"Mesh", "\[Rule]", "All"}]}], "\[IndentingNewLine]", 
-  "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Mesh", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotTheme", "\[Rule]", "\"\<Monochrome\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", 
+    "\"\<h2 running time with increasing memory allocation rates\>\""}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<\[CapitalDelta](MB)\>\"", ",", "\"\<time(s)\>\""}], 
+     "}"}]}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Export", "[", 
    RowBox[{"\"\<graph/client_h2.pdf\>\"", ",", "%"}], "]"}], 
@@ -47934,138 +48082,121 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Clear", "[", 
    RowBox[{"$", ",", "$max"}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.616122765628821*^9, 3.616122872977707*^9}}],
+ CellChangeTimes->{{3.616122765628821*^9, 3.616122872977707*^9}, {
+  3.6162804239078207`*^9, 3.616280470216786*^9}, {3.616280510055194*^9, 
+  3.616280540059918*^9}, {3.616280580495098*^9, 3.616280598632287*^9}, {
+  3.616280681193697*^9, 3.6162806901068087`*^9}, {3.616280888759089*^9, 
+  3.6162808889682837`*^9}, {3.61628148642317*^9, 3.616281490739224*^9}, {
+  3.6162817315336437`*^9, 3.6162817461158733`*^9}}],
 
 Cell[BoxData[
- GraphicsBox[{{}, 
-   GraphicsComplexBox[{{0., 14556.}, {10., 15211.}, {50., 15585.}, {100., 
-    17555.}, {150., 18133.}, {200., 20630.}, {300., 21684.}}, {{{}, {}, 
-      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-       0.019444444444444445`], AbsoluteThickness[1.6], 
-       LineBox[{1, 2, 3, 4, 5, 6, 
-        7}], {{LineBox[{{0., 15135.}, {0., 12939.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {0., 15135.}], Offset[{-1.5, 0}, {0., 15135.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {0., 12939.}], 
-           Offset[{-1.5, 0}, {0., 12939.}]}]}, {
-         LineBox[{{10., 15867.}, {10., 12383.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {10., 15867.}], Offset[{-1.5, 0}, {10., 15867.}]}],
-          LineBox[{
-          Offset[{1.5, 0}, {10., 12383.}], 
-           Offset[{-1.5, 0}, {10., 12383.}]}]}, {
-         LineBox[{{50., 18285.}, {50., 13524.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {50., 18285.}], Offset[{-1.5, 0}, {50., 18285.}]}],
-          LineBox[{
-          Offset[{1.5, 0}, {50., 13524.}], 
-           Offset[{-1.5, 0}, {50., 13524.}]}]}, {
-         LineBox[{{100., 21078.}, {100., 13350.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {100., 21078.}], 
-           Offset[{-1.5, 0}, {100., 21078.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {100., 13350.}], 
-           Offset[{-1.5, 0}, {100., 13350.}]}]}, {
-         LineBox[{{150., 26763.}, {150., 12875.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {150., 26763.}], 
-           Offset[{-1.5, 0}, {150., 26763.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {150., 12875.}], 
-           Offset[{-1.5, 0}, {150., 12875.}]}]}, {
-         LineBox[{{200., 33244.}, {200., 15460.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {200., 33244.}], 
-           Offset[{-1.5, 0}, {200., 33244.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {200., 15460.}], 
-           Offset[{-1.5, 0}, {200., 15460.}]}]}, {
-         LineBox[{{300., 34248.}, {300., 14326.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {300., 34248.}], 
-           Offset[{-1.5, 0}, {300., 34248.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {300., 14326.}], 
-           Offset[{-1.5, 0}, {300., 14326.}]}]}}}}, {
-      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-       0.019444444444444445`], AbsoluteThickness[1.6], 
-       PointBox[{1, 2, 3, 4, 5, 6, 
-        7}], {{LineBox[{{0., 15135.}, {0., 12939.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {0., 15135.}], Offset[{-1.5, 0}, {0., 15135.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {0., 12939.}], 
-           Offset[{-1.5, 0}, {0., 12939.}]}]}, {
-         LineBox[{{10., 15867.}, {10., 12383.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {10., 15867.}], Offset[{-1.5, 0}, {10., 15867.}]}],
-          LineBox[{
-          Offset[{1.5, 0}, {10., 12383.}], 
-           Offset[{-1.5, 0}, {10., 12383.}]}]}, {
-         LineBox[{{50., 18285.}, {50., 13524.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {50., 18285.}], Offset[{-1.5, 0}, {50., 18285.}]}],
-          LineBox[{
-          Offset[{1.5, 0}, {50., 13524.}], 
-           Offset[{-1.5, 0}, {50., 13524.}]}]}, {
-         LineBox[{{100., 21078.}, {100., 13350.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {100., 21078.}], 
-           Offset[{-1.5, 0}, {100., 21078.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {100., 13350.}], 
-           Offset[{-1.5, 0}, {100., 13350.}]}]}, {
-         LineBox[{{150., 26763.}, {150., 12875.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {150., 26763.}], 
-           Offset[{-1.5, 0}, {150., 26763.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {150., 12875.}], 
-           Offset[{-1.5, 0}, {150., 12875.}]}]}, {
-         LineBox[{{200., 33244.}, {200., 15460.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {200., 33244.}], 
-           Offset[{-1.5, 0}, {200., 33244.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {200., 15460.}], 
-           Offset[{-1.5, 0}, {200., 15460.}]}]}, {
-         LineBox[{{300., 34248.}, {300., 14326.}}], 
-         LineBox[{
-          Offset[{1.5, 0}, {300., 34248.}], 
-           Offset[{-1.5, 0}, {300., 34248.}]}], 
-         LineBox[{
-          Offset[{1.5, 0}, {300., 14326.}], 
-           Offset[{-1.5, 0}, {300., 14326.}]}]}}}, {}, {}}}], {}},
+ GraphicsBox[{{}, {{{}, {}, 
+     {GrayLevel[0], PointSize[0.019444444444444445`], AbsoluteThickness[1.6], 
+      LineBox[{{0., 23.635}, {10., 23.911}, {50., 25.143}, {100., 26.081}, {
+       150., 25.639}, {200., 26.643}, {300., 
+       30.714}}], {{
+        LineBox[{{0., 24.025000000000002`}, {0., 23.357000000000003`}}], 
+        LineBox[{
+         Offset[{1.5, 0}, {0., 24.025000000000002`}], 
+          Offset[{-1.5, 0}, {0., 24.025000000000002`}]}], 
+        LineBox[{
+         Offset[{1.5, 0}, {0., 23.357000000000003`}], 
+          Offset[{-1.5, 0}, {0., 23.357000000000003`}]}]}, {
+        LineBox[{{10., 27.147000000000002`}, {10., 23.452}}], 
+        LineBox[{
+         Offset[{1.5, 0}, {10., 27.147000000000002`}], 
+          Offset[{-1.5, 0}, {10., 27.147000000000002`}]}], 
+        LineBox[{
+         Offset[{1.5, 0}, {10., 23.452}], 
+          Offset[{-1.5, 0}, {10., 23.452}]}]}, {
+        LineBox[{{50., 26.362000000000002`}, {50., 24.3}}], 
+        LineBox[{
+         Offset[{1.5, 0}, {50., 26.362000000000002`}], 
+          Offset[{-1.5, 0}, {50., 26.362000000000002`}]}], 
+        LineBox[{
+         Offset[{1.5, 0}, {50., 24.3}], Offset[{-1.5, 0}, {50., 24.3}]}]}, {
+        LineBox[{{100., 27.354}, {100., 25.687}}], 
+        LineBox[{
+         Offset[{1.5, 0}, {100., 27.354}], 
+          Offset[{-1.5, 0}, {100., 27.354}]}], 
+        LineBox[{
+         Offset[{1.5, 0}, {100., 25.687}], 
+          Offset[{-1.5, 0}, {100., 25.687}]}]}, {
+        LineBox[{{150., 27.218}, {150., 24.615}}], 
+        LineBox[{
+         Offset[{1.5, 0}, {150., 27.218}], 
+          Offset[{-1.5, 0}, {150., 27.218}]}], 
+        LineBox[{
+         Offset[{1.5, 0}, {150., 24.615}], 
+          Offset[{-1.5, 0}, {150., 24.615}]}]}, {
+        LineBox[{{200., 32.103}, {200., 25.745}}], 
+        LineBox[{
+         Offset[{1.5, 0}, {200., 32.103}], 
+          Offset[{-1.5, 0}, {200., 32.103}]}], 
+        LineBox[{
+         Offset[{1.5, 0}, {200., 25.745}], 
+          Offset[{-1.5, 0}, {200., 25.745}]}]}, {
+        LineBox[{{300., 32.785}, {300., 28.18}}], 
+        LineBox[{
+         Offset[{1.5, 0}, {300., 32.785}], 
+          Offset[{-1.5, 0}, {300., 32.785}]}], 
+        LineBox[{
+         Offset[{1.5, 0}, {300., 28.18}], 
+          Offset[{-1.5, 0}, {300., 28.18}]}]}}}}, {
+     {GrayLevel[0], PointSize[0.019444444444444445`], AbsoluteThickness[1.6], 
+      GeometricTransformationBox[{InsetBox[
+         GraphicsBox[
+          {GrayLevel[0], PointSize[0.019444444444444445`], AbsoluteThickness[
+           1.6], DiskBox[{0, 0}, 
+            Offset[{2.75, 2.75}, {0., 0.}]]}], {0., 0.}], {}}, {{{0., 
+       23.635}}, {{10., 23.911}}, {{50., 25.143}}, {{100., 26.081}}, {{150., 
+       25.639}}, {{200., 26.643}}, {{300., 30.714}}}]}, {}}}, {}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
-  AxesOrigin->{0, 13623.22105263158},
+  AxesLabel->{
+    FormBox["\"\[CapitalDelta](MB)\"", TraditionalForm], 
+    FormBox["\"time(s)\"", TraditionalForm]},
+  AxesOrigin->{0, 23.201578947368425`},
+  AxesStyle->GrayLevel[0],
+  BaseStyle->GrayLevel[0],
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
   FrameLabel->{{None, None}, {None, None}},
+  FrameStyle->GrayLevel[0],
   FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  FrameTicksStyle->GrayLevel[0],
   GridLines->{None, None},
   GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
+    GrayLevel[0], 
+    AbsoluteThickness[1], 
+    AbsoluteDashing[{1, 2}]],
+  LabelStyle->{FontFamily -> "Helvetica", 
+    GrayLevel[0]},
   Method->{},
-  PlotRange->{{0, 300.}, {14556., 34248}},
+  PlotLabel->FormBox[
+   "\"h2 running time with increasing memory allocation rates\"", 
+    TraditionalForm],
+  PlotRange->NCache[{{0, 300.}, {23.635, 
+      Rational[6557, 200]}}, {{0, 300.}, {23.635, 32.785}}],
   PlotRangeClipping->True,
   PlotRangePadding->{{
      Scaled[0.02], 
      Scaled[0.02]}, {
      Scaled[0.05], 0}},
-  Ticks->{Automatic, Automatic}]], "Output",
+  Ticks->{Automatic, Automatic},
+  TicksStyle->GrayLevel[0]]], "Output",
  CellChangeTimes->{{3.6161228153254223`*^9, 3.616122839416292*^9}, 
-   3.616122876257928*^9}]
+   3.616122876257928*^9, 3.61628043144654*^9, 3.616280472048674*^9, {
+   3.616280512744937*^9, 3.616280540783098*^9}, {3.616280582149623*^9, 
+   3.616280602365191*^9}, {3.6162806880185747`*^9, 3.616280690609242*^9}, 
+   3.616280891983962*^9, 3.616281748044469*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{898, 674},
-WindowMargins->{{Automatic, 120}, {-9, Automatic}},
+WindowMargins->{{-9, Automatic}, {Automatic, -8}},
 FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
 StyleDefinitions->Notebook[{
    Cell[
@@ -48137,7 +48268,7 @@ Cell[234356, 5307, 6803, 137, 234, "Output"],
 Cell[241162, 5446, 7840, 153, 243, "Output"],
 Cell[249005, 5601, 7810, 153, 243, "Output"]
 }, Open  ]],
-Cell[256830, 5757, 3067, 51, 1093, "Text"]
+Cell[256830, 5757, 3067, 51, 407, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[259934, 5813, 102, 1, 47, "Subsection"],
@@ -48153,9 +48284,9 @@ Cell[CellGroupData[{
 Cell[264205, 5940, 1275, 39, 99, "Input"],
 Cell[265483, 5981, 22286, 510, 277, "Output"]
 }, Open  ]],
-Cell[287784, 6494, 513, 10, 140, "Text"],
+Cell[287784, 6494, 513, 10, 90, "Text"],
 Cell[CellGroupData[{
-Cell[288322, 6508, 2299, 48, 286, "Input"],
+Cell[288322, 6508, 2299, 48, 187, "Input"],
 Cell[290624, 6558, 3595, 77, 43, "Output"],
 Cell[294222, 6637, 23605, 414, 628, "Output"]
 }, Open  ]],
@@ -48186,9 +48317,9 @@ Cell[532240, 10668, 160, 2, 47, "Subsection"],
 Cell[532403, 10672, 230, 3, 31, "Text"],
 Cell[532636, 10677, 1319, 40, 97, "Input"],
 Cell[CellGroupData[{
-Cell[533980, 10721, 4250, 114, 443, "Input"],
-Cell[538233, 10837, 22239, 506, 2043, "Output"],
-Cell[560475, 11345, 3187, 72, 306, "Output"],
+Cell[533980, 10721, 4250, 114, 451, "Input"],
+Cell[538233, 10837, 22239, 506, 277, "Output"],
+Cell[560475, 11345, 3187, 72, 43, "Output"],
 Cell[563665, 11419, 85319, 1428, 635, 35778, 615, "CachedBoxData", "BoxData", \
 "Output"],
 Cell[648987, 12849, 3190, 72, 43, "Output"],
@@ -48246,7 +48377,7 @@ Cell[1207114, 23092, 2944, 69, 65, "Output"]
 Cell[CellGroupData[{
 Cell[1210107, 23167, 153, 2, 47, "Subsection"],
 Cell[1210263, 23171, 11830, 183, 1727, "Text"],
-Cell[1222096, 23356, 2108, 67, 200, "Input"],
+Cell[1222096, 23356, 2108, 67, 143, "Input"],
 Cell[1224207, 23425, 281, 6, 70, "Text"],
 Cell[CellGroupData[{
 Cell[1224513, 23435, 257, 8, 32, "Input"],
@@ -48388,22 +48519,27 @@ Cell[CellGroupData[{
 Cell[2383825, 47229, 2257, 60, 165, "Input"],
 Cell[2386085, 47291, 2292, 40, 262, "Output"]
 }, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[2388426, 47337, 175, 2, 47, "Subsection"],
-Cell[2388604, 47341, 1384, 43, 210, "Text"],
-Cell[2389991, 47386, 465, 10, 32, "Input"],
-Cell[CellGroupData[{
-Cell[2390481, 47400, 2999, 84, 275, "Input"],
-Cell[2393483, 47486, 15815, 374, 122, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2409347, 47866, 133, 1, 47, "Subsection"],
-Cell[2409483, 47869, 291, 8, 32, "Input"],
+Cell[2388438, 47338, 103, 1, 67, "Section"],
+Cell[2388544, 47341, 8016, 138, 1129, "Text"],
 Cell[CellGroupData[{
-Cell[2409799, 47881, 1845, 55, 253, "Input"],
-Cell[2411647, 47938, 5046, 122, 233, "Output"]
+Cell[2396585, 47483, 175, 2, 47, "Subsection"],
+Cell[2396763, 47487, 1384, 43, 210, "Text"],
+Cell[2398150, 47532, 465, 10, 32, "Input"],
+Cell[CellGroupData[{
+Cell[2398640, 47546, 4207, 111, 473, "Input"],
+Cell[2402850, 47659, 12503, 292, 156, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2415402, 47957, 158, 2, 47, "Subsection"],
+Cell[2415563, 47961, 1269, 41, 210, "Text"],
+Cell[2416835, 48004, 291, 8, 32, "Input"],
+Cell[CellGroupData[{
+Cell[2417151, 48016, 2735, 73, 319, "Input"],
+Cell[2419889, 48091, 4252, 100, 258, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
