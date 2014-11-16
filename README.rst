@@ -142,8 +142,10 @@ mm_test_client use two parameters, base memory and delta memory. it makes a mono
 data log
 ============
 
-we provide the experiment log at http://pan.baidu.com/s/1kTwuqUj .
-please download it and mount it, see README inside for detail
+we provide the experiment log at
+https://www.dropbox.com/sh/edg0nygofee8fua/AAAdSoGPkuAIPFka-bwLvCgRa?dl=0
+please download `xenmm-data.squashfs` and mount it, see README inside for
+detail
 
 dynamic display
 ================
