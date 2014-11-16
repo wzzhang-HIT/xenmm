@@ -139,6 +139,12 @@ mm_test_client use two parameters, base memory and delta memory. it makes a mono
 4.  start server program
 3.  run ``./dacapo_test 'sunflow luindex lusearch' 15`` on target domain
 
+data log
+============
+
+we provide the experiment log at http://pan.baidu.com/s/1kTwuqUj .
+please download it and mount it, see README inside for detail
+
 dynamic display
 ================
 
