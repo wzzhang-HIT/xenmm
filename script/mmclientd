@@ -1,5 +1,14 @@
 #!/bin/sh
 
+### BEGIN INIT INFO
+# Provides:       mmclientd
+# Required-Start: $remote_fs
+# Required-Stop:  $remote_fs
+# Default-Start:  2 3 4 5
+# Default-Stop:   0 1 6
+# Short-Description: start or stop xen memory management client daemon
+### END INIT INFO
+
 RETVAL=0
 prog="mmclient"
 export XENSTORED_PATH=/dev/xen/xenbus
