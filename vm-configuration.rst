@@ -78,6 +78,19 @@ static ip addr
 
 运行 `sudo service networking restart` 重启网络服务(对于Ubuntu系统)
 
+另外如果不成功, 也可以直接手动设置ip地址. (会在下次重启时失效). 例如::
+
+   2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000    
+      link/ether 00:16:3e:76:db:ed brd ff:ff:ff:ff:ff:ff    
+      inet6 fe80::216:3eff:fe76:dbed/64 scope link    
+       valid_lft forever preferred_lft forever
+
+这个地址就没有ipv4地址, 输入::
+
+   sudo ip addr add 192.168.122.25/24 brd + dev eth0
+
+来强制指定ipv4地址. 其中 'brd +' 是一个简写.
+
 ssh configure
 --------------
 
