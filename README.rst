@@ -61,13 +61,14 @@ to use program correctly, you should do following steps:
 3.  run adjust program in host vm::
 
         cd build
-        sudo src/mmserver
+        sudo src/mmserver -N <Num> -f <Num>
     
     then you can see adjust outputs on terminal. and the log files in ``build``
     directory. log files' name is based on ``date_times_[vm's id].log`` pattern.
     so, it would **not** override previous log files accidently. don't be worry.
     since you have logs, you can draw curves with tools such as gnuplot,
     matlab, ... as well as libreoffice draw. 
+
 
 benchmark
 ==========
