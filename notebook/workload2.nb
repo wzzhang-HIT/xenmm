@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[   2410996,      48030]
-NotebookOptionsPosition[   2399323,      47684]
-NotebookOutlinePosition[   2400071,      47708]
-CellTagsIndexPosition[   2400028,      47705]
+NotebookDataLength[   2410977,      48027]
+NotebookOptionsPosition[   2399304,      47681]
+NotebookOutlinePosition[   2400052,      47705]
+CellTagsIndexPosition[   2400009,      47702]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -46976,8 +46976,7 @@ Cell[TextData[{
     {
      RowBox[{"VM", " ", "count"}], "5", "f", 
      RowBox[{"150", "MB"}]},
-    {
-     RowBox[{"high", " ", "load"}], 
+    {"base", 
      RowBox[{"800", "MB"}], 
      RowBox[{"max", " ", "mem"}], 
      RowBox[{"2", "G"}]}
@@ -46996,8 +46995,7 @@ Cell[TextData[{
      RowBox[{"VM", " ", "count"}], "5", "f", 
      RowBox[{"300", 
       RowBox[{"M", "/", "450"}], "M"}]},
-    {
-     RowBox[{"high", " ", "load"}], 
+    {"base", 
      RowBox[{"800", "MB"}], 
      RowBox[{"max", " ", "mem"}], 
      RowBox[{"5", "G"}]}
@@ -47008,7 +47006,7 @@ Cell[TextData[{
 }], "Text",
  CellChangeTimes->{{3.616041585413711*^9, 3.616041708076576*^9}, {
   3.6161011872316637`*^9, 3.6161012054359083`*^9}, {3.6161141114300537`*^9, 
-  3.6161141263388453`*^9}}],
+  3.6161141263388453`*^9}, {3.6253656866468697`*^9, 3.625365695096958*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -47454,8 +47452,7 @@ Cell[TextData[{
      RowBox[{"VM", " ", "count"}], "5", "f", 
      RowBox[{"300", 
       RowBox[{"M", "/", "450"}], "M"}]},
-    {
-     RowBox[{"high", " ", "load"}], 
+    {"base", 
      RowBox[{"800", "MB"}], 
      RowBox[{"max", " ", "mem"}], 
      RowBox[{"5", "G"}]}
@@ -47473,8 +47470,7 @@ Cell[TextData[{
     {
      RowBox[{"VM", " ", "count"}], "5", "f", 
      RowBox[{"150", "MB"}]},
-    {
-     RowBox[{"high", " ", "load"}], 
+    {"base", 
      RowBox[{"800", "MB"}], 
      RowBox[{"max", " ", "mem"}], 
      RowBox[{"2", "G"}]}
@@ -47483,7 +47479,8 @@ Cell[TextData[{
     "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
      "RowsIndexed" -> {}}]]]
 }], "Text",
- CellChangeTimes->{{3.6162812290967407`*^9, 3.616281269159206*^9}}],
+ CellChangeTimes->{{3.6162812290967407`*^9, 3.616281269159206*^9}, {
+  3.625365700536771*^9, 3.625365707175502*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -48014,20 +48011,20 @@ Cell[2363345, 46818, 103, 1, 80, "Section"],
 Cell[2363451, 46821, 8016, 138, 1129, "Text"],
 Cell[CellGroupData[{
 Cell[2371492, 46963, 175, 2, 44, "Subsection"],
-Cell[2371670, 46967, 1384, 43, 210, "Text"],
-Cell[2373057, 47012, 577, 13, 32, "Input"],
+Cell[2371670, 46967, 1374, 41, 206, "Text"],
+Cell[2373047, 47010, 577, 13, 32, "Input"],
 Cell[CellGroupData[{
-Cell[2373659, 47029, 4207, 111, 473, "Input"],
-Cell[2377869, 47142, 12503, 292, 154, "Output"]
+Cell[2373649, 47027, 4207, 111, 473, "Input"],
+Cell[2377859, 47140, 12503, 292, 154, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2390421, 47440, 158, 2, 44, "Subsection"],
-Cell[2390582, 47444, 1269, 41, 210, "Text"],
-Cell[2391854, 47487, 402, 12, 32, "Input"],
+Cell[2390411, 47438, 158, 2, 44, "Subsection"],
+Cell[2390572, 47442, 1260, 40, 206, "Text"],
+Cell[2391835, 47484, 402, 12, 32, "Input"],
 Cell[CellGroupData[{
-Cell[2392281, 47503, 2735, 73, 319, "Input"],
-Cell[2395019, 47578, 4252, 100, 256, "Output"]
+Cell[2392262, 47500, 2735, 73, 319, "Input"],
+Cell[2395000, 47575, 4252, 100, 256, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

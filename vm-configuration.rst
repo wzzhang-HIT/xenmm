@@ -58,13 +58,6 @@ lvm-configure
    # vgcreate vg /dev/sdb[No.]
    # lvcreate --name name -L size vg
 
-quick make vm
-----------------
-
-虚拟机的克隆使用 ``virt-clone`` 命令, 能快速的扩展虚拟机的数量::
-
-    #virt-clone -o origin -n target -f file
-    
 disable grub wait time
 ------------------------
 
@@ -92,7 +85,7 @@ static ip addr
         address   192.168.122.21   # ip addr
         broadcast 192.168.122.255
         netmask   255.255.255.0
-        gateway   192.268.122.1
+        gateway   192.168.122.1
 
 运行 `sudo service networking restart` 重启网络服务(对于Ubuntu系统)
 
@@ -108,6 +101,23 @@ static ip addr
    sudo ip addr add 192.168.122.25/24 brd + dev eth0
 
 来强制指定ipv4地址. 其中 'brd +' 是一个简写.
+
+------------------------------------------------------------
+
+如果使用libvirt来管理, 那么还有更简单的方法, 在宿主机中为每个虚拟机的mac地址分
+配固定的ip. 这样即使虚拟机内部使用dhcp方式, 还是能保证每次获取的ip是固定的. 有
+点类似端口绑定的味道.
+
+通过::
+
+   virsh dumpxml <domain> | grep mac 
+
+来查看mac地址, 并且使用::
+
+   virsh net-update default add ip-dhcp-host '<host mac="<mac>" ip="<ip>"/>' --live --config
+
+来为固定的mac绑定地址. 重启虚拟机生效. 最后可以通过 ``virsh net-dumpxml
+default`` 查看修改结果.
 
 ssh configure
 --------------

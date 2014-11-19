@@ -1,16 +1,36 @@
 xen-configuration
 ===================
 
-**author**:xiehuc<xiehuc@gmail.com>
+**author**: xiehuc<xiehuc@gmail.com>
 
 installnation
 -------------
 
-以ubuntu为例子：
+以ubuntu为例子, 首先安装Xen ::
 
-	$ sudo apt-get install xen-hypervisory-amd-4.1 virt-manager
+	# apt-get install xen-hypervisory-amd-4.1 libxen-dev
 
-等包
+然后使用命令来安装半虚拟化的ubuntu::
+
+   # virt-install -n ubuntu_0 --connect xen:/// -r 1024  -f /dev/svg/ubuntu_0 -w bridge=virbr0 -l http://run.hit.edu.cn/ubuntu/dists/trusty/main/installer-amd64/
+
+如果出现 ``error: internal error: cannot find character device <null>`` . 则再
+次运行 ``sudo xl console ubuntu_0`` 继续安装.
+
+在 **Choose a mirror of the Ubuntu archive** 一定要选择第一项, 手工输入学校的服
+务器地址. run.hit.edu.cn
+
+Xen 早的时候使用 xm 的工具链. 现在使用 xl 的工具链. 幸好用法都差不多. 但是推荐
+使用 libvirt 的工具链. 能很好的统一两者, 还能兼容KVM等等的虚拟机. 首先需要将
+``LIBVIRTD_DEFAULT_URI="xen:///"`` 加入到环境变量中. 当前用户和root用户都要加,
+因为有些时候需要跳到sudo权限去做. 或者可以在使用命令的时候加入
+--connect=xen:/// 来强制指定连接Xen的服务.
+
+使用 ``virsh list --all`` 来查看所有虚拟机(包括关闭状态).
+
+当安装完一台虚拟机之后, 可以使用克隆命令快速复制::
+
+    #virt-clone -o origin -n target -f file
 
 configuration
 -------------
@@ -72,7 +92,17 @@ console-configure
 
 最后.在物理机上使用`xm console $vm_name` 连接虚拟机即可
 
-需要退出的时候,使用`Ctrl+[`即可
+需要退出的时候,使用 `Ctrl+[` 即可
+
+如果是用的半虚拟化方式安装, 那么大部分情况下都能够顺利的启用console而无需额外的配置.
+但是如果是希望使用 ``virsh console`` 工具链来连接console, 则需要使用 ``virsh
+edit <domain>``, 修改console项目如下::
+
+   <console type='pty'>
+      <target type='virtio' port='0'/>
+    </console>
+
+这个是使用新的virtio虚拟输出, 成功率高.
 
 
 phoronix-test-suite configure
