@@ -1,6 +1,6 @@
 declare -A ip
-ip['ubuntu_1']='xen@192.168.122.20'
-ip['ubuntu_10']='xen@192.168.122.21'
+ip['ubuntu_0']='xen@192.168.122.20'
+ip['ubuntu_1']='xen@192.168.122.21'
 ip['ubuntu_2']='xen@192.168.122.22'
 ip['ubuntu_3']='xen@192.168.122.23'
 ip['ubuntu_4']='xen@192.168.122.24'

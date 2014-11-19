@@ -24,6 +24,7 @@ do
     ssh -Tq $i << EOF
 # touch .hushlogin #disable welcome message
 echo $passwd | sudo -S dpkg -i $1
+echo $passwd | sudo -S apt-get install -yf # fix dependencies
 rm $1
 echo $passwd | sudo -S service mmclientd restart # restart service
 echo $passwd | sudo -S update-rc.d mmclientd defaults 80 80 # add to boot
