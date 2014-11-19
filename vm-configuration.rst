@@ -11,39 +11,57 @@ vnc密码 : vncvnc
 
 目前安装的虚拟机的分配:
 
-domain     version    type     static-ip                disk
---------------------------------------------------------------------------
-ubuntu_1   12.10      hvm    192.168.122.20    /dev/mapper/vg-ubuntu_1
-ubuntu_10  12.10      hvm    192.168.122.21    /dev/mapper/vg-ubuntu_10
-ubuntu_2   12.10      hvm    192.168.122.22    /dev/mapper/vg-ubuntu_2
-ubuntu_3   12.10      hvm    192.168.122.23    /dev/mapper/vg-ubuntu_3
-ubuntu_4   12.10      hvm    192.168.122.24    /dev/mapper/vg-ubuntu_4
-ubuntu_5   12.10      hvm    192.168.122.25    /dev/mapper/vg-ubuntu_5
-ubuntu_6   12.10      hvm    192.168.122.26    /dev/mapper/vg-ubuntu_6
-ubuntu_7   12.10      hvm    192.168.122.27    /dev/mapper/vg-ubuntu_7
-ubuntu_8   12.10      hvm    192.168.122.28    /dev/mapper/vg-ubuntu_8
-ubuntu_9   12.10      hvm    192.168.122.29    /dev/mapper/vg-ubuntu_9
-centos1    6.3        pvm                      /dev/mapper/vg-centos_1
-fedora1    15         pvm                      /dev/mapper/vg-fedora_1
-fedora2    15         pvm                      /dev/mapper/vg-fedora_2
++-----------+---------+------+----------------+--------------------------+
+| domain    | version | type | static-ip      | disk                     |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_1  | 12.10   | hvm  | 192.168.122.20 | /dev/mapper/vg-ubuntu_1  |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_10 | 12.10   | hvm  | 192.168.122.21 | /dev/mapper/vg-ubuntu_10 |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_2  | 12.10   | hvm  | 192.168.122.22 | /dev/mapper/vg-ubuntu_2  |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_3  | 12.10   | hvm  | 192.168.122.23 | /dev/mapper/vg-ubuntu_3  |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_4  | 12.10   | hvm  | 192.168.122.24 | /dev/mapper/vg-ubuntu_4  |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_5  | 12.10   | hvm  | 192.168.122.25 | /dev/mapper/vg-ubuntu_5  |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_6  | 12.10   | hvm  | 192.168.122.26 | /dev/mapper/vg-ubuntu_6  |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_7  | 12.10   | hvm  | 192.168.122.27 | /dev/mapper/vg-ubuntu_7  |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_8  | 12.10   | hvm  | 192.168.122.28 | /dev/mapper/vg-ubuntu_8  |
++-----------+---------+------+----------------+--------------------------+
+| ubuntu_9  | 12.10   | hvm  | 192.168.122.29 | /dev/mapper/vg-ubuntu_9  |
++-----------+---------+------+----------------+--------------------------+
 
 对于所有ubuntu虚拟机
 
-**username** : xen
-**passwd** : xen
++ **username** : xen
++ **passwd** : xen
 
 对于所有centos/fedora虚拟机
 
-**username** : root
-**passwd** : xenxen
++ **username** : root
++ **passwd** : xenxen
 
 测试pvm安装比较困难。
 其中fedora 16/17 安装失败。
 
-command
--------
+lvm-configure
+---------------
 
-虚拟机的克隆使用`virt-clone`命令
+配置lvm组管理能够方便的创建动态卷。具有高速，易扩展的优势。作为虚拟机的磁盘镜像
+非常合适::
+
+   # pvcreate /dev/sdb[No.]
+   # vgcreate vg /dev/sdb[No.]
+   # lvcreate --name name -L size vg
+
+quick make vm
+----------------
+
+虚拟机的克隆使用 ``virt-clone`` 命令, 能快速的扩展虚拟机的数量::
 
     #virt-clone -o origin -n target -f file
     

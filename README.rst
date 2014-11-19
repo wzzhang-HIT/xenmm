@@ -135,9 +135,9 @@ mm_test_client use two parameters, base memory and delta memory. it makes a mono
 
 1.  run ``service mmclientd start`` on other domain
 2.  run ``mm_test_client 150M 10M`` on target domain
-3.  run ``renice -10 -p `pidof mm_test_client` `` on target domain
+3.  run ``renice -10 -p \`pidof mm_test_client\``` on target domain
 4.  start server program
-3.  run ``./dacapo_test 'sunflow luindex lusearch' 15`` on target domain
+5.  run ``./dacapo_test 'sunflow luindex lusearch' 15`` on target domain
 
 data log
 ============
