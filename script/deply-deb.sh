@@ -1,6 +1,7 @@
 #!/bin/bash
 passwd="xen"
 
+
 dir=`dirname $0`
 . $dir/ip.sh
 
@@ -17,10 +18,13 @@ cd dacapo
 [ ! -e dacapo_test.sh ] && cp ../../script/dacapo_test.sh .
 cd ..
 
+sudo -s
 for i in ${ip[*]}
 do
     echo "processing $i ..."
     scp -r $1 dacapo $i:
+    domid=`virsh domid $i`
+    sudo xenstore-chmod -r "/local/domains/$domid/memory" b
     ssh -Tq $i << EOF
 # touch .hushlogin #disable welcome message
 echo $passwd | sudo -S dpkg -i $1
