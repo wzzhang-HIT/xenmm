@@ -27,7 +27,7 @@ static void get_max_idx()
 
     while((ep = readdir(dir))){
         if(!strncmp(path,ep->d_name,strlen(path))){
-            sscanf(ep->d_name,"%*d_%*d_%*d_%d",&idx);
+            sscanf(ep->d_name,"%*d-%*d-%*d_%d",&idx);
             if(idx>max_idx) max_idx = idx;
         }
     }

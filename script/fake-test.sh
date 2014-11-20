@@ -1,28 +1,49 @@
 #!/bin/bash
 #please run script as root
 passwd="xen"
-total="5G"
+total="10G"
 free="150M"
+#tests="sunflow luindex lusearch"
+tests="sunflow\ luindex\ lusearch"
+#repeat=15
+repeat=15
+xenbus=/dev/xen/xenbus
 
-. ip.sh
+if [ $# -lt 3 ]; then
+   echo "usage: $0 <domain> <base> <delta>"
+   exit 0
+fi
+
+read -sp "input password:" passwd_h
+
+dir=`dirname $0`
+. $dir/ip.sh
+
+for i in ${!ip[*]}
+do
+    domid=`virsh domid $i`
+    echo $passwd_h | sudo -S xenstore-chmod -r "/local/domain/$domid/memory" b
+done
 
 # force reset memory
-src/mm_server -r -N $total -f $free &
+echo $passwd_h | sudo -S src/mmserver -r -N $total -f $free &
 sleep 5
-kill `pidof mm_server`
+echo $passwd_h | sudo -S kill `pidof mmserver`
 
-ssh ${ip[$1]} <<EOF
+ssh -Tq ${ip[$1]} <<EOF
 echo $passwd | sudo -S service mmclientd stop
-echo $passwd | mm_test_client $2 $3 &
+echo $passwd | sudo -S env XENSTORED_PATH=$xenbus mm_test_client $2 $3 &
 renice -10 -p `pidof mm_test_client`
 EOF
 
-src/mmserver -N $total -f $free &
+echo $passwd_h | sudo -S src/mmserver -v -N $total -f $free -d output &
 
-ssh ${ip[$1]} <<EOF
-./dacapo_test 'sunflow luindex lusearch' 15
-echo $passwd | kill `pidof mm_test_client`
+ssh -Tq ${ip[$1]} <<EOF
+cd dacapo
+echo ./dacapo_test.sh \'$tests\' $repeat
+./dacapo_test.sh \'$tests\' $repeat
+echo $passwd | sudo -S kill `pidof mm_test_client`
 echo $passwd | sudo -S service mmclientd start
 EOF
 
-kill `pidof mmserver`
+echo $passwd_h | sudo -S kill `pidof mmserver`

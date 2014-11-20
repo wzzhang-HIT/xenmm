@@ -2,7 +2,7 @@
 
 dacapo=dacapo-9.12-bach.jar
 file=`date +%F-%s.log`
-if [ $# -eq 0 -o $# -gt 2 ]; then
+if [ $# -lt 2 ]; then
     echo "  useage: $0 [all|test id] [times]";
     echo "  example: $0 h2 5";
     echo "  example: $0 'h2 sunset' 5";
