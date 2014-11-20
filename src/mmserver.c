@@ -27,6 +27,8 @@ static double total_mem = 0.0;
 static double reverse_mem = 0.0;
 static double xi_ = 0.0;
 static int reset_ = 0;
+static int Verbose = 0;
+static const char* Dir = NULL;
 static int unit_expand(char u)
 {
     switch(u){
@@ -111,7 +113,7 @@ static void build_linear_equ()
     Tau = (xi_ + Amax-1.0/len)/(Amax-Amean/Total);
     Tau = (Tau<0)?0:((Tau>1)?1:Tau);
     Tau = Tau>old_tau?Tau:old_tau-(old_tau-Tau)/10;
-    printf("Tau:%lf\n",Tau);
+    printf("τ%.3lf\t",Tau);
     old_tau = Tau;
 #else
     Tau = tau;
@@ -124,15 +126,25 @@ static void build_linear_equ()
         i++;
     }
 #endif
-    i=0;
-    LIST_FOREACH(d,&domain0.domainu,entries){
-        printf("%d:[ tg:%llu use:%llu free:%llu ]\n",d->id,d->tg_mem,d->tot_mem-d->free_mem,d->free_mem);
-    }
-    printf("Target:[");
+    // print table
     for(i=0;i<len;i++){
-        printf(" %llu ",(mem_t)_x_[i]);
+        printf("%llu\t",(mem_t)_x_[i]);
     }
-    printf("]\n\n");
+    printf("\n");
+
+    if(Verbose){
+       printf("tg:\t");
+       LIST_FOREACH(d,&domain0.domainu,entries)
+          printf("%llu\t", d->tg_mem);
+       printf("\nuse:\t");
+       LIST_FOREACH(d,&domain0.domainu,entries)
+          printf("%llu\t", d->tot_mem - d->free_mem);
+       printf("\nfree:\t");
+       LIST_FOREACH(d,&domain0.domainu,entries)
+          printf("%llu\t", d->free_mem);
+       printf("\n\n");
+    }
+
     i = 0;
     mem_t allocated;
     LIST_FOREACH(d,&domain0.domainu,entries){
@@ -152,6 +164,8 @@ static void show_help()
             "\t:Total   the total memory\n"
             "\t:Reverse the reversed free memory\n"
             "\t-r       force set all vm memory are equal\n"
+            "\t-v       show more verbose information\n"
+            "\t-d       set log output dir\n"
             "example:\n"
             "\tmmserver -N 5G -f 100M\n"
           );
@@ -199,7 +213,7 @@ int main(int argc,char** argv)
     }
     char ch;
     char* unit;
-    while((ch = getopt(argc, argv, "N:f:hr"))!= -1){
+    while((ch = getopt(argc, argv, "N:f:hrvd:"))!= -1){
         switch(ch){
             case 'N':
                 total_mem = strtod(optarg, &unit);
@@ -215,6 +229,12 @@ int main(int argc,char** argv)
             case 'h':
                 show_help();
                 return 0;
+                break;
+            case 'v':
+                Verbose = 1;
+                break;
+            case 'd':
+                Dir = optarg;
                 break;
         }
     }
@@ -239,13 +259,6 @@ int main(int argc,char** argv)
         return 0;
     }
     signal(SIGINT, interupt_server);
-    //=============print param=============
-#if AUTO_TAX_RATE
-    printf("[PARAM: TAU=AUTO]\n\n");
-#else
-    printf("[PARAM: TAU=%f]\n\n",tau);
-#endif
-    //=====================================
     /*LIST_FOREACH(domainu,&domain0.domainu,entries){
         s_h_watch_guest_mem(domainu, domainu_mem_change, domainu);
     }*/
@@ -254,12 +267,24 @@ int main(int argc,char** argv)
     ctrl_read_domains_maxmem();
     Domain* d;
     LIST_FOREACH(d,&domain0.domainu,entries){
-        record_begin(d);
+        record_begin(d, Dir);
     }
 #if ENABLE_SOCK
     pthread_t thread = 0;
     pthread_create(&thread,NULL,sock_thread,NULL);
 #endif
+
+    //print header 
+#if AUTO_TAX_RATE
+    printf("Field   ");
+#endif
+    LIST_FOREACH(d,&domain0.domainu, entries){
+       char* name = s_h_read_name(d);
+       printf("%s   ", name);
+       free(name);
+    }
+    printf("\n");
+
     while(!prog_quit){
         sleep(2);
         //s_h_wait_change();

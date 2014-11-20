@@ -3,7 +3,7 @@
 
 #include "type.h"
 /* start record domain's memory info */
-void record_begin(Domain*);
+void record_begin(Domain* d, const char* dir);
 /* write domain's memory info to record file */
 void record_mem(Domain*);
 /* finish record */

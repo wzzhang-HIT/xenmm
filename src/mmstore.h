@@ -28,6 +28,7 @@ WatchLock* s_h_watch_guest_mem(Domain*,WatchCallback,void* userdata);
 void s_h_wait_change();
 /* read domain's tot,free,target memory from xenstore */
 void s_h_read_domain_mem(Domain*);
+char* s_h_read_name(Domain* d);
 /* set domain's target memory on xenstore */
 void s_h_set_domain_mem(Domain* d,mem_t allocate);
 #endif

@@ -151,7 +151,20 @@ void s_h_read_domain_mem(Domain* d)
 
     xs_transaction_end(h_h, t, false);
     //printf("[domain:%u tot:%llu free:%llu]\n",domainu->id,domainu->tot_mem,domainu->free_mem);
+}
 
+char* s_h_read_name(Domain* d)
+{
+   if(!d) return NULL;
+   char path[512];
+   char* buf;
+   uint buf_len;
+
+   xs_transaction_t t = xs_transaction_start(h_h);
+   snprintf(path,sizeof(path),"/local/domain/%u/name",d->id);
+   buf = xs_read(h_h, t, path, &buf_len);
+   xs_transaction_end(h_h, t, false);
+   return buf;
 }
 
 void s_h_set_domain_mem(Domain* d,mem_t allocate)
