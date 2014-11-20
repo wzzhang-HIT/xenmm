@@ -50,7 +50,7 @@ void record_begin(Domain* d, const char* dir)
     }else
        snprintf(path, sizeof(path), "%s", dir);
     if(access(path, F_OK))
-       mkdir(path, 0755);
+       mkdir(path, 0777);
 
     char* name = s_h_read_name(d);
     snprintf(path+strlen(path),sizeof(path)-strlen(path), "/%s.log", name);
@@ -63,8 +63,9 @@ void record_begin(Domain* d, const char* dir)
     }
     d->record = f;
 
-    fprintf(f,"recorded by mmserver domain: [id:%d time:%s]\n",d->id,ctime(&t));
+    fprintf(f,"recorded by mmserver domain %d time:%s\n",d->id,ctime(&t));
     fprintf(f,"time\t\ttg_mem\t\tuse_mem\t\tfree_mem\t\t\n");
+    fflush(f);
 }
 
 void record_end(Domain* d)
@@ -82,4 +83,5 @@ void record_mem(Domain* d)
     strftime(tstr, sizeof(tstr), "%X", tm_);
 
     fprintf(d->record,"%s\t%llu\t\t%llu\t\t%llu\t\t\n",tstr,d->tg_mem,d->tg_mem-d->free_mem,d->free_mem);
+    fflush(d->record);
 }
