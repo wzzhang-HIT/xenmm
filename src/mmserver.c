@@ -29,6 +29,7 @@ static double xi_ = 0.0;
 static int reset_ = 0;
 static int Verbose = 0;
 static const char* Dir = NULL;
+static double Tau = 0.0;
 static int unit_expand(char u)
 {
     switch(u){
@@ -80,7 +81,6 @@ static void build_linear_equ()
     double Amax = 0;
     double Amean = 0;
     double Total;
-    double Tau;
     int len = 0;
     Domain* d;
     LIST_FOREACH(d,&domain0.domainu,entries){
@@ -113,7 +113,6 @@ static void build_linear_equ()
     Tau = (xi_ + Amax-1.0/len)/(Amax-Amean/Total);
     Tau = (Tau<0)?0:((Tau>1)?1:Tau);
     Tau = Tau>old_tau?Tau:old_tau-(old_tau-Tau)/10;
-    printf("τ%.3lf\t",Tau);
     old_tau = Tau;
 #else
     Tau = tau;
@@ -126,24 +125,6 @@ static void build_linear_equ()
         i++;
     }
 #endif
-    // print table
-    for(i=0;i<len;i++){
-        printf("%lld\t",(mem_t)_x_[i]);
-    }
-    printf("\n");
-
-    if(Verbose){
-       printf("tot:\t");
-       LIST_FOREACH(d,&domain0.domainu,entries)
-          printf("%lld\t", d->tot_mem);
-       printf("\nuse:\t");
-       LIST_FOREACH(d,&domain0.domainu,entries)
-          printf("%lld\t", d->tot_mem - d->free_mem);
-       printf("\nfree:\t");
-       LIST_FOREACH(d,&domain0.domainu,entries)
-          printf("%lld\t", d->free_mem);
-       printf("\n\n");
-    }
 
     mem_t allocated;
     i = 0;
@@ -276,9 +257,7 @@ int main(int argc,char** argv)
 #endif
 
     //print header 
-#if AUTO_TAX_RATE
     printf("Field   ");
-#endif
     LIST_FOREACH(d,&domain0.domainu, entries){
        char* name = s_h_read_name(d);
        printf("%s   ", name);
@@ -292,6 +271,28 @@ int main(int argc,char** argv)
         LIST_FOREACH(d,&domain0.domainu,entries){
             s_h_read_domain_mem(d);
             record_mem(d);
+        }
+        // print table
+#if AUTO_TAX_RATE
+        printf("τ%.3lf\t",Tau);
+#else
+        printf("tg:\t");
+#endif
+        LIST_FOREACH(d,&domain0.domainu,entries)
+           printf("%lld\t", d->tg_mem);
+        printf("\n");
+
+        if(Verbose){
+           printf("tot:\t");
+           LIST_FOREACH(d,&domain0.domainu,entries)
+              printf("%lld\t", d->tot_mem);
+           printf("\nuse:\t");
+           LIST_FOREACH(d,&domain0.domainu,entries)
+              printf("%lld\t", d->tot_mem - d->free_mem);
+           printf("\nfree:\t");
+           LIST_FOREACH(d,&domain0.domainu,entries)
+              printf("%lld\t", d->free_mem);
+           printf("\n\n");
         }
         build_linear_equ();
     }
