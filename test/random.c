@@ -14,18 +14,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include <unistd.h>
 //adjust this value to set max mb size of memory
 //malloced
 void show_help()
 {
-    const char* help=
-        "useage: random low high\n"
+   printf("useage: random low high\n"
         "useage: random low high last\n"
-        "example: random 100M 500M\n";
+        "example: random 100M 500M\n"
         "\t run random from 100M to 500M last default 10s\n"
         "example: random 100M 500M 30s\n"
-        "\t run random from 100M to 500M last 30s\n";
-    printf("%s\n",help);
+        "\t run random from 100M to 500M last 30s\n");
 }
 int main(int argc,char** argv)
 {

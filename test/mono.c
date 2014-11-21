@@ -4,21 +4,17 @@
 #               simplify the original mono version from zhangdi
 #       Author: xiehuc
 #        Email: xiehuc@gmail.com
-#     HomePage: 
-#      Version: 0.0.1
-#   LastChange: 2012-12-27 09:42:43
-#      History: 
 =============================================================================*/
 #include "util.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 //adjust this value to set max mb size of memory
 //malloced
 void show_help()
 {
-    const char* help=
-        "useage: mono low high\n"
-        "example: mono 100M 500M\n";
-    printf(help);
+   printf("useage: mono low high\n"
+        "example: mono 100M 500M\n");
 }
 int main(int argc,char** argv)
 {
@@ -59,4 +55,5 @@ int main(int argc,char** argv)
     free_all_pages();
     sleep(1);
     printf("\n");
+    return 0;
 }

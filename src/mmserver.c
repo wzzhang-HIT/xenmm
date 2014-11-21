@@ -18,8 +18,9 @@
 #include "mmctrl.h"
 #include "solve.h"
 #include "mmrecord.h"
+#include "config.h"
 
-#define tau tax_rate
+#define tau TAX_RATE
 #define max(a,b) a<b?b:a
 static int prog_quit = 0;
 static double old_tau = 0.0;
@@ -107,7 +108,7 @@ static void build_linear_equ()
     Total = total_mem;
     Amax/=Total;
     Amean/=len;
-#if AUTO_TAX_RATE
+#ifdef AUTO_TAX_RATE
     ///*动态曲线1:*/Tau = sqrt(1-pow(1-Amax,2));
     ///*动态曲线2:*/Tau = Tau * 0.8 + 0.2;
     Tau = (xi_ + Amax-1.0/len)/(Amax-Amean/Total);
@@ -126,13 +127,9 @@ static void build_linear_equ()
     }
 #endif
 
-    mem_t allocated;
     i = 0;
-    LIST_FOREACH(d,&domain0.domainu,entries){
-        allocated = _x_[i++];
-        //s_h_set_domain_mem(d,allocated);
-        xl_update_domain_mem(d,allocated);
-    }
+    LIST_FOREACH(d,&domain0.domainu,entries)
+        ctrl_update_domain_mem(d,(mem_t)_x_[i++]);
 }
 static void interupt_server(int sig)
 {
@@ -152,7 +149,7 @@ static void show_help()
           );
 }
 /**使网页端显示可行*/
-#if ENABLE_SOCK
+#ifdef ENABLE_SOCK
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <pthread.h>
@@ -192,6 +189,7 @@ int main(int argc,char** argv)
     if(s_h_init()==MM_FAILED){
         return -1;
     }
+
     char ch;
     char* unit;
     while((ch = getopt(argc, argv, "N:f:hrvd:"))!= -1){
@@ -219,6 +217,7 @@ int main(int argc,char** argv)
                 break;
         }
     }
+
     if(total_mem==0.0){
         fprintf(stderr, "-N is required\n");
         return 0;
@@ -228,7 +227,7 @@ int main(int argc,char** argv)
         return 0;
     }
     xi_ = reverse_mem/total_mem;
-    xl_init();
+    ctrl_init();
     s_h_list_domains();
     if(LIST_EMPTY(&domain0.domainu)){
         fprintf(stderr,"it seems you didn't run mmclient in any guest vm.\n"
@@ -240,18 +239,13 @@ int main(int argc,char** argv)
         return 0;
     }
     signal(SIGINT, interupt_server);
-    /*LIST_FOREACH(domainu,&domain0.domainu,entries){
-        s_h_watch_guest_mem(domainu, domainu_mem_change, domainu);
-    }*/
-
-    //s_h_wait_change();
-    //ctrl_read_domains_maxmem();
+    ctrl_read_domains_maxmem();
     Domain* d;
     LIST_FOREACH(d,&domain0.domainu,entries){
 		  d->min_mem = reverse_mem;
         record_begin(d, Dir);
     }
-#if ENABLE_SOCK
+#ifdef ENABLE_SOCK
     pthread_t thread = 0;
     pthread_create(&thread,NULL,sock_thread,NULL);
 #endif
@@ -273,7 +267,7 @@ int main(int argc,char** argv)
             record_mem(d);
         }
         // print table
-#if AUTO_TAX_RATE
+#ifdef AUTO_TAX_RATE
         printf("τ%.3lf\t",Tau);
 #else
         printf("tg:\t");
@@ -296,13 +290,13 @@ int main(int argc,char** argv)
         }
         build_linear_equ();
     }
-#if ENABLE_SOCK
+#ifdef ENABLE_SOCK
     pthread_cancel(thread);
 #endif
     LIST_FOREACH(d,&domain0.domainu,entries){
         record_end(d);
     }
     s_h_close();
-    xl_close();
+    ctrl_close();
     return 0;
 }

@@ -1,0 +1,5 @@
+
+#cmakedefine TAX_RATE @TAX_RATE@
+#cmakedefine AUTO_TAX_RATE 
+#cmakedefine ENABLE_SOCK
+#cmakedefine WITH_LIBXL

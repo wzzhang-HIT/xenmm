@@ -4,12 +4,13 @@
 #include <string.h>
 #include <fcntl.h>
 #include <time.h>
+#include <unistd.h>
 
 unsigned long rand_ul()
 {
     unsigned long ret;
     int rand_stream = open("/dev/urandom",O_RDONLY);
-    read(&ret,sizeof(ret),rand_stream);
+    read(rand_stream, &ret, sizeof(ret));
     close(rand_stream);
     return ret;
 }
@@ -33,8 +34,7 @@ static ul page_num = 0;
 void visit_pages(ul size)
 {
     ul new_pages = size / 4;
-    //page_num = size / 4;
-    int i,times;
+    int i;
 #if ! LOW_CPU
     int rand_stream = open("/dev/urandom",O_RDONLY);
     if(!rand_stream){
@@ -80,7 +80,7 @@ void flush_pages()
     int rand_stream = open("/dev/urandom",O_RDONLY);
     for(times=0;times<ITERATE_TIMES;times++){
         for(i=0;i<page_num;i++){
-            read(trunks[i], ONE_PAGE, rand_stream);
+            read(rand_stream, trunks[i], ONE_PAGE);
         }
     }
     close(rand_stream);

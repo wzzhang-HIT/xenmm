@@ -17,7 +17,7 @@ echo "preparing dacapo dir ..."
 [ ! -d dacapo ] && mkdir dacapo
 cd dacapo
 [ ! -e dacapo*.jar ] && wget http://softlayer-dal.dl.sourceforge.net/project/dacapobench/9.12-bach/dacapo-9.12-bach.jar
-[ ! -e dacapo_test.sh ] && cp ../../script/dacapo_test.sh .
+cp ../../script/dacapo_test.sh .
 cd ..
 
 for i in ${!ip[*]}

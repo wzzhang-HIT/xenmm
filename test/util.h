@@ -24,5 +24,6 @@ int unit_expand(char u);
 unsigned long rand_ul();
 void visit_pages(ul size);
 void free_pages(ul size);
+void free_all_pages();
 void flush_pages();
 #endif

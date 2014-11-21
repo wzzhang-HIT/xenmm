@@ -1,8 +1,9 @@
 include_directories(
-	.
+   #${CMAKE_CURRENT_SOURCE_DIR}
+   ${PROJECT_BINARY_DIR}
 )
 
-add_definitions(-Wall -W)
+add_definitions(-Wall)
 
 if(NOT ONLY_CLIENT)
 
@@ -18,37 +19,22 @@ add_executable(mmserver
     type.c
     )
 
-target_link_libraries(mmserver
-    util
-    xenstore
-    xenctrl
-	 xenlight
-    m
-    )
-set(MMSERVER_COMPILE_FLAGS "")
-
-set(TAX_RATE "AUTO" CACHE STRING "set TAX_RATE")
-
-if(TAX_RATE STREQUAL "AUTO")
-   set(MMSERVER_COMPILE_FLAGS "${MMSERVER_COMPILE_FLAGS} -DAUTO_TAX_RATE=1 ")
-   message("[TAX_RATE = AUTO]")
-else(TAX_RATE STREQUAL "AUTO")
-   set(MMSERVER_COMPILE_FLAGS "${MMSERVER_COMPILE_FLAGS} -DTAX_RATE=${TAX_RATE} ")
-   message("[TAX_RATE = ${TAX_RATE}]")
-endif(TAX_RATE STREQUAL "AUTO")
-set_target_properties(mmserver
-   PROPERTIES
-   COMPILE_FLAGS "${MMSERVER_COMPILE_FLAGS}"
-   )
+if(XL_FOUND)
+   set(MMSERVER_LIBRARIES ${XL_LIBRARY})
+else()
+   set(MMSERVER_LIBRARIES ${XENCTRL_LIBRARY})
+endif()
 
 if(SOCK)
-    set(MMSERVER_COMPILE_FLAGS "${MMSERVER_COMPILE_FLAGS} -DENABLE_SOCK=1 ")
-    set_target_properties(mmserver
-        PROPERTIES
-        COMPILE_FLAGS "${MMSERVER_COMPILE_FLAGS}"
-        )
-    target_link_libraries(mmserver pthread)
-endif(SOCK)
+   set(MMSERVER_LIBRARIES ${MMSERVER_LIBRARIES} pthread)
+endif()
+
+target_link_libraries(mmserver
+    util
+    m
+    ${XENSTORE_LIBRARY}
+    ${MMSERVER_LIBRARIES}
+    )
 
 install(TARGETS mmserver DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
@@ -61,7 +47,7 @@ add_executable(mmclient
 )
 
 target_link_libraries(mmclient
-    xenstore
+   ${XENSTORE_LIBRARY}
 )
 
 install(TARGETS mmclient DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)

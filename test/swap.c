@@ -5,6 +5,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <signal.h>
+#include <unistd.h>
 
 typedef unsigned long memkb_t;
 struct SwapInfo{
@@ -65,5 +66,5 @@ int main(){
         sleep(1);
     }
     close_swap();
-
+    return 0;
 }

@@ -11,8 +11,4 @@ void ctrl_read_domains_maxmem();
  */
 void ctrl_update_domain_mem(Domain* d,mem_t allocated);
 
-void xl_init();
-void xl_close();
-void xl_update_domain_mem(Domain* d,mem_t allocated);
-
 #endif

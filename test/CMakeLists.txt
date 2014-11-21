@@ -1,3 +1,4 @@
+add_definitions(-Wall)
 
 add_executable(mm_test_mono
     mono.c
