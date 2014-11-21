@@ -56,7 +56,7 @@ int main()
 
     while(1){
         read_mem(&mem);
-        printf("tot:%llu,free:%llu\n",mem.tot_mem,mem.free_mem);
+        printf("tot:%lld,free:%lld\n",mem.tot_mem,mem.free_mem);
         s_g_write_mem(mem);
         sleep(1);
     }

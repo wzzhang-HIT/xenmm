@@ -128,29 +128,29 @@ static void build_linear_equ()
 #endif
     // print table
     for(i=0;i<len;i++){
-        printf("%llu\t",(mem_t)_x_[i]);
+        printf("%lld\t",(mem_t)_x_[i]);
     }
     printf("\n");
 
     if(Verbose){
-       printf("tg:\t");
+       printf("tot:\t");
        LIST_FOREACH(d,&domain0.domainu,entries)
-          printf("%llu\t", d->tg_mem);
+          printf("%lld\t", d->tot_mem);
        printf("\nuse:\t");
        LIST_FOREACH(d,&domain0.domainu,entries)
-          printf("%llu\t", d->tot_mem - d->free_mem);
+          printf("%lld\t", d->tot_mem - d->free_mem);
        printf("\nfree:\t");
        LIST_FOREACH(d,&domain0.domainu,entries)
-          printf("%llu\t", d->free_mem);
+          printf("%lld\t", d->free_mem);
        printf("\n\n");
     }
 
-    i = 0;
     mem_t allocated;
+    i = 0;
     LIST_FOREACH(d,&domain0.domainu,entries){
         allocated = _x_[i++];
-        s_h_set_domain_mem(d,allocated);
-        ctrl_update_domain_mem(d,allocated);
+        //s_h_set_domain_mem(d,allocated);
+        xl_update_domain_mem(d,allocated);
     }
 }
 static void interupt_server(int sig)
@@ -196,7 +196,7 @@ static void * sock_thread(void* no_used)
             strcat(buf,"[");
             Domain* d;
             LIST_FOREACH(d,&domain0.domainu,entries){
-                snprintf(buf+strlen(buf),sizeof(buf)-strlen(buf),"[%llu,%llu,%llu],",d->tot_mem,d->tot_mem-d->free_mem,d->free_mem);
+                snprintf(buf+strlen(buf),sizeof(buf)-strlen(buf),"[%lld,%lld,%lld],",d->tot_mem,d->tot_mem-d->free_mem,d->free_mem);
             }
             buf[strlen(buf)-1] = ']';
         }
@@ -247,7 +247,7 @@ int main(int argc,char** argv)
         return 0;
     }
     xi_ = reverse_mem/total_mem;
-    ctrl_init();
+    xl_init();
     s_h_list_domains();
     if(LIST_EMPTY(&domain0.domainu)){
         fprintf(stderr,"it seems you didn't run mmclient in any guest vm.\n"
@@ -264,9 +264,10 @@ int main(int argc,char** argv)
     }*/
 
     //s_h_wait_change();
-    ctrl_read_domains_maxmem();
+    //ctrl_read_domains_maxmem();
     Domain* d;
     LIST_FOREACH(d,&domain0.domainu,entries){
+		  d->min_mem = reverse_mem;
         record_begin(d, Dir);
     }
 #if ENABLE_SOCK
@@ -301,6 +302,6 @@ int main(int argc,char** argv)
         record_end(d);
     }
     s_h_close();
-    ctrl_close();
+    xl_close();
     return 0;
 }

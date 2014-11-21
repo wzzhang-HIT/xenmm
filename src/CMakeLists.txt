@@ -22,6 +22,7 @@ target_link_libraries(mmserver
     util
     xenstore
     xenctrl
+	 xenlight
     m
     )
 set(MMSERVER_COMPILE_FLAGS "")

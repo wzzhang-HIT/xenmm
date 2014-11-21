@@ -10,11 +10,11 @@
 =============================================================================*/
 #include "mmctrl.h"
 #include <xenctrl.h>
+#include <libxl.h>
 
 static xc_interface* c_h;
+static libxl_ctx* ctx;
 static xentoollog_logger xc_logger;
-
-
 
 void ctrl_init()
 {
@@ -50,4 +50,22 @@ void ctrl_read_domains_maxmem()
         if(domain == NULL) continue;
         domain->max_mem = domain_infos[i].max_pages * domain0.page_size;
     }
+}
+
+void xl_init()
+{
+   libxl_ctx_alloc(&ctx, LIBXL_VERSION, 0, &xc_logger);
+}
+
+void xl_close()
+{
+   libxl_ctx_free(ctx);
+}
+void xl_update_domain_mem(Domain* d,mem_t allocated)
+{
+    if(!d) return;
+    //大于精度才进行调整
+    if(abs(allocated-d->tg_mem)<ACCURACY) return;
+    uint32_t target = allocated;
+    libxl_set_memory_target(ctx, d->id, target, 0, 1);
 }

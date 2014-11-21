@@ -37,9 +37,9 @@ void s_g_write_mem(MemInfo mem)
     xs_transaction_t t;
     t = xs_transaction_start(g_h);
 
-    snprintf(buf,sizeof(buf),"%llu",mem.free_mem);
+    snprintf(buf,sizeof(buf),"%lld",mem.free_mem);
     xs_write(g_h, t, "memory/free", buf, strlen(buf));
-    snprintf(buf, sizeof(buf), "%llu",mem.tot_mem);
+    snprintf(buf, sizeof(buf), "%lld",mem.tot_mem);
     xs_write(g_h, t, "memory/tot", buf, strlen(buf));
 
     xs_transaction_end(g_h, t, 0);
@@ -136,21 +136,20 @@ void s_h_read_domain_mem(Domain* d)
     xs_transaction_t t = xs_transaction_start(h_h);
     snprintf(path,sizeof(path),"/local/domain/%u/memory/free",d->id);
     buf = xs_read(h_h, t, path, &buf_len);
-    d->free_mem = strtoul(buf,NULL,10);
+    d->free_mem = strtoll(buf,NULL,10);
     free(buf);
 
     snprintf(path, sizeof(path), "/local/domain/%u/memory/tot",d->id);
     buf = xs_read(h_h, t, path, &buf_len);
-    d->tot_mem = strtoul(buf,NULL,10);
+    d->tot_mem = strtoll(buf,NULL,10);
     free(buf);
 
     snprintf(path, sizeof(path), "/local/domain/%u/memory/target",d->id);
     buf = xs_read(h_h, t, path, &buf_len);
-    d->tg_mem = strtoul(buf, NULL, 10);
+    d->tg_mem = strtoll(buf, NULL, 10);
     free(buf);
 
     xs_transaction_end(h_h, t, false);
-    //printf("[domain:%u tot:%llu free:%llu]\n",domainu->id,domainu->tot_mem,domainu->free_mem);
 }
 
 char* s_h_read_name(Domain* d)
@@ -171,12 +170,13 @@ void s_h_set_domain_mem(Domain* d,mem_t allocate)
 {
     if(!d) return ;
     if(abs(allocate - d->tg_mem)<ACCURACY) return;
+	 if(d->tg_mem < d->min_mem) return;
 
     char path[512];
     char target[64];
     xs_transaction_t t = xs_transaction_start(h_h);
     snprintf(path, sizeof(path), "/local/domain/%u/memory/target",d->id);
-    snprintf(target,sizeof(target),"%llu",allocate);
+    snprintf(target,sizeof(target),"%lld",allocate);
     xs_write(h_h, t, path, target, strlen(target));
     xs_transaction_end(h_h, t, 0);
 }

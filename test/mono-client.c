@@ -15,7 +15,7 @@
 
 static void show_help(char* prog)
 {
-   printf("useage: %s :Base :Delta\n"
+   printf("useage: %s :Base :Delta :Max\n"
          "Delta is changed mem in every 2 seconds\n",
          prog);
 }
@@ -42,7 +42,7 @@ int main(int argc, char** argv)
    mem_t used_mem, real_used_mem;
    char * unit = NULL;
 
-   if(argc!=3){
+   if(argc!=4){
       show_help(argv[0]);
       return 0;
    }
@@ -53,6 +53,9 @@ int main(int argc, char** argv)
    double speed_mem = strtod(argv[2], &unit);
    speed_mem *= unit?unit_expand(*unit):1024;
    speed_mem /= 2; // changed in every two seconds
+
+   double max_mem = strtod(argv[3], &unit);
+   max_mem *= unit?unit_expand(*unit):1024;
 
    if(s_g_init()) return 0;
 
@@ -69,17 +72,17 @@ int main(int argc, char** argv)
 
       if(direction == DIRECT_DECREASE) 
          used_mem - speed_mem > real_used_mem ? used_mem -= speed_mem : (direction = DIRECT_INCREASE);
-      else
-         if( used_mem + speed_mem < real_mem.tot_mem ) 
+      else {
+         if( used_mem + speed_mem < max_mem )
             used_mem += speed_mem ;
          else {
-            int i=3;
-            do{
-               sleep(1);
-            }while(--i);
+            sleep(3);
             direction = DIRECT_DECREASE;
+            continue;
          }
+      }
 
+      printf("tot:%lld, used:%lld, free:%lld\n", mem.tot_mem, used_mem, mem.free_mem);
       mem.free_mem = mem.tot_mem - used_mem;
       s_g_write_mem(mem);
       sleep(1);

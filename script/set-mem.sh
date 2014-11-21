@@ -12,15 +12,11 @@ fi
 for i in ${!ip[*]}
 do
     virsh setmaxmem $i $2 --live --config
-    #virsh setmem $i $1 --live --config
-    # it seems no need reboot
-    #state=`virsh domstate $i`
-    #if [ $state = "running" ]; then
-    #    virsh reboot $i
-    #elif [ $state = "shut off" ]; then
-    #    virsh start $i
-    #fi
-    #sleep 5
+    virsh setmem $i $1 --live --config
+    virsh destroy $i
+    virsh start $i
+    virsh setmaxmem $i $2 --live --config
+    virsh setmem $i $1 --live --config
 done
 
 echo NOTE: sometimes auto configure failed, use *xl top* to check valid.

@@ -64,7 +64,7 @@ void record_begin(Domain* d, const char* dir)
     d->record = f;
 
     fprintf(f,"recorded by mmserver domain %d time:%s\n",d->id,ctime(&t));
-    fprintf(f,"time\t\ttg_mem\t\tuse_mem\t\tfree_mem\t\t\n");
+    fprintf(f,"time\ttg_mem\tuse_mem\tfree_mem\ttot_mem\n");
     fflush(f);
 }
 
@@ -82,6 +82,7 @@ void record_mem(Domain* d)
     struct tm *tm_ = localtime(&t);
     strftime(tstr, sizeof(tstr), "%X", tm_);
 
-    fprintf(d->record,"%s\t%llu\t\t%llu\t\t%llu\t\t\n",tstr,d->tg_mem,d->tg_mem-d->free_mem,d->free_mem);
+    fprintf(d->record,"%s\t%lld\t%lld\t%lld\t%lld\n",tstr,d->tg_mem,
+          d->tg_mem-d->free_mem, d->free_mem, d->tot_mem);
     fflush(d->record);
 }

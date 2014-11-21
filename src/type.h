@@ -25,7 +25,7 @@
 #define UNUSED(x) (void)x
 
 typedef unsigned int uint;
-typedef unsigned long long mem_t;
+typedef long long mem_t;
 typedef unsigned long ulong;
 
 typedef struct Domain0 {
@@ -47,6 +47,7 @@ typedef struct Domain {
      */
     mem_t tg_mem;           
     mem_t max_mem;          ///< it is from host perspective see maxmium memory setting
+	 mem_t min_mem;          ///< reversed min memory always equal reversed(free) memory
 
     FILE* record;
 
