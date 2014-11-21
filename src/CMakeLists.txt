@@ -10,7 +10,6 @@ if(NOT ONLY_CLIENT)
 add_library(util STATIC
     mmstore.c
     mmctrl.c
-    solve.c
     mmrecord.c
 )
 
@@ -19,13 +18,13 @@ add_executable(mmserver
     type.c
     )
 
-if(XL_FOUND)
+if(WITH_LIBXL)
    set(MMSERVER_LIBRARIES ${XL_LIBRARY})
 else()
    set(MMSERVER_LIBRARIES ${XENCTRL_LIBRARY})
 endif()
 
-if(SOCK)
+if(WITH_SOCK)
    set(MMSERVER_LIBRARIES ${MMSERVER_LIBRARIES} pthread)
 endif()
 

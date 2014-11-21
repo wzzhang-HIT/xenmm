@@ -16,12 +16,12 @@
 #include "type.h"
 #include "mmstore.h"
 #include "mmctrl.h"
-#include "solve.h"
 #include "mmrecord.h"
 #include "config.h"
 
 #define tau TAX_RATE
 #define max(a,b) a<b?b:a
+static double* _x_;
 static int prog_quit = 0;
 static double old_tau = 0.0;
 static double total_mem = 0.0;
@@ -49,36 +49,6 @@ static int unit_expand(char u)
 static void build_linear_equ()
 {
     int i;
-    memset(_x_,sizeof(_x_),0);
-#if SOLVE_EQU
-    memset(_a_,sizeof(_a_),0);
-    memset(_b_,sizeof(_b_),0);
-    int len = 0;
-    double _N_ = 0;
-    double _A0_ = 0;
-    Domain* d;
-    double _Ai_;
-    mem_t total;
-    LIST_FOREACH(d,&domain0.domainu,entries){
-        total = (abs(d->tg_mem - d->tot_mem)> 70*1024)?d->tot_mem:d->tg_mem;
-        _N_ += (double)d->tg_mem;
-        _Ai_ = (double)(total - d->free_mem);
-        if(len==0){
-            _A0_ = _Ai_;
-        }else{
-            _b_[len] = tau*(_A0_-_Ai_);
-            _a_[len][0] = 1;
-            _a_[len][len] = -1;
-        }
-        len++;
-    }
-    //_b_[0] = _N_;
-    _b_[0] = 1024*1024*len;
-    for(i=0;i<len;i++){
-        _a_[0][i] = 1;
-    }
-    solve_line_equations(_a_, _b_, len, _x_);
-#else
     double Amax = 0;
     double Amean = 0;
     double Total;
@@ -125,7 +95,6 @@ static void build_linear_equ()
         _x_[i]=Part+Tau*_x_[i];
         i++;
     }
-#endif
 
     i = 0;
     LIST_FOREACH(d,&domain0.domainu,entries)
@@ -240,11 +209,14 @@ int main(int argc,char** argv)
     }
     signal(SIGINT, interupt_server);
     ctrl_read_domains_maxmem();
+    size_t domu_len = 0;
     Domain* d;
     LIST_FOREACH(d,&domain0.domainu,entries){
 		  d->min_mem = reverse_mem;
         record_begin(d, Dir);
+        domu_len++;
     }
+    _x_ = calloc(domu_len, sizeof(*_x_));
 #ifdef ENABLE_SOCK
     pthread_t thread = 0;
     pthread_create(&thread,NULL,sock_thread,NULL);
@@ -298,5 +270,6 @@ int main(int argc,char** argv)
     }
     s_h_close();
     ctrl_close();
+    free(_x_);
     return 0;
 }

@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8)
 option(ONLY_CLIENT "Build Only Client, useful on domain" Off)
 option(ONLY_DOCUMENT "[Not Used]" Off)
 set(TAX_RATE "AUTO" CACHE STRING "set TAX_RATE")
-option(SOCK Off)
+option(WITH_SOCK "Build with socket support" Off)
 
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
@@ -14,7 +14,7 @@ if(WITH_LIBXL AND NOT XL_FOUND)
    message(FATAL_ERROR "Required xenlight not found")
 endif()
 
-set(ENABLE_SOCK ${SOCK})
+set(ENABLE_SOCK ${WITH_SOCK})
 if(TAX_RATE STREQUAL "AUTO")
    set(AUTO_TAX_RATE True)
    message(STATUS "Setting Tax rate: AUTO")
