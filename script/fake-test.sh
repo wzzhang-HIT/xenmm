@@ -7,7 +7,8 @@ min="800M"
 delta="400M"
 max="8G"
 result=output
-tests="sunflow\ luindex\ lusearch"
+tests="h2"
+#tests="sunflow\ luindex\ lusearch"
 repeat=15
 xenbus=/dev/xen/xenbus
 
@@ -30,7 +31,7 @@ dir=`dirname $0`
 
 # force reset memory
 echo $passwd_h | sudo -S src/mmserver -r -N $total -f $free &
-sleep 5
+sleep 10
 echo $passwd_h | sudo -S kill `pidof mmserver`
 
 ssh -Tq ${ip[$1]} <<EOF
