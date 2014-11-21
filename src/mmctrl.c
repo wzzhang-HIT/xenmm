@@ -66,6 +66,7 @@ void xl_update_domain_mem(Domain* d,mem_t allocated)
     if(!d) return;
     //大于精度才进行调整
     if(abs(allocated-d->tg_mem)<ACCURACY) return;
-    uint32_t target = allocated;
+    if(allocated < 0) return;
+    int32_t target = allocated;
     libxl_set_memory_target(ctx, d->id, target, 0, 1);
 }
