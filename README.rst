@@ -144,7 +144,7 @@ data log
 ============
 
 we provide the experiment log at
-https://www.dropbox.com/sh/edg0nygofee8fua/AAAdSoGPkuAIPFka-bwLvCgRa?dl=0
+https://github.com/wzzhang-HIT/xenmm/releases/download/data/xenmm-data.squashfs
 please download `xenmm-data.squashfs` and mount it, see README inside for
 detail
 
